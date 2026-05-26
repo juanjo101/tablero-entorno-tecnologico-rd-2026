@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTESA - Entorno Empresarial y Tendencias Tecnológicas 2026</title>
+    <meta name="description" content="Consola analítica institucional de UTESA que cruza factores políticos y económicos del entorno empresarial con las tendencias tecnológicas para 2026.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            /* Nueva Línea Gráfica UTESA Plus (Vibrante, Limpia y Profesional) */
+            --utesa-green-deep: #106a37;   /* Verde bosque profundo corporativo */
+            --utesa-green-medium: #0cc984; /* Verde esmeralda brillante (UTESA Plus Accent) */
+            --utesa-green-light: #e7fbf4;  /* Fondo verde pastel ultra limpio */
+            --utesa-gold: #fedc2a;         /* Amarillo oro brillante y solar */
+            --utesa-gold-light: #fffdf0;   /* Fondo amarillo pastel ultra limpio */
+            --utesa-lime: #4cd957;         /* Verde lima secundario para acentos */
+            
+            /* Paleta General Light Premium */
+            --bg-canvas: #f8fafc;
+            --bg-panel: #ffffff;
+            --bg-row-even: #f1f5f9;
+            --bg-row-odd: #ffffff;
+            --border-color: #e2e8f0;
+            
+            --text-main: #0f172a;         /* Carbón oscuro */
+            --text-secondary: #475569;    /* Gris pizarra */
+            --text-muted: #94a3b8;        /* Gris claro */
+            
+            /* Indicadores de Capa */
+            --color-empresarial: #0cc984;
+            --color-desarrollo: #0284c7;
+            --color-infraestructura: #7c3aed;
+            --color-estrategico: #db2777;
+            --color-declive: #dc2626;
+            
+            --accent-color: #0cc984;
+            --font-mono: 'JetBrains Mono', monospace;
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.02);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-canvas);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar UTESA */
+        nav {
+            background-color: var(--utesa-green-deep);
+            border-bottom: 3px solid var(--utesa-gold);
+            padding: 0.9rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .nav-logo span {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: var(--utesa-gold);
+        }
+
+        .nav-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+        }
+
+        /* Sistema de Pestañas (Elegante y Limpio) */
+        .main-tabs {
+            display: flex;
+            background: var(--bg-panel);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 2rem;
+            gap: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .main-tab-btn {
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 1rem 0.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .main-tab-btn:hover {
+            color: var(--utesa-green-medium);
+        }
+
+        .main-tab-btn.active {
+            border-bottom-color: var(--utesa-green-medium);
+            color: var(--utesa-green-medium);
+        }
+
+        /* Workspace Grid */
+        .workspace {
+            display: flex;
+            flex: 1;
+            min-height: calc(100vh - 105px);
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .workspace {
+                flex-direction: column;
+            }
+        }
+
+        /* Sidebar Filtros con marca UTESA */
+        aside {
+            width: 260px;
+            flex-shrink: 0;
+            background-color: var(--bg-panel);
+            border-right: 1px solid var(--border-color);
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .sidebar-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .sidebar-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--utesa-green-medium);
+            font-weight: 700;
+            border-left: 2.5px solid var(--utesa-gold);
+            padding-left: 0.5rem;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            background-color: var(--bg-canvas);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.55rem 0.8rem 0.55rem 2.2rem;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--utesa-green-medium);
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(12, 201, 132, 0.12);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.25rem 0;
+            transition: var(--transition);
+        }
+
+        .filter-option:hover {
+            color: var(--utesa-green-medium);
+        }
+
+        .filter-option input {
+            cursor: pointer;
+            accent-color: var(--utesa-green-medium);
+        }
+
+        /* Paneles de Vista */
+        .view-panel {
+            display: none;
+            flex: 1;
+            padding: 2.2rem;
+            flex-direction: column;
+            gap: 2.2rem;
+            overflow-y: auto;
+            max-height: calc(100vh - 105px);
+        }
+
+        .view-panel.active {
+            display: flex;
+        }
+
+        /* KPIs Estilo Académico Limpio */
+        .stats-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .stat-card {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            box-shadow: var(--shadow-sm);
+            border-top: 3.5px solid var(--utesa-green-medium);
+        }
+
+        .stat-card.decline-card {
+            border-top-color: var(--utesa-gold);
+        }
+
+        .stat-value {
+            font-family: var(--font-mono);
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: var(--utesa-green-deep);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Grid Analítico */
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 1.75fr;
+            gap: 2.2rem;
+            align-items: start;
+        }
+
+        @media (max-width: 800px) {
+            .analytics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel-card {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .panel-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .panel-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--utesa-green-deep);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            border-left: 3px solid var(--utesa-gold);
+            padding-left: 0.6rem;
+        }
+
+        .chart-type-selector {
+            display: flex;
+            background: var(--bg-canvas);
+            border: 1px solid var(--border-color);
+            padding: 0.2rem;
+            border-radius: 6px;
+        }
+
+        .chart-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.35rem 0.7rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .chart-btn.active {
+            background: var(--bg-panel);
+            color: var(--utesa-green-medium);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .chart-frame {
+            position: relative;
+            width: 100%;
+            height: 310px;
+        }
+
+        /* Tabla Estilo UTESA */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--text-secondary);
+            font-weight: 700;
+            padding: 0.85rem 1.1rem;
+            border-bottom: 1.5px solid var(--border-color);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        td {
+            padding: 0.85rem 1.1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-main);
+            background-color: white;
+        }
+
+        tr.active-row td {
+            background-color: var(--utesa-green-light) !important;
+            border-left: 3.5px solid var(--utesa-green-medium);
+        }
+
+        tr.clickable-row {
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        tr.clickable-row:hover td {
+            background-color: #f8fafc;
+        }
+
+        .table-badge {
+            display: inline-block;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            font-weight: 600;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .badge-emp { background: rgba(12, 201, 132, 0.12); color: var(--color-empresarial); }
+        .badge-dev { background: rgba(2, 132, 199, 0.1); color: var(--color-desarrollo); }
+        .badge-infra { background: rgba(124, 58, 237, 0.1); color: var(--color-infraestructura); }
+        .badge-fut { background: rgba(219, 39, 119, 0.1); color: var(--color-estrategico); }
+        .badge-dec { background: rgba(220, 38, 38, 0.1); color: var(--color-declive); }
+
+        .mono-val {
+            font-family: var(--font-mono);
+            font-weight: 600;
+        }
+
+        .btn-export {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background-color: var(--bg-canvas);
+            border: 1px solid var(--border-color);
+            color: var(--utesa-green-deep);
+            padding: 0.45rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .btn-export:hover {
+            background-color: var(--utesa-green-medium);
+            border-color: transparent;
+            color: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* --- REDISEÑO INTERACTIVO DE PESTEL CRUZADO --- */
+        .cross-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 1.6rem;
+            align-items: start;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .cross-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pestel-selector-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .pestel-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .pestel-group-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--utesa-green-deep);
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.4rem;
+        }
+
+        .pestel-btn-card {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.1rem;
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pestel-btn-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4.5px;
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+            background-color: transparent;
+        }
+
+        .pestel-btn-card.active::before {
+            background-color: var(--utesa-green-medium);
+        }
+
+        .pestel-btn-card.active {
+            background-color: var(--utesa-green-light);
+            border-color: rgba(12, 201, 132, 0.25);
+            box-shadow: var(--shadow-md);
+            transform: translateX(4px);
+        }
+
+        .pestel-card-header {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--utesa-green-deep);
+        }
+
+        .pestel-btn-card.active .pestel-card-header {
+            color: var(--utesa-green-deep);
+        }
+
+        .pestel-card-tag {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        /* Panel de Detalle Cruzado Dinámico */
+        .cross-output-panel {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 2.2rem;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cross-header-wrapper {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1.4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .cross-meta {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--utesa-green-medium);
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .cross-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--utesa-green-deep);
+        }
+
+        .cross-body-desc {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .crossed-trends-box {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .crossed-trend-row {
+            background-color: var(--bg-canvas);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            transition: var(--transition);
+        }
+
+        .crossed-trend-row:hover {
+            border-color: rgba(12, 201, 132, 0.25);
+            background-color: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .crossed-trend-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--utesa-green-deep);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .crossed-trend-name span {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--utesa-green-medium);
+        }
+
+        .progress-bar-bg {
+            background: #e2e8f0;
+            height: 6px;
+            border-radius: 3px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: var(--utesa-green-medium);
+            width: 0%;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Indicadores Macro BCRD / BM */
+        .macro-data-badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+        }
+
+        .macro-data-badge {
+            background-color: var(--utesa-green-light);
+            border: 1px solid rgba(12, 201, 132, 0.15);
+            border-radius: 6px;
+            padding: 0.5rem 0.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+            min-width: 140px;
+        }
+
+        .macro-badge-val {
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--utesa-green-deep);
+        }
+
+        .macro-badge-lbl {
+            font-size: 0.65rem;
+            color: var(--utesa-green-medium);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Drawer Lateral */
+        .drawer {
+            position: fixed;
+            top: 0;
+            right: -420px;
+            width: 420px;
+            height: 100%;
+            background-color: var(--bg-panel);
+            border-left: 1.5px solid var(--border-color);
+            z-index: 100;
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.08);
+            transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 2.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            overflow-y: auto;
+        }
+
+        .drawer.active { right: 0; }
+        
+        .drawer-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .drawer-close:hover {
+            color: var(--utesa-green-deep);
+        }
+
+        .drawer-title-wrapper { margin-top: 1rem; }
+        
+        .drawer-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--utesa-green-deep);
+            line-height: 1.2;
+            margin-top: 0.5rem;
+        }
+
+        .drawer-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .drawer-section-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--utesa-green-medium);
+            font-weight: 700;
+            border-left: 2px solid var(--utesa-gold);
+            padding-left: 0.4rem;
+        }
+
+        .drawer-text {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .drawer-tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .drawer-tag {
+            background-color: var(--bg-canvas);
+            border: 1px solid var(--border-color);
+            color: var(--utesa-green-deep);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            font-weight: 500;
+        }
+    
+        /* === TAB 3: BRECHA DE TALENTO Y STEAM === */
+        .steam-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 900px) { .steam-grid { grid-template-columns: 1fr; } }
+
+        .gap-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .gap-row:last-child { border-bottom: none; }
+
+        .gap-label-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .gap-label { font-size: 0.85rem; font-weight: 600; color: var(--text-main); }
+        .gap-badge {
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-family: var(--font-mono);
+        }
+        .gap-critical { background: rgba(220,38,38,0.12); color: #dc2626; }
+        .gap-high     { background: rgba(234,88,12,0.12); color: #ea580c; }
+        .gap-medium   { background: rgba(234,179,8,0.12); color: #ca8a04; }
+        .gap-ok       { background: rgba(12,201,132,0.12); color: #0cc984; }
+
+        .gap-bars { display: flex; flex-direction: column; gap: 0.2rem; }
+        .gap-bar-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--text-secondary); }
+        .gap-bar-track { flex: 1; background: #e2e8f0; height: 7px; border-radius: 4px; overflow: hidden; }
+        .gap-bar-fill  { height: 100%; border-radius: 4px; transition: width 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .fill-demand   { background: var(--utesa-green-medium); }
+        .fill-supply   { background: var(--utesa-gold); }
+
+        .career-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--utesa-green-medium);
+            transition: var(--transition);
+        }
+        .career-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .career-card.priority-2 { border-left-color: var(--utesa-gold); }
+        .career-card.priority-3 { border-left-color: #7c3aed; }
+
+        .career-title  { font-size: 1rem; font-weight: 800; color: var(--utesa-green-deep); }
+        .career-sub    { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; }
+        .career-tags   { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.2rem; }
+        .career-tag    {
+            font-size: 0.65rem; font-family: var(--font-mono); font-weight: 600;
+            background: var(--bg-canvas); border: 1px solid var(--border-color);
+            padding: 0.15rem 0.4rem; border-radius: 3px; color: var(--utesa-green-deep);
+        }
+        .career-demand-badge {
+            font-size: 0.72rem; font-weight: 700; font-family: var(--font-mono);
+            padding: 0.2rem 0.5rem; border-radius: 4px; align-self: flex-start;
+            background: rgba(12,201,132,0.15); color: var(--utesa-green-deep);
+        }
+
+        .kpi-steam-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+        }
+        .kpi-steam {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.1rem;
+            display: flex; flex-direction: column; gap: 0.3rem;
+            box-shadow: var(--shadow-sm);
+            border-top: 3.5px solid var(--utesa-gold);
+            text-align: center;
+        }
+        .kpi-steam-val { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: var(--utesa-green-deep); }
+        .kpi-steam-lbl { font-size: 0.7rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegación UTESA -->
+    <nav>
+        <div class="nav-logo">
+            <span>UTESA</span>
+            <div class="nav-title">Análisis del Entorno Empresarial 2026</div>
+        </div>
+        <div class="nav-meta">MUESTRA: 20 TENDENCIAS | MODELO DE ANÁLISIS ACADÉMICO</div>
+    </nav>
+
+    <!-- Pestañas Principales -->
+    <div class="main-tabs">
+        <button id="tabBtn1" class="main-tab-btn active" onclick="switchView('explorer')">1. Explorador de Tendencias Tecnológicas</button>
+        <button id="tabBtn2" class="main-tab-btn" onclick="switchView('macro')">2. Factores de Impacto PEST (Político y Económico)</button>
+        <button id="tabBtn3" class="main-tab-btn" onclick="switchView('steam')">3. Brecha de Talento y Carreras STEAM</button>
+    </div>
+
+    <!-- Espacio de Trabajo Principal -->
+    <div class="workspace">
+        
+        <!-- Sidebar de Controles -->
+        <aside id="sidebarControls">
+            <div class="sidebar-section">
+                <span class="sidebar-label">Buscador Temático</span>
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="dbSearch" class="search-input" placeholder="Buscar variable o tag...">
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <span class="sidebar-label">Nivel Tecnológico</span>
+                <label class="filter-option">
+                    <input type="checkbox" name="levelFilter" value="empresarial" checked onchange="handleFilterChange()">
+                    Nivel Empresarial
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="levelFilter" value="desarrollo" checked onchange="handleFilterChange()">
+                    Nivel Desarrollo
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="levelFilter" value="infraestructura" checked onchange="handleFilterChange()">
+                    Nivel Infraestructura
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="levelFilter" value="estrategico" checked onchange="handleFilterChange()">
+                    Estratégico / Futuro
+                </label>
+            </div>
+
+            <div class="sidebar-section">
+                <span class="sidebar-label">Clasificación Adopción</span>
+                <label class="filter-option">
+                    <input type="radio" name="catFilter" value="todos" checked onchange="handleFilterChange()">
+                    Mostrar Todos
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="catFilter" value="altisima" onchange="handleFilterChange()">
+                    Altísima Demanda
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="catFilter" value="acelerado" onchange="handleFilterChange()">
+                    Crecimiento Acelerado
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="catFilter" value="futuro_cat" onchange="handleFilterChange()">
+                    Vanguardia / Futuro
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="catFilter" value="declive" onchange="handleFilterChange()">
+                    En Declive Técnico
+                </label>
+            </div>
+
+            <div class="sidebar-section">
+                <span class="sidebar-label">Criterio de Orden</span>
+                <select id="dbSort" class="search-input" onchange="handleFilterChange()" style="padding-left: 0.6rem;">
+                    <option value="demand_desc">Demanda Proyectada (Desc)</option>
+                    <option value="demand_asc">Demanda Proyectada (Asc)</option>
+                    <option value="alpha">Nombre Alfabético</option>
+                    <option value="level">Nivel de Impacto</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- Contenedor de Vistas -->
+        <div style="flex: 1; overflow: hidden; display: flex; flex-direction: column;">
+            
+            <!-- VISTA 1: EXPLORADOR DE TENDENCIAS -->
+            <section id="panelExplorer" class="view-panel active">
+                
+                <!-- Banner de Onboarding para Mortales -->
+                <div class="panel-card" style="background: linear-gradient(135deg, var(--utesa-green-light), var(--utesa-gold-light)); border: 1.5px solid var(--utesa-gold); border-radius: 12px; padding: 1.4rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 0.4rem; border-left: 5px solid var(--utesa-green-medium);">
+                    <h3 style="color: var(--utesa-green-deep); display: flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 1.1rem; font-weight: 800;">
+                        👋 ¡Bienvenido, Profesor! (Tablero de Entorno y Tendencias 2026)
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0; line-height: 1.5;">
+                        Esta consola académica interactiva te permite explorar la <strong>demanda tecnológica real para 2026</strong> y cómo los factores macroeconómicos de la República Dominicana la impulsan de manera causal. 
+                        <strong>¿Cómo empezar?</strong> Haz clic en cualquier tecnología de la tabla para abrir su ficha detallada <strong>"En Sencillo (Para Mortales)"</strong>, o ve a la <em>Pestaña 2</em> para cruzar las fuerzas del Banco Central (BCRD) y el Banco Mundial con las tecnologías de vanguardia.
+                    </p>
+                </div>
+
+                <!-- Metodología de Determinación de Tendencias y Fuentes Globales -->
+                <div class="panel-card" style="border: 1px solid var(--border-color); border-radius: 12px; padding: 1.4rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 0.6rem; border-left: 5px solid var(--utesa-gold); background-color: var(--bg-panel);">
+                    <h4 style="color: var(--utesa-green-deep); font-weight: 800; font-size: 0.95rem; margin: 0; display: flex; align-items: center; gap: 0.4rem;">
+                        📋 ¿Cómo determinamos estas tendencias y cuáles son sus fuentes?
+                    </h4>
+                    <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 0; line-height: 1.5;">
+                        Estas 20 variables tecnológicas no son suposiciones; fueron determinadas mediante un riguroso proceso de tres fases:
+                    </p>
+                    <ul style="font-size: 0.8rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.5; display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.2rem;">
+                        <li><strong>Fase 1: Mapeo de Fuentes Globales:</strong> Identificación de las tendencias tecnológicas matrices a partir de informes globales reconocidos: <em>Gartner Top Strategic Technology Trends for 2026</em>, el <em>GitHub Octoverse Report 2025</em> (democratización de asistentes de IA) y el <em>Stack Overflow Developer Survey 2025</em> (obsolescencia de infraestructuras manuales).</li>
+                        <li><strong>Fase 2: Enfoque Temático Balanceado:</strong> Integración equilibrada de la ciberseguridad (Zero Trust) como pilar transversal de infraestructura junto al desarrollo de software (APIs, Cloud-Native), nubes elásticas y procesamiento de datos, evitando que domine como único foco.</li>
+                        <li><strong>Fase 3: Validación Dominicana en LinkedIn Empleos:</strong> Auditoría sistemática de vacantes activas localizadas en la República Dominicana y puestos de teletrabajo remoto en Latinoamérica para contrastar la demanda y calcular los porcentajes de adopción empresarial real.</li>
+                    </ul>
+                </div>
+                
+                <!-- KPIs -->
+                <div class="stats-strip">
+                    <div class="stat-card">
+                        <span class="stat-value" id="statTotal">20</span>
+                        <span class="stat-label">Variables Analizadas</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" id="statMean">80.5%</span>
+                        <span class="stat-label">Demanda Media Activa</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" id="statMax">98%</span>
+                        <span class="stat-label">Demanda Máxima</span>
+                    </div>
+                    <div class="stat-card decline-card">
+                        <span class="stat-value" id="statDecline">20.0%</span>
+                        <span class="stat-label">% Tendencias en Declive</span>
+                    </div>
+                </div>
+
+                <!-- Gráfico + Tabla -->
+                <div class="analytics-grid">
+                    
+                    <!-- Chart.js -->
+                    <div class="panel-card">
+                        <div class="panel-header-row">
+                            <span class="panel-title">📊 Distribución de Adopción</span>
+                            <div class="chart-type-selector">
+                                <button id="btnBar" class="chart-btn active" onclick="switchChartType('bar')">Barra</button>
+                                <button id="btnRadar" class="chart-btn" onclick="switchChartType('radar')">Radar</button>
+                            </div>
+                        </div>
+                        <div class="chart-frame">
+                            <canvas id="scientificChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Tabla Interactiva -->
+                    <div class="panel-card">
+                        <div class="panel-header-row">
+                            <span class="panel-title">📋 Explorador de Tendencias de Mercado</span>
+                            <button class="btn-export" onclick="exportFilteredCSV()">💾 Exportar CSV</button>
+                        </div>
+                        <div class="table-wrapper">
+                            <table id="dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Tendencia / Tecnología</th>
+                                        <th>Nivel</th>
+                                        <th>Categoría</th>
+                                        <th style="text-align: right;">Demanda (%)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody">
+                                    <!-- Inyectado dinámicamente -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- VISTA 2: REDISEÑO INTERACTIVO DEL ANÁLISIS PESTEL CRUZADO -->
+            <section id="panelMacro" class="view-panel">
+                
+                <!-- Banner de Onboarding para PESTEL Cruzado -->
+                <div class="panel-card" style="background: linear-gradient(135deg, var(--utesa-green-light), var(--utesa-gold-light)); border: 1.5px solid var(--utesa-gold); border-radius: 12px; padding: 1.4rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 0.4rem; border-left: 5px solid var(--utesa-green-medium);">
+                    <h3 style="color: var(--utesa-green-deep); display: flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 1.1rem; font-weight: 800;">
+                        ⚖️ Simulador de Fuerzas del Entorno (Cruces de Impacto Causal)
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0; line-height: 1.5;">
+                        Para garantizar el rigor académico y la veracidad de los datos, cada fuerza política o económica a la izquierda está vinculada con <strong>boletines y cifras oficiales del Banco Central (BCRD) y el Banco Mundial</strong>.
+                        <strong>Instrucciones:</strong> Haz clic en cualquier fuerza. Verás la <strong>Explicación para Mortales</strong>, el análisis técnico formal y las <strong>Fuentes Oficiales Verificadas</strong> que puedes auditar mediante enlaces directos.
+                    </p>
+                </div>
+
+                <div class="cross-container">
+                    
+                    <!-- Columna Izquierda: Botones del PESTEL del Entorno Real -->
+                    <div class="pestel-selector-panel">
+                        
+                        <div class="pestel-group">
+                            <div class="pestel-group-title">⚖️ Fuerzas Políticas y Normativas</div>
+                            
+                            <div id="btnP1" class="pestel-btn-card active" onclick="selectPestel('agenda_2030', this)">
+                                <span class="pestel-card-tag">Política Dominicana</span>
+                                <span class="pestel-card-header">Agenda Digital 2030 (Dec. 427-21)</span>
+                            </div>
+
+                            <div id="btnP2" class="pestel-btn-card" onclick="selectPestel('resolucion_teletrabajo', this)">
+                                <span class="pestel-card-tag">Marco Laboral RD</span>
+                                <span class="pestel-card-header">Regulación del Teletrabajo (Res. 54-2020)</span>
+                            </div>
+
+                            <div id="btnP3" class="pestel-btn-card" onclick="selectPestel('interoperabilidad_jm', this)">
+                                <span class="pestel-card-tag">Regulación Financiera</span>
+                                <span class="pestel-card-header">Interoperabilidad (Junta Monetaria)</span>
+                            </div>
+                        </div>
+
+                        <div class="pestel-group">
+                            <div class="pestel-group-title">🪙 Fuerzas Económicas y de Mercado</div>
+                            
+                            <div id="btnE1" class="pestel-btn-card" onclick="selectPestel('fuga_talento', this)">
+                                <span class="pestel-card-tag">Mercado de Talento</span>
+                                <span class="pestel-card-header">Déficit de Talento por Fuga Remota</span>
+                            </div>
+
+                            <div id="btnE2" class="pestel-btn-card" onclick="selectPestel('opex_vs_capex', this)">
+                                <span class="pestel-card-tag">Finanzas Corporativas</span>
+                                <span class="pestel-card-header">Transición OpEx (Optimización Presupuesto)</span>
+                            </div>
+
+                            <div id="btnE3" class="pestel-btn-card" onclick="selectPestel('costos_energia', this)">
+                                <span class="pestel-card-tag">Costos de Operación RD</span>
+                                <span class="pestel-card-header">Elevados Costos de Energía Eléctrica</span>
+                            </div>
+
+                            <div id="btnE4" class="pestel-btn-card" onclick="selectPestel('bvrd_market', this)">
+                                <span class="pestel-card-tag">Mercado de Capitales</span>
+                                <span class="pestel-card-header">Democratización de la Bolsa (BVRD)</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Columna Derecha: Panel de Cruce Dinámico -->
+                    <div class="cross-output-panel" id="crossOutput">
+                        <!-- Inyectado dinámicamente por JS al interactuar -->
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- VISTA 3: BRECHA DE TALENTO Y CARRERAS STEAM -->
+            <section id="panelSteam" class="view-panel">
+
+                <!-- Banner -->
+                <div class="panel-card" style="background: linear-gradient(135deg, var(--utesa-green-light), var(--utesa-gold-light)); border: 1.5px solid var(--utesa-gold); border-radius: 12px; padding: 1.4rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 0.4rem; border-left: 5px solid var(--utesa-green-medium);">
+                    <h3 style="color: var(--utesa-green-deep); display: flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 1.1rem; font-weight: 800;">
+                        🎓 Brecha de Talento Tech vs. Oferta Académica Dominicana (2025–2026)
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0; line-height: 1.5;">
+                        Este tablero cruza las <strong>habilidades presentes en perfiles LinkedIn de profesionales TI dominicanos</strong> (oferta real) con la <strong>demanda activa de vacantes</strong> del mercado para identificar brechas y proponer nuevas carreras STEAM. Fuentes: LinkedIn RD (2.1M perfiles), UNDP 2025, Banco Mundial, ENAE 2024.
+                    </p>
+                </div>
+
+                <!-- KPIs Clave -->
+                <div class="kpi-steam-strip">
+                    <div class="kpi-steam">
+                        <span class="kpi-steam-val">2.1M</span>
+                        <span class="kpi-steam-lbl">Profesionales en LinkedIn RD</span>
+                    </div>
+                    <div class="kpi-steam">
+                        <span class="kpi-steam-val">40%</span>
+                        <span class="kpi-steam-lbl">Empleadores sin cubrir roles tech</span>
+                    </div>
+                    <div class="kpi-steam">
+                        <span class="kpi-steam-val">68.9%</span>
+                        <span class="kpi-steam-lbl">Dominicanos que usan IA semanal (UNDP)</span>
+                    </div>
+                    <div class="kpi-steam">
+                        <span class="kpi-steam-val">329K</span>
+                        <span class="kpi-steam-lbl">Déficit Ciberseguridad LATAM</span>
+                    </div>
+                    <div class="kpi-steam">
+                        <span class="kpi-steam-val">~10%</span>
+                        <span class="kpi-steam-lbl">Trabajadores con habilidades digitales intensivas</span>
+                    </div>
+                    <div class="kpi-steam">
+                        <span class="kpi-steam-val">66.3%</span>
+                        <span class="kpi-steam-lbl">Empresas que necesitan reskilling interno</span>
+                    </div>
+                </div>
+
+                <!-- Mapa de Brechas + Carreras -->
+                <div class="steam-grid">
+
+                    <!-- Columna Izquierda: Mapa de Brechas -->
+                    <div class="panel-card">
+                        <div class="panel-header-row">
+                            <span class="panel-title">📉 Mapa de Brechas: Demanda vs. Oferta Local</span>
+                        </div>
+                        <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 0 0 0.5rem 0;">🟢 Verde = Demanda del mercado &nbsp;|&nbsp; 🟡 Dorado = Presencia en perfiles RD</p>
+
+                        <div id="gapList">
+                            <!-- Brechas renderizadas por JS -->
+                        </div>
+
+                        <!-- Leyenda fuentes -->
+                        <div style="border-top: 1px solid var(--border-color); padding-top: 0.8rem; margin-top: 0.4rem;">
+                            <p style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.5;">
+                                🔒 <strong>Fuentes de oferta:</strong> Auditoría de perfiles LinkedIn RD + BeBee + ENAE 2024 (Banco Central) | <strong>Fuentes de demanda:</strong> Vacantes LinkedIn RD activas (mayo 2026) + Gartner 2026 + Stack Overflow 2025
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Nuevas Carreras -->
+                    <div class="panel-card">
+                        <div class="panel-header-row">
+                            <span class="panel-title">🚀 Nuevas Carreras STEAM Prioritarias</span>
+                        </div>
+                        <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 0 0 0.8rem 0;">Recomendaciones basadas en brechas críticas identificadas. Verde = Prioridad 1.</p>
+
+                        <div id="careerList">
+                            <!-- Carreras renderizadas por JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabla de disponibilidad por Universidad -->
+                <div class="panel-card">
+                    <div class="panel-header-row">
+                        <span class="panel-title">🏛️ Estado de Carreras Tech por Universidad Dominicana</span>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Carrera / Programa</th>
+                                    <th style="text-align:center;">UTESA</th>
+                                    <th style="text-align:center;">INTEC</th>
+                                    <th style="text-align:center;">ITLA</th>
+                                    <th style="text-align:center;">UASD</th>
+                                    <th style="text-align:center;">PUCMM</th>
+                                    <th>Urgencia de Brecha</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Ing. en Ciberseguridad</strong></td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td><span class="table-badge gap-critical" style="background:rgba(220,38,38,0.12);color:#dc2626;">🔴 CRÍTICA</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ing. en IA y Ciencia de Datos</strong></td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td><span class="table-badge" style="background:rgba(220,38,38,0.12);color:#dc2626;">🔴 CRÍTICA</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tecnología Cloud / DevOps</strong></td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td><span class="table-badge" style="background:rgba(220,38,38,0.12);color:#dc2626;">🔴 NADIE LA TIENE</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ing. Sistemas / Informática</strong></td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td><span class="table-badge badge-emp">✅ Cubierta</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tecn. Ingeniería de Datos</strong></td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td><span class="table-badge" style="background:rgba(234,88,12,0.12);color:#ea580c;">🟠 ALTA</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ing. Mecatrónica / Robótica</strong></td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td><span class="table-badge" style="background:rgba(234,88,12,0.12);color:#ea580c;">🟠 ALTA</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tecn. Semiconductores</strong></td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td><span class="table-badge badge-dev">MEDIA</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Animación Digital / Game Design</strong></td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td><span class="table-badge badge-dev">MEDIA</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.4rem;">
+                        Fuentes: INTEC (intec.edu.do), UTESA (utesa.edu), ITLA (itla.edu.do), UASD, PUCMM — Auditoría de oferta académica mayo 2026
+                    </p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Drawer Lateral -->
+    <div class="drawer" id="detailsDrawer">
+        <button class="drawer-close" onclick="closeDrawer()">×</button>
+        <div class="drawer-title-wrapper">
+            <span class="table-badge" id="drawerBadge">NIVEL</span>
+            <h2 class="drawer-title" id="drawerTitle">Título</h2>
+        </div>
+        <div class="drawer-body">
+            <div class="drawer-section" style="background-color: var(--utesa-gold-light); border-left: 4.5px solid var(--utesa-gold); padding: 0.9rem 1.1rem; border-radius: 8px; margin-bottom: 1.5rem; box-shadow: var(--shadow-sm);">
+                <span class="drawer-section-title" style="color: var(--utesa-green-deep); font-weight: bold; display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; letter-spacing: 0.5px;">
+                    💡 En palabras sencillas (Para Mortales)
+                </span>
+                <p class="drawer-text" id="drawerForMortals" style="font-weight: 600; color: var(--utesa-green-deep); font-size: 0.88rem; line-height: 1.45; margin-top: 0.3rem;">Cargando...</p>
+            </div>
+            <div class="drawer-section" style="margin-bottom: 1.5rem;">
+                <span class="drawer-section-title">Análisis de Impacto (2026)</span>
+                <p class="drawer-text" id="drawerDesc">Descripción...</p>
+            </div>
+            <div class="drawer-section" style="margin-bottom: 1.5rem;">
+                <span class="drawer-section-title">Ámbito y Caso de Uso Real</span>
+                <p class="drawer-text" id="drawerContext">Aplicación...</p>
+            </div>
+            <div class="drawer-section">
+                <span class="drawer-section-title">Tecnologías e Integración Clave</span>
+                <div class="drawer-tag-container" id="drawerTags">
+                    <!-- Tags -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DATASET
+        const dataset = [
+            { id: "agentic_ai", name: "Inteligencia Artificial Agéntica", level: "empresarial", category: "acelerado", demandPct: 98, desc: "Sistemas capaces de planificar, iterar y ejecutar flujos de tareas complejas de manera autónoma sin requerir supervisión constante.", context: "Asistentes de operaciones autónomas y asistentes corporativos avanzados.", forMortals: "Es como contratar a un asistente virtual inteligente al que solo le das la meta final (ej. 'planifica y compra el viaje más barato') y él solo investiga, compara y toma las decisiones por ti.", tags: ["Agentic AI", "Sistemas Multi-Agente", "Autonomía"] },
+            { id: "ai_coding", name: "AI-Assisted Software Engineering", level: "desarrollo", category: "altisima", demandPct: 96, desc: "La programación asistida por modelos de lenguaje masivo (LLMs) se estandariza. Acelera la generación, debugging y documentación de software.", context: "Integrado en IDEs para refactorización inteligente y generación automática de tests.", forMortals: "Es como programar teniendo al programador más rápido del mundo soplándote las respuestas en tiempo real y redactándote los aburridos manuales.", tags: ["GitHub Copilot", "OpenAI Codex", "Refactor"] },
+            { id: "low_code", name: "Low-Code / No-Code Development", level: "empresarial", category: "altisima", demandPct: 92, desc: "Democratización del desarrollo de software. Permite construir flujos y aplicaciones funcionales reduciendo la dependencia de perfiles expertos.", context: "Muy fuerte en automatizaciones dentro de PyMEs locales, fintechs rápidas y universidades.", forMortals: "Es como armar una aplicación móvil usando bloques de Lego de colores, sin necesidad de saber escribir complicados códigos de programación desde cero.", tags: ["PowerApps", "Zapier", "Bubble", "Desarrollo Ágil"] },
+            { id: "hyperautomation", name: "Hyperautomation (Hiperautomatización)", level: "empresarial", category: "altisima", demandPct: 94, desc: "Estrategia integral de orquestación tecnológica que combina IA, automatización robótica de procesos (RPA), workflows y APIs avanzadas.", context: "Automatización de punta a punta en flujos de facturación, compras y contabilidad financiera.", forMortals: "Es crear una súper-fábrica digital donde los robots de software se encargan de facturar, archivar y enviar correos de forma automática mientras tú duermes.", tags: ["RPA", "BPM", "Workflows", "APIs"] },
+            { id: "platform_eng", name: "Platform Engineering", level: "empresarial", category: "altisima", demandPct: 89, desc: "Construcción de plataformas internas para desarrolladores (Internal Developer Platforms) orientadas a reducir la fricción en infraestructura.", context: "Optimización operativa en grandes departamentos de TI en bancos locales y telcos.", forMortals: "Es crear una ventanilla única de autoservicio digital para que los programadores de una empresa obtengan sus servidores y herramientas con un solo clic, sin hacer filas.", tags: ["Autoservicio", "IDP Platforms", "Developer Experience"] },
+            { id: "serverless", name: "Serverless Computing", level: "desarrollo", category: "altisima", demandPct: 87, desc: "Infraestructura elástica autogestionada donde las bases de datos y la capacidad de cómputo escalan de forma automatizada por el proveedor.", context: "Despliegue rápido de microservicios, llamadas a APIs e integraciones de IA.", forMortals: "Es como alquilar electricidad por segundos: solo pagas por la luz exacta que consumes cuando enciendes el interruptor, en lugar de comprar tu propia planta eléctrica.", tags: ["AWS Lambda", "Azure Functions", "Capacidad Elástica"] },
+            { id: "edge_ai", name: "Edge AI (IA en el Borde)", level: "infraestructura", category: "acelerado", demandPct: 82, desc: "Ejecución de modelos analíticos complejos localmente en los dispositivos periféricos reduciendo drásticamente latencias y tráfico.", context: "Optimización de seguridad en hotelería, puertos y control de manufactura.", forMortals: "Es ponerle un 'pequeño cerebro inteligente' directamente a una cámara de seguridad o sensor, para que reconozca caras en el acto sin tener que pedir permiso a internet.", tags: ["IoT", "Sensores Inteligentes", "Baja Latencia"] },
+                        { id: "zero_trust_security", name: "Ciberseguridad Zero Trust", level: "infraestructura", category: "altisima", demandPct: 93, desc: "Modelo de seguridad moderno basado en verificar continuamente cada intento de acceso y autenticación en la nube, eliminando la confianza implícita.", context: "Protección de accesos remotos y de la interconexión segura de APIs bancarias.", forMortals: "Es como poner a un guardia de seguridad digital en la puerta de cada archivo de la empresa, que te pide identificación cada vez que quieres abrir un documento, aunque ya hayas entrado al edificio.", tags: ["Zero Trust", "MFA", "Seguridad Cloud", "Autenticación"] },
+            { id: "aiops", name: "DevOps Inteligente (AIOps)", level: "desarrollo", category: "acelerado", demandPct: 84, desc: "Automatización de la administración de sistemas informáticos aplicando analítica predictiva de aprendizaje automático a los logs operativos.", context: "Detección temprana de caídas operativas y anomalías de software en banca móvil.", forMortals: "Es como tener a un médico digital monitoreando el pulso de los servidores de la empresa las 24 horas, capaz de predecir y curar un fallo antes de que los clientes lo noten.", tags: ["AIOps", "Log Analysis", "Auto-curación"] },
+            { id: "iac", name: "Infrastructure as Code (IaC)", level: "infraestructura", category: "altisima", demandPct: 91, desc: "Administración, despliegue y auditoría de la infraestructura de TI completa (redes, bases de datos, accesos) mediante lenguaje de código.", context: "Gestión unificada de topologías híbridas y nubes públicas empresariales.", forMortals: "Es como crear los planos de una casa en un archivo de computadora de modo que, al presionar un botón, la casa se construya sola exactamente igual cada vez.", tags: ["Terraform", "Ansible", "Configuración de Nube"] },
+            { id: "quantum", name: "Computación Cuántica", level: "estrategico", category: "futuro_cat", demandPct: 40, desc: "Cómputo basado en física cuántica. Aún en fase experimental pero atrayendo inversión masiva de corporativos globales.", context: "Optimización matemática hipercompleja, diseño de materiales y criptografía.", forMortals: "Es una súper computadora del futuro que procesa trillones de soluciones a la vez usando leyes de física avanzada, orientada a descifrar problemas imposibles hoy.", tags: ["Qubits", "Supercómputo"] },
+            { id: "xr", name: "Realidad Extendida (XR)", level: "estrategico", category: "futuro_cat", demandPct: 55, desc: "Ecosistemas avanzados de realidad virtual, aumentada y mixta integrados con IA para simulación inmersiva interactiva de alta fidelidad.", context: "Capacitación corporativa técnica y simulaciones médicas seguras.", forMortals: "Es ponerte unas gafas mágicas que mezclan el mundo real con hologramas digitales interactivos para aprender a reparar una máquina compleja sin romper nada.", tags: ["Realidad Virtual", "Entrenamiento Inmersivo", "Simulación IA"] },
+            { id: "digital_twins", name: "Digital Twins (Gemelos Digitales)", level: "estrategico", category: "futuro_cat", demandPct: 68, desc: "Réplicas virtuales actualizadas en tiempo real que modelan el comportamiento de procesos de negocio, fábricas o redes físicas.", context: "Simulación operativa en puertos logísticos y optimización energética en RD.", forMortals: "Es crear un clon digital interactivo en 3D de una fábrica o puerto real para simular qué pasaría si aumentamos la velocidad sin tener que arriesgar la operación real.", tags: ["Gemelo Digital", "Modelado Físico", "Simulación en Vivo"] },
+            { id: "cloud_native", name: "Arquitectura Cloud-Native", level: "desarrollo", category: "altisima", demandPct: 94, desc: "Enfoque de diseño orientado al desarrollo ágil dentro de nubes elásticas utilizando microservicios modernos y empaquetamiento en contenedores.", context: "Estándar absoluto exigido para las nuevas plataformas de banca en línea.", forMortals: "Es diseñar software modular que vive y respira exclusivamente en la nube, dividiéndose en pequeños 'contenedores' independientes que nunca se caen todos juntos.", tags: ["Docker", "Kubernetes", "Microservicios"] },
+            { id: "observability", name: "Observabilidad Avanzada", level: "infraestructura", category: "altisima", demandPct: 88, desc: "Análisis y correlación de métricas, trazas distribuidas y logs de software para identificar la causa raíz de anomalías en microservicios.", context: "Garantía de rendimiento en sistemas de pago masivos basados en la nube.", forMortals: "Es instalar un sistema de telemetría de Fórmula 1 en las aplicaciones de la empresa, rastreando cada milisegundo de las transacciones para saber exactamente qué tornillo falló.", tags: ["Prometheus", "Grafana", "DataDog", "Trazabilidad"] },
+            { id: "green_computing", name: "Green Computing & Tech Sostenible", level: "estrategico", category: "futuro_cat", demandPct: 70, desc: "Conjunto de tecnologías orientadas a la optimización energética radical, centros de datos verdes e iniciativas ecológicas ESG.", context: "Auditorías de huella de carbono y optimizaciones del consumo de servidores en RD.", forMortals: "Es optimizar el software para que los servidores trabajen menos y consuman menos electricidad, ayudando a reducir la factura de luz y a cuidar el medio ambiente.", tags: ["ESG", "Eficiencia Verde", "Centro de Datos Verde"] },
+            { id: "declive_manual_servers", name: "Administración Manual de Servidores", level: "infraestructura", category: "declive", demandPct: 15, desc: "La configuración artesanal o manual de servidores mediante SSH tradicional está obsoleta frente a metodologías inmutables y elásticas.", context: "Desplazado por Infrastructure as Code (IaC) e infraestructuras inmutables.", forMortals: "Configurar servidores de uno en uno escribiendo comandos a mano en una pantalla negra ya no se usa; ahora todo se crea de forma automática en segundos.", tags: ["SSH", "Configuración Manual", "Obsoleto"] },
+            { id: "declive_manual_deploys", name: "Despliegues Manuales (Deployments)", level: "desarrollo", category: "declive", demandPct: 10, desc: "La subida de software de forma manual a producción representa un riesgo crítico de fallas. Es reemplazado al 100% por pipelines.", context: "Sustituido por automatizaciones CI/CD consistentes y controladas.", forMortals: "Subir tus archivos al servidor copiando y pegando a mano por FTP está obsoleto por el alto riesgo de error humano; hoy se automatiza con tuberías digitales de entrega.", tags: ["FTP", "Copiar Archivos", "Riesgo Operativo"] },
+            { id: "declive_manual_testing", name: "Testing Manual Extensivo", level: "desarrollo", category: "declive", demandPct: 20, desc: "El QA manual repetitivo está en fuerte retroceso debido a su alto costo de ejecución y escasa escalabilidad frente a suites automáticas.", context: "Sustituido por suites automáticas integradas en el pipeline asistido por IA.", forMortals: "Tener a una persona haciendo clic repetitivamente en una pantalla para ver si el sistema funciona es muy lento y costoso; ahora la IA y los robots de software lo hacen al instante.", tags: ["QA Manual", "Pruebas Repetitivas", "Baja Velocidad"] },
+            { id: "declive_no_ai", name: "Desarrollo de Software sin IA", level: "desarrollo", category: "declive", demandPct: 8, desc: "Escribir código sin el uso continuo de asistentes de programación e IA generativa representa una pérdida drástica de competitividad laboral.", context: "Reemplazado por ingenieros que utilizan Copilots para triplicar su productividad.", forMortals: "Programar hoy en día sin usar asistentes de Inteligencia Artificial (como Copilot) es tan ineficiente como querer hacer contabilidad a mano en un cuaderno de papel en lugar de usar Excel.", tags: ["Programación Tradicional", "Baja Competitividad", "Sin Asistencia"] }
+        ];
+
+        // BASE DE DATOS PESTEL CON DATOS BCRD Y BANCO MUNDIAL (INCLUYE BVRD)
+        const pestelData = {
+            agenda_2030: {
+                type: "Fuerza Política / Gubernamental",
+                title: "Agenda Digital 2030 (Decreto 427-21)",
+                desc: "Política del Estado dominicano orientada a acelerar la infraestructura digital del país. Según el <strong>Banco Mundial</strong>, la inversión en capital humano e infraestructura de conectividad es crucial para el crecimiento sostenido de R.D., proyectado en un rango robusto del <strong>3.5% al 4.5% para el 2026</strong>. Esta agenda impulsa de forma prioritaria la migración a sistemas basados en la nube y la creación de arquitecturas de información estandarizadas.",
+                forMortals: "El gobierno dominicano se ha propuesto conectar todo el país a internet y digitalizar todos sus trámites, obligando a las empresas a renovar sus sistemas informáticos.",
+                trends: ["cloud_native", "platform_eng", "observability"],
+                macroStats: [
+                    { value: "3.5% - 4.5%", label: "PIB Proyectado 2026 (BM)" },
+                    { value: "#1 en LatAm", label: "Crecimiento Relativo (BM)" }
+                ],
+                strategy: "Las empresas locales en R.D. deben diseñar sistemas de información distribuidos y abiertos basados en APIs para alinear sus plataformas con los nuevos ecosistemas públicos que el Estado dominicano está desplegando.",
+                citations: [
+                    { institution: "Presidencia de la República Dominicana", document: "Decreto No. 427-21 que aprueba la Agenda Digital 2030", year: "2021", url: "https://www.optiic.gob.do" },
+                    { institution: "Banco Mundial (BM)", document: "Informe de Perspectivas Económicas de R.D. 2026", year: "2025", url: "https://www.bancomundial.org" }
+                ]
+            },
+            resolucion_teletrabajo: {
+                type: "Fuerza Política / Laboral",
+                title: "Regulación del Teletrabajo (Resolución 54-2020)",
+                desc: "Marco normativo emitido por el Ministerio de Trabajo dominicano para formalizar el trabajo no presencial. En línea con los estudios del <strong>Banco Mundial</strong> sobre la evolución de la fuerza laboral en América Latina, esta ley fomenta una cultura orientada a resultados y eficiencia operativa, catalizando el crecimiento del trabajo híbrido y la flexibilización de los espacios físicos empresariales.",
+                forMortals: "El Ministerio de Trabajo creó reglas de juego para trabajar desde casa de manera formal, impulsando a las empresas a equiparse con sistemas para coordinar equipos remotos.",
+                trends: ["observability", "edge_ai", "platform_eng", "zero_trust_security"],
+                macroStats: [
+                    { value: "45% Híbrido", label: "Adopción Proyectada" },
+                    { value: "OpEx Eficiente", label: "Enfoque de Costo" }
+                ],
+                strategy: "Sustituir los antiguos mecanismos de control físico de horas por sistemas analíticos modernos de telemetría y observabilidad de software para medir la productividad por entregables objetivos.",
+                citations: [
+                    { institution: "Ministerio de Trabajo de la República Dominicana", document: "Resolución No. 54-2020 sobre la Regulación del Teletrabajo", year: "2020", url: "https://mt.gob.do" },
+                    { institution: "Banco Mundial (BM)", document: "El Futuro del Trabajo en América Latina", year: "2024", url: "https://www.bancomundial.org" }
+                ]
+            },
+            interoperabilidad_jm: {
+                type: "Fuerza Regulatoria / Sector Finanzas",
+                title: "Interoperabilidad y Open Banking (Junta Monetaria)",
+                desc: "Directrices de la Junta Monetaria y del <strong>Banco Central de la República Dominicana (BCRD)</strong> para forzar la interoperabilidad en tiempo real entre entidades bancarias y plataformas Fintech. Esta regulación busca expandir la inclusión financiera y democratizar el acceso al crédito, sentando las bases tecnológicas para la aparición masiva de billeteras digitales móviles interoperables.",
+                forMortals: "El Banco Central ordenó que todos los bancos y plataformas de pago locales (fintechs) puedan conectarse entre sí al instante, facilitando transferencias inmediatas por celular.",
+                trends: ["cloud_native", "serverless", "hyperautomation", "zero_trust_security"],
+                macroStats: [
+                    { value: "$4.0B USD", label: "Inversión Ex. Directa (BCRD)" },
+                    { value: "Banca Abierta", label: "Modelo de Conexión" }
+                ],
+                strategy: "Modernizar las capas de acceso a los sistemas core bancarios heredados utilizando microservicios Serverless y APIs abiertas para tolerar picos masivos de consultas transaccionales en tiempo real.",
+                citations: [
+                    { institution: "Junta Monetaria / Banco Central de la R.D. (BCRD)", document: "Reglamento de Sistemas de Pago y Open Banking", year: "2024", url: "https://www.bancentral.gov.do" },
+                    { institution: "Banco Central de la R.D. (BCRD)", document: "Boletín Trimestral de Inversión Extranjera Directa y Tecnología", year: "2024", url: "https://www.bancentral.gov.do" }
+                ]
+            },
+            fuga_talento: {
+                type: "Fuerza Económica / Mercado Laboral",
+                title: "Déficit de Talento Técnico por Fuga Remota",
+                desc: "El mercado dominicano enfrenta una escasez crítica de ingenieros y analistas debido a que empresas extranjeras (EOR) los contratan de forma 100% remota pagando en dólares. El <strong>Banco Mundial</strong> estima que en la República Dominicana persiste una tasa de <strong>informalidad laboral en torno al 57%</strong>, lo que limita la oferta de talento altamente calificado para las PyMEs y corporaciones dominicanas locales, presionando los salarios hacia el alza.",
+                forMortals: "Los mejores programadores dominicanos son contratados por empresas extranjeras para trabajar desde casa ganando en dólares, dejando a las empresas locales con escasez de personal calificado.",
+                trends: ["low_code", "ai_coding"],
+                macroStats: [
+                    { value: "~57%", label: "Tasa Informalidad (BM)" },
+                    { value: "Altísima", label: "Fuga de Talentos (EOR)" }
+                ],
+                strategy: "Estandarizar al 100% el uso de asistentes de IA en programación (Copilots) para aumentar el rendimiento del personal disponible y capacitar a analistas de negocio en plataformas Low-Code para automatizar flujos rápidos.",
+                citations: [
+                    { institution: "Banco Mundial (BM)", document: "Estudio sobre Tasa de Informalidad y Capital Humano en la R.D.", year: "2024", url: "https://www.bancomundial.org" },
+                    { institution: "LinkedIn Corporation", document: "Informe sobre Contratación Remota e Hitos del Empleo Latinoamericano", year: "2025", url: "https://news.linkedin.com" }
+                ]
+            },
+            opex_vs_capex: {
+                type: "Fuerza Económica / Finanzas",
+                title: "Transición Financiera a OpEx (Optimización Presupuesto)",
+                desc: "El <strong>Banco Central de la República Dominicana (BCRD)</strong> ha fijado su <strong>Tasa de Política Monetaria (TPM) en un estable 5.25% anual</strong> para el 2026, con el fin de consolidar la inflación dentro del <strong>rango meta del 4.0% ± 1.0%</strong>. Este costo estable del capital empuja a las juntas directivas a optimizar el flujo de caja, recortando compras masivas de servidores físicos (CapEx) a favor del arrendamiento de capacidad de nube flexible de pago por uso (OpEx).",
+                forMortals: "El costo del dinero y los intereses controlados por el Banco Central motivan a las empresas a no gastar millones comprando servidores propios (CapEx), prefiriendo pagar una suscripción mensual en la nube (OpEx).",
+                trends: ["serverless", "cloud_native", "iac"],
+                macroStats: [
+                    { value: "5.25% Anual", label: "Tasa Política (BCRD)" },
+                    { value: "4.0% ± 1.0%", label: "Meta Inflación (BCRD)" }
+                ],
+                strategy: "Migrar la arquitectura empresarial hacia nubes públicas elásticas gestionadas (Serverless) e Infrastructure as Code para dimensionar los presupuestos de TI en estricta consonancia con los ingresos operativos mensuales.",
+                citations: [
+                    { institution: "Banco Central de la R.D. (BCRD)", document: "Comunicado de la Decisión de Política Monetaria - TPM 5.25% anual", year: "2025", url: "https://www.bancentral.gov.do" },
+                    { institution: "Banco Central de la R.D. (BCRD)", document: "Encuesta Mensual de Expectativas Macroeconómicas - Rango Meta de Inflación", year: "2025", url: "https://www.bancentral.gov.do" }
+                ]
+            },
+            costos_energia: {
+                type: "Fuerza Económica / Costos de Operación",
+                title: "Elevados Costos de Energía Eléctrica Corporativa en RD",
+                desc: "Los altos costos por kilovatio/hora de energía eléctrica y climatización en la República Dominicana representan una de las mayores cargas de costo fijo operativo en los balances corporativos analizados. Datos del <strong>Banco Mundial</strong> enfatizan la necesidad de transitar hacia infraestructuras eficientes para garantizar la sostenibilidad y competitividad de las cadenas de valor.",
+                forMortals: "La factura de luz de las empresas en el país es sumamente alta, por lo que resulta mucho más barato mudar todo el almacenamiento digital a la nube para no tener que gastar en electricidad y aire acondicionado para servidores.",
+                trends: ["green_computing", "cloud_native"],
+                macroStats: [
+                    { value: "Costo Alto", label: "Tarifa Eléctrica RD" },
+                    { value: "Reducción 40%", label: "Ahorro Nube Compartida" }
+                ],
+                strategy: "Tercerizar el almacenamiento masivo y el procesamiento a centros de datos remotos verdes compartidos (Cloud Computing) que cuenten con certificación de Green Computing y optimización de energía.",
+                citations: [
+                    { institution: "Banco Mundial (BM)", document: "Estudio de Sostenibilidad y Transición Energética de República Dominicana", year: "2024", url: "https://www.bancomundial.org" },
+                    { institution: "Superintendencia de Electricidad (SIE)", document: "Tarifas Eléctricas Vigentes para Clientes Corporativos", year: "2025", url: "https://sie.gob.do" }
+                ]
+            },
+            bvrd_market: {
+                type: "Fuerza Económica / Mercado de Capitales",
+                title: "Democratización Digital de la Bolsa (BVRD)",
+                desc: "La Bolsa y Mercados de Valores de la República Dominicana (BVRD) está experimentando una digitalización exponencial. Con volúmenes de transacciones históricos que superan los <strong>$10,000 millones de USD anuales</strong>, los Puestos de Bolsa (como JMMB, CCI, Alpha) están desarrollando activamente portales transaccionales móviles y web para permitir que inversionistas minoristas (retail) operen en tiempo real en los mercados primario y secundario.",
+                forMortals: "La Bolsa de Valores dominicana está moviendo sumas millonarias y las apps móviles de inversión están de moda, obligando a los intermediarios financieros a crear sistemas ultra rápidos y escalables en tiempo real.",
+                trends: ["cloud_native", "hyperautomation", "platform_eng"],
+                macroStats: [
+                    { value: ">$10.0B USD", label: "Volumen Transado (BVRD)" },
+                    { value: "API Real-Time", label: "Canal de Operación" }
+                ],
+                strategy: "Desarrollar plataformas transaccionales nativas de la nube altamente escalables, implementando microservicios web y flujos hiperautomatizados para agilizar los procesos de clearing, compensación y reportes regulatorios en tiempo real.",
+                citations: [
+                    { institution: "Bolsa y Mercados de Valores de la R.D. (BVRD)", document: "Memoria Anual de Operaciones y Volumen del Mercado Secundario", year: "2024", url: "https://www.bvrd.com.do" },
+                    { institution: "Superintendencia del Mercado de Valores (SIMV)", document: "Estadísticas del Mercado de Valores Dominicano bajo la Ley 249-17", year: "2025", url: "https://simv.gob.do" }
+                ]
+            }
+        };
+
+        let filteredDataset = [...dataset];
+        let currentChartType = 'bar';
+        let scientificChartInstance = null;
+        let selectedRowId = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            applyFilters();
+            selectPestel('agenda_2030', document.getElementById('btnP1'));
+        });
+
+        // Alternar vistas principales
+        function switchView(view) {
+            document.getElementById('tabBtn1').classList.remove('active');
+            document.getElementById('tabBtn2').classList.remove('active');
+            document.getElementById('tabBtn3').classList.remove('active');
+            document.getElementById('panelExplorer').classList.remove('active');
+            document.getElementById('panelMacro').classList.remove('active');
+            document.getElementById('panelSteam').classList.remove('active');
+
+            const sidebar = document.getElementById('sidebarControls');
+
+            if (view === 'explorer') {
+                document.getElementById('tabBtn1').classList.add('active');
+                document.getElementById('panelExplorer').classList.add('active');
+                sidebar.style.display = 'flex';
+            } else if (view === 'macro') {
+                document.getElementById('tabBtn2').classList.add('active');
+                document.getElementById('panelMacro').classList.add('active');
+                sidebar.style.display = 'none';
+            } else {
+                document.getElementById('tabBtn3').classList.add('active');
+                document.getElementById('panelSteam').classList.add('active');
+                sidebar.style.display = 'none';
+            }
+        }
+
+        // --- SISTEMA INTERACTIVO DE PESTEL CRUZADO ---
+        function selectPestel(key, element) {
+            const cards = document.querySelectorAll('.pestel-btn-card');
+            cards.forEach(c => c.classList.remove('active'));
+
+            if (element) {
+                element.classList.add('active');
+            } else {
+                const fallback = document.getElementById('btnP1');
+                if (fallback) fallback.classList.add('active');
+            }
+
+            const data = pestelData[key];
+            const output = document.getElementById('crossOutput');
+            if (!data || !output) return;
+
+            // Mapear y cruzar las tendencias específicas
+            let trendsHtml = '';
+            data.trends.forEach(trendId => {
+                const trend = dataset.find(t => t.id === trendId);
+                if (trend) {
+                    let badgeClass = 'badge-dev';
+                    if (trend.level === 'empresarial') badgeClass = 'badge-emp';
+                    else if (trend.level === 'infraestructura') badgeClass = 'badge-infra';
+                    else if (trend.level === 'estrategico') badgeClass = 'badge-fut';
+
+                    trendsHtml += `
+                        <div class="crossed-trend-row">
+                            <div class="crossed-trend-name">
+                                ${trend.name} 
+                                <span>Demanda: ${trend.demandPct}%</span>
+                            </div>
+                            <span class="table-badge ${badgeClass}" style="align-self: start;">Capa: ${trend.level}</span>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.4;">${trend.desc}</p>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" style="width: ${trend.demandPct}%"></div>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            // Generar indicadores macro
+            let macroBadgesHtml = '';
+            data.macroStats.forEach(stat => {
+                macroBadgesHtml += `
+                    <div class="macro-data-badge">
+                        <span class="macro-badge-val">${stat.value}</span>
+                        <span class="macro-badge-lbl">${stat.label}</span>
+                    </div>
+                `;
+            });
+
+            // Generar lista de citas verificadas
+            let citationsHtml = '';
+            if (data.citations && data.citations.length > 0) {
+                data.citations.forEach(c => {
+                    citationsHtml += `
+                        <li style="margin-bottom: 0.8rem; border-left: 2.5px solid var(--utesa-gold); padding-left: 0.6rem; line-height: 1.4;">
+                            <strong style="color: var(--utesa-green-deep); font-size: 0.85rem;">${c.institution}</strong> (${c.year})<br/>
+                            <span style="font-size: 0.8rem; font-style: italic; color: var(--text-secondary);">${c.document}</span><br/>
+                            <a href="${c.url}" target="_blank" style="font-size: 0.72rem; color: var(--utesa-green-medium); text-decoration: underline; font-family: var(--font-mono);">
+                                ${c.url.replace("https://", "")} ↗
+                            </a>
+                        </li>
+                    `;
+                });
+            } else {
+                citationsHtml = '<li style="color: var(--text-muted); font-size: 0.8rem;">Citas académicas en proceso de carga.</li>';
+            }
+
+            // Inyectar HTML dinámico
+            output.innerHTML = `
+                <div class="cross-header-wrapper">
+                    <div>
+                        <span class="cross-meta">${data.type}</span>
+                        <h3 class="cross-title">${data.title}</h3>
+                    </div>
+                    <div class="macro-data-badge-grid">
+                        ${macroBadgesHtml}
+                    </div>
+                </div>
+                
+                <!-- Caja Explicativa para Mortales -->
+                <div class="drawer-section" style="background-color: var(--utesa-gold-light); border-left: 4.5px solid var(--utesa-gold); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--shadow-sm);">
+                    <span class="drawer-section-title" style="color: var(--utesa-green-deep); font-weight: bold; font-size: 0.72rem; letter-spacing: 0.5px;">💡 En palabras sencillas (Para Mortales)</span>
+                    <p class="cross-body-desc" style="font-size: 0.9rem; font-weight: 600; color: var(--utesa-green-deep); margin-top: 0.3rem; line-height: 1.45;">${data.forMortals}</p>
+                </div>
+
+                <div class="drawer-section">
+                    <span class="drawer-section-title">Análisis de Entorno y Variables Oficiales (BCRD / Banco Mundial / BVRD)</span>
+                    <p class="cross-body-desc">${data.desc}</p>
+                </div>
+                
+                <div class="drawer-section">
+                    <span class="drawer-section-title">➡️ Tendencias Tecnológicas Cruzadas (Impulsadas)</span>
+                    <div class="crossed-trends-box">
+                        ${trendsHtml}
+                    </div>
+                </div>
+                
+                <div class="drawer-section" style="border-top: 1.5px solid var(--border-color); padding-top: 1rem;">
+                    <span class="drawer-section-title" style="color: var(--utesa-green-medium);">💡 Estrategia Sugerida para Líderes de Negocio</span>
+                    <p class="cross-body-desc" style="font-size: 0.88rem; font-style: italic;">"${data.strategy}"</p>
+                </div>
+
+                <!-- Bloque de Veracidad y Citación Académica Oficial -->
+                <div class="drawer-section" style="border-top: 1.5px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem;">
+                    <span class="drawer-section-title" style="color: var(--utesa-green-deep); font-weight: bold; display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; letter-spacing: 0.5px;">
+                        🔒 Verificación de Veracidad y Fuentes Oficiales
+                    </span>
+                    <ul class="citation-list" style="margin-top: 0.6rem; font-size: 0.8rem; color: var(--text-secondary); list-style: none; padding-left: 0;">
+                        ${citationsHtml}
+                    </ul>
+                </div>
+            `;
+        }
+
+        // Aplicar filtros
+        function applyFilters() {
+            const searchVal = document.getElementById('dbSearch').value.toLowerCase();
+            const levelCheckboxes = document.querySelectorAll('input[name="levelFilter"]:checked');
+            const activeLevels = Array.from(levelCheckboxes).map(cb => cb.value);
+            const activeCat = document.querySelector('input[name="catFilter"]:checked').value;
+
+            filteredDataset = dataset.filter(item => {
+                const matchesSearch = item.name.toLowerCase().includes(searchVal) ||
+                                      item.desc.toLowerCase().includes(searchVal) ||
+                                      item.tags.some(t => t.toLowerCase().includes(searchVal));
+                
+                const matchesLevel = activeLevels.includes(item.level);
+                const matchesCategory = activeCat === 'todos' || item.category === activeCat;
+
+                return matchesSearch && matchesLevel && matchesCategory;
+            });
+
+            const sortVal = document.getElementById('dbSort').value;
+            if (sortVal === 'demand_desc') {
+                filteredDataset.sort((a, b) => b.demandPct - a.demandPct);
+            } else if (sortVal === 'demand_asc') {
+                filteredDataset.sort((a, b) => a.demandPct - b.demandPct);
+            } else if (sortVal === 'alpha') {
+                filteredDataset.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (sortVal === 'level') {
+                filteredDataset.sort((a, b) => a.level.localeCompare(b.level));
+            }
+
+            renderStats();
+            renderTable();
+            renderChart();
+        }
+
+        function handleFilterChange() {
+            applyFilters();
+        }
+
+        document.getElementById('dbSearch').addEventListener('input', () => {
+            applyFilters();
+        });
+
+        function renderStats() {
+            const total = filteredDataset.length;
+            const actives = filteredDataset.filter(item => item.category !== 'declive');
+            const sumActives = actives.reduce((acc, curr) => acc + curr.demandPct, 0);
+            const meanActives = actives.length > 0 ? (sumActives / actives.length).toFixed(1) + '%' : '0.0%';
+            const maxVal = filteredDataset.length > 0 ? Math.max(...filteredDataset.map(d => d.demandPct)) + '%' : '0%';
+            const declines = filteredDataset.filter(item => item.category === 'declive').length;
+            const pctDecline = total > 0 ? ((declines / total) * 100).toFixed(1) + '%' : '0.0%';
+
+            document.getElementById('statTotal').innerText = total;
+            document.getElementById('statMean').innerText = meanActives;
+            document.getElementById('statMax').innerText = maxVal;
+            document.getElementById('statDecline').innerText = pctDecline;
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            if (filteredDataset.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="4" class="no-results">Sin datos coincidentes. Ajuste los filtros.</td></tr>`;
+                return;
+            }
+
+            filteredDataset.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = 'clickable-row';
+                if (selectedRowId === item.id) {
+                    tr.classList.add('active-row');
+                }
+                tr.onclick = () => selectRow(item);
+
+                let levelBadgeClass = 'badge-emp';
+                if (item.level === 'desarrollo') levelBadgeClass = 'badge-dev';
+                else if (item.level === 'infraestructura') levelBadgeClass = 'badge-infra';
+                else if (item.level === 'estrategico') levelBadgeClass = 'badge-fut';
+
+                let catLabel = item.category;
+                let catBadgeClass = 'badge-dev';
+                if (item.category === 'altisima') { catLabel = 'Altísima'; catBadgeClass = 'badge-emp'; }
+                else if (item.category === 'acelerado') { catLabel = 'Acelerado'; catBadgeClass = 'badge-dev'; }
+                else if (item.category === 'futuro_cat') { catLabel = 'Futuro'; catBadgeClass = 'badge-fut'; }
+                else if (item.category === 'declive') { catLabel = 'Declive'; catBadgeClass = 'badge-dec'; }
+
+                tr.innerHTML = `
+                    <td><strong>${item.name}</strong></td>
+                    <td><span class="table-badge ${levelBadgeClass}">${item.level}</span></td>
+                    <td><span class="table-badge ${catBadgeClass}">${catLabel}</span></td>
+                    <td class="mono-val text-right" style="text-align: right; font-weight: bold; color: ${item.category === 'declive' ? '#ff3e3e' : '#0f172a'};">${item.demandPct}%</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function selectRow(item) {
+            selectedRowId = item.id;
+            const rows = document.querySelectorAll('#tableBody tr');
+            rows.forEach((r, idx) => {
+                if (filteredDataset[idx] && filteredDataset[idx].id === item.id) {
+                    r.classList.add('active-row');
+                } else {
+                    r.classList.remove('active-row');
+                }
+            });
+            openDrawer(item);
+        }
+
+        function openDrawer(item) {
+            const drawer = document.getElementById('detailsDrawer');
+            
+            let badgeClass = 'badge-emp';
+            if (item.level === 'desarrollo') badgeClass = 'badge-dev';
+            else if (item.level === 'infraestructura') badgeClass = 'badge-infra';
+            else if (item.level === 'estrategico') badgeClass = 'badge-fut';
+            
+            const badge = document.getElementById('drawerBadge');
+            badge.className = `table-badge ${badgeClass}`;
+            badge.innerText = item.level;
+
+            document.getElementById('drawerTitle').innerText = item.name;
+            document.getElementById('drawerForMortals').innerText = item.forMortals;
+            document.getElementById('drawerDesc').innerText = item.desc;
+            document.getElementById('drawerContext').innerText = item.context;
+
+            const tagsContainer = document.getElementById('drawerTags');
+            tagsContainer.innerHTML = '';
+            item.tags.forEach(t => {
+                const span = document.createElement('span');
+                span.className = 'drawer-tag';
+                span.innerText = t;
+                tagsContainer.appendChild(span);
+            });
+
+            drawer.classList.add('active');
+        }
+
+        function closeDrawer() {
+            document.getElementById('detailsDrawer').classList.remove('active');
+            selectedRowId = null;
+            document.querySelectorAll('#tableBody tr').forEach(r => r.classList.remove('active-row'));
+        }
+
+        function switchChartType(type) {
+            currentChartType = type;
+            document.getElementById('btnBar').classList.remove('active');
+            document.getElementById('btnRadar').classList.remove('active');
+            
+            if (type === 'bar') document.getElementById('btnBar').classList.add('active');
+            else document.getElementById('btnRadar').classList.add('active');
+
+            renderChart();
+        }
+
+        function renderChart() {
+            const canvas = document.getElementById('scientificChart');
+            if (scientificChartInstance) {
+                scientificChartInstance.destroy();
+            }
+
+            const topData = filteredDataset.slice(0, 8);
+            const labels = topData.map(item => item.name);
+            const values = topData.map(item => item.demandPct);
+
+            if (currentChartType === 'bar') {
+                scientificChartInstance = new Chart(canvas, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Adopción Proyectada (%)',
+                            data: values,
+                            backgroundColor: topData.map(item => {
+                                if (item.category === 'declive') return 'rgba(220, 38, 38, 0.6)';
+                                return 'rgba(12, 201, 132, 0.8)'; // UTESA Green
+                            }),
+                            borderColor: topData.map(item => {
+                                if (item.category === 'declive') return '#dc2626';
+                                return '#106a37';
+                            }),
+                            borderWidth: 1.5,
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            x: {
+                                grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                                ticks: { color: '#475569', font: { family: 'Inter', size: 9 } }
+                            },
+                            y: {
+                                grid: { display: false },
+                                ticks: { color: '#0f172a', font: { family: 'Inter', size: 9, weight: 'bold' } }
+                            }
+                        }
+                    }
+                });
+            } else if (currentChartType === 'radar') {
+                const levels = ['empresarial', 'desarrollo', 'infraestructura', 'estrategico'];
+                const levelLabels = ['Empresarial', 'Desarrollo', 'Infraestructura', 'Estratégico'];
+                const levelAverages = levels.map(l => {
+                    const levelData = filteredDataset.filter(t => t.level === l);
+                    if (levelData.length === 0) return 0;
+                    const sum = levelData.reduce((acc, curr) => acc + curr.demandPct, 0);
+                    return Math.round(sum / levelData.length);
+                });
+
+                scientificChartInstance = new Chart(canvas, {
+                    type: 'radar',
+                    data: {
+                        labels: levelLabels,
+                        datasets: [{
+                            label: 'Adopción Promedio (%)',
+                            data: levelAverages,
+                            backgroundColor: 'rgba(12, 201, 132, 0.15)',
+                            borderColor: '#0cc984',
+                            borderWidth: 2.5,
+                            pointBackgroundColor: '#106a37',
+                            pointBorderColor: '#fff',
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            r: {
+                                grid: { color: 'rgba(0, 0, 0, 0.06)' },
+                                angleLines: { color: 'rgba(0, 0, 0, 0.06)' },
+                                ticks: {
+                                    backdropColor: 'transparent',
+                                    color: '#475569',
+                                    font: { size: 9 }
+                                },
+                                pointLabels: {
+                                    color: '#0f172a',
+                                    font: { family: 'Inter', size: 9, weight: 'bold' }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        function exportFilteredCSV() {
+            if (filteredDataset.length === 0) {
+                alert("No hay datos para exportar.");
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += "ID,Nombre,Nivel,Categoria,Demanda_Pct,Descripcion,Contexto\n";
+
+            filteredDataset.forEach(item => {
+                const escapedDesc = `"${item.desc.replace(/"/g, '""')}"`;
+                const escapedContext = `"${item.context.replace(/"/g, '""')}"`;
+                csvContent += `${item.id},"${item.name}",${item.level},${item.category},${item.demandPct},${escapedDesc},${escapedContext}\n`;
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `analisis_entorno_y_tendencias_2026.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+
+        // ========== TAB 3: BRECHA DE TALENTO STEAM ==========
+        const gapData = [
+            { skill: 'Ciberseguridad Zero Trust / SIEM', demand: 93, supply: 8,  urgency: 'critical', label: '🔴 CRÍTICA' },
+            { skill: 'Cloud Engineering (AWS / Azure)',   demand: 94, supply: 15, urgency: 'critical', label: '🔴 CRÍTICA' },
+            { skill: 'DevOps / IaC (Terraform/K8s)',     demand: 91, supply: 12, urgency: 'critical', label: '🔴 CRÍTICA' },
+            { skill: 'IA Aplicada / LLMs / MLOps',       demand: 98, supply: 10, urgency: 'critical', label: '🔴 CRÍTICA' },
+            { skill: 'Prompt Engineering / IA Generativa',demand: 85, supply: 5,  urgency: 'critical', label: '🔴 CRÍTICA' },
+            { skill: 'Observability (Grafana/Prometheus)',demand: 88, supply: 8,  urgency: 'critical', label: '🔴 CRÍTICA' },
+            { skill: 'Inglés Técnico (B2-C1 real)',       demand: 95, supply: 20, urgency: 'high',     label: '🟠 ALTA' },
+            { skill: 'Data Engineering / ETL Pipelines', demand: 82, supply: 18, urgency: 'high',     label: '🟠 ALTA' },
+            { skill: 'RPA / Power Automate',             demand: 78, supply: 22, urgency: 'high',     label: '🟠 ALTA' },
+            { skill: 'Low-Code / Power Apps',            demand: 75, supply: 30, urgency: 'medium',   label: '🟡 MEDIA' },
+            { skill: 'Python Avanzado (ML/Data)',        demand: 80, supply: 35, urgency: 'medium',   label: '🟡 MEDIA' },
+            { skill: 'Java / Spring Boot Empresarial',   demand: 78, supply: 75, urgency: 'ok',       label: '✅ CUBIERTA' },
+            { skill: 'React / JavaScript Frontend',      demand: 70, supply: 68, urgency: 'ok',       label: '✅ CUBIERTA' },
+            { skill: 'SQL / Bases de Datos',             demand: 72, supply: 70, urgency: 'ok',       label: '✅ CUBIERTA' },
+        ];
+
+        const careerData = [
+            {
+                priority: 1,
+                emoji: '🔐',
+                title: 'Ingeniería en Ciberseguridad',
+                sub: 'Déficit de 329,000 profesionales en LATAM. Bancos y telcos de RD contratan activamente. Solo INTEC la ofrece actualmente.',
+                tags: ['Zero Trust', 'SIEM', 'Ethical Hacking', 'Cloud Security', 'SOC'],
+                demandLabel: 'Demanda: 93% | Oferta local: 8%'
+            },
+            {
+                priority: 1,
+                emoji: '🤖',
+                title: 'Ing. en IA y Ciencia de Datos',
+                sub: 'Tendencia #1 global (Gartner 2026). UNDP: 73.3% de dominicanos quiere formarse en IA. Solo INTEC la tiene.',
+                tags: ['Machine Learning', 'LLMs', 'Python', 'MLOps', 'Agentic AI'],
+                demandLabel: 'Demanda: 98% | Oferta local: 10%'
+            },
+            {
+                priority: 1,
+                emoji: '☁️',
+                title: 'Tecnología en Cloud y DevOps',
+                sub: 'NINGUNA universidad en RD la ofrece. Todos los bancos dominicanos tienen vacantes sin cubrir en cloud.',
+                tags: ['AWS', 'Azure', 'Terraform', 'Kubernetes', 'CI/CD'],
+                demandLabel: 'Demanda: 94% | Oferta local: 12%'
+            },
+            {
+                priority: 2,
+                emoji: '📊',
+                title: 'Tecnología en Ingeniería de Datos',
+                sub: 'Banca, BVRD y retail necesitan pipelines de datos. ETL, Spark, dbt son skills inexistentes en perfiles RD.',
+                tags: ['Apache Spark', 'dbt', 'Airflow', 'BigQuery', 'ETL'],
+                demandLabel: 'Demanda: 82% | Oferta local: 18%'
+            },
+            {
+                priority: 2,
+                emoji: '🏭',
+                title: 'Ing. en Automatización y Robótica Industrial',
+                sub: 'Zonas francas y manufactura en crecimiento. RPA + cobots + IoT industrial sin formación local.',
+                tags: ['PLC', 'RPA', 'Cobots', 'IoT Industrial', 'Mecatrónica'],
+                demandLabel: 'Mercado: Medio-Alto | Crecimiento: Acelerado'
+            },
+            {
+                priority: 3,
+                emoji: '🎮',
+                title: 'Tecnología en Animación Digital y XR',
+                sub: 'Alta empleabilidad remota. ITLA ya la tiene — UTESA puede diferenciarse con enfoque en XR y metaverso empresarial.',
+                tags: ['Unity', 'Unreal Engine', 'VR/AR', 'Blender', 'UX 3D'],
+                demandLabel: 'Mercado remoto LATAM: Alta demanda'
+            },
+        ];
+
+        function renderGapList() {
+            const container = document.getElementById('gapList');
+            if (!container) return;
+            container.innerHTML = '';
+            gapData.forEach(item => {
+                const urgencyClass = item.urgency === 'critical' ? 'gap-critical'
+                                   : item.urgency === 'high' ? 'gap-high'
+                                   : item.urgency === 'medium' ? 'gap-medium' : 'gap-ok';
+                container.innerHTML += `
+                    <div class="gap-row">
+                        <div class="gap-label-row">
+                            <span class="gap-label">${item.skill}</span>
+                            <span class="gap-badge ${urgencyClass}">${item.label}</span>
+                        </div>
+                        <div class="gap-bars">
+                            <div class="gap-bar-row">
+                                <span style="width:60px;">Demanda</span>
+                                <div class="gap-bar-track"><div class="gap-bar-fill fill-demand" style="width:${item.demand}%"></div></div>
+                                <span style="width:32px;text-align:right;">${item.demand}%</span>
+                            </div>
+                            <div class="gap-bar-row">
+                                <span style="width:60px;">Oferta RD</span>
+                                <div class="gap-bar-track"><div class="gap-bar-fill fill-supply" style="width:${item.supply}%"></div></div>
+                                <span style="width:32px;text-align:right;">${item.supply}%</span>
+                            </div>
+                        </div>
+                    </div>`;
+            });
+        }
+
+        function renderCareerList() {
+            const container = document.getElementById('careerList');
+            if (!container) return;
+            container.innerHTML = '';
+            careerData.forEach(item => {
+                const cls = item.priority === 2 ? 'career-card priority-2' : item.priority === 3 ? 'career-card priority-3' : 'career-card';
+                const tagsHtml = item.tags.map(t => `<span class="career-tag">${t}</span>`).join('');
+                const priorityLabel = item.priority === 1 ? 'Prioridad 1 — Inmediata' : item.priority === 2 ? 'Prioridad 2 — Mediano Plazo' : 'Prioridad 3 — Largo Plazo';
+                container.innerHTML += `
+                    <div class="${cls}" style="margin-bottom:0.8rem;">
+                        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.5rem;flex-wrap:wrap;">
+                            <span class="career-title">${item.emoji} ${item.title}</span>
+                            <span class="career-demand-badge">${priorityLabel}</span>
+                        </div>
+                        <p class="career-sub">${item.sub}</p>
+                        <p style="font-size:0.72rem;font-family:var(--font-mono);color:var(--utesa-green-medium);font-weight:600;">${item.demandLabel}</p>
+                        <div class="career-tags">${tagsHtml}</div>
+                    </div>`;
+            });
+        }
+
+        // Render on DOM load + when tab 3 is clicked
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGapList();
+            renderCareerList();
+        });
+
+    </script>
+</body>
+</html>
