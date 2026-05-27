@@ -19,11 +19,11 @@
 
 ## 1. Introducción
 
-El desarrollo y competitividad de las economías emergentes del Caribe se encuentran intrínsecamente ligados a su capacidad de absorción y asimilación de tecnologías de frontera. En el caso de la República Dominicana, el crecimiento económico sostenido del Producto Interno Bruto (PIB) proyectado en un rango del 3.5% al 4.5% para el año fiscal 2026 por el Banco Mundial (2025) ejerce una presión directa sobre la infraestructura productiva local. Este fenómeno se enmarca en políticas estatales explícitas como la Agenda Digital 2030, formalizada bajo el Decreto Presidencial No. 427-21, que busca el cierre acelerado de las brechas de conectividad y la digitalización de los procesos estatales. No obstante, las asimetrías del mercado de talento representan el principal cuello de botella sociotécnico, registrando un preocupante 40% de empleadores que experimentan escasez para cubrir vacantes tecnológicas avanzadas (ManpowerGroup, 2025).
+El desarrollo y competitividad de las economías emergentes del Caribe se encuentran intrínsecamente ligados a su capacidad de absorción y asimilación de tecnologías de frontera. En el caso de la República Dominicana, el crecimiento económico sostenido del Producto Interno Bruto (PIB) proyectado en un rango del 3.5% al 4.5% para el año fiscal 2026 por el Banco Mundial (2025) ejerce una presión directa sobre la infraestructura productiva local. Este fenómeno se enmarca en políticas estatales explícitas como la Agenda Digital 2030, formalizada bajo el Decreto Presidencial No. 427-21 (Presidencia de la República Dominicana, 2021), que busca el cierre acelerado de las brechas de conectividad y la digitalización de los procesos estatales. No obstante, las asimetrías del mercado de talento representan el principal cuello de botella sociotécnico, registrando un preocupante 40% de empleadores que experimentan escasez para cubrir vacantes tecnológicas avanzadas (ManpowerGroup, 2025).
 
-Esta problemática se ve agudizada por dos fenómenos concurrentes: por un lado, la desalineación entre los programas de estudio ofrecidos por las instituciones de educación superior (IES) locales y los requerimientos prácticos de la industria digital moderna; y por otro, la "fuga de talentos remota", donde ingenieros locales altamente capacitados son contratados directamente bajo modalidades de teletrabajo por corporaciones internacionales, devengando salarios en dólares y desplazando la oferta laboral fuera del alcance de las organizaciones locales.
+Esta problemática se ve agudizada por dos fenómenos concurrentes en el ecosistema laboral local: por un lado, la desalineación entre los programas de estudio ofrecidos por las instituciones de educación superior (IES) locales y los requerimientos prácticos de la industria digital moderna; y por otro, la fuga de talentos en modalidad remota. Este último fenómeno ocurre cuando ingenieros locales altamente capacitados son contratados de manera directa por corporaciones internacionales bajo esquemas de subcontratación extranjera (LinkedIn Corporation, 2026), devengando salarios competitivos en moneda extranjera y retirando la oferta de talento calificado del mercado corporativo dominicano local. Adicionalmente, el mercado laboral dominicano opera bajo una persistente tasa de informalidad en torno al 57% (Banco Mundial, 2024), lo que restringe significativamente la base de profesionales insertados en estructuras corporativas estables y con programas de capacitación formales.
 
-El propósito de este artículo es analizar empíricamente la magnitud de esta desalineación en el mercado dominicano durante el bienio 2025-2026. A través de un cruce metodológico riguroso entre la demanda laboral activa y la oferta curricular de grado, se propone un modelo de rediseño educativo basado en datos que permita a las universidades dominicanas actuar como verdaderos catalizadores de la competitividad nacional.
+El propósito de este artículo es analizar empíricamente la magnitud de esta desalineación en el mercado dominicano durante el bienio 2025-2026. A través de un cruce metodológico riguroso entre la demanda laboral activa (LinkedIn Corporation, 2026; BeBee & Tu Empleo RD, 2026) y la oferta curricular de grado, se propone un modelo de rediseño educativo basado en datos que permita a las universidades dominicanas actuar como verdaderos catalizadores de la competitividad nacional.
 
 ---
 
@@ -32,12 +32,12 @@ El propósito de este artículo es analizar empíricamente la magnitud de esta d
 ### 2.1. Fuerzas Macroeconómicas y Financieras como Impulsores de la Nube
 Para comprender la demanda de perfiles tecnológicos en un país en desarrollo, resulta insuficiente examinar el software de manera aislada. La adopción tecnológica es un efecto directo de variables económicas subyacentes. 
 
-En la República Dominicana, el Banco Central (BCRD) ha mantenido su Tasa de Política Monetaria (TPM) en 5.25% anual para el 2026, logrando consolidar la inflación interanual dentro del rango meta de 4.0% ± 1.0% (Banco Central de la República Dominicana, 2025). En un entorno de costo de capital controlado pero restrictivo para el endeudamiento de capital intensivo, las juntas directivas de las organizaciones priorizan la optimización radical del flujo de caja. Esto incentiva de manera directa la transición del presupuesto tecnológico de CapEx (gasto de capital en servidores físicos e infraestructura local) hacia OpEx (gasto operativo mediante nubes elásticas de pago por uso). 
+En la República Dominicana, el Banco Central (BCRD) ha mantenido su Tasa de Política Monetaria (TPM) en 5.25% anual para el 2026, logrando consolidar la inflación interanual dentro del rango meta de 4.0% ± 1.0% (Banco Central de la República Dominicana, 2025). En un entorno de costo de capital controlado pero restrictivo para el endeudamiento de capital intensivo, las juntas directivas de las organizaciones priorizan la optimización radical del flujo de caja. Esto incentiva de manera directa la transición del presupuesto tecnológico de CapEx (gasto de capital en servidores físicos e infraestructura local) hacia OpEx (gasto operativo mediante nubes elásticas de pago por uso), en concordancia con los marcos de transición presupuestaria sugeridos para mercados emergentes (Banco Mundial, 2025). 
 
-Este impulso macroeconómico se ve acelerado por el elevado costo por kilovatio/hora de energía eléctrica corporativa en el país (Superintendencia de Electricidad, 2025). Al trasladar la carga de climatización y mantenimiento de servidores locales hacia centros de datos verdes compartidos operados de manera remota (Green Computing), las empresas logran reducciones de costos fijos de hasta un 40% (Banco Mundial, 2024).
+Este impulso macroeconómico se ve acelerado por el elevado costo por kilovatio/hora de la tarifa de energía eléctrica corporativa en el país (Superintendencia de Electricidad, 2025). Al trasladar la carga de climatización y mantenimiento de servidores locales hacia centros de datos verdes compartidos operados de manera remota (Green Computing), las empresas logran reducciones de costos fijos de hasta un 40% (Banco Mundial, 2024).
 
 ### 2.2. La Brecha de Habilidades y el Ecosistema Educativo STEAM
-La literatura internacional sobre el futuro del empleo postula que la automatización y la inteligencia artificial redefinirán drásticamente las tareas laborales. El World Economic Forum (2025) estima que el 66.3% de las empresas requerirán estrategias intensivas de reskilling y reentrenamiento interno en los próximos años para mantener su competitividad operativa. 
+La literatura internacional sobre el futuro del empleo postula que la automatización y la inteligencia artificial redefinirán drásticamente las tareas laborales. El World Economic Forum (2025) estima que el 66.3% de las empresas requerirán estrategias intensivas de reskilling y reentrenamiento interno en los próximos años para mantener su competitividad operativa frente a los modelos generativos. 
 
 En el plano local, este requerimiento se vuelve crítico ante la baja tasa de trabajadores dominicanos con habilidades digitales intensivas, estimada en apenas un 10% del total de la fuerza laboral calificada (Banco Mundial, 2025). Asimismo, el Programa de las Naciones Unidas para el Desarrollo (PNUD, 2025) señala que el 68.9% de los dominicanos con acceso a internet ya utiliza herramientas de Inteligencia Artificial de manera semanal. Esta rápida adopción informal de los usuarios contrasta severamente con la oferta de carreras estructuradas en las IES locales, donde áreas críticas como la Ciberseguridad enfrentan deficits regionales masivos de más de 329,000 profesionales en toda Latinoamérica (ISC², 2025).
 
@@ -45,9 +45,9 @@ En el plano local, este requerimiento se vuelve crítico ante la baja tasa de tr
 
 ## 3. Metodología
 
-La presente investigación adoptó un diseño no experimental, descriptivo-causal y de corte transversal. El estudio operacionaliza el entorno macroeconómico y regulatorio a través de variables analíticas formales obtenidas de los boletines oficiales del Banco Central de la República Dominicana (TPM en 5.25% y metas de inflación) y del Banco Mundial (tasa de informalidad laboral del 57%). 
+La presente investigación adoptó un diseño no experimental, descriptivo-causal y de corte transversal. El estudio operacionaliza el entorno macroeconómico y regulatorio a través de variables analíticas formales obtenidas de los boletines oficiales del Banco Central de la República Dominicana (Banco Central de la República Dominicana, 2025) y de los informes económicos de país del Banco Mundial (Banco Mundial, 2024, 2025). 
 
-Para cuantificar la demanda laboral de vanguardia, se implementó una auditoría empírica automatizada sobre las interfaces de programación de aplicaciones (APIs) de LinkedIn Jobs y BeBee a mayo de 2026, capturando N = 20 variables tecnológicas clave del entorno nacional. La correspondencia curricular de grado se evaluó de manera exhaustiva en las cinco instituciones académicas dominicanas líderes (N = 5) mediante la normalización matemática del Índice de Cobertura Curricular (ICC).
+Para cuantificar la demanda laboral de vanguardia, se implementó una auditoría empírica automatizada sobre las interfaces de programación de aplicaciones (APIs) de LinkedIn Jobs y BeBee a mayo de 2026 (LinkedIn Corporation, 2026; BeBee & Tu Empleo RD, 2026), capturando N = 20 variables tecnológicas clave del entorno nacional. La correspondencia curricular de grado se evaluó de manera exhaustiva en las cinco instituciones académicas dominicanas líderes (N = 5) mediante la normalización matemática del Índice de Cobertura Curricular (ICC).
 
 ```mermaid
 graph TD
@@ -58,7 +58,7 @@ graph TD
 ```
 
 ### 3.1. Fase 1: Auditoría de Campo de la Demanda Laboral
-Se realizó una auditoría empírica de ofertas de empleo activas en la República Dominicana entre enero y mayo de 2026. Para ello, se estructuraron búsquedas automatizadas parametrizadas en las API de LinkedIn Jobs y BeBee utilizando descriptores técnicos específicos (inteligencia artificial, ciberseguridad, data engineer, cloud native, devops, manual testing). 
+Se realizó una auditoría empírica de ofertas de empleo activas en la República Dominicana entre enero y mayo de 2026. Para ello, se estructuraron búsquedas automatizadas parametrizadas en las API de LinkedIn Jobs y BeBee utilizando descriptores técnicos específicos (inteligencia artificial, ciberseguridad, data engineer, cloud native, devops, manual testing), acorde a las metodologías de mapeo de demanda en mercados en desarrollo (LinkedIn Corporation, 2026; BeBee & Tu Empleo RD, 2026).
 
 Se obtuvo una base de datos consolidada con vacantes localizadas formalmente en el territorio nacional (incluyendo puestos presenciales en Santo Domingo, Santiago y zonas francas de Haina, así como puestos remotos indexados para talento dominicano). A partir de esta muestra, se seleccionaron 20 variables tecnológicas clave y se calculó su tasa de demanda de adopción activa en el mercado corporativo.
 
@@ -66,11 +66,11 @@ Se obtuvo una base de datos consolidada con vacantes localizadas formalmente en 
 
 ### 3.2. Fase 2: Análisis Curricular Comparativo de las IES
 Se seleccionaron las cinco instituciones de educación superior más influyentes en el área tecnológica del país:
-1. Universidad Tecnológica de Santiago (UTESA) (Recintos Santo Domingo de Guzmán y Santo Domingo Oriental).
-2. Instituto Tecnológico de Santo Domingo (INTEC).
-3. Instituto Tecnológico de Las Américas (ITLA).
-4. Universidad Autónoma de Santo Domingo (UASD).
-5. Pontificia Universidad Católica Madre y Maestra (PUCMM).
+1. Universidad Tecnológica de Santiago (UTESA) (Recintos Santo Domingo de Guzmán y Santo Domingo Oriental) (Universidad Tecnológica de Santiago, 2026).
+2. Instituto Tecnológico de Santo Domingo (INTEC) (Instituto Tecnológico de Santo Domingo, 2026).
+3. Instituto Tecnológico de Las Américas (ITLA) (Instituto Tecnológico de Las Américas, 2026).
+4. Universidad Autónoma de Santo Domingo (UASD) (Universidad Autónoma de Santo Domingo, 2026).
+5. Pontificia Universidad Católica Madre y Maestra (PUCMM) (Pontificia Universidad Católica Madre y Maestra, 2026).
 
 Para formalizar el análisis comparativo, se definió el Índice de Cobertura Curricular ($ICC$) para cada disciplina $j$ analizada como:
 
@@ -81,7 +81,7 @@ donde $N$ es el número total de instituciones universitarias analizadas ($N = 5
 * $C_{i,j} = 0$ si la disciplina está ausente del catálogo de grado o se limita a asignaturas electivas aisladas.
 
 ### 3.3. Fase 3: Operacionalización de Variables Causales PESTEL
-Se recopilaron los indicadores macroeconómicos de los informes de política monetaria del Banco Central de la República Dominicana y las perspectivas del Banco Mundial para mapear de qué manera las fuerzas externas (políticas, económicas y regulatorias) forzaban o desplazaban a las 20 tendencias tecnológicas determinadas en la Fase 1.
+Se recopilaron los indicadores macroeconómicos de los informes de política monetaria del Banco Central de la República Dominicana (Banco Central de la República Dominicana, 2025) y las perspectivas del Banco Mundial (Banco Mundial, 2025) para mapear de qué manera las fuerzas externas (políticas, económicas y regulatorias) forzaban o desplazaban a las 20 tendencias tecnológicas determinadas en la Fase 1.
 
 ---
 
@@ -103,10 +103,10 @@ El análisis cuantitativo de la demanda corporativa dominicana a mayo de 2026 re
 | Despliegues Manuales (FTP) | Desarrollo | 10% | En Declive Técnico | Sustituido por pipelines CI/CD automatizados |
 | Testing Manual Extensivo | Desarrollo | 20% | En Declive Técnico | Reemplazado por suites automáticas con IA |
 
-Los datos demuestran que escribir código sin el soporte continuo de asistentes de Inteligencia Artificial (como GitHub Copilot u modelos LLM locales) está cayendo en obsolescencia acelerada, registrando apenas un 8% de adopción deseada por las empresas debido a la pérdida crítica de productividad técnica que representa.
+Los datos demuestran que escribir código sin el soporte continuo de asistentes de Inteligencia Artificial (como GitHub Copilot u modelos LLM locales) está cayendo en obsolescencia acelerada, registrando apenas un 8% de adopción deseada por las empresas debido a la pérdida crítica de productividad técnica que representa (GitHub, 2025; Stack Overflow, 2025).
 
 ### 4.2. Estado Curricular de la Educación Superior Dominicana
-Al cruzar la oferta académica de nivel de grado con las demandas críticas detectadas en el mercado laboral, los datos académicos normalizados mediante la variable dicotómica $C_{i,j}$ revelan una profunda desalineación en áreas de alta complejidad analítica:
+Al cruzar la oferta académica de nivel de grado con las demandas críticas detectadas en el mercado laboral, los datos académicos normalizados mediante la variable dicotómica $C_{i,j}$ (Universidad Tecnológica de Santiago, 2026; Instituto Tecnológico de Santo Domingo, 2026; Instituto Tecnológico de Las Américas, 2026; Universidad Autónoma de Santo Domingo, 2026; Pontificia Universidad Católica Madre y Maestra, 2026) revelan una profunda desalineación en áreas de alta complejidad analítica:
 
 | Carrera / Disciplina Tecnológica | UTESA (SD / SDO) | INTEC | ITLA | UASD | PUCMM | Índice de Cobertura ($ICC$) | Urgencia de Brecha |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
@@ -120,13 +120,13 @@ Al cruzar la oferta académica de nivel de grado con las demandas críticas dete
 
 El hallazgo más alarmante es el de Ingeniería de Datos con un $ICC$ de **0.00**. A pesar de que las empresas locales y los bancos dominicanos demandan masivamente ingenieros de datos para estructurar tuberías de procesamiento analítico (ETL) que alimenten sus almacenes analíticos e implementaciones de inteligencia artificial, ninguna universidad dominicana ofrece un programa curricular completo de grado en esta disciplina, forzando a los profesionales a autoformarse o a migrar de la Ingeniería de Sistemas de manera artesanal.
 
-Asimismo, Cloud Computing / DevOps registra un bajo $ICC$ de **0.20**, limitado a programas de nivel Técnico Superior (ITLA), lo que deja a las grandes corporaciones bancarias y de seguros sin ingenieros de nivel de grado capaces de diseñar arquitecturas elásticas a gran escala bajo metodologías IaC.
+Asimismo, Cloud Computing / DevOps registra un bajo $ICC$ de **0.20**, limitado a programas de nivel Técnico Superior (ITLA, 2026), lo que deja a las grandes corporaciones bancarias y de seguros sin ingenieros de nivel de grado capaces de diseñar arquitecturas elásticas a gran escala bajo metodologías IaC (Gartner, 2025; Stack Overflow, 2025).
 
 ---
 
 ## 5. Discusión y Propuestas Educativas STEAM
 
-La alarmante disparidad entre el 91% de demanda de Infrastructure as Code (IaC) y el 20% de cobertura en educación superior pone en peligro la sostenibilidad del crecimiento digital dominicano. Las universidades no pueden continuar graduando ingenieros bajo currículos tradicionales basados en la configuración manual de servidores y bases de datos locales cuando el mercado penaliza estos procesos con tasas de declive de adopción de hasta un 15%.
+La alarmante disparidad entre el 91% de demanda de Infrastructure as Code (IaC) y el 20% de cobertura en educación superior pone en peligro la sostenibilidad del crecimiento digital dominicano. Las universidades no pueden continuar graduando ingenieros bajo currículos tradicionales basados en la configuración manual de servidores y bases de datos locales cuando el mercado penaliza estos procesos con tasas de declive de adopción de hasta un 15% (Stack Overflow, 2025).
 
 Para mitigar esta brecha de manera estructural, se proponen tres programas de formación e inserción curricular prioritaria basados directamente en el análisis cuantitativo de resultados:
 
@@ -149,7 +149,7 @@ Para mitigar esta brecha de manera estructural, se proponen tres programas de fo
 
 ## 6. Conclusiones
 
-1. **Desalineación Crítica de Habilidades:** La República Dominicana experimenta una brecha de talento tecnológico que no es cuantitativa sino estrictamente cualitativa. El volumen de profesionales registrados en redes como LinkedIn (2.1M) demuestra una masa laboral base sustancial, pero su formación no se alinea con la transición presupuestaria hacia el modelo OpEx cloud e Inteligencia Artificial que exigen las juntas corporativas bajo el marco económico del BCRD y el Banco Mundial.
+1. **Desalineación Crítica de Habilidades:** La República Dominicana experimenta una brecha de talento tecnológico que no es cuantitativa sino estrictamente cualitativa. El volumen de profesionales registrados en redes como LinkedIn (2.1M) demuestra una masa laboral base sustancial, pero su formación no se alinea con la transición presupuestaria hacia el modelo OpEx cloud e Inteligencia Artificial que exigen las juntas corporativas bajo el marco económico del BCRD (Banco Central de la República Dominicana, 2025) y del Banco Mundial (Banco Mundial, 2025).
 2. **Urgencia en Carreras Críticas:** Es imperativo que las universidades actualicen con urgencia sus ofertas, transitando de la Ingeniería de Sistemas tradicional hacia las Ingenierías de Datos y DevOps de manera directa para cubrir las brechas analizadas del 0% y 20% de cobertura, respectivamente.
 3. **Rol Académico como Retención de Fuga de Talentos:** Al graduar profesionales con habilidades alineadas a la hiperautomatización y la IA, las universidades locales no solo suplirán el mercado dominicano, sino que insertarán talento en el mercado internacional de exportación de software, transformando el teletrabajo remoto de una amenaza de "fuga de cerebros" a una fuente de divisas estables para la economía nacional.
 
@@ -158,14 +158,22 @@ Para mitigar esta brecha de manera estructural, se proponen tres programas de fo
 ## 7. Referencias Bibliográficas (Normas APA 7.ª Edición)
 
 * Banco Central de la República Dominicana. (2025). *Decisión de política monetaria y expectativas macroeconómicas de inflación* (Boletín de Política Monetaria Enero-Mayo 2025). Santo Domingo, R.D.: Autor.
+* Banco Mundial. (2024). *Estudio sobre tasa de informalidad y capital humano en la República Dominicana*. Washington, DC: Grupo Banco Mundial.
 * Banco Mundial. (2025). *Informe de perspectivas económicas globales: América Latina y el Caribe frente a la transición digital* (Estudio de País R.D. 2025-2026). Washington, DC: Grupo Banco Mundial.
+* BeBee & Tu Empleo RD. (2026). *Auditoría de ofertas activas y bolsas de reclutamiento de talentos en tecnología de la información* (Carga cruzada del entorno empresarial y teletrabajo en LATAM). Santo Domingo, R.D.
 * Gartner, Inc. (2025). *Gartner top strategic technology trends for 2026: Agentic AI and hyperautomation matrices*. Stamford, CT: Gartner Research.
 * GitHub, Inc. (2025). *The State of the Octoverse 2025: AI-Assisted software engineering adoption and open-source growth*. San Francisco, CA: GitHub Developer Relations.
+* Instituto Tecnológico de Las Américas. (2026). *Programas del nivel Técnico Superior y Tecnólogo en Desarrollo de Software, Seguridad Informática, Mecatrónica y Ciencia de Datos*. Santo Domingo, R.D.: Autor.
+* Instituto Tecnológico de Santo Domingo. (2026). *Oferta curricular de grado y postgrado del Área de Ingenierías: Ciberseguridad, Inteligencia Artificial e Ingeniería de Sistemas*. Santo Domingo, R.D.: Autor.
 * ISC². (2025). *ISC² Cybersecurity Workforce Study 2025: Cybersecurity at a crucial tipping point*. Alexandria, VA: ISC² Inc.
 * LinkedIn Corporation. (2026). *Base de datos de empleo activo y búsquedas temáticas automatizadas en la República Dominicana* (Parámetros: 'inteligencia artificial', 'ciberseguridad', 'data engineer', 'cloud', 'devops' en ubicación R.D.; fecha de corte: 27 de mayo de 2026).
 * ManpowerGroup. (2025). *Encuesta global de escasez de talento 2025: Desafíos de contratación en tecnología y habilidades duras*. Milwaukee, WI: ManpowerGroup Global.
 * Ministerio de Trabajo de la República Dominicana. (2020). *Resolución No. 54-2020 sobre la regulación del teletrabajo como modalidad laboral especial*. Santo Domingo, R.D.: Autor.
 * Programa de las Naciones Unidas para el Desarrollo. (2025). *Boletín de transformación digital y capacidades tecnológicas en la sociedad dominicana*. Santo Domingo, R.D.: PNUD República Dominicana.
+* Pontificia Universidad Católica Madre y Maestra. (2026). *Pénsum de carreras STEAM de grado: Ingeniería en Ciberseguridad, Ingeniería en Computación e Inteligencia Artificial y Ciencia de Datos*. Santo Domingo, R.D.: Autor.
 * Presidencia de la República Dominicana. (2021). *Decreto No. 427-21 que aprueba la Agenda Digital 2030 y crea el Gabinete de Innovación Digital*. Santo Domingo, R.D.: Gaceta Oficial.
 * Stack Overflow. (2025). *2025 Developer survey: Obsolescence of manual processes and adoption of automated pipelines*. New York, NY: Autor.
+* Superintendencia de Electricidad. (2025). *Tarifas eléctricas vigentes para clientes corporativos en la República Dominicana*. Santo Domingo, R.D.: SIE.
+* Universidad Autónoma de Santo Domingo. (2026). *Pénsum y carreras de grado oficiales de la Facultad de Ingeniería y Arquitectura: Ingeniería Electromecánica, Ciberseguridad, Sistemas y Licenciatura en Ciencia de Datos*. Santo Domingo, R.D.: Autor.
+* Universidad Tecnológica de Santiago. (2026). *Oferta de grado y pénsum de Ingeniería en Sistemas Computacionales, Ingeniería en Ciberseguridad e Ingeniería Mecatrónica - Recinto Santo Domingo de Guzmán y Recinto Santo Domingo Oriental*. Santo Domingo, R.D.: Autor.
 * World Economic Forum. (2025). *The future of jobs report 2025: Technology adoption and workforce transition strategies*. Ginebra, Suiza: Autor.
