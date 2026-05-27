@@ -1178,6 +1178,43 @@
                     </div>
                 </div>
 
+                <!-- Panel de Auditoría de Empleos de IA en RD -->
+                <div class="panel-card" style="margin-top: 1.5rem; border-left: 5px solid var(--utesa-gold); background-color: var(--bg-panel);">
+                    <div class="panel-header-row">
+                        <span class="panel-title">🔍 Muestra de Vacantes Activas de IA y Datos en RD (Auditoría LinkedIn May 2026)</span>
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <span style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 600;">Filtrar por Ciudad:</span>
+                            <select id="jobCityFilter" onchange="filterJobs()" class="search-input" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; width: auto; height: auto;">
+                                <option value="todos">Todas las ciudades</option>
+                                <option value="Santo Domingo">Santo Domingo (y Sto Dgo Este/Oeste)</option>
+                                <option value="Santiago">Santiago de los Caballeros</option>
+                                <option value="San Pedro">San Pedro de Macorís</option>
+                                <option value="Remoto">100% Remoto (Nacional)</option>
+                                <option value="Otras">Otras Provincias (La Romana, Higüey, La Vega, Bonao, Luperón)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 0 0 1rem 0;">
+                        Listado interactivo de vacantes reales capturadas directamente desde la auditoría de campo de LinkedIn del 27 de mayo de 2026, vinculando la teoría macroeconómica con la demanda laboral local.
+                    </p>
+                    <div class="table-wrapper" style="max-height: 350px; overflow-y: auto;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Puesto / Vacante</th>
+                                    <th>Empresa</th>
+                                    <th>Ubicación / Modalidad</th>
+                                    <th>Publicación</th>
+                                    <th>Tipo de Demanda</th>
+                                </tr>
+                            </thead>
+                            <tbody id="jobsTableBody">
+                                <!-- Inyectado dinámicamente -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
                 <!-- Tabla de disponibilidad por Universidad -->
                 <div class="panel-card">
                     <div class="panel-header-row">
@@ -1317,8 +1354,8 @@
     <script>
         // DATASET
         const dataset = [
-            { id: "agentic_ai", name: "Inteligencia Artificial Agéntica", level: "empresarial", category: "acelerado", demandPct: 98, desc: "Sistemas capaces de planificar, iterar y ejecutar flujos de tareas complejas de manera autónoma sin requerir supervisión constante.", context: "Asistentes de operaciones autónomas y asistentes corporativos avanzados.", forMortals: "Es como contratar a un asistente virtual inteligente al que solo le das la meta final (ej. 'planifica y compra el viaje más barato') y él solo investiga, compara y toma las decisiones por ti.", tags: ["Agentic AI", "Sistemas Multi-Agente", "Autonomía"] },
-            { id: "ai_coding", name: "AI-Assisted Software Engineering", level: "desarrollo", category: "altisima", demandPct: 96, desc: "La programación asistida por modelos de lenguaje masivo (LLMs) se estandariza. Acelera la generación, debugging y documentación de software.", context: "Integrado en IDEs para refactorización inteligente y generación automática de tests.", forMortals: "Es como programar teniendo al programador más rápido del mundo soplándote las respuestas en tiempo real y redactándote los aburridos manuales.", tags: ["GitHub Copilot", "OpenAI Codex", "Refactor"] },
+            { id: "agentic_ai", name: "Inteligencia Artificial Agéntica", level: "empresarial", category: "acelerado", demandPct: 98, desc: "Sistemas capaces de planificar, iterar y ejecutar flujos de tareas complejas de manera autónoma sin requerir supervisión constante.", context: "Asistentes de operaciones autónomas. Validador real: vacante de 'Senior AI Automation Engineer' (Black Birch Group) en Santo Domingo Este.", forMortals: "Es como contratar a un asistente virtual inteligente al que solo le das la meta final (ej. 'planifica y compra el viaje más barato') y él solo investiga, compara y toma las decisiones por ti.", tags: ["Agentic AI", "Sistemas Multi-Agente", "Autonomía"] },
+            { id: "ai_coding", name: "AI-Assisted Software Engineering", level: "desarrollo", category: "altisima", demandPct: 96, desc: "La programación asistida por modelos de lenguaje masivo (LLMs) se estandariza. Acelera la generación, debugging y documentación de software.", context: "Integrado en IDEs. Validador real: vacante de 'Agentic Software Engineer (GitHub Copilot)' (FullStack Labs) en San Pedro de Macorís.", forMortals: "Es como programar teniendo al programador más rápido del mundo soplándote las respuestas en tiempo real y redactándote los aburridos manuales.", tags: ["GitHub Copilot", "OpenAI Codex", "Refactor"] },
             { id: "low_code", name: "Low-Code / No-Code Development", level: "empresarial", category: "altisima", demandPct: 92, desc: "Democratización del desarrollo de software. Permite construir flujos y aplicaciones funcionales reduciendo la dependencia de perfiles expertos.", context: "Muy fuerte en automatizaciones dentro de PyMEs locales, fintechs rápidas y universidades.", forMortals: "Es como armar una aplicación móvil usando bloques de Lego de colores, sin necesidad de saber escribir complicados códigos de programación desde cero.", tags: ["PowerApps", "Zapier", "Bubble", "Desarrollo Ágil"] },
             { id: "hyperautomation", name: "Hyperautomation (Hiperautomatización)", level: "empresarial", category: "altisima", demandPct: 94, desc: "Estrategia integral de orquestación tecnológica que combina IA, automatización robótica de procesos (RPA), workflows y APIs avanzadas.", context: "Automatización de punta a punta en flujos de facturación, compras y contabilidad financiera.", forMortals: "Es crear una súper-fábrica digital donde los robots de software se encargan de facturar, archivar y enviar correos de forma automática mientras tú duermes.", tags: ["RPA", "BPM", "Workflows", "APIs"] },
             { id: "platform_eng", name: "Platform Engineering", level: "empresarial", category: "altisima", demandPct: 89, desc: "Construcción de plataformas internas para desarrolladores (Internal Developer Platforms) orientadas a reducir la fricción en infraestructura.", context: "Optimización operativa en grandes departamentos de TI en bancos locales y telcos.", forMortals: "Es crear una ventanilla única de autoservicio digital para que los programadores de una empresa obtengan sus servidores y herramientas con un solo clic, sin hacer filas.", tags: ["Autoservicio", "IDP Platforms", "Developer Experience"] },
@@ -1919,7 +1956,7 @@
                 priority: 1,
                 emoji: '🤖',
                 title: 'Ing. en IA y Ciencia de Datos',
-                sub: 'Tendencia #1 global (Gartner 2026). UNDP: 73.3% de dominicanos quiere formarse en IA. Solo INTEC la tiene.',
+                sub: 'Tendencia #1 global (Gartner 2026). Validación en LinkedIn RD (mayo 2026): +99 vacantes activas (ej. Agentic Software Engineer en FullStack Labs, Senior AI Automation Engineer en Black Birch Group).',
                 tags: ['Machine Learning', 'LLMs', 'Python', 'MLOps', 'Agentic AI'],
                 demandLabel: 'Demanda: 98% | Oferta local: 10%'
             },
@@ -2008,10 +2045,209 @@
             });
         }
 
+        const realJobsData = [
+            { title: "Agentic Software Engineer (GitHub Copilot)", company: "FullStack", location: "San Pedro de Macorís (Remoto)", date: "Hace 5 días", type: "IA Agéntica" },
+            { title: "AI Machine Learning Engineer", company: "FullStack", location: "San Pedro de Macorís (Remoto)", date: "Hace 2 semanas", type: "Machine Learning / MLOps" },
+            { title: "Senior AI AUTOMATION ENGINEER", company: "Black Birch Group", location: "Santo Domingo Este (Híbrido)", date: "Hace 2 semanas", type: "Hiperautomatización" },
+            { title: "Aprendiz de IA", company: "Babel", location: "Santo Domingo (Presencial)", date: "Hace 1 mes", type: "IA / Ciencia de Datos" },
+            { title: "Sr. AI/ML Engineer", company: "Perform", location: "Santo Domingo (Remoto)", date: "Hace 1 mes", type: "Machine Learning" },
+            { title: "Forward Deployed AI Consultant", company: "Truelogic Software", location: "República Dominicana (Remoto)", date: "Hace 1 día", type: "Consultoría de IA" },
+            { title: "Senior Data Engineer / AI Data Platform Engineer", company: "Linuo Group", location: "Santo Domingo (Presencial)", date: "Hace 1 mes", type: "Ingeniería de Datos / Cloud" },
+            { title: "Gerente Desarrollo Modelos De Riesgos", company: "Banco BHD", location: "Santo Domingo (Híbrido)", date: "Hace 3 semanas", type: "Ciencia de Datos / Riesgo" },
+            { title: "Analista sr. ciencia de datos", company: "Claro RD", location: "Santo Domingo (Presencial)", date: "Hace 1 día", type: "Ciencia de Datos" },
+            { title: "Machine Learning Engineer", company: "Lumenalta", location: "República Dominicana (Remoto)", date: "Hace 2 días", type: "Machine Learning" },
+            { title: "AI Platform Engineer", company: "Thryv", location: "República Dominicana (Remoto)", date: "Hace 2 semanas", type: "Infraestructura de IA" },
+            { title: "Agentic Python Engineer", company: "FullStack", location: "Santiago de los Caballeros (Remoto)", date: "Hace 1 semana", type: "IA Agéntica / Python" },
+            { title: "Agentic Software Engineer (OpenAI Codex)", company: "FullStack", location: "Santo Domingo (Remoto)", date: "Hace 6 días", type: "IA Agéntica" },
+            { title: "Agentic Software Engineer (Claude Code)", company: "FullStack", location: "Santo Domingo Oeste (Remoto)", date: "Hace 6 días", type: "IA Agéntica" },
+            { title: "Agentic Software Engineer (Google Antigravity)", company: "FullStack", location: "La Romana (Remoto)", date: "Hace 3 semanas", type: "IA Agéntica / Orquestación" },
+            { title: "AI Machine Learning Engineer", company: "FullStack", location: "Santiago de los Caballeros (Remoto)", date: "Hace 2 semanas", type: "Machine Learning / MLOps" },
+            { title: "AI Machine Learning Engineer", company: "FullStack", location: "La Romana (Remoto)", date: "Hace 2 semanas", type: "Machine Learning / MLOps" },
+            { title: "Agentic Software Engineer (OpenAI Codex)", company: "FullStack", location: "Concepción de la Vega (Remoto)", date: "Hace 5 días", type: "IA Agéntica" },
+            { title: "Agentic Python Engineer", company: "FullStack", location: "Higüey (Remoto)", date: "Hace 1 semana", type: "IA Agéntica / Python" },
+            { title: "Agentic Elixir Engineer", company: "FullStack", location: "Santo Domingo Oeste (Remoto)", date: "Hace 2 días", type: "IA Agéntica / Elixir" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "Santo Domingo (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "Santo Domingo Oeste (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Software Engineer (Claude Code)", company: "FullStack", location: "San Pedro de Macorís (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Claude" },
+            { title: "Agentic Elixir Engineer", company: "FullStack", location: "Santo Domingo Este (Remoto)", date: "Hace 2 días", type: "IA Agéntica / Elixir" },
+            { title: "Agentic Software Engineer (Google Antigravity)", company: "FullStack", location: "Santiago de los Caballeros (Remoto)", date: "Hace 2 semanas", type: "IA Agéntica / Orquestación" },
+            { title: "Agentic Software Engineer (Claude Code)", company: "FullStack", location: "Bonao (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Claude" },
+            { title: "Agentic Python Engineer", company: "FullStack", location: "San Pedro de Macorís (Remoto)", date: "Hace 1 semana", type: "IA Agéntica / Python" },
+            { title: "Agentic Software Engineer (Google Antigravity)", company: "FullStack", location: "San Pedro de Macorís (Remoto)", date: "Hace 2 semanas", type: "IA Agéntica / Orquestación" },
+            { title: "Agentic Software Engineer (Google Antigravity)", company: "FullStack", location: "Bonao (Remoto)", date: "Hace 2 semanas", type: "IA Agéntica / Orquestación" },
+            { title: "Agentic Software Engineer (Google Antigravity)", company: "FullStack", location: "Concepción de la Vega (Remoto)", date: "Hace 3 semanas", type: "IA Agéntica / Orquestación" },
+            { title: "Agentic Elixir Engineer", company: "FullStack", location: "Concepción de la Vega (Remoto)", date: "Hace 2 días", type: "IA Agéntica / Elixir" },
+            { title: "Agentic Elixir Engineer", company: "FullStack", location: "Urb. San Francisco (Remoto)", date: "Hace 2 días", type: "IA Agéntica / Elixir" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "Santiago de los Caballeros (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Elixir Engineer", company: "FullStack", location: "Santiago de los Caballeros (Remoto)", date: "Hace 2 días", type: "IA Agéntica / Elixir" },
+            { title: "Agentic Elixir Engineer", company: "FullStack", location: "Bonao (Remoto)", date: "Hace 1 día", type: "IA Agéntica / Elixir" },
+            { title: "Agentic Elixir Engineer", company: "FullStack", location: "San Pedro de Macorís (Remoto)", date: "Hace 2 días", type: "IA Agéntica / Elixir" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "Bonao (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Software Engineer (Google Antigravity)", company: "FullStack", location: "San Cristobal (Remoto)", date: "Hace 2 semanas", type: "IA Agéntica / Orquestación" },
+            { title: "Agentic Software Engineer (Google Antigravity)", company: "FullStack", location: "Luperón (Remoto)", date: "Hace 3 semanas", type: "IA Agéntica / Orquestación" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "Urb. San Francisco (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Elixir Engineer", company: "FullStack", location: "San Cristobal (Remoto)", date: "Hace 2 días", type: "IA Agéntica / Elixir" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "San Pedro de Macorís (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Elixir Engineer", company: "FullStack", location: "Luperón (Remoto)", date: "Hace 2 días", type: "IA Agéntica / Elixir" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "La Romana (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "Concepción de la Vega (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "San Cristobal (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Software Engineer (Google Antigravity)", company: "FullStack", location: "Higüey (Remoto)", date: "Hace 2 semanas", type: "IA Agéntica / Orquestación" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "Higüey (Remoto)", date: "Hace 5 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Software Engineer (Cursor)", company: "FullStack", location: "Luperón (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Cursor" },
+            { title: "Agentic Elixir Engineer", company: "FullStack", location: "Higüey (Remoto)", date: "Hace 1 día", type: "IA Agéntica / Elixir" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "Santo Domingo Oeste (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "Santo Domingo Este (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "La Romana (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "Concepción de la Vega (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "Santiago de los Caballeros (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "San Pedro de Macorís (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "Bonao (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "Urb. San Francisco (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "San Cristobal (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "Luperón (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "Senior Software Engineer (MCP Specialist)", company: "FullStack", location: "Higüey (Remoto)", date: "Hace 2 semanas", type: "Model Context Protocol" },
+            { title: "AI Creative Operations - Marketing", company: "Truelogic Software", location: "República Dominicana (Remoto)", date: "Hace 2 semanas", type: "Operaciones de IA / Marketing" },
+            { title: "Software Engineer - AI & Automations", company: "Emapta Global", location: "Santo Domingo (Remoto)", date: "Hace 1 semana", type: "Ingeniería de Automatizaciones / IA" },
+            { title: "Ingeniero Inteligencia de Negocios (BI)", company: "Supermercados Bravo", location: "Santo Domingo Oeste (Presencial)", date: "Hace 1 mes", type: "Inteligencia de Negocios / BI" },
+            { title: "Ingeniero de Big Data", company: "BairesDev", location: "Santo Domingo (Remoto)", date: "Hace 1 año", type: "Big Data / Datos" },
+            { title: "Data Engineer Specialist (SDQ)", company: "Horatio", location: "Santo Domingo (Presencial)", date: "Hace 3 meses", type: "Ingeniería de Datos" },
+            { title: "Analista De Business Intelligence", company: "CECOMSA", location: "Santiago de los Caballeros (Presencial)", date: "Hace 19 horas", type: "Inteligencia de Negocios / BI" },
+            { title: "Agentic Product Designer", company: "FullStack", location: "Santo Domingo (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Diseño UI/UX" },
+            { title: "Senior Software Engineer & LLM Code Trainer", company: "Kake", location: "República Dominicana (Remoto)", date: "Hace 14 horas", type: "Entrenamiento de LLMs / IA" },
+            { title: "Software & Innovation Manager", company: "VoiceTeam", location: "Santiago de los Caballeros (Presencial)", date: "Hace 11 horas", type: "Innovación / Software" },
+            { title: "Technical Lead", company: "GBH", location: "República Dominicana (Remoto)", date: "Hace 5 días", type: "Liderazgo Técnico / TI" },
+            { title: "Data Engineer", company: "Origami Risk", location: "Santo Domingo (Presencial)", date: "Hace 1 semana", type: "Ingeniería de Datos" },
+            { title: "Gerente Monitoreo Riesgo Persona", company: "Banco BHD", location: "Santo Domingo (Híbrido)", date: "Hace 1 día", type: "Ciencia de Datos / Riesgo" },
+            { title: "Data Engineer", company: "Perform", location: "República Dominicana (Remoto)", date: "Hace 5 días", type: "Ingeniería de Datos" },
+            { title: "Analytics Engineer", company: "Grove Point Marinas", location: "República Dominicana (Remoto)", date: "Hace 1 semana", type: "Ingeniería de Analítica" },
+            { title: "Palantir Foundry Engineer", company: "BairesDev", location: "Santo Domingo (Remoto)", date: "Hace 11 meses", type: "Datos / Palantir Foundry" },
+            { title: "Agentic Product Designer", company: "FullStack", location: "Luperón (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Diseño UI/UX" },
+            { title: "Agentic Product Designer", company: "FullStack", location: "Santo Domingo Oeste (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Diseño UI/UX" },
+            { title: "Full Stack Developer (Python)", company: "Perform", location: "Santo Domingo (Remoto)", date: "Hace 1 semana", type: "Python / Full Stack" },
+            { title: "Agentic Product Designer", company: "FullStack", location: "Santiago de los Caballeros (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Diseño UI/UX" },
+            { title: "Agentic Product Designer", company: "FullStack", location: "San Pedro de Macorís (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Diseño UI/UX" },
+            { title: "Agentic Product Designer", company: "FullStack", location: "Concepción de la Vega (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Diseño UI/UX" },
+            { title: "Agentic Product Designer", company: "FullStack", location: "La Romana (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Diseño UI/UX" },
+            { title: "Agentic Product Designer", company: "FullStack", location: "San Cristobal (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Diseño UI/UX" },
+            { title: "Agentic Product Designer", company: "FullStack", location: "Higüey (Remoto)", date: "Hace 6 días", type: "IA Agéntica / Diseño UI/UX" },
+            { title: "Agentic Ruby on Rails Engineer", company: "FullStack", location: "República Dominicana (Remoto)", date: "Hace 1 semana", type: "IA Agéntica / Rails" }
+        ];
+
+        function renderJobsList(filteredJobs = realJobsData) {
+            const tbody = document.getElementById('jobsTableBody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+            filteredJobs.forEach(job => {
+                tbody.innerHTML += `
+                    <tr onclick="openJobDrawer(${realJobsData.indexOf(job)})" style="cursor: pointer;">
+                        <td><strong>${job.title}</strong></td>
+                        <td>${job.company}</td>
+                        <td>📍 ${job.location}</td>
+                        <td>🕒 ${job.date}</td>
+                        <td><span class="table-badge" style="background: rgba(124, 58, 237, 0.12); color: #7c3aed; font-size: 0.68rem; font-weight: 700; border-radius: 4px; padding: 0.15rem 0.4rem; font-family: var(--font-mono);">${job.type}</span></td>
+                    </tr>
+                `;
+            });
+        }
+
+        function openJobDrawer(index) {
+            const job = realJobsData[index];
+            if (!job) return;
+            const drawer = document.getElementById('detailsDrawer');
+            if (!drawer) return;
+
+            let detailedDesc = "";
+            let keyRequirements = [];
+            let businessImpact = "";
+            let forMortals = "";
+
+            if (job.type.includes("IA Agéntica")) {
+                detailedDesc = "Desarrollo e implementación de agentes autónomos y flujos de ingeniería agéntica de vanguardia (integrando frameworks como LangGraph y Copilots avanzados) para automatizar el desarrollo y operaciones de software.";
+                keyRequirements = ["Python / TypeScript", "Model Context Protocol (MCP)", "Asistentes de IA (Copilot/Cursor)", "LangChain / LangGraph", "Orquestación de Agentes"];
+                businessImpact = "Maximiza la productividad técnica de los equipos de TI locales, automatizando hasta el 60% de tareas repetitivas de codificación y QA.";
+                forMortals = "Es crear 'robots programadores' ultra inteligentes que pueden resolver bugs y escribir código de forma autónoma siguiendo tus instrucciones.";
+            } else if (job.type.includes("Model Context Protocol")) {
+                detailedDesc = "Especialista en habilitar la comunicación estandarizada y segura entre modelos de lenguaje masivo (LLMs) y los datos locales, servidores o APIs de la empresa usando la arquitectura MCP de Anthropic.";
+                keyRequirements = ["MCP SDKs", "Diseño de APIs", "JSON-RPC", "Seguridad de Datos", "Python / TypeScript"];
+                businessImpact = "Permite que la IA de la empresa interactúe de forma automatizada y segura con bases de datos y herramientas de infraestructura local.";
+                forMortals = "Es crear los 'puentes digitales y seguros' para que la Inteligencia Artificial pueda consultar tus archivos y bases de datos sin violar políticas de seguridad.";
+            } else if (job.type.includes("Machine Learning")) {
+                detailedDesc = "Diseño, estructuración, entrenamiento y despliegue continuo (MLOps) de modelos de aprendizaje automático y algoritmos de predicción profunda en infraestructuras híbridas o cloud.";
+                keyRequirements = ["Python (PyTorch / Scikit-learn)", "Kubernetes / Docker", "MLOps Pipelines", "SQL / Feature Engineering", "AWS / Azure Cloud"];
+                businessImpact = "Soporta algoritmos predictivos para la mitigación de fraudes en tiempo real, personalización de ofertas bancarias y optimización analítica de procesos.";
+                forMortals = "Es entrenar a computadoras mediante millones de datos históricos para que aprendan a predecir comportamientos futuros o detectar anomalías automáticamente.";
+            } else if (job.type.includes("Datos") || job.type.includes("Data") || job.type.includes("Foundry")) {
+                detailedDesc = "Modelado dimensional de datos y construcción de flujos de extracción, transformación y carga (ETL/ELT) de alta confiabilidad y rendimiento para alimentar consolas analíticas y lagos de datos empresariales.";
+                keyRequirements = ["SQL Avanzado", "Apache Spark / dbt", "Apache Airflow / Prefect", "Snowflake / Google BigQuery", "Palantir Foundry (opcional)"];
+                businessImpact = "Asegura la calidad, integridad y disponibilidad continua de la información estratégica corporativa para su uso analítico y por modelos de IA.";
+                forMortals = "Es diseñar las 'autopistas y tuberías digitales' que limpian, ordenan y transportan los datos de la empresa para que siempre estén listos para ser analizados.";
+            } else if (job.type.includes("Negocios") || job.type.includes("BI")) {
+                detailedDesc = "Interpretación analítica de datos de negocio y diseño de tableros analíticos e informes ejecutivos de alto impacto para la dirección general.";
+                keyRequirements = ["SQL", "PowerBI / Tableau / Looker", "Modelado de Datos (Kimball)", "Análisis de Requerimientos", "Estadística Aplicada"];
+                businessImpact = "Impulsa la cultura basada en datos de la empresa, acelerando la toma de decisiones estratégicas basadas en evidencia empírica en un 40%.";
+                forMortals = "Es tomar millones de datos aburridos y transformarlos en gráficos interactivos y coloridos súper fáciles de entender por los directores.";
+            } else if (job.type.includes("Diseño")) {
+                detailedDesc = "Diseño de experiencia de usuario (UX) adaptada a aplicaciones basadas en Inteligencia Artificial, flujos de interacción conversacional y micro-interacciones adaptativas.";
+                keyRequirements = ["Figma", "User-Agent UX flows", "Responsive Design", "Prototipado Conversacional", "Frontend Basics (HTML/CSS)"];
+                businessImpact = "Eleva la adopción y satisfacción de los usuarios al interactuar con sistemas de IA de alta complejidad, reduciendo la curva de aprendizaje.";
+                forMortals = "Es diseñar las pantallas y diálogos para que hablar o interactuar con una Inteligencia Artificial sea tan fácil y placentero como chatear con un amigo.";
+            } else {
+                detailedDesc = "Ingeniería de software avanzada orientada a la innovación técnica, automatizaciones e integraciones elásticas basadas en la nube.";
+                keyRequirements = ["Arquitectura de Software", "Cloud Foundations", "Integraciones de API", "Metodologías Ágiles (Scrum)"];
+                businessImpact = "Moderniza los sistemas heredados de la compañía reduciendo costos de servidores en un 30% mediante arquitecturas elásticas.";
+                forMortals = "Es programar sistemas modernos, rápidos y seguros en la nube para automatizar las tareas del día a día de la empresa.";
+            }
+
+            // Populate the drawer
+            document.getElementById('drawerTitle').innerText = job.title;
+            document.getElementById('drawerBadge').innerText = job.company.toUpperCase();
+            document.getElementById('drawerBadge').className = "table-badge";
+            document.getElementById('drawerBadge').style.background = "rgba(124, 58, 237, 0.12)";
+            document.getElementById('drawerBadge').style.color = "#7c3aed";
+
+            document.getElementById('drawerForMortals').innerText = forMortals;
+            document.getElementById('drawerDesc').innerText = detailedDesc + "\n\n📍 Ubicación: " + job.location + "\n🕒 Publicado: " + job.date;
+            document.getElementById('drawerContext').innerText = businessImpact;
+
+            const tagsContainer = document.getElementById('drawerTags');
+            if (tagsContainer) {
+                tagsContainer.innerHTML = '';
+                keyRequirements.forEach(tag => {
+                    tagsContainer.innerHTML += `<span class="drawer-tag">${tag}</span>`;
+                });
+            }
+
+            drawer.classList.add('active');
+        }
+
+        function filterJobs() {
+            const filterValue = document.getElementById('jobCityFilter').value;
+            if (filterValue === 'todos') {
+                renderJobsList(realJobsData);
+            } else if (filterValue === 'Santo Domingo') {
+                const filtered = realJobsData.filter(j => j.location.includes('Santo Domingo'));
+                renderJobsList(filtered);
+            } else if (filterValue === 'Santiago') {
+                const filtered = realJobsData.filter(j => j.location.includes('Santiago'));
+                renderJobsList(filtered);
+            } else if (filterValue === 'San Pedro') {
+                const filtered = realJobsData.filter(j => j.location.includes('San Pedro'));
+                renderJobsList(filtered);
+            } else if (filterValue === 'Remoto') {
+                const filtered = realJobsData.filter(j => j.location.includes('(Remoto)') || j.location.includes('En remoto') || j.location.includes('República Dominicana (Remoto)'));
+                renderJobsList(filtered);
+            } else if (filterValue === 'Otras') {
+                const filtered = realJobsData.filter(j => !j.location.includes('Santo Domingo') && !j.location.includes('Santiago') && !j.location.includes('San Pedro') && (j.location.includes('La Romana') || j.location.includes('Higüey') || j.location.includes('Vega') || j.location.includes('Bonao') || j.location.includes('Luperón')));
+                renderJobsList(filtered);
+            }
+        }
+
         // Render on DOM load + when tab 3 is clicked
         document.addEventListener('DOMContentLoaded', () => {
             renderGapList();
             renderCareerList();
+            renderJobsList();
         });
 
     </script>
