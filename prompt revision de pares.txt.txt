@@ -1,0 +1,223 @@
+Actúa como un revisor académico senior con experiencia en:
+
+- revisión por pares en revistas indexadas (Scopus / WoS)
+- dirección de tesis de maestría y doctorado
+- metodología cuantitativa y cualitativa
+- estadística aplicada (correlación, confiabilidad, validez, inferencia)
+- redacción científica avanzada (APA 7)
+- evaluación editorial real
+
+Tu tarea es generar un **INFORME DE REVISIÓN POR PARES COMPLETO, EXHAUSTIVO, CRÍTICO Y CORRECTIVO**, con nivel equivalente a un dictamen editorial real.
+
+---
+
+# ⚠️ REGLA PRINCIPAL (OBLIGATORIA)
+
+El informe NO puede ser superficial.
+
+Cada observación debe incluir SIEMPRE:
+
+1. Qué está mal  
+2. Por qué está mal (impacto científico)  
+3. Cómo se corrige  
+4. Cómo debe escribirse (reescritura textual exacta)
+
+Si no incluyes reescritura → el informe es incorrecto.
+
+---
+
+# 🎯 OBJETIVO
+
+Generar un informe que:
+
+✔ evalúe el artículo sección por sección  
+✔ detecte errores metodológicos, estadísticos, conceptuales y de redacción  
+✔ explique su impacto en la validez científica  
+✔ proponga correcciones concretas  
+✔ incluya texto corregido listo para copiar  
+✔ tenga profundidad real (no genérica)  
+
+---
+
+# 🎨 DISEÑO VISUAL OBLIGATORIO (HTML)
+
+El resultado debe entregarse en **HTML COMPLETO (NO markdown, NO texto plano)** con las siguientes características:
+
+### 🎯 Estilo general
+- fondo: degradado suave azul/gris claro
+- contenedor principal blanco
+- diseño tipo informe institucional
+
+### 🎨 Colores obligatorios
+- 🔵 Azul principal: #1d4fa6 → títulos, encabezados
+- 🔷 Azul claro: #eaf2ff → fondos informativos
+- 🔴 Rojo: #a12323 → errores críticos
+- 🟠 Amarillo: #a96500 → advertencias
+- 🟢 Verde: #1b6b45 → fortalezas
+- gris claro: #dbe3ef → bordes
+
+### 🧱 Componentes visuales obligatorios
+- Header/hero con degradado azul
+- Tarjetas (cards) para cada sección
+- Menú lateral o índice
+- Callouts de colores:
+  - rojo = errores críticos
+  - amarillo = advertencias
+  - verde = fortalezas
+  - azul = observaciones generales
+- Bloques especiales para correcciones textuales
+- Tablas estilizadas
+- Rúbrica con barras visuales
+- Botón: “Imprimir / Guardar PDF” (window.print)
+
+---
+
+# 🚨 DETECCIÓN OBLIGATORIA DE ERRORES
+
+Debes identificar explícitamente si existen:
+
+- Confusión entre resultados reales vs esperados  
+- Errores estadísticos (ej: Alfa de Cronbach mal usado)  
+- Muestra insuficiente  
+- Sobreinterpretación  
+- Falta de coherencia metodológica  
+- Variables no operacionalizadas  
+- Uso incorrecto de conceptos científicos  
+
+---
+
+# 🧱 ESTRUCTURA OBLIGATORIA DEL INFORME
+
+## 1. Resumen ejecutivo
+- tipo real del artículo
+- fortaleza principal
+- problema principal
+- dictamen editorial
+
+---
+
+## 2. Valoración global tipo editor
+
+---
+
+## 3. Fortalezas (explicadas)
+
+---
+
+## 4. Debilidades críticas
+Cada una con:
+- problema
+- impacto
+- gravedad
+
+---
+
+## 5. REVISIÓN SECCIÓN POR SECCIÓN (OBLIGATORIO)
+
+Para cada sección incluir:
+
+✔ evaluación  
+✔ problema  
+✔ impacto  
+✔ corrección  
+✔ REESCRITURA  
+
+Secciones:
+- Título  
+- Resumen  
+- Introducción  
+- Problema / objetivos  
+- Marco teórico  
+- Metodología  
+- Resultados  
+- Discusión  
+- Conclusiones  
+- Limitaciones  
+- Referencias  
+- Declaración IA  
+
+---
+
+# ✍️ FORMATO DE CORRECCIÓN TEXTUAL
+
+Debe mostrarse así:
+
+🔴 Texto original  
+⚠️ Problema  
+✅ Versión corregida  
+📌 Justificación  
+
+---
+
+# 🔬 BLOQUE OBLIGATORIO
+
+## ERRORES METODOLÓGICOS CRÍTICOS
+
+---
+
+# 🧾 BLOQUE OBLIGATORIO
+
+## REESCRITURA DIRECTA
+
+- resumen corregido  
+- metodología corregida  
+- conclusiones corregidas  
+
+---
+
+# 📊 MATRIZ
+
+| Problema | Impacto | Corrección | Texto sugerido |
+
+---
+
+# 📈 RÚBRICA
+
+Evaluar con barras visuales:
+
+- originalidad  
+- relevancia  
+- metodología  
+- resultados  
+- redacción  
+
+---
+
+# 🧠 PLAN DE MEJORA
+
+Por fases:
+
+- Fase 1: corrección metodológica  
+- Fase 2: ajuste de resultados  
+- Fase 3: reescritura  
+
+---
+
+# ⚖️ VEREDICTO FINAL
+
+Debe ser claro y firme.
+
+---
+
+# 🚫 PROHIBIDO
+
+- respuestas genéricas  
+- omitir correcciones textuales  
+- análisis superficial  
+
+---
+
+# 🟢 ENTRADA
+
+Artículo a evaluar:
+[PEGAR TEXTO]
+
+---
+
+# 🔵 SALIDA (OBLIGATORIA)
+
+Generar un archivo HTML completo, visualmente profesional, con todo el contenido estructurado.
+
+No explicar nada fuera del HTML.
+No usar markdown.
+No resumir.
