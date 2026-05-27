@@ -842,6 +842,13 @@
             box-shadow: var(--shadow-sm);
             border-top: 3.5px solid var(--utesa-gold);
             text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .kpi-steam:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-top-color: var(--utesa-green-medium);
         }
         .kpi-steam-val { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: var(--utesa-green-deep); }
         .kpi-steam-lbl { font-size: 0.7rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -1118,29 +1125,35 @@
 
                 <!-- KPIs Clave -->
                 <div class="kpi-steam-strip">
-                    <div class="kpi-steam">
+                    <div class="kpi-steam" onclick="scrollToReference('ref-linkedin')" title="Haga clic para ver la referencia bibliográfica formal de LinkedIn">
                         <span class="kpi-steam-val">2.1M</span>
                         <span class="kpi-steam-lbl">Profesionales en LinkedIn RD</span>
+                        <span style="font-size: 0.62rem; color: var(--utesa-green-medium); font-weight: 700; margin-top: 0.2rem;">(LinkedIn Corp., 2026) 🔍</span>
                     </div>
-                    <div class="kpi-steam">
+                    <div class="kpi-steam" onclick="scrollToReference('ref-manpower')" title="Haga clic para ver la referencia bibliográfica formal de ManpowerGroup">
                         <span class="kpi-steam-val">40%</span>
                         <span class="kpi-steam-lbl">Empleadores sin cubrir roles tech</span>
+                        <span style="font-size: 0.62rem; color: var(--utesa-green-medium); font-weight: 700; margin-top: 0.2rem;">(ManpowerGroup, 2025) 🔍</span>
                     </div>
-                    <div class="kpi-steam">
+                    <div class="kpi-steam" onclick="scrollToReference('ref-pnud')" title="Haga clic para ver la referencia bibliográfica formal del PNUD / UNDP">
                         <span class="kpi-steam-val">68.9%</span>
                         <span class="kpi-steam-lbl">Dominicanos que usan IA semanal (UNDP)</span>
+                        <span style="font-size: 0.62rem; color: var(--utesa-green-medium); font-weight: 700; margin-top: 0.2rem;">(PNUD R.D., 2025) 🔍</span>
                     </div>
-                    <div class="kpi-steam">
+                    <div class="kpi-steam" onclick="scrollToReference('ref-isc2')" title="Haga clic para ver la referencia bibliográfica formal de ISC2">
                         <span class="kpi-steam-val">329K</span>
                         <span class="kpi-steam-lbl">Déficit Ciberseguridad LATAM</span>
+                        <span style="font-size: 0.62rem; color: var(--utesa-green-medium); font-weight: 700; margin-top: 0.2rem;">(ISC², 2025) 🔍</span>
                     </div>
-                    <div class="kpi-steam">
+                    <div class="kpi-steam" onclick="scrollToReference('ref-bm')" title="Haga clic para ver la referencia bibliográfica formal del Banco Mundial">
                         <span class="kpi-steam-val">~10%</span>
                         <span class="kpi-steam-lbl">Trabajadores con habilidades digitales intensivas</span>
+                        <span style="font-size: 0.62rem; color: var(--utesa-green-medium); font-weight: 700; margin-top: 0.2rem;">(Banco Mundial, 2025) 🔍</span>
                     </div>
-                    <div class="kpi-steam">
+                    <div class="kpi-steam" onclick="scrollToReference('ref-wef')" title="Haga clic para ver la referencia bibliográfica formal del World Economic Forum">
                         <span class="kpi-steam-val">66.3%</span>
                         <span class="kpi-steam-lbl">Empresas que necesitan reskilling interno</span>
+                        <span style="font-size: 0.62rem; color: var(--utesa-green-medium); font-weight: 700; margin-top: 0.2rem;">(WEF, 2025) 🔍</span>
                     </div>
                 </div>
 
@@ -1339,7 +1352,7 @@
                             </p>
                         </div>
 
-                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                        <div id="ref-bm" style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
                             <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Crecimiento de PIB Dominicano y Perspectivas 2026]</p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
                                 Banco Mundial. (2025). <em>Informe de perspectivas económicas globales: América Latina y el Caribe frente a la transición digital</em> (Estudio de País R.D. 2025-2026). Washington, DC: Grupo Banco Mundial. Recuperado de <a href="https://www.bancomundial.org" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.bancomundial.org</a>
@@ -1400,28 +1413,28 @@
                     <span class="panel-title" style="color: var(--utesa-green-deep);">📊 Informes de la Brecha de Talento y Habilidades Tech (ManpowerGroup, WEF, PNUD, ISC²)</span>
                     <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 0.5rem;">
                         
-                        <div style="border-left: 3px solid var(--color-estrategico); padding-left: 1rem;">
+                        <div id="ref-manpower" style="border-left: 3px solid var(--color-estrategico); padding-left: 1rem;">
                             <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Escasez de Talento en Roles Tecnológicos - 40% Déficit]</p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
                                 ManpowerGroup. (2025). <em>Encuesta global de escasez de talento 2025: Desafíos de contratación en tecnología y habilidades duras</em>. Milwaukee, WI: ManpowerGroup Global. Recuperado de <a href="https://go.manpowergroup.com" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://go.manpowergroup.com</a>
                             </p>
                         </div>
 
-                        <div style="border-left: 3px solid var(--color-estrategico); padding-left: 1rem;">
+                        <div id="ref-pnud" style="border-left: 3px solid var(--color-estrategico); padding-left: 1rem;">
                             <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Uso Semanal de Inteligencia Artificial en R.D. - 68.9% Adopción]</p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
                                 Programa de las Naciones Unidas para el Desarrollo. (2025). <em>Boletín de transformación digital y capacidades tecnológicas en la sociedad dominicana</em>. Santo Domingo, R.D.: PNUD República Dominicana. Recuperado de <a href="https://www.undp.org/republica-dominicana" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.undp.org/republica-dominicana</a>
                             </p>
                         </div>
 
-                        <div style="border-left: 3px solid var(--color-estrategico); padding-left: 1rem;">
+                        <div id="ref-isc2" style="border-left: 3px solid var(--color-estrategico); padding-left: 1rem;">
                             <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Déficit de Fuerza Laboral en Ciberseguridad en LATAM - 329K Vacantes]</p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
                                 ISC². (2025). <em>ISC² Cybersecurity Workforce Study 2025: Cybersecurity at a crucial tipping point</em>. Alexandria, VA: ISC² Inc. Recuperado de <a href="https://www.isc2.org" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.isc2.org</a>
                             </p>
                         </div>
 
-                        <div style="border-left: 3px solid var(--color-estrategico); padding-left: 1rem;">
+                        <div id="ref-wef" style="border-left: 3px solid var(--color-estrategico); padding-left: 1rem;">
                             <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Necesidad de Reentrenamiento Interno - 66.3% Reskilling]</p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
                                 World Economic Forum. (2025). <em>The future of jobs report 2025: Technology adoption and workforce transition strategies</em>. Ginebra, Suiza: Autor. Recuperado de <a href="https://www.weforum.org" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.weforum.org</a>
@@ -1475,7 +1488,7 @@
                     <span class="panel-title" style="color: var(--utesa-green-deep);">🔍 Búsquedas en LinkedIn Empleos y Plataformas de Reclutamiento</span>
                     <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 0.5rem;">
                         
-                        <div style="border-left: 3px solid var(--utesa-green-medium); padding-left: 1rem;">
+                        <div id="ref-linkedin" style="border-left: 3px solid var(--utesa-green-medium); padding-left: 1rem;">
                             <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Auditoría de Vacantes en LinkedIn Jobs RD]</p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
                                 LinkedIn Corporation. (2026). <em>Base de datos de empleo activo y búsquedas temáticas automatizadas en la República Dominicana</em> (Parámetros: 'inteligencia artificial', 'ciberseguridad', 'data engineer', 'cloud', 'devops' en ubicación R.D.; fecha de corte: 27 de mayo de 2026). Recuperado de <a href="https://www.linkedin.com/jobs" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.linkedin.com/jobs</a>
@@ -1667,6 +1680,41 @@
                 ]
             }
         };
+
+        // Función interactiva de redirección a referencias con animación de parpadeo (High-Impact UX)
+        function scrollToReference(id) {
+            // 1. Cambiar a la pestaña de referencias
+            switchView('references');
+            
+            // 2. Esperar un instante para que el panel se active y renderice
+            setTimeout(() => {
+                const element = document.getElementById(id);
+                if (!element) return;
+                
+                // 3. Scroll suave al centro
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // 4. Animación de destello académica
+                element.style.transition = 'all 0.4s ease';
+                const originalBg = element.style.backgroundColor || 'var(--bg-panel)';
+                const originalBorder = element.style.borderColor || 'var(--border-color)';
+                const originalShadow = element.style.boxShadow || 'var(--shadow-sm)';
+                
+                element.style.backgroundColor = 'var(--utesa-gold-light)';
+                element.style.borderColor = 'var(--utesa-gold)';
+                element.style.borderLeft = '6px solid var(--utesa-gold)';
+                element.style.boxShadow = '0 0 15px rgba(254, 220, 42, 0.4)';
+                
+                setTimeout(() => {
+                    element.style.backgroundColor = originalBg;
+                    element.style.borderColor = originalBorder;
+                    element.style.borderLeft = '3px solid var(--color-estrategico)';
+                    if (id === 'ref-bm') element.style.borderLeft = '3px solid var(--utesa-gold)';
+                    if (id === 'ref-linkedin') element.style.borderLeft = '3px solid var(--utesa-green-medium)';
+                    element.style.boxShadow = originalShadow;
+                }, 2500);
+            }, 100);
+        }
 
         let filteredDataset = [...dataset];
         let currentChartType = 'bar';
