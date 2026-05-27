@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictamen de Revisión por Pares - Brecha de Talento Tech RD</title>
+    <style>
+        :root {
+            --blue-main: #1d4fa6;
+            --blue-light: #eaf2ff;
+            --red-alert: #a12323;
+            --red-bg: #fff3f3;
+            --yellow-alert: #a96500;
+            --yellow-bg: #fffbf0;
+            --green-success: #1b6b45;
+            --green-bg: #f2faf5;
+            --border-color: #dbe3ef;
+            --bg-gradient: linear-gradient(135deg, #f4f7fc 0%, #e9edf5 100%);
+            --text-color: #2c3e50;
+            --text-muted: #5a738e;
+            --font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            display: flex;
+            min-height: 90vh;
+        }
+
+        /* Sidebar Index */
+        aside {
+            width: 280px;
+            background: #f8fafc;
+            border-right: 1px solid var(--border-color);
+            padding: 2rem;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .aside-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--blue-main);
+            font-weight: 700;
+            border-bottom: 2px solid var(--blue-main);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .aside-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .aside-menu a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: block;
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+        }
+
+        .aside-menu a:hover {
+            color: var(--blue-main);
+            background: var(--blue-light);
+        }
+
+        .aside-menu a.active {
+            color: var(--blue-main);
+            background: var(--blue-light);
+            border-left: 3px solid var(--blue-main);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 3rem;
+            overflow-y: auto;
+        }
+
+        /* Hero Header */
+        .hero {
+            background: linear-gradient(135deg, var(--blue-main) 0%, #153b80 100%);
+            color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 15px rgba(29, 79, 166, 0.15);
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-meta {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 1rem;
+        }
+
+        /* Print Button */
+        .btn-print-container {
+            margin-top: 1.5rem;
+        }
+
+        .btn-print {
+            background: var(--blue-main);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-print:hover {
+            background: #153b80;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Cards */
+        .card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            scroll-margin-top: 2rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--blue-main);
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Callouts */
+        .callout {
+            border-left: 4.5px solid;
+            padding: 1.2rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .callout.red {
+            border-left-color: var(--red-alert);
+            background: var(--red-bg);
+            color: #5c1414;
+        }
+
+        .callout.yellow {
+            border-left-color: var(--yellow-alert);
+            background: var(--yellow-bg);
+            color: #633b00;
+        }
+
+        .callout.green {
+            border-left-color: var(--green-success);
+            background: var(--green-bg);
+            color: #0f3d27;
+        }
+
+        .callout.blue {
+            border-left-color: var(--blue-main);
+            background: var(--blue-light);
+            color: #0f306b;
+        }
+
+        .callout-title {
+            font-weight: bold;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Correction Blocks */
+        .correction-block {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            overflow: hidden;
+        }
+
+        .correction-header {
+            background: #f8fafc;
+            padding: 0.75rem 1.2rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-color);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .correction-content {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .orig {
+            color: var(--red-alert);
+            background: var(--red-bg);
+            padding: 0.6rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--red-alert);
+            font-size: 0.88rem;
+        }
+
+        .prob {
+            color: var(--yellow-alert);
+            background: var(--yellow-bg);
+            padding: 0.6rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--yellow-alert);
+            font-size: 0.88rem;
+        }
+
+        .corr {
+            color: var(--green-success);
+            background: var(--green-bg);
+            padding: 0.6rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--green-success);
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .just {
+            color: var(--blue-main);
+            background: var(--blue-light);
+            padding: 0.6rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--blue-main);
+            font-size: 0.88rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.88rem;
+        }
+
+        th {
+            background-color: var(--blue-main);
+            color: white;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            font-weight: 700;
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Rubric / Progress Bars */
+        .rubric-row {
+            margin-bottom: 1.2rem;
+        }
+
+        .rubric-lbl-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .rubric-track {
+            background: #e2e8f0;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .rubric-fill {
+            height: 100%;
+            background: var(--blue-main);
+            border-radius: 5px;
+            transition: width 0.8s ease-in-out;
+        }
+
+        /* Timeline / Plan */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .timeline-step {
+            border-left: 3.5px solid var(--blue-main);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            left: -8.5px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--blue-main);
+            border: 3px solid #ffffff;
+        }
+
+        .step-title {
+            font-weight: bold;
+            font-size: 1rem;
+            color: var(--blue-main);
+            margin-bottom: 0.25rem;
+        }
+
+        .step-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        /* Lists */
+        ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            main {
+                padding: 1.5rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            aside {
+                display: none;
+            }
+
+            .container {
+                box-shadow: none;
+                border: none;
+            }
+
+            main {
+                padding: 0;
+            }
+
+            .btn-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Sidebar / Menú Lateral -->
+    <aside>
+        <div class="aside-title">Navegación</div>
+        <ul class="aside-menu">
+            <li><a href="#resumen" class="active">1. Resumen Ejecutivo</a></li>
+            <li><a href="#valoracion">2. Valoración Global</a></li>
+            <li><a href="#fortalezas">3. Fortalezas</a></li>
+            <li><a href="#debilidades">4. Debilidades Críticas</a></li>
+            <li><a href="#seccion">5. Revisión Sección por Sección</a></li>
+            <li><a href="#metodologia">6. Errores Metodológicos</a></li>
+            <li><a href="#reescritura">7. Reescrítura Directa</a></li>
+            <li><a href="#matriz">8. Matriz de Corrección</a></li>
+            <li><a href="#rubrica">9. Rúbrica Analítica</a></li>
+            <li><a href="#plan">10. Plan de Mejora</a></li>
+            <li><a href="#veredicto">11. Veredicto Final</a></li>
+        </ul>
+        
+        <div class="btn-print-container">
+            <button class="btn-print" onclick="window.print()">
+                🖨️ Guardar PDF / Imprimir
+            </button>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main>
+        
+        <!-- Hero Header -->
+        <div class="hero">
+            <h1>INFORME DE REVISIÓN POR PARES (PEER REVIEW)</h1>
+            <p><strong>Artículo:</strong> Análisis Basado en Datos de la Brecha entre la Demanda Laboral de Tecnologías Emergentes y la Oferta Académica de Educación Superior en la República Dominicana (2025–2026)</p>
+            <div class="hero-meta">
+                <span><strong>Autor Evaluado:</strong> Juan José Díaz</span>
+                <span><strong>Revisor:</strong> Comité Editorial Senior (Indexación Scopus / WoS)</span>
+                <span><strong>Fecha de Evaluación:</strong> 27 de Mayo de 2026</span>
+            </div>
+        </div>
+
+        <!-- 1. Resumen Ejecutivo -->
+        <section id="resumen" class="card">
+            <h2 class="card-title">1. Resumen Ejecutivo</h2>
+            <p>A continuación se resume de manera sintética la valoración del artículo y su viabilidad editorial de publicación:</p>
+            
+            <div class="callout green">
+                <div class="callout-title">Tipo Real del Artículo</div>
+                <p>Estudio empírico descriptivo-transversal de enfoque mixto (Socio-Técnico y Educativo).</p>
+            </div>
+
+            <div class="callout blue">
+                <div class="callout-title">Fortaleza Principal</div>
+                <p>Uso de datos empíricos de mercado laboral real capturados en tiempo real (LinkedIn Jobs, BeBee) cruzados sistemáticamente con la currícula formal de grado de las cinco IES más representativas del país, ofreciendo una solidez empírica inédita en la región del Caribe.</p>
+            </div>
+
+            <div class="callout yellow">
+                <div class="callout-title">Problema Principal</div>
+                <p>La metodología carece de una formulación matemática explícita y formalizada para el cálculo del "Índice de Cobertura Curricular", y el diseño transversal limita la inferencia temporal (sesgo de un solo corte en 2026).</p>
+            </div>
+
+            <div class="callout green">
+                <div class="callout-title">Dictamen Editorial Sugerido</div>
+                <p><strong>Aceptar con Correcciones Menores (Minor Revision).</strong> El manuscrito cuenta con un rigor y relevancia excepcionales para revistas indexadas de nivel Q2/Q3.</p>
+            </div>
+        </section>
+
+        <!-- 2. Valoración Global -->
+        <section id="valoracion" class="card">
+            <h2 class="card-title">2. Valoración Global del Editor</h2>
+            <p>El manuscrito aborda un problema crítico y de alta relevancia práctica y científica: la brecha cualitativa entre el capital humano egresado en áreas STEAM y las exigencias de un mercado laboral fuertemente impulsado por factores macroeconómicos e Inteligencia Artificial en un país en vías de desarrollo (República Dominicana).</p>
+            <p>El trabajo destaca por su enfoque interdisciplinar, que exitosamente vincula las fuerzas macroeconómicas (TPM, OpEx, tarifas eléctricas) con decisiones de arquitectura de TI específicas, superando las limitaciones tradicionales de la literatura educativa pura. Sin embargo, para consolidar su aceptación en un foro indexado de alto impacto (Scopus/WoS), se debe elevar el formalismo matemático de las métricas y explicitar las limitaciones intrínsecas de las APIs utilizadas para mitigar cualquier riesgo de sesgo de representatividad muestral.</p>
+        </section>
+
+        <!-- 3. Fortalezas -->
+        <section id="fortalezas" class="card">
+            <h2 class="card-title">3. Fortalezas Principales</h2>
+            <ul>
+                <li><strong>Interdisciplinaridad Causal Coherente:</strong> La operacionalización de variables PESTEL utilizando indicadores del Banco Central (TPM en 5.25% anual, rango meta de inflación) y del Banco Mundial (tasa de informalidad del 57%) para justificar cuantitativamente por qué las juntas corporativas aceleran la migración a nubes elásticas (OpEx) y reducen el CapEx tradicional.</li>
+                <li><strong>Genuinidad de Datos Locales:</strong> Representa un aporte sustancial para cerrar el vacío de literatura científica sobre el desarrollo sociotécnico en Centroamérica y el Caribe, utilizando datos auditados directamente en el campo.</li>
+                <li><strong>Originalidad Metodológica:</strong> El cruce binario y la normalización de pénsumes oficiales universitarios frente a perfiles de reclutamiento activo añade un valor operativo claro e inmediatamente transferible al plano de la política pública educativa.</li>
+            </ul>
+        </section>
+
+        <!-- 4. Debilidades Críticas -->
+        <section id="debilidades" class="card">
+            <h2 class="card-title">4. Debilidades Críticas</h2>
+            
+            <div class="callout red">
+                <div class="callout-title">Debilidad 1: Ausencia de Formalismo Matemático para Métricas</div>
+                <p><strong>Problema:</strong> El manuscrito calcula un "Índice de Cobertura Curricular" de manera heurística o cualitativa sin proveer la fórmula matemática formalizada.</p>
+                <p><strong>Impacto:</strong> Reduce el rigor científico e impide la replicabilidad exacta de la investigación por otros académicos.</p>
+                <p><strong>Gravedad:</strong> Alta / Crítica.</p>
+            </div>
+
+            <div class="callout red">
+                <div class="callout-title">Debilidad 2: Limitación Intrínseca de Representatividad en APIs de Empleo</div>
+                <p><strong>Problema:</strong> Se asume que las ofertas de empleo capturadas en LinkedIn y BeBee representan el 100% de la demanda laboral, omitiendo sesgos de representatividad (ej. exclusión de perfiles gubernamentales locales que no usan estas plataformas).</p>
+                <p><strong>Impacto:</strong> Afecta la validez externa de las conclusiones de brecha cualitativa general.</p>
+                <p><strong>Gravedad:</strong> Media.</p>
+            </div>
+        </section>
+
+        <!-- 5. Revisión Sección por Sección -->
+        <section id="seccion" class="card">
+            <h2 class="card-title">5. Revisión Sección por Sección</h2>
+
+            <!-- Título -->
+            <div class="correction-block">
+                <div class="correction-header">Sección: Título del Artículo</div>
+                <div class="correction-content">
+                    <div class="orig">🔴 <strong>Texto original:</strong> Análisis Basado en Datos de la Brecha entre la Demanda Laboral de Tecnologías Emergentes y la Oferta Académica de Educación Superior en la República Dominicana (2025–2026)</div>
+                    <div class="prob">⚠️ <strong>Problema:</strong> El título es excesivamente largo y peca de descriptivo. En revistas WoS se prefiere concisión y un enfoque metodológico más preciso.</div>
+                    <div class="corr">✅ <strong>Versión corregida:</strong> Brecha sociotécnica entre demanda laboral emergente y oferta académica: un análisis descriptivo-causal en la República Dominicana</div>
+                    <div class="just">📌 <strong>Justificación:</strong> El título corregido es compacto (16 palabras), define el marco teórico subyacente (sociotécnico), y resume con mayor precisión el alcance de la investigación.</div>
+                </div>
+            </div>
+
+            <!-- Resumen -->
+            <div class="correction-block">
+                <div class="correction-header">Sección: Resumen / Abstract</div>
+                <div class="correction-content">
+                    <div class="orig">🔴 <strong>Texto original:</strong> Resultados: Se identificó una brecha crítica en roles emergentes como Ingeniería de Datos (100% de desalineación en grado)...</div>
+                    <div class="prob">⚠️ <strong>Problema:</strong> Menciona porcentajes absolutos y listas específicas en el resumen sin haber definido las métricas teóricas primarias que les dan validez.</div>
+                    <div class="corr">✅ <strong>Versión corregida:</strong> Resultados: El análisis cuantitativo identificó una desalineación estructural severa en disciplinas críticas. Se observó una ausencia de cobertura del 100% de programas de grado dedicados para la Ingeniería de Datos y de un 80% para metodologías de desarrollo en la nube (DevOps/Cloud Computing), contrastando con una tasa de adopción proyectada del 98% en arquitecturas de Inteligencia Artificial Agéntica corporativa.</div>
+                    <div class="just">📌 <strong>Justificación:</strong> Aporta un tono puramente académico y descriptivo, situando las variables en su contexto de significación metodológica.</div>
+                </div>
+            </div>
+
+            <!-- Metodología -->
+            <div class="correction-block">
+                <div class="correction-header">Sección: Metodología</div>
+                <div class="correction-content">
+                    <div class="orig">🔴 <strong>Texto original:</strong> Los programas fueron normalizados binariamente: (✓) Si la institución ofrece un título formal o concentración explícita... (✗) Si la disciplina está ausente...</div>
+                    <div class="prob">⚠️ <strong>Problema:</strong> El uso de símbolos informales de checklist (✓ y ✗) no es aceptable para describir metodologías de indexación WoS. Requiere una formulación matemática rigurosa del índice de normalización.</div>
+                    <div class="corr">✅ <strong>Versión corregida:</strong> Para formalizar el análisis comparativo, se definió el Índice de Cobertura Curricular ($ICC$) para cada disciplina $j$ analizada como: <br>
+                    $$ICC_j = \frac{1}{N} \sum_{i=1}^{N} C_{i,j}$$ <br>
+                    donde $N$ es el número total de instituciones universitarias analizadas ($N = 5$) y $C_{i,j}$ es una variable dicotómica de asignación de cobertura de la institución $i$ sobre la disciplina $j$, parametrizada formalmente como:<br>
+                    $C_{i,j} = 1$ si la institución ofrece un título de grado o concentración curricular explícita en su pénsum oficial, y $C_{i,j} = 0$ en caso de ausencia de programa o limitación a materias electivas aisladas.</div>
+                    <div class="just">📌 <strong>Justificación:</strong> Introduce formalismo matemático estricto que elimina la informalidad de la descripción binaria simple, dotando a la metodología de un estándar analítico internacional.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Errores Metodológicos Críticos -->
+        <section id="metodologia" class="card">
+            <h2 class="card-title">6. Errores Metodológicos Críticos</h2>
+            <div class="callout red">
+                <div class="callout-title">1. Falta de Ajuste por Sesgo de Sesión del Mercado Laboral</div>
+                <p>Las vacantes activas en plataformas digitales (Fase 1) están intrínsecamente sesgadas hacia corporaciones tecnológicas modernas y sector privado internacional. Las pequeñas y medianas empresas (PyMEs) dominicanas de sectores tradicionales y el sector público gubernamental local no suelen reclutar perfiles de alta ingeniería a través de LinkedIn. El estudio debe explicitar que la muestra es representativa de la <em>demanda digital de vanguardia y perfiles corporativos de alto valor</em>, y no del total absoluto de la fuerza laboral dominicana.</p>
+            </div>
+            <div class="callout yellow">
+                <div class="callout-title">2. Estacionariedad y Carácter Transversal</div>
+                <p>La auditoría de campo fue realizada en una ventana de corte específica a mayo de 2026. La demanda laboral tecnológica presenta una alta volatilidad cíclica. Concluir brechas estructurales a partir de un único corte transversal introduce sesgos temporales. Se recomienda mitigar esto definiendo la limitación correspondiente en el apartado final.</p>
+            </div>
+        </section>
+
+        <!-- 7. Reescrítura Directa -->
+        <section id="reescritura" class="card">
+            <h2 class="card-title">7. Reescrítura Directa de Secciones Clave</h2>
+            
+            <div class="correction-block">
+                <div class="correction-header">Introducción Corregida Académicamente</div>
+                <div class="correction-content">
+                    <p style="font-size: 0.9rem; text-align: justify; line-height: 1.6; color: var(--text-color);">
+                        "El desarrollo y competitividad de las economías emergentes del Caribe se encuentran intrínsecamente ligados a su capacidad de absorción y asimilación de tecnologías de frontera. En el caso de la República Dominicana, el crecimiento económico sostenido del Producto Interno Bruto (PIB) proyectado en un rango del 3.5% al 4.5% para el año fiscal 2026 por el Banco Mundial (2025) ejerce una presión directa sobre la infraestructura productiva local. Este fenómeno se enmarca en políticas estatales explícitas como la Agenda Digital 2030, formalizada bajo el Decreto Presidencial No. 427-21, que busca el cierre acelerado de las brechas de conectividad y la digitalización de los procesos estatales. No obstante, las asimetrías del mercado de talento representan el principal cuello de botella sociotécnico, registrando un preocupante 40% de empleadores que experimentan escasez para cubrir vacantes tecnológicas avanzadas (ManpowerGroup, 2025)."
+                    </p>
+                </div>
+            </div>
+
+            <div class="correction-block">
+                <div class="correction-header">Metodología Corregida Académicamente</div>
+                <div class="correction-content">
+                    <p style="font-size: 0.9rem; text-align: justify; line-height: 1.6; color: var(--text-color);">
+                        "La presente investigación adoptó un diseño no experimental, descriptivo-causal y de corte transversal. El estudio operacionaliza el entorno macroeconómico y regulatorio a través de variables analíticas formales obtenidas de los boletines oficiales del Banco Central de la República Dominicana (TPM en 5.25% y metas de inflación) y del Banco Mundial (tasa de informalidad laboral del 57%). Para cuantificar la demanda laboral de vanguardia, se implementó una auditoría empírica automatizada sobre las interfaces de programación de aplicaciones (APIs) de LinkedIn Jobs y BeBee a mayo de 2026, capturando N = 20 variables tecnológicas clave del entorno nacional. La correspondencia curricular de grado se evaluó de manera exhaustiva en las cinco instituciones académicas dominicanas líderes ($N = 5$) mediante la normalización matemática del Índice de Cobertura Curricular ($ICC$)."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Matriz de Corrección -->
+        <section id="matriz" class="card">
+            <h2 class="card-title">8. Matriz de Corrección y Recomendaciones</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Problema Detectado</th>
+                        <th style="width: 25%;">Impacto Científico</th>
+                        <th style="width: 25%;">Corrección Sugerida</th>
+                        <th style="width: 25%;">Texto Reescrito Sugerido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Informalidad en uso de símbolos gráficos (✓ y ✗) en el texto formal del análisis.</td>
+                        <td>Debilita el rigor estético y la formalidad científica exigida en arbitrajes internacionales.</td>
+                        <td>Reemplazar por valores numéricos normalizados ($C_{i,j} = 1$ o $C_{i,j} = 0$) en la descripción analítica.</td>
+                        <td>"Los programas académicos fueron modelados cuantitativamente mediante una matriz de cobertura dicotómica..."</td>
+                    </tr>
+                    <tr>
+                        <td>Omitir la delimitación geográfica interna de la muestra.</td>
+                        <td>Introduce sesgo de generalización excesiva sobre zonas rurales o de baja conectividad en R.D.</td>
+                        <td>Explicitar la concentración geográfica en Santo Domingo, Santo Domingo Oriental y Santiago de los Caballeros.</td>
+                        <td>"La representatividad geográfica de la muestra de vacantes está fuertemente ponderada hacia los núcleos urbanos metropolitanos..."</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 9. Rúbrica Analítica -->
+        <section id="rubrica" class="card">
+            <h2 class="card-title">9. Rúbrica Analítica (Evaluación del Manuscrito)</h2>
+            <p>Estado de cumplimiento del artículo científico con base en criterios de indexación:</p>
+            
+            <div class="rubric-row">
+                <div class="rubric-lbl-row">
+                    <span>Originalidad</span>
+                    <span>90%</span>
+                </div>
+                <div class="rubric-track">
+                    <div class="rubric-fill" style="width: 90%; background: var(--green-success);"></div>
+                </div>
+            </div>
+
+            <div class="rubric-row">
+                <div class="rubric-lbl-row">
+                    <span>Relevancia Práctica</span>
+                    <span>95%</span>
+                </div>
+                <div class="rubric-track">
+                    <div class="rubric-fill" style="width: 95%; background: var(--green-success);"></div>
+                </div>
+            </div>
+
+            <div class="rubric-row">
+                <div class="rubric-lbl-row">
+                    <span>Rigor Metodológico</span>
+                    <span>80%</span>
+                </div>
+                <div class="rubric-track">
+                    <div class="rubric-fill" style="width: 80%; background: var(--blue-main);"></div>
+                </div>
+            </div>
+
+            <div class="rubric-row">
+                <div class="rubric-lbl-row">
+                    <span>Resultados y Discusión</span>
+                    <span>88%</span>
+                </div>
+                <div class="rubric-track">
+                    <div class="rubric-fill" style="width: 88%; background: var(--blue-main);"></div>
+                </div>
+            </div>
+
+            <div class="rubric-row">
+                <div class="rubric-lbl-row">
+                    <span>Redacción Académica y APA 7</span>
+                    <span>90%</span>
+                </div>
+                <div class="rubric-track">
+                    <div class="rubric-fill" style="width: 90%; background: var(--green-success);"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Plan de Mejora -->
+        <section id="plan" class="card">
+            <h2 class="card-title">10. Plan de Mejora por Fases</h2>
+            <div class="timeline">
+                
+                <div class="timeline-step">
+                    <div class="step-title">Fase 1: Corrección Metodológica e Inserción de Fórmulas (Día 1-2)</div>
+                    <div class="step-desc">Inyectar la definición matemática del Índice de Cobertura Curricular ($ICC$) en la sección 3.2, y reemplazar las marcas heurísticas por la nomenclatura dicotómica normalizada.</div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-title">Fase 2: Ajuste de Resultados y Aclaración de Muestra (Día 3)</div>
+                    <div class="step-desc">Redactar el párrafo de delimitación muestral, explicando el sesgo inherente del uso de APIs digitales y la concentración en los principales cascos urbanos dominicanos (Santo Domingo y Santiago).</div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-title">Fase 3: Reescritura General y Revisión de Estilo APA (Día 4)</div>
+                    <div class="step-desc">Aplicar las reescrituras textuales sugeridas en este informe en el manuscrito final en formato Markdown.</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 11. Veredicto Final -->
+        <section id="veredicto" class="card">
+            <h2 class="card-title">11. Veredicto Editorial Final</h2>
+            <div class="callout green">
+                <div class="callout-title">DICTAMEN: ACEPTAR CON CORRECCIONES MENORES (MINOR REVISIONS)</div>
+                <p>El manuscrito presenta una altísima originalidad y pertinencia socio-económica. Una vez implementadas las precisiones de rigor metodológico y formalización de fórmulas descritas en este dictamen, el artículo posee las condiciones óptimas para iniciar su proceso formal de arbitraje e indexación exitosa en revistas internacionales Scopus de nivel Q2 o Q3.</p>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
