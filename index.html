@@ -864,6 +864,7 @@
         <button id="tabBtn1" class="main-tab-btn active" onclick="switchView('explorer')">1. Explorador de Tendencias Tecnológicas</button>
         <button id="tabBtn2" class="main-tab-btn" onclick="switchView('macro')">2. Factores de Impacto PEST (Político y Económico)</button>
         <button id="tabBtn3" class="main-tab-btn" onclick="switchView('steam')">3. Brecha de Talento y Carreras STEAM</button>
+        <button id="tabBtn4" class="main-tab-btn" onclick="switchView('references')">📚 Referencias Bibliográficas (APA)</button>
     </div>
 
     <!-- Espacio de Trabajo Principal -->
@@ -1225,7 +1226,7 @@
                             <thead>
                                 <tr>
                                     <th>Carrera / Programa</th>
-                                    <th style="text-align:center;">UTESA</th>
+                                    <th style="text-align:center;background-color:var(--utesa-green-light);border-bottom:2px solid var(--utesa-green-medium);"><span style="color:var(--utesa-green-deep);font-weight:800;font-size:0.75rem;">UTESA<br><small style="font-size:0.58rem;font-weight:600;display:block;margin-top:2px;">(SD y SD Oriental)</small></span></th>
                                     <th style="text-align:center;">INTEC</th>
                                     <th style="text-align:center;">ITLA</th>
                                     <th style="text-align:center;">UASD</th>
@@ -1236,30 +1237,30 @@
                             <tbody>
                                 <tr>
                                     <td><strong>Ing. en Ciberseguridad</strong></td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td><span class="table-badge gap-critical" style="background:rgba(220,38,38,0.12);color:#dc2626;">🔴 CRÍTICA</span></td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td><span class="table-badge" style="background:rgba(234,88,12,0.12);color:#ea580c;">🟠 ALTA</span></td>
                                 </tr>
                                 <tr>
                                     <td><strong>Ing. en IA y Ciencia de Datos</strong></td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td><span class="table-badge" style="background:rgba(220,38,38,0.12);color:#dc2626;">🔴 CRÍTICA</span></td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td><span class="table-badge" style="background:rgba(234,88,12,0.12);color:#ea580c;">🟠 ALTA</span></td>
                                 </tr>
                                 <tr>
                                     <td><strong>Tecnología Cloud / DevOps</strong></td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td><span class="table-badge" style="background:rgba(220,38,38,0.12);color:#dc2626;">🔴 NADIE LA TIENE</span></td>
+                                    <td><span class="table-badge gap-critical" style="background:rgba(220,38,38,0.12);color:#dc2626;">🔴 CRÍTICA (Falta grado)</span></td>
                                 </tr>
                                 <tr>
                                     <td><strong>Ing. Sistemas / Informática</strong></td>
@@ -1277,16 +1278,16 @@
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td><span class="table-badge" style="background:rgba(234,88,12,0.12);color:#ea580c;">🟠 ALTA</span></td>
+                                    <td><span class="table-badge gap-critical" style="background:rgba(220,38,38,0.12);color:#dc2626;">🔴 CRÍTICA</span></td>
                                 </tr>
                                 <tr>
                                     <td><strong>Ing. Mecatrónica / Robótica</strong></td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td><span class="table-badge" style="background:rgba(234,88,12,0.12);color:#ea580c;">🟠 ALTA</span></td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td><span class="table-badge badge-dev">MEDIA</span></td>
                                 </tr>
                                 <tr>
                                     <td><strong>Tecn. Semiconductores</strong></td>
@@ -1303,7 +1304,7 @@
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
+                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
                                     <td><span class="table-badge badge-dev">MEDIA</span></td>
                                 </tr>
                             </tbody>
@@ -1314,6 +1315,86 @@
                     </p>
                 </div>
 
+            </section>
+
+            <!-- VISTA 4: REFERENCIAS BIBLIOGRÁFICAS (APA) -->
+            <section id="panelReferences" class="view-panel">
+                <div class="panel-card" style="background: linear-gradient(135deg, var(--utesa-green-light), var(--bg-panel)); border: 1.5px solid var(--utesa-green-medium); border-radius: 12px; padding: 1.5rem; border-left: 5px solid var(--utesa-green-deep);">
+                    <h3 style="color: var(--utesa-green-deep); display: flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 1.2rem; font-weight: 800;">
+                        📚 Fuentes Oficiales de Información y Bibliografía Académica (APA 7.ª Edición)
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0.4rem 0 0 0; line-height: 1.5;">
+                        Esta sección recopila las referencias formales de bases de datos macroeconómicas, decretos nacionales, informes multinacionales y estudios de mercado que sustentan con rigor metodológico el modelo analítico de este tablero.
+                    </p>
+                </div>
+
+                <div class="panel-card">
+                    <span class="panel-title" style="color: var(--utesa-green-deep);">📋 Bibliografía Oficial del Entorno Dominicano (BCRD, BM, BVRD)</span>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 0.5rem;">
+                        
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Tasa de Política Monetaria - TPM 5.25% y Metas de Inflación]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Banco Central de la República Dominicana. (2025). <em>Decisión de política monetaria y expectativas macroeconómicas de inflación</em> (Boletín de Política Monetaria Enero-Mayo 2025). Santo Domingo, R.D.: Autor. Recuperado de <a href="https://www.bancentral.gov.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.bancentral.gov.do</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Crecimiento de PIB Dominicano y Perspectivas 2026]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Banco Mundial. (2025). <em>Informe de perspectivas económicas globales: América Latina y el Caribe frente a la transición digital</em> (Estudio de País R.D. 2025-2026). Washington, DC: Grupo Banco Mundial. Recuperado de <a href="https://www.bancomundial.org" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.bancomundial.org</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Digitalización Gubernamental y Conectividad]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Presidencia de la República Dominicana. (2021). <em>Decreto No. 427-21 que aprueba la Agenda Digital 2030 y crea el Gabinete de Innovación Digital</em>. Santo Domingo, R.D.: Gaceta Oficial. Recuperado de <a href="https://www.optiic.gob.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.optiic.gob.do</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Regulación del Teletrabajo y Relaciones de Empleo]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Ministerio de Trabajo de la República Dominicana. (2020). <em>Resolución No. 54-2020 sobre la regulación del teletrabajo como modalidad laboral especial</em>. Santo Domingo, R.D.: Autor. Recuperado de <a href="https://mt.gob.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://mt.gob.do</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Mercados Financieros e Interoperabilidad Digital]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Bolsa y Mercados de Valores de la República Dominicana. (2024). <em>Memoria analítica del mercado de valores y digitalización transaccional retail</em>. Santo Domingo, R.D.: Autor. Recuperado de <a href="https://www.bvrd.com.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.bvrd.com.do</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-card">
+                    <span class="panel-title" style="color: var(--utesa-green-deep);">🔬 Fuentes Científicas y Metodologías Globales de Tecnología</span>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 0.5rem;">
+                        
+                        <div style="border-left: 3px solid var(--utesa-green-medium); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Tendencias Tecnológicas Globales Proyectadas]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Gartner, Inc. (2025). <em>Gartner top strategic technology trends for 2026: Agentic AI and hyperautomation matrices</em>. Stamford, CT: Gartner Research. Recuperado de <a href="https://www.gartner.com" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.gartner.com</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-green-medium); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Adopción de Tecnologías y Empleo de IA en Software]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                GitHub, Inc. (2025). <em>The State of the Octoverse 2025: AI-Assisted software engineering adoption and open-source growth</em>. San Francisco, CA: GitHub Developer Relations. Recuperado de <a href="https://github.blog" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://github.blog</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-green-medium); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Encuesta Global de Habilidades y Lenguajes en Declive]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Stack Overflow. (2025). <em>2025 Developer survey: Obsolescence of manual processes and adoption of automated pipelines</em>. New York, NY: Autor. Recuperado de <a href="https://survey.stackoverflow.co" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://survey.stackoverflow.co</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
         </div>
@@ -1361,7 +1442,7 @@
             { id: "platform_eng", name: "Platform Engineering", level: "empresarial", category: "altisima", demandPct: 89, desc: "Construcción de plataformas internas para desarrolladores (Internal Developer Platforms) orientadas a reducir la fricción en infraestructura.", context: "Optimización operativa en grandes departamentos de TI en bancos locales y telcos.", forMortals: "Es crear una ventanilla única de autoservicio digital para que los programadores de una empresa obtengan sus servidores y herramientas con un solo clic, sin hacer filas.", tags: ["Autoservicio", "IDP Platforms", "Developer Experience"] },
             { id: "serverless", name: "Serverless Computing", level: "desarrollo", category: "altisima", demandPct: 87, desc: "Infraestructura elástica autogestionada donde las bases de datos y la capacidad de cómputo escalan de forma automatizada por el proveedor.", context: "Despliegue rápido de microservicios, llamadas a APIs e integraciones de IA.", forMortals: "Es como alquilar electricidad por segundos: solo pagas por la luz exacta que consumes cuando enciendes el interruptor, en lugar de comprar tu propia planta eléctrica.", tags: ["AWS Lambda", "Azure Functions", "Capacidad Elástica"] },
             { id: "edge_ai", name: "Edge AI (IA en el Borde)", level: "infraestructura", category: "acelerado", demandPct: 82, desc: "Ejecución de modelos analíticos complejos localmente en los dispositivos periféricos reduciendo drásticamente latencias y tráfico.", context: "Optimización de seguridad en hotelería, puertos y control de manufactura.", forMortals: "Es ponerle un 'pequeño cerebro inteligente' directamente a una cámara de seguridad o sensor, para que reconozca caras en el acto sin tener que pedir permiso a internet.", tags: ["IoT", "Sensores Inteligentes", "Baja Latencia"] },
-                        { id: "zero_trust_security", name: "Ciberseguridad Zero Trust", level: "infraestructura", category: "altisima", demandPct: 93, desc: "Modelo de seguridad moderno basado en verificar continuamente cada intento de acceso y autenticación en la nube, eliminando la confianza implícita.", context: "Protección de accesos remotos y de la interconexión segura de APIs bancarias.", forMortals: "Es como poner a un guardia de seguridad digital en la puerta de cada archivo de la empresa, que te pide identificación cada vez que quieres abrir un documento, aunque ya hayas entrado al edificio.", tags: ["Zero Trust", "MFA", "Seguridad Cloud", "Autenticación"] },
+            { id: "zero_trust_security", name: "Ciberseguridad Zero Trust", level: "infraestructura", category: "altisima", demandPct: 93, desc: "Modelo de seguridad moderno basado en verificar continuamente cada intento de acceso y autenticación en la nube, eliminando la confianza implícita.", context: "Protección de accesos remotos y de la interconexión segura de APIs bancarias.", forMortals: "Es como poner a un guardia de seguridad digital en la puerta de cada archivo de la empresa, que te pide identificación cada vez que quieres abrir un documento, aunque ya hayas entrado al edificio.", tags: ["Zero Trust", "MFA", "Seguridad Cloud", "Autenticación"] },
             { id: "aiops", name: "DevOps Inteligente (AIOps)", level: "desarrollo", category: "acelerado", demandPct: 84, desc: "Automatización de la administración de sistemas informáticos aplicando analítica predictiva de aprendizaje automático a los logs operativos.", context: "Detección temprana de caídas operativas y anomalías de software en banca móvil.", forMortals: "Es como tener a un médico digital monitoreando el pulso de los servidores de la empresa las 24 horas, capaz de predecir y curar un fallo antes de que los clientes lo noten.", tags: ["AIOps", "Log Analysis", "Auto-curación"] },
             { id: "iac", name: "Infrastructure as Code (IaC)", level: "infraestructura", category: "altisima", demandPct: 91, desc: "Administración, despliegue y auditoría de la infraestructura de TI completa (redes, bases de datos, accesos) mediante lenguaje de código.", context: "Gestión unificada de topologías híbridas y nubes públicas empresariales.", forMortals: "Es como crear los planos de una casa en un archivo de computadora de modo que, al presionar un botón, la casa se construya sola exactamente igual cada vez.", tags: ["Terraform", "Ansible", "Configuración de Nube"] },
             { id: "quantum", name: "Computación Cuántica", level: "estrategico", category: "futuro_cat", demandPct: 40, desc: "Cómputo basado en física cuántica. Aún en fase experimental pero atrayendo inversión masiva de corporativos globales.", context: "Optimización matemática hipercompleja, diseño de materiales y criptografía.", forMortals: "Es una súper computadora del futuro que procesa trillones de soluciones a la vez usando leyes de física avanzada, orientada a descifrar problemas imposibles hoy.", tags: ["Qubits", "Supercómputo"] },
@@ -1507,9 +1588,11 @@
             document.getElementById('tabBtn1').classList.remove('active');
             document.getElementById('tabBtn2').classList.remove('active');
             document.getElementById('tabBtn3').classList.remove('active');
+            document.getElementById('tabBtn4').classList.remove('active');
             document.getElementById('panelExplorer').classList.remove('active');
             document.getElementById('panelMacro').classList.remove('active');
             document.getElementById('panelSteam').classList.remove('active');
+            document.getElementById('panelReferences').classList.remove('active');
 
             const sidebar = document.getElementById('sidebarControls');
 
@@ -1521,9 +1604,13 @@
                 document.getElementById('tabBtn2').classList.add('active');
                 document.getElementById('panelMacro').classList.add('active');
                 sidebar.style.display = 'none';
-            } else {
+            } else if (view === 'steam') {
                 document.getElementById('tabBtn3').classList.add('active');
                 document.getElementById('panelSteam').classList.add('active');
+                sidebar.style.display = 'none';
+            } else {
+                document.getElementById('tabBtn4').classList.add('active');
+                document.getElementById('panelReferences').classList.add('active');
                 sidebar.style.display = 'none';
             }
         }
@@ -2045,446 +2132,435 @@
             });
         }
 
-                const realJobsData = [
-            {
-                title: "Agentic Python Engineer",
-                company: "FullStack",
-                location: "Santo Domingo Este, Santo Domingo, República Dominicana (En remoto)",
-                date: "Hace poco",
-                type: "IA Agéntica",
-                desc: "Desarrollo e implementación de flujos autónomos y programación acelerada por IA en FullStack.",
-                requirements: ["Python / TypeScript", "Asistentes de IA (Cursor/Claude Code)", "Model Context Protocol", "LangGraph / CrewAI"],
-                impact: "Aumenta la velocidad de desarrollo en un 60% automatizando tareas operativas repetitivas.",
-                forMortals: "Es programar con la ayuda de asistentes de Inteligencia Artificial que escriben y corrigen código por ti."
-            },
+                                                                const realJobsData = [
             {
                 title: "Training Master",
                 company: "Svitzer",
                 location: "Santo Domingo, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Svitzer.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Svitzer.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "Analista de Logística.",
                 company: "TotalEnergies",
                 location: "Santo Domingo, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Inteligencia de Negocios / BI",
-                desc: "Transformación de datos crudos en informes y tableros interactivos para guiar las decisiones comerciales en TotalEnergies.",
-                requirements: ["Power BI / Tableau", "SQL para consultas", "Análisis de Requerimientos", "Estadística Comercial"],
-                impact: "Acelera la toma de decisiones estratégicas basadas en evidencia empírica en un 40%.",
-                forMortals: "Es tomar miles de números y convertirlos en gráficos de barras y pasteles interactivos muy fáciles de leer."
+                desc: "Transformación de datos crudos en tableros e informes para decisiones gerenciales en TotalEnergies.",
+                requirements: ["Power BI / Tableau / Looker", "SQL para análisis", "Estadística y visualización", "Storytelling con datos"],
+                impact: "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+                forMortals: "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
             },
             {
                 title: "Data Engineer",
                 company: "EvoPoint Solutions",
                 location: "Distrito Nacional, República Dominicana (Híbrido)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Datos",
-                desc: "Construcción y optimización de almacenes de datos analíticos, flujos de extracción ETL y modelado dimensional en EvoPoint Solutions.",
-                requirements: ["SQL Avanzado", "Apache Spark / dbt", "Data Lakes & Warehouses", "Python para ingeniería de datos"],
-                impact: "Asegura que los datos de negocio estén siempre limpios, ordenados y listos para los analistas de negocio.",
-                forMortals: "Es construir las 'tuberías digitales' que limpian y ordenan toda la información para que sea fácil analizarla."
+                desc: "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en EvoPoint Solutions.",
+                requirements: ["SQL Avanzado & dbt", "Apache Spark / Kafka", "Data Lakes & Warehouses", "Python para ETL"],
+                impact: "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+                forMortals: "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
             },
             {
                 title: "Coordinador de Proyectos",
                 company: "Supermercados Bravo",
                 location: "Santo Domingo Oeste, Santo Domingo, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Supermercados Bravo.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Supermercados Bravo.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "CONSULTOR ANALISTA DE DOCUMENTACIÓN",
                 company: "PERCEPTIO S.A.S.",
                 location: "República Dominicana (En remoto)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Inteligencia de Negocios / BI",
-                desc: "Transformación de datos crudos en informes y tableros interactivos para guiar las decisiones comerciales en PERCEPTIO S.A.S..",
-                requirements: ["Power BI / Tableau", "SQL para consultas", "Análisis de Requerimientos", "Estadística Comercial"],
-                impact: "Acelera la toma de decisiones estratégicas basadas en evidencia empírica en un 40%.",
-                forMortals: "Es tomar miles de números y convertirlos en gráficos de barras y pasteles interactivos muy fáciles de leer."
+                desc: "Transformación de datos crudos en tableros e informes para decisiones gerenciales en PERCEPTIO S.A.S..",
+                requirements: ["Power BI / Tableau / Looker", "SQL para análisis", "Estadística y visualización", "Storytelling con datos"],
+                impact: "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+                forMortals: "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
             },
             {
-                title: "Professional Services Partner",
+                title: "Professional Services Partner - Remote Work | REF#289343",
                 company: "BairesDev",
                 location: "América Latina (En remoto)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en BairesDev.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en BairesDev.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "TVET Capacity Building Specialist",
                 company: "ReliefWeb",
                 location: "República Dominicana (Híbrido)",
-                date: "Hace poco",
-                type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en ReliefWeb.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                date: "Mayo 2026",
+                type: "IA y Automatización",
+                desc: "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en ReliefWeb.",
+                requirements: ["Python / TensorFlow / PyTorch", "Modelos LLM y IA Generativa", "MLOps & Pipelines", "Automatización RPA"],
+                impact: "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+                forMortals: "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
             },
             {
-                title: "Remote",
+                title: "Remote - Quality Assurance & Process Analyst",
                 company: "World Business Lenders, LLC",
                 location: "Las Salinas, Provincia Barahona, República Dominicana (En remoto)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en World Business Lenders, LLC.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en World Business Lenders, LLC.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
-                title: "Lead Technical Support Engineer",
+                title: "Lead Technical Support Engineer | Upto $50K/yr",
                 company: "Mercor",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Mercor.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Mercor.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "Planificador de mantenimiento",
                 company: "CMI-Corporación Multi Inversiones",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
-                date: "Hace poco",
-                type: "Inteligencia de Negocios / BI",
-                desc: "Transformación de datos crudos en informes y tableros interactivos para guiar las decisiones comerciales en CMI-Corporación Multi Inversiones.",
-                requirements: ["Power BI / Tableau", "SQL para consultas", "Análisis de Requerimientos", "Estadística Comercial"],
-                impact: "Acelera la toma de decisiones estratégicas basadas en evidencia empírica en un 40%.",
-                forMortals: "Es tomar miles de números y convertirlos en gráficos de barras y pasteles interactivos muy fáciles de leer."
+                date: "Mayo 2026",
+                type: "Ingeniería de Software",
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en CMI-Corporación Multi Inversiones.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "IT Projektový Specialista / Cyber Security Leader",
                 company: "Schneider Electric",
                 location: "República Dominicana (Presencial)",
-                date: "Hace poco",
-                type: "Ciberseguridad",
-                desc: "Monitoreo de amenazas, auditoría de vulnerabilidades y defensa de perímetros digitales corporativos en Schneider Electric.",
-                requirements: ["CompTIA Security+ / CEH", "Detección de Intrusos (SIEM)", "Seguridad de Redes", "Ethical Hacking"],
-                impact: "Protege el patrimonio digital corporativo y los datos de clientes ante ataques externos o malware.",
-                forMortals: "Es como un guardia digital que vigila la red de la empresa para evitar hackeos o robos de información."
+                date: "Mayo 2026",
+                type: "IA y Automatización",
+                desc: "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Schneider Electric.",
+                requirements: ["Python / TensorFlow / PyTorch", "Modelos LLM y IA Generativa", "MLOps & Pipelines", "Automatización RPA"],
+                impact: "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+                forMortals: "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
             },
             {
                 title: "Coordinador de Redes – Última Milla",
                 company: "Tu Empleo RD",
                 location: "Santo Domingo Este, Santo Domingo, República Dominicana (Presencial)",
-                date: "Hace poco",
-                type: "Tecnología Cloud / DevOps",
-                desc: "Administración de infraestructuras de red, despliegues elásticos en la nube y conectividad de alta disponibilidad en Tu Empleo RD.",
-                requirements: ["Terraform / Ansible", "AWS / Azure Cloud Foundations", "Kubernetes & Docker", "Configuración de switches y firewalls"],
-                impact: "Garantiza un tiempo de actividad del 99.9% para todas las plataformas digitales de la compañía.",
-                forMortals: "Es estructurar y mantener los servidores de internet y la red para que los sistemas de la empresa nunca se caigan."
+                date: "Mayo 2026",
+                type: "Cloud & Infraestructura",
+                desc: "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Tu Empleo RD.",
+                requirements: ["AWS / Azure / GCP Certified", "Kubernetes & Docker", "Terraform & Ansible", "Redes: switches, firewalls"],
+                impact: "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+                forMortals: "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
             },
             {
-                title: "Engineer II",
+                title: "Engineer II - Manufacturing-3",
                 company: "Integer Holdings Corporation",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Integer Holdings Corporation.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Integer Holdings Corporation.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "Gerente Senior Sinergias Comerciales de Datos",
                 company: "Banco BHD",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Híbrido)",
-                date: "Hace poco",
-                type: "Ingeniería de Datos",
-                desc: "Construcción y optimización de almacenes de datos analíticos, flujos de extracción ETL y modelado dimensional en Banco BHD.",
-                requirements: ["SQL Avanzado", "Apache Spark / dbt", "Data Lakes & Warehouses", "Python para ingeniería de datos"],
-                impact: "Asegura que los datos de negocio estén siempre limpios, ordenados y listos para los analistas de negocio.",
-                forMortals: "Es construir las 'tuberías digitales' que limpian y ordenan toda la información para que sea fácil analizarla."
+                date: "Mayo 2026",
+                type: "IA y Automatización",
+                desc: "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Banco BHD.",
+                requirements: ["Python / TensorFlow / PyTorch", "Modelos LLM y IA Generativa", "MLOps & Pipelines", "Automatización RPA"],
+                impact: "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+                forMortals: "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
             },
             {
                 title: "Electrical BIM Job Captain",
                 company: "ENG",
                 location: "República Dominicana (En remoto)",
-                date: "Hace poco",
-                type: "Inteligencia de Negocios / BI",
-                desc: "Transformación de datos crudos en informes y tableros interactivos para guiar las decisiones comerciales en ENG.",
-                requirements: ["Power BI / Tableau", "SQL para consultas", "Análisis de Requerimientos", "Estadística Comercial"],
-                impact: "Acelera la toma de decisiones estratégicas basadas en evidencia empírica en un 40%.",
-                forMortals: "Es tomar miles de números y convertirlos en gráficos de barras y pasteles interactivos muy fáciles de leer."
+                date: "Mayo 2026",
+                type: "Ingeniería de Software",
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en ENG.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "Manufacturing Engineer I",
                 company: "Nissha Medical Technologies",
                 location: "República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Nissha Medical Technologies.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Nissha Medical Technologies.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "Medical Education and Events Specialist",
                 company: "Zimmer Biomet",
                 location: "República Dominicana (Híbrido)",
-                date: "Hace poco",
-                type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Zimmer Biomet.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                date: "Mayo 2026",
+                type: "IA y Automatización",
+                desc: "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Zimmer Biomet.",
+                requirements: ["Python / TensorFlow / PyTorch", "Modelos LLM y IA Generativa", "MLOps & Pipelines", "Automatización RPA"],
+                impact: "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+                forMortals: "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
             },
             {
                 title: "Analista de Proyectos (INFOCENTRO)",
                 company: "Banco Popular Dominicano",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Inteligencia de Negocios / BI",
-                desc: "Transformación de datos crudos en informes y tableros interactivos para guiar las decisiones comerciales en Banco Popular Dominicano.",
-                requirements: ["Power BI / Tableau", "SQL para consultas", "Análisis de Requerimientos", "Estadística Comercial"],
-                impact: "Acelera la toma de decisiones estratégicas basadas en evidencia empírica en un 40%.",
-                forMortals: "Es tomar miles de números y convertirlos en gráficos de barras y pasteles interactivos muy fáciles de leer."
+                desc: "Transformación de datos crudos en tableros e informes para decisiones gerenciales en Banco Popular Dominicano.",
+                requirements: ["Power BI / Tableau / Looker", "SQL para análisis", "Estadística y visualización", "Storytelling con datos"],
+                impact: "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+                forMortals: "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
             },
             {
                 title: "Ingeniero de Calidad",
                 company: "Cardinal Health",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
-                date: "Hace poco",
-                type: "QA y Pruebas",
-                desc: "Garantía de calidad de software y validación funcional automatizada de aplicaciones en Cardinal Health.",
-                requirements: ["Automatización de Pruebas (Selenium, Cypress)", "Casos de Prueba (QA Manual)", "Python / JavaScript básico", "Bug Tracking (Jira)"],
-                impact: "Reduce el número de errores en producción y asegura que las aplicaciones funcionen perfectamente para el cliente.",
-                forMortals: "Es el detective que se encarga de usar y probar las aplicaciones antes de que salgan al público para corregir fallos."
+                date: "Mayo 2026",
+                type: "Ingeniería de Software",
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Cardinal Health.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "Salesforce Consultant",
                 company: "Applaudo",
                 location: "República Dominicana (En remoto)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Applaudo.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Applaudo.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "Data Engineer",
                 company: "Perform",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Datos",
-                desc: "Construcción y optimización de almacenes de datos analíticos, flujos de extracción ETL y modelado dimensional en Perform.",
-                requirements: ["SQL Avanzado", "Apache Spark / dbt", "Data Lakes & Warehouses", "Python para ingeniería de datos"],
-                impact: "Asegura que los datos de negocio estén siempre limpios, ordenados y listos para los analistas de negocio.",
-                forMortals: "Es construir las 'tuberías digitales' que limpian y ordenan toda la información para que sea fácil analizarla."
+                desc: "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en Perform.",
+                requirements: ["SQL Avanzado & dbt", "Apache Spark / Kafka", "Data Lakes & Warehouses", "Python para ETL"],
+                impact: "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+                forMortals: "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
             },
             {
                 title: "Assistant.MFG.Engineering",
                 company: "Eaton",
                 location: "Bajos de Haina, San Cristóbal, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Eaton.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Eaton.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
-                title: "Video Editor",
+                title: "Video Editor - Dominican Republic",
                 company: "Edit Crew",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Edit Crew.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Edit Crew.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "Scientist I",
                 company: "STERIS",
                 location: "Santo Domingo Este, Santo Domingo, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en STERIS.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en STERIS.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
-                title: "Agentic Software Engineer (Claude Code)",
+                title: "Agentic Software Engineer (Claude Code) - Remote - Latin America",
                 company: "FullStack",
                 location: "Bonao, Monseñor Nouel, República Dominicana (En remoto)",
-                date: "Hace poco",
-                type: "IA Agéntica",
-                desc: "Desarrollo e implementación de flujos autónomos y programación acelerada por IA en FullStack.",
-                requirements: ["Python / TypeScript", "Asistentes de IA (Cursor/Claude Code)", "Model Context Protocol", "LangGraph / CrewAI"],
-                impact: "Aumenta la velocidad de desarrollo en un 60% automatizando tareas operativas repetitivas.",
-                forMortals: "Es programar con la ayuda de asistentes de Inteligencia Artificial que escriben y corrigen código por ti."
+                date: "Mayo 2026",
+                type: "IA y Automatización",
+                desc: "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en FullStack.",
+                requirements: ["Python / TensorFlow / PyTorch", "Modelos LLM y IA Generativa", "MLOps & Pipelines", "Automatización RPA"],
+                impact: "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+                forMortals: "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
             },
             {
                 title: "Gerente Senior Regional de Seguridad y TI",
                 company: "Multicómputos",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ciberseguridad",
-                desc: "Monitoreo de amenazas, auditoría de vulnerabilidades y defensa de perímetros digitales corporativos en Multicómputos.",
-                requirements: ["CompTIA Security+ / CEH", "Detección de Intrusos (SIEM)", "Seguridad de Redes", "Ethical Hacking"],
-                impact: "Protege el patrimonio digital corporativo y los datos de clientes ante ataques externos o malware.",
-                forMortals: "Es como un guardia digital que vigila la red de la empresa para evitar hackeos o robos de información."
+                desc: "Protección de activos digitales, auditoría de vulnerabilidades y respuesta a incidentes en Multicómputos.",
+                requirements: ["CompTIA Security+ / CEH / CISSP", "SIEM & SOC Operations", "Seguridad en cloud y redes", "Ethical Hacking"],
+                impact: "Previene pérdidas millonarias por ataques cibernéticos y protege la reputación corporativa.",
+                forMortals: "Es ser el guardián digital que protege a la empresa de hackers y robos de información."
             },
             {
                 title: "Data Analysis Teaching Experts",
                 company: "TripleTen Indonesia",
                 location: "Santo Domingo, República Dominicana (En remoto)",
-                date: "Hace poco",
-                type: "Ingeniería de Datos",
-                desc: "Construcción y optimización de almacenes de datos analíticos, flujos de extracción ETL y modelado dimensional en TripleTen Indonesia.",
-                requirements: ["SQL Avanzado", "Apache Spark / dbt", "Data Lakes & Warehouses", "Python para ingeniería de datos"],
-                impact: "Asegura que los datos de negocio estén siempre limpios, ordenados y listos para los analistas de negocio.",
-                forMortals: "Es construir las 'tuberías digitales' que limpian y ordenan toda la información para que sea fácil analizarla."
+                date: "Mayo 2026",
+                type: "Ingeniería de Software",
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en TripleTen Indonesia.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
-                title: "Corporativo",
+                title: "Corporativo - Especialista Comunicación Interna",
                 company: "Centro Cuesta Nacional",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
-                date: "Hace poco",
-                type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Centro Cuesta Nacional.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                date: "Mayo 2026",
+                type: "IA y Automatización",
+                desc: "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Centro Cuesta Nacional.",
+                requirements: ["Python / TensorFlow / PyTorch", "Modelos LLM y IA Generativa", "MLOps & Pipelines", "Automatización RPA"],
+                impact: "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+                forMortals: "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
             },
             {
                 title: "Supervisor, Production-2",
                 company: "Integer Holdings Corporation",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Integer Holdings Corporation.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Integer Holdings Corporation.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "Lead Generation Specialist",
                 company: "Remote Leverage",
                 location: "América Latina (En remoto)",
-                date: "Hace poco",
-                type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Remote Leverage.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                date: "Mayo 2026",
+                type: "IA y Automatización",
+                desc: "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Remote Leverage.",
+                requirements: ["Python / TensorFlow / PyTorch", "Modelos LLM y IA Generativa", "MLOps & Pipelines", "Automatización RPA"],
+                impact: "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+                forMortals: "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
             },
             {
-                title: "Customer Support Specialist",
+                title: "Customer Support Specialist - Fully Remote",
                 company: "Mercor",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
-                date: "Hace poco",
-                type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Mercor.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                date: "Mayo 2026",
+                type: "IA y Automatización",
+                desc: "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Mercor.",
+                requirements: ["Python / TensorFlow / PyTorch", "Modelos LLM y IA Generativa", "MLOps & Pipelines", "Automatización RPA"],
+                impact: "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+                forMortals: "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
             },
             {
-                title: "Senior Drupal Engineer (AI-Augmented)",
+                title: "Senior Drupal Engineer (AI-Augmented) - Remote - Latin America",
                 company: "FullStack",
                 location: "Concepción de la Vega, La Vega, República Dominicana (En remoto)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en FullStack.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en FullStack.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "Coordinador de Mantenimiento (Proyectos)",
                 company: "Eaton",
                 location: "Bajos de Haina, San Cristóbal, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Eaton.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Eaton.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "LIDER DE PROYECTOS ARQUITECTURA DE DATOS",
                 company: "Banco Popular Dominicano",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Datos",
-                desc: "Construcción y optimización de almacenes de datos analíticos, flujos de extracción ETL y modelado dimensional en Banco Popular Dominicano.",
-                requirements: ["SQL Avanzado", "Apache Spark / dbt", "Data Lakes & Warehouses", "Python para ingeniería de datos"],
-                impact: "Asegura que los datos de negocio estén siempre limpios, ordenados y listos para los analistas de negocio.",
-                forMortals: "Es construir las 'tuberías digitales' que limpian y ordenan toda la información para que sea fácil analizarla."
+                desc: "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en Banco Popular Dominicano.",
+                requirements: ["SQL Avanzado & dbt", "Apache Spark / Kafka", "Data Lakes & Warehouses", "Python para ETL"],
+                impact: "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+                forMortals: "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
             },
             {
                 title: "Gerente Residente",
                 company: "Hyatt",
                 location: "La Altagracia, República Dominicana (Presencial)",
-                date: "Hace poco",
-                type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en Hyatt.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                date: "Mayo 2026",
+                type: "Gestión de TI / Liderazgo Tech",
+                desc: "Dirección estratégica del área tecnológica y alineación con los objetivos del negocio en Hyatt.",
+                requirements: ["PMP / ITIL / COBIT", "Gestión de equipos técnicos", "Presupuesto y planificación TI", "Transformación digital"],
+                impact: "Guía la transformación digital de la empresa para mantenerse competitiva en la economía digital.",
+                forMortals: "Es ser el director del equipo de tecnología, decidiendo qué sistemas y proyectos construir."
             },
             {
                 title: "Marketing Assistant",
                 company: "TalentPop App",
                 location: "América Latina (En remoto)",
-                date: "Hace poco",
+                date: "Mayo 2026",
                 type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en TalentPop App.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                desc: "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en TalentPop App.",
+                requirements: ["Python, Java, JavaScript / TypeScript", "APIs REST & Microservicios", "Git & CI/CD", "Testing automatizado"],
+                impact: "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+                forMortals: "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
             },
             {
                 title: "IT Advisor IV (911 Program Liaison and Technical Advisor)",
                 company: "ATSG Corporation",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
-                date: "Hace poco",
-                type: "Ingeniería de Software",
-                desc: "Desarrollo e implementación de soluciones de software escalables y eficientes en ATSG Corporation.",
-                requirements: ["Git / Metodologías Ágiles", "Diseño de APIs", "Frontend o Backend stack", "Resolución de Problemas"],
-                impact: "Acelera el lanzamiento de nuevos productos y automatizaciones internas.",
-                forMortals: "Es programar aplicaciones y sistemas modernos para resolver las necesidades del día a día de la empresa."
+                date: "Mayo 2026",
+                type: "IA y Automatización",
+                desc: "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en ATSG Corporation.",
+                requirements: ["Python / TensorFlow / PyTorch", "Modelos LLM y IA Generativa", "MLOps & Pipelines", "Automatización RPA"],
+                impact: "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+                forMortals: "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
             },
             {
-                title: "AI Machine Learning Engineer",
+                title: "AI Machine Learning Engineer - Remote - Latin America",
                 company: "FullStack",
                 location: "Luperón, Puerto Plata, República Dominicana (En remoto)",
-                date: "Hace poco",
-                type: "Machine Learning",
-                desc: "Diseño, entrenamiento e implementación de modelos de aprendizaje automático y visión computacional en FullStack.",
-                requirements: ["Python (PyTorch, TensorFlow)", "MLOps & Pipelines", "Modelos de Lenguaje (LLMs)", "Procesamiento de Datos"],
-                impact: "Habilita la toma de decisiones predictivas automáticas de alta fidelidad basada en datos históricos.",
-                forMortals: "Es entrenar a las computadoras para que aprendan a predecir comportamientos o reconocer patrones solas."
+                date: "Mayo 2026",
+                type: "IA y Automatización",
+                desc: "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en FullStack.",
+                requirements: ["Python / TensorFlow / PyTorch", "Modelos LLM y IA Generativa", "MLOps & Pipelines", "Automatización RPA"],
+                impact: "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+                forMortals: "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
             },
             {
                 title: "Network Engineer",
                 company: "Quagnito Solutions Pvt Ltd",
                 location: "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
-                date: "Hace poco",
-                type: "Tecnología Cloud / DevOps",
-                desc: "Administración de infraestructuras de red, despliegues elásticos en la nube y conectividad de alta disponibilidad en Quagnito Solutions Pvt Ltd.",
-                requirements: ["Terraform / Ansible", "AWS / Azure Cloud Foundations", "Kubernetes & Docker", "Configuración de switches y firewalls"],
-                impact: "Garantiza un tiempo de actividad del 99.9% para todas las plataformas digitales de la compañía.",
-                forMortals: "Es estructurar y mantener los servidores de internet y la red para que los sistemas de la empresa nunca se caigan."
+                date: "Mayo 2026",
+                type: "Cloud & Infraestructura",
+                desc: "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Quagnito Solutions Pvt Ltd.",
+                requirements: ["AWS / Azure / GCP Certified", "Kubernetes & Docker", "Terraform & Ansible", "Redes: switches, firewalls"],
+                impact: "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+                forMortals: "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
             }
         ];
 
