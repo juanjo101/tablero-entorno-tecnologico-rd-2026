@@ -29,7 +29,7 @@
 - Mapa de brechas: Demanda del mercado vs. habilidades presentes en perfiles LinkedIn RD
 - Cobertura ampliada: Sistemas Computacionales, Electrónica, Eléctrica, Mecánica, Industrial, Civil, Arquitectura, Manufactura y BIM
 - Nuevas carreras STEAM recomendadas con prioridad y justificación
-- Tabla de disponibilidad por universidad (UTESA, INTEC, ITLA, UASD, PUCMM)
+- Tabla de disponibilidad por universidad (UTESA, INTEC, ITLA, UASD, PUCMM, O&M, UAPA, UNICARIBE)
 
 ---
 
