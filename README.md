@@ -15,7 +15,7 @@
 
 ### Pestaña 1 — Explorador de Tendencias STEAM
 - Variables STEAM analizadas (demanda proyectada 2026)
-- Tendencias de software, datos y nube junto con automatización industrial, energía, manufactura, BIM, construcción digital y supply chain
+- Tendencias de software, datos y nube junto con automatización industrial, energías renovables, almacenamiento BESS, microrredes, movilidad eléctrica/autónoma, manufactura, BIM, construcción digital, agua inteligente, materiales avanzados, carbono/ESG y supply chain
 - Tabla interactiva filtrable por nivel, categoría y búsqueda
 - Gráfico de barras / radar con Chart.js
 - Panel lateral ("En Sencillo — Para Mortales") al hacer clic en cada tendencia
@@ -38,7 +38,7 @@
 | Fase | Descripción |
 |------|-------------|
 | **Fase 1** | Mapeo de tendencias en Gartner 2026, GitHub Octoverse 2025, Stack Overflow Survey 2025 |
-| **Fase 2** | Enfoque temático balanceado (Cloud, IA, Ciberseguridad, Datos, Automatización, energía, electrónica aplicada, manufactura, construcción digital, BIM, infraestructura civil y supply chain) |
+| **Fase 2** | Enfoque temático balanceado (Cloud, IA, Ciberseguridad, Datos, Automatización, renovables, BESS, microrredes, movilidad eléctrica/autónoma, electrónica aplicada, manufactura, construcción digital, BIM, infraestructura civil, agua, materiales, ESG y supply chain) |
 | **Fase 3** | Validación con vacantes activas en LinkedIn RD + BeBee + Jooble (mayo 2026), usando búsquedas sectoriales por carrera STEAM |
 | **Fase 4** | Cruce de habilidades de 2.1M perfiles LinkedIn RD con demanda real de mercado |
 
