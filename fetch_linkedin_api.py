@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Extractor de Tendencias Tecnológicas RD — Demanda del Mercado
+Extractor de Tendencias STEAM RD — Demanda del Mercado
 Búsqueda directa en LinkedIn usando geoId de República Dominicana
 geoId=101623149 = República Dominicana
 """
@@ -9,13 +9,13 @@ import re, json, time, sys, os, urllib.request, urllib.parse
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-WORKSPACE = r"C:\Users\jdiaz\Documents\antigravity\resilient-planck"
+WORKSPACE = os.path.dirname(os.path.abspath(__file__))
 INDEX_PATH = os.path.join(WORKSPACE, "index.html")
 
 # geoId oficial de LinkedIn para República Dominicana
 GEO_ID = "101623149"
 
-# Búsquedas orientadas a tendencias tecnológicas en RD
+# Búsquedas orientadas a tendencias STEAM en RD
 TECH_SEARCHES = [
     # IA y Automatización
     ("inteligencia artificial",     "IA / Automatización"),
@@ -40,6 +40,32 @@ TECH_SEARCHES = [
     ("gerente tecnologia",           "Gestión de TI"),
     ("director tecnologia",          "Gestión de TI"),
     ("jefe sistemas",                "Gestión de TI"),
+    # Ingenierías tradicionales y arquitectura
+    ("ingeniero electronico",        "Ingeniería Electrónica"),
+    ("instrumentacion industrial",   "Ingeniería Electrónica"),
+    ("PLC SCADA",                    "Ingeniería Electrónica"),
+    ("IoT industrial",               "Ingeniería Electrónica"),
+    ("ingeniero electrico",          "Ingeniería Eléctrica"),
+    ("electrical engineer",          "Ingeniería Eléctrica"),
+    ("eficiencia energetica",        "Ingeniería Eléctrica"),
+    ("energia solar",                "Ingeniería Eléctrica"),
+    ("ingeniero mecanico",           "Ingeniería Mecánica"),
+    ("mechanical engineer",          "Ingeniería Mecánica"),
+    ("mantenimiento predictivo",     "Ingeniería Mecánica"),
+    ("ingeniero industrial",         "Ingeniería Industrial"),
+    ("industrial engineer",          "Ingeniería Industrial"),
+    ("supply chain",                 "Ingeniería Industrial"),
+    ("lean manufacturing",           "Ingeniería Industrial"),
+    ("ingeniero civil",              "Ingeniería Civil"),
+    ("civil engineer",               "Ingeniería Civil"),
+    ("infraestructura civil",        "Ingeniería Civil"),
+    ("arquitecto",                   "Arquitectura / BIM"),
+    ("BIM architect",                "Arquitectura / BIM"),
+    ("BIM engineer",                 "Arquitectura / BIM"),
+    ("revit BIM",                    "Arquitectura / BIM"),
+    ("manufacturing engineer",       "Manufactura / Calidad"),
+    ("ingeniero de calidad",         "Manufactura / Calidad"),
+    ("mantenimiento industrial",     "Manufactura / Calidad"),
 ]
 
 HEADERS = {
@@ -50,7 +76,7 @@ HEADERS = {
 }
 
 print("=" * 70)
-print("📊 ANÁLISIS TENDENCIAS TECNOLÓGICAS — REPÚBLICA DOMINICANA 2026")
+print("📊 ANÁLISIS TENDENCIAS STEAM — REPÚBLICA DOMINICANA 2026")
 print("=" * 70)
 print(f"\n🌐 Fuente: LinkedIn Jobs | Geolocalización: RD (geoId={GEO_ID})")
 print(f"📅 Período: Últimos 30 días (Mayo 2026)\n")
@@ -95,6 +121,27 @@ def extract_jobs(html):
         })
     return results
 
+def is_relevant_location(location):
+    loc = location.lower()
+    allowed = [
+        "república dominicana",
+        "republica dominicana",
+        "dominican republic",
+        "santo domingo",
+        "santiago",
+        "san cristóbal",
+        "san cristobal",
+        "la vega",
+        "bonao",
+        "barahona",
+        "puerto plata",
+        "la altagracia",
+        "américa latina",
+        "america latina",
+        "latin america",
+    ]
+    return any(term in loc for term in allowed)
+
 # --- RECOPILACIÓN ---
 all_jobs = []
 seen = set()
@@ -106,6 +153,8 @@ for keywords, category in TECH_SEARCHES:
     found = extract_jobs(html)
     new = 0
     for j in found:
+        if not is_relevant_location(j["location"]):
+            continue
         key = (j["title"].lower()[:45], j["company"].lower()[:30])
         if key not in seen:
             seen.add(key)
@@ -121,7 +170,7 @@ print(f"📦 TOTAL VACANTES ÚNICAS: {len(all_jobs)}")
 print(f"{'='*70}\n")
 
 # --- RESUMEN DE DEMANDA POR CATEGORÍA ---
-print("📊 DEMANDA POR ÁREA TECNOLÓGICA (Mayo 2026 — RD):")
+print("📊 DEMANDA POR ÁREA STEAM (Mayo 2026 — RD):")
 print("-" * 50)
 for cat, count in sorted(demand_by_category.items(), key=lambda x: -x[1]):
     bar = "█" * count
@@ -188,6 +237,55 @@ def enrich(j):
             "impact": "Guía la transformación digital de la empresa para mantenerse competitiva en la economía digital.",
             "forMortals": "Es ser el director del equipo de tecnología, decidiendo qué sistemas y proyectos construir.",
         },
+        "Ingeniería Electrónica": {
+            "type": "Ingeniería Electrónica",
+            "desc": f"Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación y control en {j['company']}.",
+            "requirements": ["Circuitos y electrónica de potencia", "Instrumentación industrial", "PLC / SCADA", "Sensores e IoT"],
+            "impact": "Mejora la automatización, confiabilidad y monitoreo técnico de procesos productivos.",
+            "forMortals": "Es diseñar y mantener los componentes electrónicos que permiten que máquinas, sensores y equipos se comuniquen y funcionen.",
+        },
+        "Ingeniería Eléctrica": {
+            "type": "Ingeniería Eléctrica",
+            "desc": f"Gestión de sistemas eléctricos, potencia, instalaciones, eficiencia energética y continuidad operativa en {j['company']}.",
+            "requirements": ["Sistemas de potencia", "Diseño eléctrico", "Normativas eléctricas", "Eficiencia energética"],
+            "impact": "Reduce riesgos operativos y costos energéticos, manteniendo infraestructura crítica funcionando de forma segura.",
+            "forMortals": "Es asegurar que la energía llegue bien, segura y sin interrupciones a edificios, plantas y equipos.",
+        },
+        "Ingeniería Mecánica": {
+            "type": "Ingeniería Mecánica",
+            "desc": f"Diseño, mantenimiento y mejora de equipos mecánicos, líneas de producción y sistemas térmicos en {j['company']}.",
+            "requirements": ["Mantenimiento predictivo", "CAD / SolidWorks", "Termodinámica aplicada", "Lean Maintenance"],
+            "impact": "Aumenta la disponibilidad de equipos y reduce paradas de producción.",
+            "forMortals": "Es mantener y mejorar las máquinas físicas que hacen posible producir, transportar o procesar cosas.",
+        },
+        "Ingeniería Industrial": {
+            "type": "Ingeniería Industrial",
+            "desc": f"Optimización de procesos, logística, calidad, productividad y operaciones empresariales en {j['company']}.",
+            "requirements": ["Lean Six Sigma", "Logística y supply chain", "Análisis de procesos", "Power BI / Excel avanzado"],
+            "impact": "Reduce desperdicios, tiempos y costos operativos mediante procesos mejor diseñados.",
+            "forMortals": "Es ordenar y mejorar la forma en que trabaja una empresa para producir más, con menos errores y menos desperdicio.",
+        },
+        "Ingeniería Civil": {
+            "type": "Ingeniería Civil",
+            "desc": f"Planificación, supervisión y control técnico de obras civiles e infraestructura en {j['company']}.",
+            "requirements": ["Diseño estructural", "Gestión de obras", "AutoCAD / Civil 3D", "Presupuestos y cubicaciones"],
+            "impact": "Garantiza obras más seguras, eficientes y ajustadas a tiempo y presupuesto.",
+            "forMortals": "Es diseñar y supervisar carreteras, edificios, puentes y obras para que sean seguras y duren.",
+        },
+        "Arquitectura / BIM": {
+            "type": "Arquitectura / BIM",
+            "desc": f"Diseño arquitectónico, coordinación BIM y documentación digital de proyectos constructivos en {j['company']}.",
+            "requirements": ["Revit / BIM", "Diseño arquitectónico", "Coordinación multidisciplinaria", "Visualización 3D"],
+            "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+            "forMortals": "Es crear y coordinar modelos digitales de edificios antes de construirlos para evitar errores costosos.",
+        },
+        "Manufactura / Calidad": {
+            "type": "Manufactura / Calidad",
+            "desc": f"Mejora de procesos de manufactura, validación de calidad y soporte técnico a producción en {j['company']}.",
+            "requirements": ["GMP / ISO 9001", "Lean Manufacturing", "Validación de procesos", "Control estadístico de calidad"],
+            "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+            "forMortals": "Es revisar y mejorar cómo se fabrica un producto para que salga bien, seguro y con menos errores.",
+        },
     }
 
     defaults = {
@@ -240,7 +338,21 @@ if os.path.exists(TXT_SOURCE):
 
     def enrich_local(j):
         t = j["title"].lower()
-        if any(k in t for k in ["python","agent","claude","copilot","cursor","agentic"]):
+        if any(k in t for k in ["bim", "arquitect", "revit"]):
+            cat = "Arquitectura / BIM"
+        elif any(k in t for k in ["electrical", "eléctr", "electric"]):
+            cat = "Ingeniería Eléctrica"
+        elif any(k in t for k in ["electron", "instrumentacion", "instrumentación", "plc", "scada"]):
+            cat = "Ingeniería Electrónica"
+        elif any(k in t for k in ["mechanical", "mecánico", "mecanico"]):
+            cat = "Ingeniería Mecánica"
+        elif any(k in t for k in ["industrial", "logística", "logistica", "supply", "process", "procesos"]):
+            cat = "Ingeniería Industrial"
+        elif any(k in t for k in ["civil", "obra", "estructural"]):
+            cat = "Ingeniería Civil"
+        elif any(k in t for k in ["manufacturing", "manufactura", "mfg", "quality", "calidad", "producción", "produccion", "mantenimiento"]):
+            cat = "Manufactura / Calidad"
+        elif any(k in t for k in ["python","agent","claude","copilot","cursor","agentic"]):
             cat = "IA / Automatización"
         elif any(k in t for k in ["machine","learning","ml ","ia ","inteligencia"]):
             cat = "IA / Automatización"

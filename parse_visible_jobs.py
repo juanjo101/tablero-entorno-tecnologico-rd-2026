@@ -9,7 +9,7 @@ if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
 # Paths
-WORKSPACE = r"C:\Users\jdiaz\Documents\antigravity\resilient-planck"
+WORKSPACE = os.path.dirname(os.path.abspath(__file__))
 INDEX_PATH = os.path.join(WORKSPACE, "index.html")
 TXT_SOURCE = os.path.join(WORKSPACE, "scratch_visible_jobs.txt")
 
@@ -84,7 +84,7 @@ while i < len(lines):
 unique_jobs = []
 seen = set()
 for j in jobs:
-    title_clean = j["title"].split(" - ")[0].split(" | ")[0].strip()
+    title_clean = re.sub(r'\s+\|\s+REF#.*$', '', j["title"]).strip()
     key = (title_clean.lower(), j["company"].lower())
     if key not in seen and len(title_clean) > 3 and len(j["company"]) > 2:
         seen.add(key)
@@ -103,7 +103,7 @@ for j in unique_jobs:
     loc = j["location"]
     date = j.get("date", "Hace poco")
     
-    t_lower = title.lower()
+    t_lower = f"{title} {company} {loc}".lower()
     j_type = "Tecnología"
     desc = ""
     reqs = []
@@ -111,7 +111,49 @@ for j in unique_jobs:
     mortals = ""
     
     # Classification logic
-    if "python" in t_lower or "agent" in t_lower or "claude" in t_lower or "copilot" in t_lower or "cursor" in t_lower:
+    if "bim" in t_lower or "arquitect" in t_lower or "revit" in t_lower:
+        j_type = "Arquitectura / BIM"
+        desc = f"Diseño arquitectónico, coordinación BIM y documentación digital de proyectos constructivos en {company}."
+        reqs = ["Revit / BIM", "AutoCAD", "Coordinación multidisciplinaria", "Visualización 3D"]
+        imp = "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción."
+        mortals = "Es crear y coordinar modelos digitales de edificios antes de construirlos para evitar errores costosos."
+    elif "electrical" in t_lower or "eléctr" in t_lower or "electric" in t_lower:
+        j_type = "Ingeniería Eléctrica"
+        desc = f"Gestión de sistemas eléctricos, potencia, instalaciones y continuidad operativa en {company}."
+        reqs = ["Sistemas de potencia", "Diseño eléctrico", "Normativas eléctricas", "Eficiencia energética"]
+        imp = "Reduce riesgos operativos y costos energéticos, manteniendo infraestructura crítica funcionando de forma segura."
+        mortals = "Es asegurar que la energía llegue bien, segura y sin interrupciones a edificios, plantas y equipos."
+    elif "electron" in t_lower or "instrumentacion" in t_lower or "instrumentación" in t_lower or "plc" in t_lower or "scada" in t_lower:
+        j_type = "Ingeniería Electrónica"
+        desc = f"Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación y control en {company}."
+        reqs = ["Circuitos y electrónica de potencia", "Instrumentación industrial", "PLC / SCADA", "Sensores e IoT"]
+        imp = "Mejora la automatización, confiabilidad y monitoreo técnico de procesos productivos."
+        mortals = "Es diseñar y mantener los componentes electrónicos que permiten que máquinas, sensores y equipos se comuniquen y funcionen."
+    elif "mechanical" in t_lower or "mecánico" in t_lower or "mecanico" in t_lower:
+        j_type = "Ingeniería Mecánica"
+        desc = f"Diseño, mantenimiento y mejora de equipos mecánicos, líneas de producción y sistemas térmicos en {company}."
+        reqs = ["Mantenimiento predictivo", "CAD / SolidWorks", "Termodinámica aplicada", "Lean Maintenance"]
+        imp = "Aumenta la disponibilidad de equipos y reduce paradas de producción."
+        mortals = "Es mantener y mejorar las máquinas físicas que hacen posible producir, transportar o procesar cosas."
+    elif "industrial" in t_lower or "logística" in t_lower or "logistica" in t_lower or "supply" in t_lower or "process" in t_lower or "procesos" in t_lower:
+        j_type = "Ingeniería Industrial"
+        desc = f"Optimización de procesos, logística, calidad, productividad y operaciones empresariales en {company}."
+        reqs = ["Lean Six Sigma", "Logística y supply chain", "Análisis de procesos", "Power BI / Excel avanzado"]
+        imp = "Reduce desperdicios, tiempos y costos operativos mediante procesos mejor diseñados."
+        mortals = "Es ordenar y mejorar la forma en que trabaja una empresa para producir más, con menos errores y menos desperdicio."
+    elif "civil" in t_lower or "obra" in t_lower or "estructural" in t_lower:
+        j_type = "Ingeniería Civil"
+        desc = f"Planificación, supervisión y control técnico de obras civiles e infraestructura en {company}."
+        reqs = ["Diseño estructural", "Gestión de obras", "AutoCAD / Civil 3D", "Presupuestos y cubicaciones"]
+        imp = "Garantiza obras más seguras, eficientes y ajustadas a tiempo y presupuesto."
+        mortals = "Es diseñar y supervisar carreteras, edificios, puentes y obras para que sean seguras y duren."
+    elif "manufacturing" in t_lower or "manufactura" in t_lower or "mfg" in t_lower or "quality" in t_lower or "calidad" in t_lower or "producción" in t_lower or "produccion" in t_lower or "mantenimiento" in t_lower:
+        j_type = "Manufactura / Calidad"
+        desc = f"Mejora de procesos de manufactura, validación de calidad y soporte técnico a producción en {company}."
+        reqs = ["GMP / ISO 9001", "Lean Manufacturing", "Validación de procesos", "Control estadístico de calidad"]
+        imp = "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta."
+        mortals = "Es revisar y mejorar cómo se fabrica un producto para que salga bien, seguro y con menos errores."
+    elif "python" in t_lower or "agent" in t_lower or "claude" in t_lower or "copilot" in t_lower or "cursor" in t_lower:
         j_type = "IA Agéntica"
         desc = f"Desarrollo e implementación de flujos autónomos y programación acelerada por IA en {company}."
         reqs = ["Python / TypeScript", "Asistentes de IA (Cursor/Claude Code)", "Model Context Protocol", "LangGraph / CrewAI"]

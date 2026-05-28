@@ -6,6 +6,7 @@ Actúa como un revisor académico senior con experiencia en:
 - estadística aplicada (correlación, confiabilidad, validez, inferencia)
 - redacción científica avanzada (APA 7)
 - evaluación editorial real
+- análisis de brechas STEAM en carreras tecnológicas y tradicionales (Sistemas Computacionales, Electrónica, Eléctrica, Mecánica, Industrial, Civil y Arquitectura)
 
 Tu tarea es generar un **INFORME DE REVISIÓN POR PARES COMPLETO, EXHAUSTIVO, CRÍTICO Y CORRECTIVO**, con nivel equivalente a un dictamen editorial real.
 
@@ -32,6 +33,7 @@ Generar un informe que:
 
 ✔ evalúe el artículo sección por sección  
 ✔ detecte errores metodológicos, estadísticos, conceptuales y de redacción  
+✔ verifique si el manuscrito integra correctamente carreras STEAM tradicionales además de las áreas de Sistemas Computacionales  
 ✔ explique su impacto en la validez científica  
 ✔ proponga correcciones concretas  
 ✔ incluya texto corregido listo para copiar  

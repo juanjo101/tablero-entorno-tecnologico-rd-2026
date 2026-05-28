@@ -1,7 +1,7 @@
-# 📊 Tablero de Entorno Empresarial y Tendencias Tecnológicas 2026
+# 📊 Tablero de Entorno Empresarial y Tendencias STEAM 2026
 **República Dominicana | Análisis Académico UTESA**
 
-> Consola analítica interactiva que cruza las fuerzas macroeconómicas dominicanas con las tendencias tecnológicas globales para 2026, validadas con vacantes reales del mercado laboral.
+> Consola analítica interactiva que cruza las fuerzas macroeconómicas dominicanas con tendencias STEAM globales y sectoriales para 2026, validadas con vacantes reales del mercado laboral.
 
 ---
 
@@ -13,20 +13,22 @@
 
 ## 📋 ¿Qué contiene?
 
-### Pestaña 1 — Explorador de Tendencias Tecnológicas
-- 20 variables tecnológicas analizadas (demanda proyectada 2026)
+### Pestaña 1 — Explorador de Tendencias STEAM
+- Variables STEAM analizadas (demanda proyectada 2026)
+- Tendencias de software, datos y nube junto con automatización industrial, energía, manufactura, BIM, construcción digital y supply chain
 - Tabla interactiva filtrable por nivel, categoría y búsqueda
 - Gráfico de barras / radar con Chart.js
-- Panel lateral ("En Sencillo — Para Mortales") al hacer clic en cada tecnología
+- Panel lateral ("En Sencillo — Para Mortales") al hacer clic en cada tendencia
 
 ### Pestaña 2 — Factores de Impacto PEST
 - 7 fuerzas político-económicas de RD con datos oficiales del **BCRD** y **Banco Mundial**
-- Cruce dinámico: cada fuerza muestra las tecnologías que impulsa
+- Cruce dinámico: cada fuerza muestra las tendencias STEAM que impulsa
 - Fuentes verificadas con enlaces directos (bancentral.gov.do, bancomundial.org, etc.)
 
 ### Pestaña 3 — Brecha de Talento y Nuevas Carreras STEAM
 - Mapa de brechas: Demanda del mercado vs. habilidades presentes en perfiles LinkedIn RD
-- 6 nuevas carreras STEAM recomendadas con prioridad y justificación
+- Cobertura ampliada: Sistemas Computacionales, Electrónica, Eléctrica, Mecánica, Industrial, Civil, Arquitectura, Manufactura y BIM
+- Nuevas carreras STEAM recomendadas con prioridad y justificación
 - Tabla de disponibilidad por universidad (UTESA, INTEC, ITLA, UASD, PUCMM)
 
 ---
@@ -36,8 +38,8 @@
 | Fase | Descripción |
 |------|-------------|
 | **Fase 1** | Mapeo de tendencias en Gartner 2026, GitHub Octoverse 2025, Stack Overflow Survey 2025 |
-| **Fase 2** | Enfoque temático balanceado (Cloud, IA, Ciberseguridad, Datos, Automatización) |
-| **Fase 3** | Validación con vacantes activas en LinkedIn RD + BeBee + Jooble (mayo 2026) |
+| **Fase 2** | Enfoque temático balanceado (Cloud, IA, Ciberseguridad, Datos, Automatización, energía, electrónica aplicada, manufactura, construcción digital, BIM, infraestructura civil y supply chain) |
+| **Fase 3** | Validación con vacantes activas en LinkedIn RD + BeBee + Jooble (mayo 2026), usando búsquedas sectoriales por carrera STEAM |
 | **Fase 4** | Cruce de habilidades de 2.1M perfiles LinkedIn RD con demanda real de mercado |
 
 ---
