@@ -106,8 +106,9 @@ except Exception:
     driver.quit()
     sys.exit(1)
 
-# ── Paso 2: Búsquedas de tendencias tecnológicas en RD ───────────
+# ── Paso 2: Búsquedas de tendencias STEAM en RD ──────────────────
 SEARCHES = [
+    # Sistemas, datos e infraestructura
     ("inteligencia artificial",      "IA / Automatización"),
     ("machine learning",             "IA / Automatización"),
     ("desarrollador software",       "Ingeniería de Software"),
@@ -124,6 +125,50 @@ SEARCHES = [
     ("transformacion digital",       "Gestión de TI"),
     ("python developer",             "IA / Automatización"),
     ("network engineer",             "Cloud / Infraestructura"),
+    # Electrónica, eléctrica y energía
+    ("ingeniero electronico",        "Ingeniería Electrónica"),
+    ("instrumentacion industrial",   "Ingeniería Electrónica"),
+    ("PLC SCADA",                    "Ingeniería Electrónica"),
+    ("IoT industrial",               "Ingeniería Electrónica"),
+    ("ingeniero electrico",          "Ingeniería Eléctrica"),
+    ("electrical engineer",          "Ingeniería Eléctrica"),
+    ("energias renovables",          "Ingeniería Eléctrica"),
+    ("energia solar",                "Ingeniería Eléctrica"),
+    ("solar fotovoltaica",           "Ingeniería Eléctrica"),
+    ("BESS",                         "Ingeniería Eléctrica"),
+    ("microgrid",                    "Ingeniería Eléctrica"),
+    ("smart grid",                   "Ingeniería Eléctrica"),
+    ("vehiculos electricos",         "Ingeniería Eléctrica"),
+    ("EV charging",                  "Ingeniería Eléctrica"),
+    # Mecánica, robótica, manufactura e industrial
+    ("ingeniero mecanico",           "Ingeniería Mecánica"),
+    ("mechanical engineer",          "Ingeniería Mecánica"),
+    ("mantenimiento predictivo",     "Ingeniería Mecánica"),
+    ("vehiculos autonomos",          "Ingeniería Mecánica"),
+    ("ADAS",                         "Ingeniería Mecánica"),
+    ("robotica movil",               "Ingeniería Mecánica"),
+    ("ingeniero industrial",         "Ingeniería Industrial"),
+    ("industrial engineer",          "Ingeniería Industrial"),
+    ("supply chain",                 "Ingeniería Industrial"),
+    ("lean manufacturing",           "Ingeniería Industrial"),
+    ("manufacturing engineer",       "Manufactura / Calidad"),
+    ("ingeniero de calidad",         "Manufactura / Calidad"),
+    ("mantenimiento industrial",     "Manufactura / Calidad"),
+    ("drones inspeccion",            "Manufactura / Calidad"),
+    ("materiales avanzados",         "Manufactura / Calidad"),
+    # Civil, arquitectura, ambiente y ESG
+    ("ingeniero civil",              "Ingeniería Civil"),
+    ("civil engineer",               "Ingeniería Civil"),
+    ("infraestructura civil",        "Ingeniería Civil"),
+    ("gestion del agua",             "Ingeniería Civil"),
+    ("drenaje urbano",               "Ingeniería Civil"),
+    ("resiliencia climatica",        "Ingeniería Civil"),
+    ("arquitecto",                   "Arquitectura / BIM"),
+    ("BIM architect",                "Arquitectura / BIM"),
+    ("BIM engineer",                 "Arquitectura / BIM"),
+    ("revit BIM",                    "Arquitectura / BIM"),
+    ("economia circular",            "ESG / Economía Circular"),
+    ("ESG carbon",                   "ESG / Economía Circular"),
 ]
 
 LOCATION = "República Dominicana"
@@ -283,16 +328,13 @@ import urllib.parse
 
 def do_search(driver, keywords, location="República Dominicana"):
     """
-    Realiza una búsqueda en LinkedIn Jobs usando la interfaz gráfica,
-    escribiendo en los campos de texto como lo haría un humano.
-    Esto evita que LinkedIn sobreescriba la ubicación por IP.
+    Realiza una búsqueda en LinkedIn Jobs usando la interfaz gráfica.
+    Escribe la ubicación manualmente para que LinkedIn respete República Dominicana.
     """
     try:
-        # Ir a la página de búsqueda de empleos limpia
         driver.get("https://www.linkedin.com/jobs/search/")
         time.sleep(3)
 
-        # ── Campo de KEYWORDS ──────────────────────────────────────
         kw_selectors = [
             "input[aria-label*='título']",
             "input[aria-label*='Search job']",
@@ -304,12 +346,13 @@ def do_search(driver, keywords, location="República Dominicana"):
         kw_field = None
         for sel in kw_selectors:
             try:
-                kw_field = WebDriverWait(driver, 5).until(
+                candidate = WebDriverWait(driver, 5).until(
                     EC.presence_of_element_located((By.CSS_SELECTOR, sel))
                 )
-                if kw_field.is_displayed():
+                if candidate.is_displayed():
+                    kw_field = candidate
                     break
-            except:
+            except Exception:
                 continue
 
         if kw_field:
@@ -320,7 +363,6 @@ def do_search(driver, keywords, location="República Dominicana"):
             kw_field.send_keys(keywords)
             time.sleep(0.5)
 
-        # ── Campo de UBICACIÓN ─────────────────────────────────────
         loc_selectors = [
             "input[aria-label*='ubicación']",
             "input[aria-label*='City']",
@@ -332,59 +374,56 @@ def do_search(driver, keywords, location="República Dominicana"):
         loc_field = None
         for sel in loc_selectors:
             try:
-                loc_field = WebDriverWait(driver, 5).until(
+                candidate = WebDriverWait(driver, 5).until(
                     EC.presence_of_element_located((By.CSS_SELECTOR, sel))
                 )
-                if loc_field.is_displayed():
+                if candidate.is_displayed():
+                    loc_field = candidate
                     break
-            except:
+            except Exception:
                 continue
 
         if loc_field:
             loc_field.click()
             time.sleep(0.3)
-            # Seleccionar todo y borrar contenido actual
             loc_field.send_keys(Keys.CONTROL + "a")
             loc_field.send_keys(Keys.DELETE)
             time.sleep(0.5)
-            # Escribir ubicación
             loc_field.send_keys(location)
-            time.sleep(2)  # esperar sugerencias del autocomplete
+            time.sleep(2)
 
-            # Seleccionar primera sugerencia del autocomplete si aparece
             try:
                 suggestion = WebDriverWait(driver, 4).until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR,
+                    EC.presence_of_element_located((
+                        By.CSS_SELECTOR,
                         ".basic-typeahead__selectable, .jobs-search-box__typeahead-item, [role='option']"
                     ))
                 )
                 suggestion.click()
                 time.sleep(1)
-            except:
-                # Si no hay autocomplete, presionar Enter directamente
+            except Exception:
                 loc_field.send_keys(Keys.RETURN)
                 time.sleep(1)
         else:
-            # Fallback: construir URL con parámetros
-            encoded_kw  = urllib.parse.quote(keywords)
+            encoded_kw = urllib.parse.quote(keywords)
             fallback_url = (
-                f"https://www.linkedin.com/jobs/search/"
+                "https://www.linkedin.com/jobs/search/"
                 f"?keywords={encoded_kw}"
-                f"&location=Rep%C3%BAblica+Dominicana"
-                f"&geoId=101623149"
-                f"&f_TPR=r2592000"
+                "&location=Rep%C3%BAblica+Dominicana"
+                "&geoId=101623149"
+                "&f_TPR=r2592000"
             )
             driver.get(fallback_url)
             time.sleep(3)
             return True
 
-        # ── Presionar buscar ───────────────────────────────────────
         try:
-            search_btn = driver.find_element(By.CSS_SELECTOR,
+            search_btn = driver.find_element(
+                By.CSS_SELECTOR,
                 "button[type='submit'], .jobs-search-box__submit-button, button[data-tracking-control-name*='search']"
             )
             search_btn.click()
-        except:
+        except Exception:
             if loc_field:
                 loc_field.send_keys(Keys.RETURN)
 
@@ -487,6 +526,62 @@ ENRICHMENT = {
         "impact": "Guía la transformación digital de la empresa para mantenerse competitiva en la economía digital.",
         "forMortals": "Es ser el director del equipo de tecnología, decidiendo qué sistemas y proyectos construir.",
     },
+    "Ingeniería Electrónica": {
+        "type": "Ingeniería Electrónica",
+        "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial.",
+        "requirements": ["PLC / SCADA", "Instrumentación industrial", "Sensores e IoT", "Electrónica de potencia"],
+        "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+        "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor.",
+    },
+    "Ingeniería Eléctrica": {
+        "type": "Ingeniería Eléctrica / Energía",
+        "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética.",
+        "requirements": ["Sistemas de potencia", "Solar FV / BESS", "Smart Grid / Microgrid", "Normativas eléctricas"],
+        "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+        "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades.",
+    },
+    "Ingeniería Mecánica": {
+        "type": "Ingeniería Mecánica / Movilidad",
+        "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción.",
+        "requirements": ["Mantenimiento predictivo", "CAD / diseño mecánico", "Robótica / ADAS", "Análisis de fallas"],
+        "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+        "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia.",
+    },
+    "Ingeniería Industrial": {
+        "type": "Ingeniería Industrial",
+        "desc": "Optimización de procesos, logística, supply chain, mejora continua, calidad, productividad y analítica operacional.",
+        "requirements": ["Lean Six Sigma", "Supply Chain", "Power BI / Excel avanzado", "Gestión de procesos"],
+        "impact": "Reduce desperdicio, tiempos y costos operativos mediante procesos mejor diseñados.",
+        "forMortals": "Es ordenar cómo trabaja una empresa para producir más, gastar menos y cometer menos errores.",
+    },
+    "Ingeniería Civil": {
+        "type": "Ingeniería Civil / Agua e Infraestructura",
+        "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras.",
+        "requirements": ["Civil 3D / AutoCAD", "Gestión de obras", "Drenaje y agua", "Resiliencia climática"],
+        "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+        "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima.",
+    },
+    "Arquitectura / BIM": {
+        "type": "Arquitectura / BIM",
+        "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción.",
+        "requirements": ["Revit / BIM", "Navisworks", "Coordinación multidisciplinaria", "Visualización 3D"],
+        "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+        "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra.",
+    },
+    "Manufactura / Calidad": {
+        "type": "Manufactura / Calidad",
+        "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico.",
+        "requirements": ["Lean Manufacturing", "ISO / GMP", "Control estadístico", "Validación de procesos"],
+        "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+        "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos.",
+    },
+    "ESG / Economía Circular": {
+        "type": "ESG / Carbono / Economía Circular",
+        "desc": "Medición de huella de carbono, eficiencia de recursos, reportes ESG, circularidad y reducción de residuos.",
+        "requirements": ["ESG", "Huella de carbono", "Economía circular", "Gestión ambiental"],
+        "impact": "Ayuda a cumplir estándares ambientales y a reducir costos por energía, residuos y materiales.",
+        "forMortals": "Es medir y reducir el impacto ambiental de una operación para producir con menos desperdicio.",
+    },
 }
 
 DEFAULT_ENRICHMENT = {
@@ -499,6 +594,38 @@ DEFAULT_ENRICHMENT = {
 
 def safe(s):
     return str(s).replace('"', '\\"').replace('\n', ' ').replace('\r', '')
+
+def infer_category(title):
+    t = title.lower()
+    if any(k in t for k in ["bim", "arquitect", "revit"]):
+        return "Arquitectura / BIM"
+    if any(k in t for k in ["electrical", "eléctr", "electric", "solar", "renovable", "bess", "microgrid", "smart grid", "energia", "energía", "ev charging"]):
+        return "Ingeniería Eléctrica"
+    if any(k in t for k in ["electron", "instrumentacion", "instrumentación", "plc", "scada", "iot"]):
+        return "Ingeniería Electrónica"
+    if any(k in t for k in ["mechanical", "mecánico", "mecanico", "predictivo", "autonom", "adas", "robotica", "robótica"]):
+        return "Ingeniería Mecánica"
+    if any(k in t for k in ["industrial", "logística", "logistica", "supply", "process", "procesos", "operaciones", "lean"]):
+        return "Ingeniería Industrial"
+    if any(k in t for k in ["civil", "obra", "drenaje", "agua", "resiliencia", "infraestructura"]):
+        return "Ingeniería Civil"
+    if any(k in t for k in ["manufacturing", "manufactura", "mfg", "quality", "calidad", "producción", "produccion", "mantenimiento", "maintenance", "drones", "materiales"]):
+        return "Manufactura / Calidad"
+    if any(k in t for k in ["esg", "carbon", "circular"]):
+        return "ESG / Economía Circular"
+    if any(k in t for k in ["python", "agent", "claude", "copilot", "ia", "inteligencia", "machine", "learning"]):
+        return "IA / Automatización"
+    if any(k in t for k in ["ciber", "security", "seguridad"]):
+        return "Ciberseguridad"
+    if any(k in t for k in ["cloud", "devops", "aws", "azure", "redes", "network"]):
+        return "Cloud / Infraestructura"
+    if any(k in t for k in ["data engineer", "datos", "arquitectura de datos"]):
+        return "Ingeniería de Datos"
+    if any(k in t for k in ["analista", "bi ", "business", "power bi"]):
+        return "Análisis de Datos / BI"
+    if any(k in t for k in ["gerente", "director", "lider", "líder"]):
+        return "Gestión de TI"
+    return "Ingeniería de Software"
 
 enriched = []
 for j in all_jobs:
@@ -536,21 +663,7 @@ if os.path.exists(TXT):
                 key = (title.lower()[:45], company.lower()[:30])
                 if key not in seen_keys:
                     seen_keys.add(key)
-                    t = title.lower()
-                    if any(k in t for k in ["python","agent","claude","ia","inteligencia","machine","learning"]):
-                        cat = "IA / Automatización"
-                    elif any(k in t for k in ["ciber","security","seguridad"]):
-                        cat = "Ciberseguridad"
-                    elif any(k in t for k in ["cloud","devops","aws","azure","redes","network"]):
-                        cat = "Cloud / Infraestructura"
-                    elif any(k in t for k in ["data engineer","datos","arquitectura de datos"]):
-                        cat = "Ingeniería de Datos"
-                    elif any(k in t for k in ["analista","bi ","business","power bi"]):
-                        cat = "Análisis de Datos / BI"
-                    elif any(k in t for k in ["gerente","director","lider","líder"]):
-                        cat = "Gestión de TI"
-                    else:
-                        cat = "Ingeniería de Software"
+                    cat = infer_category(title)
                     info = ENRICHMENT.get(cat, DEFAULT_ENRICHMENT)
                     enriched.append({
                         "title":        title,
