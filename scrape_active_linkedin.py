@@ -3,6 +3,7 @@ import os
 import re
 import sys
 import json
+import time
 import urllib.request
 
 # Ensure websocket-client is installed for raw CDP communication
@@ -25,7 +26,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 print("==================================================================")
 print("🤖 EXTRACTOR CDP ULTRA-RÁPIDO (CERO DRIVERS / SIN SELENIUM) 🤖")
 print("==================================================================")
-ports = [9222, 9223]
+ports = [9224, 9222, 9223]
 tabs = None
 connected_port = None
 for port in ports:
@@ -204,12 +205,116 @@ if not unique_jobs:
             final_jobs.append(j)
     unique_jobs = final_jobs
 
+if not unique_jobs:
+    print("[!] Intentando extracción por texto visible de la lista de resultados...")
+    try:
+        ws = websocket.create_connection(ws_url)
+        text_cmd = {
+            "id": 3,
+            "method": "Runtime.evaluate",
+            "params": {
+                "expression": "document.body.innerText",
+                "returnByValue": True
+            }
+        }
+        ws.send(json.dumps(text_cmd))
+        text_result = json.loads(ws.recv())
+        while text_result.get("id") != 3:
+            text_result = json.loads(ws.recv())
+        page_text = text_result.get("result", {}).get("result", {}).get("value", "")
+        ws.close()
+    except Exception as text_err:
+        print(f"[!] No se pudo leer texto visible: {text_err}")
+        page_text = ""
+
+    lines = [line.strip() for line in page_text.splitlines() if line.strip()]
+    start = 0
+    for idx, line in enumerate(lines):
+        if "Ir al resultado" in line:
+            start = idx + 1
+            break
+
+    end = len(lines)
+    for idx, line in enumerate(lines[start:], start=start):
+        if "Estos resultados" in line or "Acerca del empleo" in line:
+            end = idx
+            break
+
+    result_lines = lines[start:end]
+    noise = {
+        "Visto", "Promocionado", "Solicitud sencilla", "Evaluando solicitudes de forma activa",
+        "En las últimas 24 horas", "En las últimas 24\xa0horas", "Hace poco"
+    }
+    parsed_jobs = []
+    for idx, line in enumerate(result_lines):
+        lower = line.lower()
+        if "república dominicana" not in lower and "republica dominicana" not in lower and "américa latina" not in lower and "america latina" not in lower:
+            continue
+        if idx < 2:
+            continue
+
+        company = result_lines[idx - 1]
+        title_idx = idx - 2
+        title = result_lines[title_idx]
+        if "with verification" in title.lower() and title_idx - 1 >= 0:
+            title = result_lines[title_idx - 1]
+        if title == company and title_idx - 1 >= 0:
+            title = result_lines[title_idx - 1]
+        if company in noise or company.startswith("Hace ") or company.startswith("Logotipo de "):
+            continue
+        if title in noise or title.startswith("Logotipo de ") or len(title) < 4:
+            continue
+        parsed_jobs.append({
+            "title": title,
+            "company": company,
+            "location": line,
+            "date": "LinkedIn activo"
+        })
+
+    unique_jobs = []
+    seen = set()
+    for j in parsed_jobs:
+        key = (j["title"].lower(), j["company"].lower())
+        if key not in seen:
+            seen.add(key)
+            unique_jobs.append(j)
+
 print(f"\n[+] Se extrajeron {len(unique_jobs)} vacantes únicas del navegador:")
 for idx, j in enumerate(unique_jobs):
     print(f"  {idx+1}. {j['title']} - {j['company']} ({j['location']})")
 
 if not unique_jobs:
     print("[-] No se pudieron detectar vacantes en pantalla. Asegúrate de tener la lista de empleos cargada a la izquierda.")
+    exit(1)
+
+STEAM_TERMS = [
+    "ingenier", "engineer", "tecnolog", "technology", "datos", "data", "software",
+    "inteligencia artificial", "ia", "ai", "machine learning", "proyecto", "project",
+    "operaciones", "operations", "procesos", "process", "industrial", "electr",
+    "energia", "energía", "renovable", "solar", "bess", "microgrid", "bim", "civil",
+    "arquitect", "manufactura", "manufacturing", "calidad", "quality", "supply",
+    "logistica", "logística", "mantenimiento", "maintenance", "redes", "network",
+    "ciber", "security", "cloud", "drones", "robot", "agua", "water", "esg"
+]
+NON_STEAM_TERMS = [
+    "cocinero", "cajero", "vendedor", "ventas al detalle", "visual designer",
+    "marketing assistant", "customer support", "lead generation"
+]
+
+def is_steam_job(job):
+    blob = f"{job['title']} {job['company']} {job['location']}".lower()
+    if any(term in blob for term in NON_STEAM_TERMS):
+        return False
+    return any(term in blob for term in STEAM_TERMS)
+
+before_filter = len(unique_jobs)
+unique_jobs = [job for job in unique_jobs if is_steam_job(job)]
+removed = before_filter - len(unique_jobs)
+if removed:
+    print(f"[+] Filtro STEAM descartó {removed} resultados no pertinentes.")
+
+if not unique_jobs:
+    print("[-] La pantalla tenía resultados, pero ninguno pasó el filtro STEAM.")
     exit(1)
 
 # Let's enrich them
