@@ -1073,6 +1073,11 @@
                                 <span class="pestel-card-tag">Regulación Financiera</span>
                                 <span class="pestel-card-header">Interoperabilidad (Junta Monetaria)</span>
                             </div>
+
+                            <div id="btnP4" class="pestel-btn-card" onclick="selectPestel('map_estructuras_tic', this)">
+                                <span class="pestel-card-tag">Estructura Estatal TIC</span>
+                                <span class="pestel-card-header">Cargos y Transformación Digital (Res. MAP 342-2024)</span>
+                            </div>
                         </div>
 
                         <div class="pestel-group">
@@ -1096,6 +1101,11 @@
                             <div id="btnE4" class="pestel-btn-card" onclick="selectPestel('bvrd_market', this)">
                                 <span class="pestel-card-tag">Mercado de Capitales</span>
                                 <span class="pestel-card-header">Democratización de la Bolsa (BVRD)</span>
+                            </div>
+
+                            <div id="btnE5" class="pestel-btn-card" onclick="selectPestel('mem_ahorro_energetico', this)">
+                                <span class="pestel-card-tag">Eficiencia Energética</span>
+                                <span class="pestel-card-header">Ahorro Energético Estatal (Res. MEM R-MEM-ADM-019-2026)</span>
                             </div>
                         </div>
 
@@ -1501,6 +1511,20 @@
                         </div>
 
                         <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Estructuras TIC del Estado y Estandarización de Cargos]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Ministerio de Administración Pública. (2024). <em>Resolución No. 342-2024 que aprueba los modelos de estructura organizativa para las áreas de Tecnologías de la Información y Comunicación (TIC) de los entes y órganos de la administración pública</em>. Santo Domingo, R.D.: Autor. Recuperado de <a href="https://map.gob.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://map.gob.do</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Directrices de Eficiencia y Ahorro Energético Estatal]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Ministerio de Energía y Minas. (2026). <em>Resolución No. R-MEM-ADM-019-2026 que establece las directrices de eficiencia y ahorro energético en los órganos y entes gubernamentales</em>. Santo Domingo, R.D.: Autor. Recuperado de <a href="https://mem.gob.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://mem.gob.do</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
                             <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Mercados Financieros e Interoperabilidad Digital]</p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
                                 Bolsa y Mercados de Valores de la República Dominicana. (2024). <em>Memoria analítica del mercado de valores y digitalización transaccional retail</em>. Santo Domingo, R.D.: Autor. Recuperado de <a href="https://www.bvrd.com.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://www.bvrd.com.do</a>
@@ -1850,6 +1874,36 @@
                 citations: [
                     { institution: "Bolsa y Mercados de Valores de la R.D. (BVRD)", document: "Memoria Anual de Operaciones y Volumen del Mercado Secundario", year: "2024", url: "https://www.bvrd.com.do" },
                     { institution: "Superintendencia del Mercado de Valores (SIMV)", document: "Estadísticas del Mercado de Valores Dominicano bajo la Ley 249-17", year: "2025", url: "https://simv.gob.do" }
+                ]
+            },
+            map_estructuras_tic: {
+                type: "Fuerza Político-Legal / Estructura del Estado",
+                title: "Estructuras TIC del Estado (Resolución MAP 342-2024)",
+                desc: "Resolución emitida por el Ministerio de Administración Pública (MAP) que actualiza los modelos organizativos de las TIC en el sector público dominicano. Establece con carácter obligatorio las unidades de <strong>Transformación Digital</strong> y <strong>Ciberseguridad</strong> en cada institución, estandarizando un catálogo de cargos técnicos especializados como <em>Ingeniero de Datos</em>, <em>Arquitecto de Datos</em> e <em>Ingeniero de Ciberseguridad</em> para mejorar la retención de talento. Esta fuerza legal valida y justifica directamente la creación de programas académicos en estas áreas en la educación superior dominicana.",
+                forMortals: "El gobierno dominicano ordenó a todas las instituciones públicas crear departamentos formales de Ciberseguridad y Transformación Digital, y definió cargos oficiales para ingenieros de datos y de ciberseguridad con escalas salariales competitivas.",
+                trends: ["cloud_native", "observability", "zero_trust_security", "operations_analytics"],
+                macroStats: [
+                    { value: "Res. 342-24", label: "Normativa MAP" },
+                    { value: "Cargos TIC", label: "Perfiles Estandarizados" }
+                ],
+                strategy: "Alinear los planes curriculares académicos con las definiciones estatuarias de cargos de datos y seguridad dadas por el MAP, capacitando a los ingenieros en el diseño de plataformas seguras, análisis de datos públicos e interoperabilidad estatal.",
+                citations: [
+                    { institution: "Ministerio de Administración Pública (MAP)", document: "Resolución No. 342-2024 que aprueba los modelos de estructura organizativa para las áreas de TIC", year: "2024", url: "https://map.gob.do" }
+                ]
+            },
+            mem_ahorro_energetico: {
+                type: "Fuerza Gubernamental / Sostenibilidad",
+                title: "Eficiencia Energética en el Estado (Resolución R-MEM-ADM-019-2026)",
+                desc: "Directriz del Ministerio de Energía y Minas (MEM) emitida en abril de 2026, que impone medidas de ahorro y control de la demanda eléctrica en el sector público dominicano (climatización mínima a 22 °C, apagado estricto a las 5:00 PM, desconexión física de equipos para eliminar consumo vampiro/standby, y reporte trimestral obligatorio). Esta fuerza regulatoria presiona la facturación corporativa e institucional e impulsa directamente la demanda de sensores, auditorías de energía, almacenamiento en baterías (BESS), microgrids e infraestructura inteligente.",
+                forMortals: "El Ministerio de Energía y Minas prohibió tener el aire a menos de 22 °C en oficinas públicas y ordenó desconectar todos los equipos los fines de semana. Las instituciones deben enviar reportes de ahorro cada tres meses, lo que obliga a automatizar el control de luz y consumo.",
+                trends: ["smart_grids", "predictive_maintenance", "industrial_iot", "renewable_energy", "battery_storage", "microgrids", "smart_water", "carbon_management"],
+                macroStats: [
+                    { value: "Res. 019-2026", label: "Normativa MEM" },
+                    { value: "22 °C Mínimo", label: "Climatización Pública" }
+                ],
+                strategy: "Implementar sistemas avanzados de sensores inteligentes IoT para telemetría de consumo eléctrico y automatizaciones automáticas para suprimir consumos vampiro, integrando a su vez fuentes de generación solar y almacenamiento BESS para amortiguar picos en horas de punta.",
+                citations: [
+                    { institution: "Ministerio de Energía y Minas (MEM)", document: "Resolución No. R-MEM-ADM-019-2026 sobre directrices de eficiencia y ahorro energético en el Estado", year: "2026", url: "https://mem.gob.do" }
                 ]
             }
         };
