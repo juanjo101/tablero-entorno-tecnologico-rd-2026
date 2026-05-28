@@ -113,7 +113,7 @@ Al cruzar la oferta académica de nivel de grado con las demandas críticas dete
 
 | Carrera / Disciplina Tecnológica | UTESA (SD / SDO) | INTEC | ITLA | UASD | PUCMM | O&M | UAPA | UNICARIBE | Índice de Cobertura ($ICC$) | Urgencia de Brecha |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| Ing. en Ciberseguridad | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 1 | **75.0%** | Baja (Mercado cubierto en oferta inicial) |
+| Ing. en Ciberseguridad | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 1 | **62.5%** | Baja (Mercado cubierto en oferta inicial) |
 | Ing. en IA y Ciencia de Datos | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | **50.0%** | Media-Alta (Requiere adopción por UTESA) |
 | Tecnología Cloud / DevOps | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | **12.5%** | CRÍTICA (Ausente a nivel de grado) |
 | Ing. de Sistemas / Informática | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | **100%** | Baja (Programa tradicional cubierto) |
@@ -178,7 +178,7 @@ Para mitigar esta brecha de manera estructural, se proponen tres programas de fo
 * Stack Overflow. (2025). *2025 Developer survey: Obsolescence of manual processes and adoption of automated pipelines*. New York, NY: Autor.
 * Superintendencia de Electricidad. (2025). *Tarifas eléctricas vigentes para clientes corporativos en la República Dominicana*. Santo Domingo, R.D.: SIE.
 * Universidad Autónoma de Santo Domingo. (2026). *Pénsum y carreras de grado oficiales de la Facultad de Ingeniería y Arquitectura: Ingeniería Electromecánica, Ciberseguridad, Sistemas y Licenciatura en Ciencia de Datos*. Santo Domingo, R.D.: Autor.
-* Universidad Tecnológica de Santiago. (2026). *Oferta de grado y pénsum de Ingeniería en Sistemas Computacionales, Ingeniería en Ciberseguridad e Ingeniería Mecatrónica - Recinto Santo Domingo de Guzmán y Recinto Santo Domingo Oriental*. Santo Domingo, R.D.: Autor.
+* Universidad Tecnológica de Santiago. (2026). *Oferta de grado y pénsum de Ingeniería en Sistemas Computacionales e Ingeniería Mecatrónica - Recinto Santo Domingo de Guzmán y Recinto Santo Domingo Oriental*. Santo Domingo, R.D.: Autor.
 * Universidad Dominicana O&M. (2026). *Oferta de grado y pénsum de Ingeniería en Sistemas y Computación, Ingeniería Civil, Ingeniería Industrial e Ingeniería Electrónica*. Santo Domingo, R.D.: Autor.
 * Universidad Abierta para Adultos. (2026). *Carreras de Ingeniería en Software y programas virtuales de desarrollo de tecnologías de la información*. Santiago y Santo Domingo, R.D.: Autor.
 * Universidad del Caribe. (2026). *Oferta curricular de Ingeniería en Ciberseguridad e Ingeniería en Sistemas e Información*. Santo Domingo, R.D.: Autor.
