@@ -4,7 +4,7 @@ import re
 import json
 
 # Paths
-WORKSPACE = r"C:\Users\jdiaz\Documents\antigravity\resilient-planck"
+WORKSPACE = os.path.dirname(os.path.abspath(__file__))
 INDEX_PATH = os.path.join(WORKSPACE, "index.html")
 HTML_SOURCE = os.path.join(WORKSPACE, "empleos.html")
 

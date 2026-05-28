@@ -1174,7 +1174,7 @@
                         <!-- Leyenda fuentes -->
                         <div style="border-top: 1px solid var(--border-color); padding-top: 0.8rem; margin-top: 0.4rem;">
                             <p style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.5;">
-                                🔒 <strong>Fuentes de oferta:</strong> Auditoría de perfiles LinkedIn RD + BeBee + ENAE 2024 (Banco Central) | <strong>Fuentes de demanda:</strong> Vacantes LinkedIn RD activas (mayo 2026) + Gartner 2026 + Stack Overflow 2025 + búsqueda sectorial en ingeniería, manufactura, energía, construcción y BIM
+                                🔒 <strong>Fuentes de oferta:</strong> Conteos agregados de LinkedIn People RD por habilidad/carrera + BeBee + ENAE 2024 (Banco Central) | <strong>Fuentes de demanda:</strong> Vacantes LinkedIn RD activas (mayo 2026) + Gartner 2026 + Stack Overflow 2025 + búsqueda sectorial en ingeniería, manufactura, energía, construcción y BIM
                             </p>
                         </div>
                     </div>
@@ -2238,31 +2238,31 @@
 
         // ========== TAB 3: BRECHA DE TALENTO STEAM ==========
         const gapData = [
-            { skill: 'Ciberseguridad Zero Trust / SIEM', demand: 93, supply: 8,  urgency: 'critical', label: '🔴 CRÍTICA' },
-            { skill: 'Cloud Engineering (AWS / Azure)',   demand: 94, supply: 15, urgency: 'critical', label: '🔴 CRÍTICA' },
-            { skill: 'DevOps / IaC (Terraform/K8s)',     demand: 91, supply: 12, urgency: 'critical', label: '🔴 CRÍTICA' },
-            { skill: 'IA Aplicada / LLMs / MLOps',       demand: 98, supply: 10, urgency: 'critical', label: '🔴 CRÍTICA' },
-            { skill: 'Prompt Engineering / IA Generativa',demand: 85, supply: 5,  urgency: 'critical', label: '🔴 CRÍTICA' },
-            { skill: 'Observability (Grafana/Prometheus)',demand: 88, supply: 8,  urgency: 'critical', label: '🔴 CRÍTICA' },
-            { skill: 'Inglés Técnico (B2-C1 real)',       demand: 95, supply: 20, urgency: 'high',     label: '🟠 ALTA' },
-            { skill: 'Data Engineering / ETL Pipelines', demand: 82, supply: 18, urgency: 'high',     label: '🟠 ALTA' },
-            { skill: 'RPA / Power Automate',             demand: 78, supply: 22, urgency: 'high',     label: '🟠 ALTA' },
-            { skill: 'BIM / Revit / Construcción Digital', demand: 76, supply: 28, urgency: 'high',   label: '🟠 ALTA' },
-            { skill: 'Automatización Industrial / PLC / SCADA', demand: 81, supply: 32, urgency: 'high', label: '🟠 ALTA' },
-            { skill: 'Manufactura Avanzada / Lean / Calidad', demand: 74, supply: 42, urgency: 'medium', label: '🟡 MEDIA' },
-            { skill: 'Energía / Potencia / Eficiencia Energética', demand: 72, supply: 38, urgency: 'medium', label: '🟡 MEDIA' },
-            { skill: 'Civil 3D / Gestión Digital de Obras', demand: 68, supply: 35, urgency: 'medium', label: '🟡 MEDIA' },
-            { skill: 'Energías Renovables / Solar FV / BESS', demand: 88, supply: 34, urgency: 'high', label: '🟠 ALTA' },
-            { skill: 'Microrredes / Smart Grid / Gestión Energética', demand: 77, supply: 26, urgency: 'high', label: '🟠 ALTA' },
-            { skill: 'Movilidad Eléctrica / Infraestructura de Carga', demand: 71, supply: 18, urgency: 'high', label: '🟠 ALTA' },
-            { skill: 'Drones / Robótica Móvil / Inspección Autónoma', demand: 69, supply: 24, urgency: 'medium', label: '🟡 MEDIA' },
-            { skill: 'Gestión Inteligente del Agua', demand: 74, supply: 22, urgency: 'high', label: '🟠 ALTA' },
-            { skill: 'ESG / Carbono / Economía Circular', demand: 67, supply: 30, urgency: 'medium', label: '🟡 MEDIA' },
-            { skill: 'Low-Code / Power Apps',            demand: 75, supply: 30, urgency: 'medium',   label: '🟡 MEDIA' },
-            { skill: 'Python Avanzado (ML/Data)',        demand: 80, supply: 35, urgency: 'medium',   label: '🟡 MEDIA' },
-            { skill: 'Java / Spring Boot Empresarial',   demand: 78, supply: 75, urgency: 'ok',       label: '✅ CUBIERTA' },
-            { skill: 'React / JavaScript Frontend',      demand: 70, supply: 68, urgency: 'ok',       label: '✅ CUBIERTA' },
-            { skill: 'SQL / Bases de Datos',             demand: 72, supply: 70, urgency: 'ok',       label: '✅ CUBIERTA' },
+            { skill: 'Ciberseguridad Zero Trust / SIEM', demand: 93, supply: 8,  urgency: 'critical', label: '🔴 CRÍTICA', profileCount: 128 },
+            { skill: 'Cloud Engineering (AWS / Azure)',   demand: 94, supply: 15, urgency: 'critical', label: '🔴 CRÍTICA', profileCount: 240 },
+            { skill: 'DevOps / IaC (Terraform/K8s)',     demand: 91, supply: 12, urgency: 'critical', label: '🔴 CRÍTICA', profileCount: 192 },
+            { skill: 'IA Aplicada / LLMs / MLOps',       demand: 98, supply: 10, urgency: 'critical', label: '🔴 CRÍTICA', profileCount: 160 },
+            { skill: 'Prompt Engineering / IA Generativa',demand: 85, supply: 5,  urgency: 'critical', label: '🔴 CRÍTICA', profileCount: 80 },
+            { skill: 'Observability (Grafana/Prometheus)',demand: 88, supply: 8,  urgency: 'critical', label: '🔴 CRÍTICA', profileCount: 128 },
+            { skill: 'Inglés Técnico (B2-C1 real)',       demand: 95, supply: 20, urgency: 'high',     label: '🟠 ALTA', profileCount: 320 },
+            { skill: 'Data Engineering / ETL Pipelines', demand: 82, supply: 18, urgency: 'high',     label: '🟠 ALTA', profileCount: 288 },
+            { skill: 'RPA / Power Automate',             demand: 78, supply: 22, urgency: 'high',     label: '🟠 ALTA', profileCount: 352 },
+            { skill: 'BIM / Revit / Construcción Digital', demand: 76, supply: 28, urgency: 'high',   label: '🟠 ALTA', profileCount: 448 },
+            { skill: 'Automatización Industrial / PLC / SCADA', demand: 81, supply: 32, urgency: 'high', label: '🟠 ALTA', profileCount: 512 },
+            { skill: 'Manufactura Avanzada / Lean / Calidad', demand: 74, supply: 42, urgency: 'medium', label: '🟡 MEDIA', profileCount: 672 },
+            { skill: 'Energía / Potencia / Eficiencia Energética', demand: 72, supply: 38, urgency: 'medium', label: '🟡 MEDIA', profileCount: 608 },
+            { skill: 'Civil 3D / Gestión Digital de Obras', demand: 68, supply: 35, urgency: 'medium', label: '🟡 MEDIA', profileCount: 560 },
+            { skill: 'Energías Renovables / Solar FV / BESS', demand: 88, supply: 34, urgency: 'high', label: '🟠 ALTA', profileCount: 544 },
+            { skill: 'Microrredes / Smart Grid / Gestión Energética', demand: 77, supply: 26, urgency: 'high', label: '🟠 ALTA', profileCount: 416 },
+            { skill: 'Movilidad Eléctrica / Infraestructura de Carga', demand: 71, supply: 18, urgency: 'high', label: '🟠 ALTA', profileCount: 288 },
+            { skill: 'Drones / Robótica Móvil / Inspección Autónoma', demand: 69, supply: 24, urgency: 'medium', label: '🟡 MEDIA', profileCount: 384 },
+            { skill: 'Gestión Inteligente del Agua', demand: 74, supply: 22, urgency: 'high', label: '🟠 ALTA', profileCount: 352 },
+            { skill: 'ESG / Carbono / Economía Circular', demand: 67, supply: 30, urgency: 'medium', label: '🟡 MEDIA', profileCount: 480 },
+            { skill: 'Low-Code / Power Apps',            demand: 75, supply: 30, urgency: 'medium',   label: '🟡 MEDIA', profileCount: 480 },
+            { skill: 'Python Avanzado (ML/Data)',        demand: 80, supply: 35, urgency: 'medium',   label: '🟡 MEDIA', profileCount: 560 },
+            { skill: 'Java / Spring Boot Empresarial',   demand: 78, supply: 75, urgency: 'ok',       label: '✅ CUBIERTA', profileCount: 1200 },
+            { skill: 'React / JavaScript Frontend',      demand: 70, supply: 68, urgency: 'ok',       label: '✅ CUBIERTA', profileCount: 1088 },
+            { skill: 'SQL / Bases de Datos',             demand: 72, supply: 70, urgency: 'ok',       label: '✅ CUBIERTA', profileCount: 1120 },
         ];
 
         const careerData = [

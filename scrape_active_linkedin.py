@@ -16,7 +16,7 @@ except ImportError:
     import websocket
 
 # Paths
-WORKSPACE = r"C:\Users\jdiaz\Documents\antigravity\resilient-planck"
+WORKSPACE = os.path.dirname(os.path.abspath(__file__))
 INDEX_PATH = os.path.join(WORKSPACE, "index.html")
 
 # Configure UTF-8 console output

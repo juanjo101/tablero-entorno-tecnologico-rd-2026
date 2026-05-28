@@ -21,7 +21,7 @@ from datetime import datetime
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-WORKSPACE = r"C:\Users\jdiaz\Documents\antigravity\resilient-planck"
+WORKSPACE = os.path.dirname(os.path.abspath(__file__))
 INDEX_PATH = os.path.join(WORKSPACE, "index.html")
 LATEST_DEMAND_JSON = os.path.join(WORKSPACE, "linkedin_jobs_demand_latest.json")
 LATEST_DEMAND_CSV = os.path.join(WORKSPACE, "linkedin_jobs_demand_latest.csv")
