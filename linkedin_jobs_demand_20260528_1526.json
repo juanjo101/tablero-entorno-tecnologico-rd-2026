@@ -1,0 +1,3034 @@
+{
+  "source": "LinkedIn Jobs",
+  "location": "República Dominicana",
+  "capturedAt": "2026-05-28T15:26:24",
+  "method": "Vacantes activas ya capturadas por Selenium e inyectadas en index.html; exportadas como evidencia estructurada.",
+  "totalJobs": 188,
+  "demandByCategory": {
+    "Ingeniería de Software": 23,
+    "IA y Automatización": 22,
+    "Ingeniería Eléctrica / Energía": 22,
+    "Cloud & Infraestructura": 21,
+    "Ingeniería Mecánica / Movilidad": 17,
+    "Manufactura / Calidad": 13,
+    "Ingeniería Civil / Agua e Infraestructura": 13,
+    "Ingeniería Electrónica": 11,
+    "Arquitectura / BIM": 11,
+    "Ingeniería de Datos": 9,
+    "Inteligencia de Negocios / BI": 9,
+    "Ingeniería Industrial": 8,
+    "Ciberseguridad": 7,
+    "ESG / Carbono / Economía Circular": 1,
+    "Gestión de TI / Liderazgo Tech": 1
+  },
+  "jobs": [
+    {
+      "title": "Analista de Capacitación Analista de Capacitación with verification",
+      "company": "Sued&Fargesa SRL",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Sued&Fargesa SRL.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Information Technology Project Analyst Information Technology Project Analyst",
+      "company": "Xolutiva, S. A.",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Xolutiva, S. A..",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Visual Designer Visual Designer",
+      "company": "Cumbre.do",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Cumbre.do.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Ai Data Reviewer - Remote Ai Data Reviewer - Remote",
+      "company": "YO IT Consulting",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en YO IT Consulting.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "LIDER DE PROYECTOS PLANIFICACION LIDER DE PROYECTOS PLANIFICACION with verification",
+      "company": "Banco Popular Dominicano",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Banco Popular Dominicano.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "AI Training Specialist (Egocentric Video) AI Training Specialist (Egocentric Video)",
+      "company": "Toloka Annotators",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Toloka Annotators.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Auxiliar de Procesos Administrativos e Inteligencia Artificial Auxiliar de Procesos Administrativos e Inteligencia Artificial",
+      "company": "EADIC",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en EADIC.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "AI Machine Learning Engineer - Remote - Latin America AI Machine Learning Engineer - Remote - Latin America",
+      "company": "FullStack",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en FullStack.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Senior Software Engineer (MCP Specialist) - Remote - Latin America Senior Software Engineer (MCP Specialist) - Remote - Latin America",
+      "company": "FullStack",
+      "location": "Concepción de la Vega, La Vega, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en FullStack.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Ai Trainer/Data Annotator - Remote Ai Trainer/Data Annotator - Remote",
+      "company": "YO IT Consulting",
+      "location": "Concepción de la Vega, La Vega, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en YO IT Consulting.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Front-end Developer Front-end Developer",
+      "company": "Factor IT",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Factor IT.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Full Stack Developer (Python) Full Stack Developer (Python) with verification",
+      "company": "Perform",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Perform.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Desarrollador Desarrollador",
+      "company": "Evaluar",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Evaluar.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Sr. QA Manual Engineer Sr. QA Manual Engineer",
+      "company": "Devlane",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Devlane.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Lead Software Engineer in Test (SDET) Lead Software Engineer in Test (SDET) with verification",
+      "company": "Flash",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Flash.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Frontend Developer (React) - Remote Work | REF#290578 Frontend Developer (React) - Remote Work | REF#290578 with verification",
+      "company": "BairesDev",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en BairesDev.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Full Stack Developer (React/Redux) Full Stack Developer (React/Redux) with verification",
+      "company": "Perform",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Perform.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Desarrollador/a Full-Stack Jr Desarrollador/a Full-Stack Jr",
+      "company": "BC Tecnología",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en BC Tecnología.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Full Stack Engineer (TypeScript & Node.js) Full Stack Engineer (TypeScript & Node.js) with verification",
+      "company": "Applaudo",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Applaudo.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Desarrollador Back-end Desarrollador Back-end",
+      "company": "Agilesoft",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Agilesoft.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Senior Data Engineer (Databricks + SQL Server) - Remote - Latin America Senior Data Engineer (Databricks + SQL Server) - Remote - Latin America",
+      "company": "FullStack",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Datos",
+      "desc": "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en FullStack.",
+      "requirements": [
+        "SQL Avanzado & dbt",
+        "Apache Spark / Kafka",
+        "Data Lakes & Warehouses",
+        "Python para ETL"
+      ],
+      "impact": "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+      "forMortals": "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
+    },
+    {
+      "title": "Sr. AI/ML Engineer Sr. AI/ML Engineer with verification",
+      "company": "Perform",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Datos",
+      "desc": "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en Perform.",
+      "requirements": [
+        "SQL Avanzado & dbt",
+        "Apache Spark / Kafka",
+        "Data Lakes & Warehouses",
+        "Python para ETL"
+      ],
+      "impact": "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+      "forMortals": "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
+    },
+    {
+      "title": "Ingeniero de Big Data - Trabajo Remoto | REF#267264 Ingeniero de Big Data - Trabajo Remoto | REF#267264 with verification",
+      "company": "BairesDev",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Datos",
+      "desc": "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en BairesDev.",
+      "requirements": [
+        "SQL Avanzado & dbt",
+        "Apache Spark / Kafka",
+        "Data Lakes & Warehouses",
+        "Python para ETL"
+      ],
+      "impact": "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+      "forMortals": "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
+    },
+    {
+      "title": "Senior Data Engineer Senior Data Engineer",
+      "company": "Zencore",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Datos",
+      "desc": "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en Zencore.",
+      "requirements": [
+        "SQL Avanzado & dbt",
+        "Apache Spark / Kafka",
+        "Data Lakes & Warehouses",
+        "Python para ETL"
+      ],
+      "impact": "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+      "forMortals": "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
+    },
+    {
+      "title": "Data Validation Engineer Data Validation Engineer with verification",
+      "company": "Lumenalta",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Datos",
+      "desc": "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en Lumenalta.",
+      "requirements": [
+        "SQL Avanzado & dbt",
+        "Apache Spark / Kafka",
+        "Data Lakes & Warehouses",
+        "Python para ETL"
+      ],
+      "impact": "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+      "forMortals": "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
+    },
+    {
+      "title": "Data Engineer Data Engineer with verification",
+      "company": "Origami Risk",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Datos",
+      "desc": "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en Origami Risk.",
+      "requirements": [
+        "SQL Avanzado & dbt",
+        "Apache Spark / Kafka",
+        "Data Lakes & Warehouses",
+        "Python para ETL"
+      ],
+      "impact": "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+      "forMortals": "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
+    },
+    {
+      "title": "Data Engineer Semi Senior Data Engineer Semi Senior",
+      "company": "Factor IT",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Datos",
+      "desc": "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en Factor IT.",
+      "requirements": [
+        "SQL Avanzado & dbt",
+        "Apache Spark / Kafka",
+        "Data Lakes & Warehouses",
+        "Python para ETL"
+      ],
+      "impact": "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+      "forMortals": "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
+    },
+    {
+      "title": "Consultor de Datos y Analítica Consultor de Datos y Analítica with verification",
+      "company": "Equifax",
+      "location": "Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Inteligencia de Negocios / BI",
+      "desc": "Transformación de datos crudos en tableros e informes para decisiones gerenciales en Equifax.",
+      "requirements": [
+        "Power BI / Tableau / Looker",
+        "SQL para análisis",
+        "Estadística y visualización",
+        "Storytelling con datos"
+      ],
+      "impact": "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+      "forMortals": "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
+    },
+    {
+      "title": "Analyst/Consultant (Data Analytics) - AI & Data - Shenzhen(315253) Analyst/Consultant (Data Analytics) - AI & Data - Shenzhen(315253) with verification",
+      "company": "Deloitte",
+      "location": "Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Inteligencia de Negocios / BI",
+      "desc": "Transformación de datos crudos en tableros e informes para decisiones gerenciales en Deloitte.",
+      "requirements": [
+        "Power BI / Tableau / Looker",
+        "SQL para análisis",
+        "Estadística y visualización",
+        "Storytelling con datos"
+      ],
+      "impact": "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+      "forMortals": "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
+    },
+    {
+      "title": "Data Analyst Data Analyst with verification",
+      "company": "Remote Leverage",
+      "location": "アト・マジョール州, Hato Mayor, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Inteligencia de Negocios / BI",
+      "desc": "Transformación de datos crudos en tableros e informes para decisiones gerenciales en Remote Leverage.",
+      "requirements": [
+        "Power BI / Tableau / Looker",
+        "SQL para análisis",
+        "Estadística y visualización",
+        "Storytelling con datos"
+      ],
+      "impact": "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+      "forMortals": "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
+    },
+    {
+      "title": "Senior Data Analyst (Oracle Fusion) - Remote - Latin America Senior Data Analyst (Oracle Fusion) - Remote - Latin America",
+      "company": "FullStack",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Inteligencia de Negocios / BI",
+      "desc": "Transformación de datos crudos en tableros e informes para decisiones gerenciales en FullStack.",
+      "requirements": [
+        "Power BI / Tableau / Looker",
+        "SQL para análisis",
+        "Estadística y visualización",
+        "Storytelling con datos"
+      ],
+      "impact": "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+      "forMortals": "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
+    },
+    {
+      "title": "ANALISTA BI ANALISTA BI",
+      "company": "El Catador",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Inteligencia de Negocios / BI",
+      "desc": "Transformación de datos crudos en tableros e informes para decisiones gerenciales en El Catador.",
+      "requirements": [
+        "Power BI / Tableau / Looker",
+        "SQL para análisis",
+        "Estadística y visualización",
+        "Storytelling con datos"
+      ],
+      "impact": "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+      "forMortals": "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
+    },
+    {
+      "title": "Analista Datos Logísticos Analista Datos Logísticos",
+      "company": "Centro Cuesta Nacional",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Inteligencia de Negocios / BI",
+      "desc": "Transformación de datos crudos en tableros e informes para decisiones gerenciales en Centro Cuesta Nacional.",
+      "requirements": [
+        "Power BI / Tableau / Looker",
+        "SQL para análisis",
+        "Estadística y visualización",
+        "Storytelling con datos"
+      ],
+      "impact": "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+      "forMortals": "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
+    },
+    {
+      "title": "Business Analyst Business Analyst",
+      "company": "Ottomatik.io",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Inteligencia de Negocios / BI",
+      "desc": "Transformación de datos crudos en tableros e informes para decisiones gerenciales en Ottomatik.io.",
+      "requirements": [
+        "Power BI / Tableau / Looker",
+        "SQL para análisis",
+        "Estadística y visualización",
+        "Storytelling con datos"
+      ],
+      "impact": "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+      "forMortals": "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
+    },
+    {
+      "title": "Director/a Comercial Director/a Comercial",
+      "company": "CORE BFR",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ciberseguridad",
+      "desc": "Protección de activos digitales, auditoría de vulnerabilidades y respuesta a incidentes en CORE BFR.",
+      "requirements": [
+        "CompTIA Security+ / CEH / CISSP",
+        "SIEM & SOC Operations",
+        "Seguridad en cloud y redes",
+        "Ethical Hacking"
+      ],
+      "impact": "Previene pérdidas millonarias por ataques cibernéticos y protege la reputación corporativa.",
+      "forMortals": "Es ser el guardián digital que protege a la empresa de hackers y robos de información."
+    },
+    {
+      "title": "Cyber Security Engineer - Remote Work | REF#290765 Cyber Security Engineer - Remote Work | REF#290765 with verification",
+      "company": "BairesDev",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ciberseguridad",
+      "desc": "Protección de activos digitales, auditoría de vulnerabilidades y respuesta a incidentes en BairesDev.",
+      "requirements": [
+        "CompTIA Security+ / CEH / CISSP",
+        "SIEM & SOC Operations",
+        "Seguridad en cloud y redes",
+        "Ethical Hacking"
+      ],
+      "impact": "Previene pérdidas millonarias por ataques cibernéticos y protege la reputación corporativa.",
+      "forMortals": "Es ser el guardián digital que protege a la empresa de hackers y robos de información."
+    },
+    {
+      "title": "Social Media Manager Social Media Manager with verification",
+      "company": "Remote Leverage",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ciberseguridad",
+      "desc": "Protección de activos digitales, auditoría de vulnerabilidades y respuesta a incidentes en Remote Leverage.",
+      "requirements": [
+        "CompTIA Security+ / CEH / CISSP",
+        "SIEM & SOC Operations",
+        "Seguridad en cloud y redes",
+        "Ethical Hacking"
+      ],
+      "impact": "Previene pérdidas millonarias por ataques cibernéticos y protege la reputación corporativa.",
+      "forMortals": "Es ser el guardián digital que protege a la empresa de hackers y robos de información."
+    },
+    {
+      "title": "Auxiliar de RR. HH. Auxiliar de RR. HH. with verification",
+      "company": "Sued&Fargesa SRL",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ciberseguridad",
+      "desc": "Protección de activos digitales, auditoría de vulnerabilidades y respuesta a incidentes en Sued&Fargesa SRL.",
+      "requirements": [
+        "CompTIA Security+ / CEH / CISSP",
+        "SIEM & SOC Operations",
+        "Seguridad en cloud y redes",
+        "Ethical Hacking"
+      ],
+      "impact": "Previene pérdidas millonarias por ataques cibernéticos y protege la reputación corporativa.",
+      "forMortals": "Es ser el guardián digital que protege a la empresa de hackers y robos de información."
+    },
+    {
+      "title": "Gerente Senior Regional de Seguridad y TI Gerente Senior Regional de Seguridad y TI",
+      "company": "Multicómputos",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ciberseguridad",
+      "desc": "Protección de activos digitales, auditoría de vulnerabilidades y respuesta a incidentes en Multicómputos.",
+      "requirements": [
+        "CompTIA Security+ / CEH / CISSP",
+        "SIEM & SOC Operations",
+        "Seguridad en cloud y redes",
+        "Ethical Hacking"
+      ],
+      "impact": "Previene pérdidas millonarias por ataques cibernéticos y protege la reputación corporativa.",
+      "forMortals": "Es ser el guardián digital que protege a la empresa de hackers y robos de información."
+    },
+    {
+      "title": "Gerente De Seguridad Gerente De Seguridad",
+      "company": "Truckslogic",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ciberseguridad",
+      "desc": "Protección de activos digitales, auditoría de vulnerabilidades y respuesta a incidentes en Truckslogic.",
+      "requirements": [
+        "CompTIA Security+ / CEH / CISSP",
+        "SIEM & SOC Operations",
+        "Seguridad en cloud y redes",
+        "Ethical Hacking"
+      ],
+      "impact": "Previene pérdidas millonarias por ataques cibernéticos y protege la reputación corporativa.",
+      "forMortals": "Es ser el guardián digital que protege a la empresa de hackers y robos de información."
+    },
+    {
+      "title": "Electrical BIM Specialist Electrical BIM Specialist",
+      "company": "ENG",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en ENG.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Spanish AI Data Trainer - Remote Spanish AI Data Trainer - Remote",
+      "company": "YO IT Consulting",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en YO IT Consulting.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Asesor de preventa- Sector tecnología Asesor de preventa- Sector tecnología",
+      "company": "Nexsys Centroamérica y Caribe",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Nexsys Centroamérica y Caribe.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "BI Engineer (Oracle Fusion Reporting) - Remote - Latin America BI Engineer (Oracle Fusion Reporting) - Remote - Latin America",
+      "company": "FullStack",
+      "location": "San Pedro de Macorís, San Pedro de Macorís, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en FullStack.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "SUBGERENTE SOPORTE OPERACIONAL (INFOCENTRO) SUBGERENTE SOPORTE OPERACIONAL (INFOCENTRO) with verification",
+      "company": "Banco Popular Dominicano",
+      "location": "San Pedro de Macorís, San Pedro de Macorís, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Banco Popular Dominicano.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Soporte Operativo Junior Soporte Operativo Junior",
+      "company": "BC Tecnología",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en BC Tecnología.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Technology-Java/Frontend/Testing/Mobile/Devops/AI Technology-Java/Frontend/Testing/Mobile/Devops/AI",
+      "company": "Accenture",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Accenture.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Multimodal AI Content Specialist - Intermediate (AI Community) Multimodal AI Content Specialist - Intermediate (AI Community)",
+      "company": "TELUS International AI Data Solutions",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en TELUS International AI Data Solutions.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "SharePoint Administrator / Microsoft 365 SharePoint Administrator / Microsoft 365 with verification",
+      "company": "Applaudo",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Applaudo.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "IT Advisor IV (911 Program Liaison and Technical Advisor) IT Advisor IV (911 Program Liaison and Technical Advisor)",
+      "company": "ATSG Corporation",
+      "location": "アト・マジョール州, Hato Mayor, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en ATSG Corporation.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Subgerente de Sistemas de Información Subgerente de Sistemas de Información",
+      "company": "Consorcio de Tarjetas Dominicanas (CardNET)",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Consorcio de Tarjetas Dominicanas (CardNET).",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Ingeniero(a) III agregación core IP y radio (Temporal) Ingeniero(a) III agregación core IP y radio (Temporal) with verification",
+      "company": "Claro RD",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Claro RD.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Agentic Python Engineer - Remote - Latin America Agentic Python Engineer - Remote - Latin America",
+      "company": "FullStack",
+      "location": "Santo Domingo Este, Santo Domingo, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en FullStack.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Python Developer - Remote Python Developer - Remote",
+      "company": "YO IT Consulting",
+      "location": "Santo Domingo Este, Santo Domingo, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en YO IT Consulting.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Backend Python Developer (APIs & Integrations) Backend Python Developer (APIs & Integrations)",
+      "company": "Segadty",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Segadty.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Python Engineer - Latin America - Remote Python Engineer - Latin America - Remote",
+      "company": "Azumo",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Azumo.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Machine Learning Engineer Machine Learning Engineer with verification",
+      "company": "Lumenalta",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Lumenalta.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Python Developer WinDifferent - Remote Work | REF#284312 Python Developer WinDifferent - Remote Work | REF#284312 with verification",
+      "company": "BairesDev",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en BairesDev.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Network Engineer Network Engineer",
+      "company": "Quagnito Solutions Pvt Ltd",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Quagnito Solutions Pvt Ltd.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Network Engineer Network Engineer",
+      "company": "Natobotics",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Natobotics.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Senior Network Engineer Senior Network Engineer with verification",
+      "company": "Wavin",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Wavin.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Network Engineer Network Engineer with verification",
+      "company": "The Functionary",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en The Functionary.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Senior Transmission Network Support Engineer Senior Transmission Network Support Engineer with verification",
+      "company": "Penta Consulting",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Penta Consulting.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Network Infrastructure Engineer (Automation Focus) Network Infrastructure Engineer (Automation Focus)",
+      "company": "Stateside",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Stateside.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Ingeniero de Infraestructura Cloud & Redes (AWS) Ingeniero de Infraestructura Cloud & Redes (AWS) with verification",
+      "company": "Stefanini LATAM",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Stefanini LATAM.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Trainee in Application Lab Trainee in Application Lab with verification",
+      "company": "STMicroelectronics",
+      "location": "Batey 8, Provincia Independencia, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en STMicroelectronics.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Electrical BIM Job Captain Electrical BIM Job Captain",
+      "company": "ENG",
+      "location": "Batey 8, Provincia Independencia, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en ENG.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Principal EDI Integration Engineer - Remote - Latin America Principal EDI Integration Engineer - Remote - Latin America",
+      "company": "FullStack",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en FullStack.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Business Intelligence RF Engineer (HYBRID) | DOMINICAN REPUBLIC Business Intelligence RF Engineer (HYBRID) | DOMINICAN REPUBLIC with verification",
+      "company": "Phoenix Tower International",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en Phoenix Tower International.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Senior Electronic Process Engineer Senior Electronic Process Engineer with verification",
+      "company": "Hayco",
+      "location": "San Cristobal, San Cristóbal, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en Hayco.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Anlagenmechaniker SHK, Elektriker oder Mechatroniker (m/w/d) - Servicefahrzeug ab Wohnort Anlagenmechaniker SHK, Elektriker oder Mechatroniker (m/w/d) - Servicefahrzeug ab Wohnort with verification",
+      "company": "GRUNDFOS",
+      "location": "San Cristobal, San Cristóbal, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en GRUNDFOS.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Ingenieros Eléctricos Ingenieros Eléctricos",
+      "company": "Tu Empleo RD",
+      "location": "Santo Domingo de Guzmán, Distrito Nacional, República Dominicana (Híbrido)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en Tu Empleo RD.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Pueblo Viejo - Responsable de Sistemas de Abastecimiento y Centro de Excelencia Pueblo Viejo - Responsable de Sistemas de Abastecimiento y Centro de Excelencia",
+      "company": "Barrick Pueblo Viejo",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en Barrick Pueblo Viejo.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Gerente de Sostenibilidad C&C Gerente de Sostenibilidad C&C with verification",
+      "company": "Tetra Pak",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en Tetra Pak.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Digital Strategist Digital Strategist",
+      "company": "PHD Dominicana",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en PHD Dominicana.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Director of Technology Innovation & Date (IT) Director of Technology Innovation & Date (IT) with verification",
+      "company": "Four Seasons",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Electrónica",
+      "desc": "Diseño, diagnóstico e integración de sistemas electrónicos, instrumentación, PLC, SCADA e IoT industrial en Four Seasons.",
+      "requirements": [
+        "PLC / SCADA",
+        "Instrumentación industrial",
+        "Sensores e IoT",
+        "Electrónica de potencia"
+      ],
+      "impact": "Mejora el monitoreo y control de procesos productivos críticos.",
+      "forMortals": "Es conectar sensores, controles y equipos para que las máquinas puedan medirse, comunicarse y operar mejor."
+    },
+    {
+      "title": "Electronics Expert - DesignSpark PCB - Remote Electronics Expert - DesignSpark PCB - Remote",
+      "company": "YO IT Consulting",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en YO IT Consulting.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Engineer, Senior - NPI* Engineer, Senior - NPI*",
+      "company": "Integer Holdings Corporation",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Integer Holdings Corporation.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Operations Assistant Operations Assistant with verification",
+      "company": "Remote Leverage",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Remote Leverage.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Desarrollador de Negocio (Baja Tensión) Desarrollador de Negocio (Baja Tensión) with verification",
+      "company": "CHINT Electric",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en CHINT Electric.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Energy & Power Systems Expert (AI Community) Energy & Power Systems Expert (AI Community)",
+      "company": "TELUS International AI Data Solutions",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en TELUS International AI Data Solutions.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Ingeniero de mantenimiento Ingeniero de mantenimiento with verification",
+      "company": "SOFRATESA",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en SOFRATESA.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Pueblo Viejo - Supervisor(a) Ambiental - GEIs Y Cambio Climático Pueblo Viejo - Supervisor(a) Ambiental - GEIs Y Cambio Climático with verification",
+      "company": "Barrick Gold Corporation",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Barrick Gold Corporation.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Administrative Assistant Administrative Assistant with verification",
+      "company": "Remote Leverage",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Remote Leverage.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Software & Innovation Manager Software & Innovation Manager with verification",
+      "company": "VoiceTeam",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en VoiceTeam.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Agentic Azure DevOps Engineer - Remote - Latin America Agentic Azure DevOps Engineer - Remote - Latin America",
+      "company": "FullStack",
+      "location": "Santiago de los Caballeros, Santiago, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en FullStack.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Education Project Manager Syria South Central Education Project Manager Syria South Central with verification",
+      "company": "Norwegian Refugee Council",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Norwegian Refugee Council.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Gerente Servicios y Operaciones TI Gerente Servicios y Operaciones TI with verification",
+      "company": "Asociación La Nacional de Ahorros y Préstamos",
+      "location": "San Pedro de Macorís, San Pedro de Macorís, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Asociación La Nacional de Ahorros y Préstamos.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Technical Director - EU-LAC Cyber-SHIELD (H/F) Technical Director - EU-LAC Cyber-SHIELD (H/F) with verification",
+      "company": "Expertise France",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Expertise France.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "IT Support Specialist (Remote) IT Support Specialist (Remote)",
+      "company": "RemoteVA",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en RemoteVA.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Ai Evaluation Expert - Remote Ai Evaluation Expert - Remote",
+      "company": "YO IT Consulting",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en YO IT Consulting.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Subgerente Inteligencia y Monitoreo PLAFT Subgerente Inteligencia y Monitoreo PLAFT",
+      "company": "Asociación La Nacional de Ahorros y Préstamos",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Asociación La Nacional de Ahorros y Préstamos.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Coordinador de Seguridad Coorporativa. Coordinador de Seguridad Coorporativa.",
+      "company": "servicios medicos",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en servicios medicos.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "CONSULTOR ANALISTA DE DOCUMENTACIÓN CONSULTOR ANALISTA DE DOCUMENTACIÓN",
+      "company": "PERCEPTIO S.A.S.",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en PERCEPTIO S.A.S..",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Automotive Tech Support (Remote) Automotive Tech Support (Remote)",
+      "company": "Horatio",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Horatio.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Gerente Senior de Go To Market - Fijo, Pospago & FMC (Oportunidad de Reubicación) Gerente Senior de Go To Market - Fijo, Pospago & FMC (Oportunidad de Reubicación)",
+      "company": "Más Móvil",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Más Móvil.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Corporativo - Product Owner Corporativo - Product Owner",
+      "company": "Centro Cuesta Nacional",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en Centro Cuesta Nacional.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Ingeniero Senior de Desarrollo / Diseño de Productos Ingeniero Senior de Desarrollo / Diseño de Productos",
+      "company": "MissionHires",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Eléctrica / Energía",
+      "desc": "Gestión de sistemas eléctricos, energía solar, renovables, BESS, microrredes, potencia y eficiencia energética en MissionHires.",
+      "requirements": [
+        "Sistemas de potencia",
+        "Solar FV / BESS",
+        "Smart Grid / Microgrid",
+        "Normativas eléctricas"
+      ],
+      "impact": "Reduce costos energéticos y mejora la continuidad de infraestructura crítica.",
+      "forMortals": "Es diseñar y operar energía segura, eficiente y cada vez más renovable para empresas y comunidades."
+    },
+    {
+      "title": "Pueblo Viejo - Metallurgy Advisor Pueblo Viejo - Metallurgy Advisor with verification",
+      "company": "Barrick Gold Corporation",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Barrick Gold Corporation.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Produktový inženýr pro sériovou výrobu Produktový inženýr pro sériovou výrobu with verification",
+      "company": "MANN+HUMMEL",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en MANN+HUMMEL.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Engineer II - Manufacturing-1 Engineer II - Manufacturing-1",
+      "company": "Integer Holdings Corporation",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Integer Holdings Corporation.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Junior Mechanical Engineer - based in Czech Republic (Brno) or Norway (Kongsberg) Junior Mechanical Engineer - based in Czech Republic (Brno) or Norway (Kongsberg)",
+      "company": "Kongsberg Precision Cutting Systems",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Kongsberg Precision Cutting Systems.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "INGENIERO DE MANTENIMIENTO INGENIERO DE MANTENIMIENTO",
+      "company": "Quala",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Quala.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Field Service Superintendent - Energy Power Plant Field Service Superintendent - Energy Power Plant",
+      "company": "Wärtsilä",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Wärtsilä.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Global Technical Leader RDHx Global Technical Leader RDHx with verification",
+      "company": "Vertiv",
+      "location": "República Dominicana (Híbrido)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Vertiv.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Ingeniero de Calidad Ingeniero de Calidad with verification",
+      "company": "Cardinal Health",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Cardinal Health.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Mechanical Piping BIM/VDC Engineer Mechanical Piping BIM/VDC Engineer",
+      "company": "Ottomatik.io",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Ottomatik.io.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Tool Engineer I Tool Engineer I with verification",
+      "company": "Medtronic",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Medtronic.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Analista de Logística. Analista de Logística.",
+      "company": "TotalEnergies",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en TotalEnergies.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Virtual Assistant Virtual Assistant",
+      "company": "Ottomatik.io",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Ottomatik.io.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Coordinador Canales Alterno Coordinador Canales Alterno with verification",
+      "company": "BANCO ADEMI",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en BANCO ADEMI.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Biomedical Technician Biomedical Technician",
+      "company": "OxiHogar SRL",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en OxiHogar SRL.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Head of Training and Quality Head of Training and Quality with verification",
+      "company": "Holafly",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Holafly.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Gerente Desarrollo Modelos De Riesgos Gerente Desarrollo Modelos De Riesgos with verification",
+      "company": "Banco BHD",
+      "location": "Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Banco BHD.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "LIDER DE PROYECTO ADM. PLATAFORMA LIDER DE PROYECTO ADM. PLATAFORMA with verification",
+      "company": "Banco Popular Dominicano",
+      "location": "Santa Bárbara de Samaná, Samaná, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Mecánica / Movilidad",
+      "desc": "Mantenimiento predictivo, sistemas mecánicos, robótica móvil, vehículos eléctricos o autónomos y soporte a producción en Banco Popular Dominicano.",
+      "requirements": [
+        "Mantenimiento predictivo",
+        "CAD / diseño mecánico",
+        "Robótica / ADAS",
+        "Análisis de fallas"
+      ],
+      "impact": "Reduce paradas de equipos y habilita nuevas soluciones de movilidad e inspección.",
+      "forMortals": "Es mantener y mejorar máquinas, vehículos y equipos para que trabajen con menos fallas y más inteligencia."
+    },
+    {
+      "title": "Engineer II - Manufacturing-3 Engineer II - Manufacturing-3",
+      "company": "Integer Holdings Corporation",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Industrial",
+      "desc": "Optimización de procesos, logística, supply chain, mejora continua, calidad, productividad y analítica operacional en Integer Holdings Corporation.",
+      "requirements": [
+        "Lean Six Sigma",
+        "Supply Chain",
+        "Power BI / Excel avanzado",
+        "Gestión de procesos"
+      ],
+      "impact": "Reduce desperdicio, tiempos y costos operativos mediante procesos mejor diseñados.",
+      "forMortals": "Es ordenar cómo trabaja una empresa para producir más, gastar menos y cometer menos errores."
+    },
+    {
+      "title": "Senior Packaging Eng Supv Senior Packaging Eng Supv with verification",
+      "company": "Medtronic",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Industrial",
+      "desc": "Optimización de procesos, logística, supply chain, mejora continua, calidad, productividad y analítica operacional en Medtronic.",
+      "requirements": [
+        "Lean Six Sigma",
+        "Supply Chain",
+        "Power BI / Excel avanzado",
+        "Gestión de procesos"
+      ],
+      "impact": "Reduce desperdicio, tiempos y costos operativos mediante procesos mejor diseñados.",
+      "forMortals": "Es ordenar cómo trabaja una empresa para producir más, gastar menos y cometer menos errores."
+    },
+    {
+      "title": "Manufacturing Engineer I Manufacturing Engineer I with verification",
+      "company": "Nissha Medical Technologies",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Industrial",
+      "desc": "Optimización de procesos, logística, supply chain, mejora continua, calidad, productividad y analítica operacional en Nissha Medical Technologies.",
+      "requirements": [
+        "Lean Six Sigma",
+        "Supply Chain",
+        "Power BI / Excel avanzado",
+        "Gestión de procesos"
+      ],
+      "impact": "Reduce desperdicio, tiempos y costos operativos mediante procesos mejor diseñados.",
+      "forMortals": "Es ordenar cómo trabaja una empresa para producir más, gastar menos y cometer menos errores."
+    },
+    {
+      "title": "Packaging Engineer II Packaging Engineer II with verification",
+      "company": "Hayco",
+      "location": "San Isidro, Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Industrial",
+      "desc": "Optimización de procesos, logística, supply chain, mejora continua, calidad, productividad y analítica operacional en Hayco.",
+      "requirements": [
+        "Lean Six Sigma",
+        "Supply Chain",
+        "Power BI / Excel avanzado",
+        "Gestión de procesos"
+      ],
+      "impact": "Reduce desperdicio, tiempos y costos operativos mediante procesos mejor diseñados.",
+      "forMortals": "Es ordenar cómo trabaja una empresa para producir más, gastar menos y cometer menos errores."
+    },
+    {
+      "title": "Corporativo - Gerente Operaciones Ecommerce Corporativo - Gerente Operaciones Ecommerce",
+      "company": "Centro Cuesta Nacional",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Industrial",
+      "desc": "Optimización de procesos, logística, supply chain, mejora continua, calidad, productividad y analítica operacional en Centro Cuesta Nacional.",
+      "requirements": [
+        "Lean Six Sigma",
+        "Supply Chain",
+        "Power BI / Excel avanzado",
+        "Gestión de procesos"
+      ],
+      "impact": "Reduce desperdicio, tiempos y costos operativos mediante procesos mejor diseñados.",
+      "forMortals": "Es ordenar cómo trabaja una empresa para producir más, gastar menos y cometer menos errores."
+    },
+    {
+      "title": "Líder de Producción Líder de Producción",
+      "company": "Quala",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Industrial",
+      "desc": "Optimización de procesos, logística, supply chain, mejora continua, calidad, productividad y analítica operacional en Quala.",
+      "requirements": [
+        "Lean Six Sigma",
+        "Supply Chain",
+        "Power BI / Excel avanzado",
+        "Gestión de procesos"
+      ],
+      "impact": "Reduce desperdicio, tiempos y costos operativos mediante procesos mejor diseñados.",
+      "forMortals": "Es ordenar cómo trabaja una empresa para producir más, gastar menos y cometer menos errores."
+    },
+    {
+      "title": "Supplier Quality Engineer II Supplier Quality Engineer II with verification",
+      "company": "Jabil",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en Jabil.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Quality Engineer Quality Engineer with verification",
+      "company": "Eaton",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en Eaton.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Quality Engineer - II (Operations) Quality Engineer - II (Operations)",
+      "company": "B. Braun Medical Inc. (US)",
+      "location": "Punta Cana, La Altagracia, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en B. Braun Medical Inc. (US).",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Responsable de Almacén Responsable de Almacén with verification",
+      "company": "Siemens",
+      "location": "Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en Siemens.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Clinical Application Specialist Ultrasound and X ray Clinical Application Specialist Ultrasound and X ray with verification",
+      "company": "Mindray",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en Mindray.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Travelling Service Technician Travelling Service Technician with verification",
+      "company": "Vestas",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en Vestas.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Standards and Training Manager, Syria Standards and Training Manager, Syria",
+      "company": "ReliefWeb",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en ReliefWeb.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Ingeniero de Planificación Ingeniero de Planificación",
+      "company": "BLUE DIAMOND",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en BLUE DIAMOND.",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "Ingeniero de Obras Ingeniero de Obras",
+      "company": "Supermercados Bravo",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en Supermercados Bravo.",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "Ingeniero Recidente, Ingeniero Recidente,",
+      "company": "Huberto Pérez Mera Ingenieros Asociados S.R.L.",
+      "location": "Santo Domingo Oeste, Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en Huberto Pérez Mera Ingenieros Asociados S.R.L..",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "Ingeniero de obras Ingeniero de obras",
+      "company": "REMIX S. A.",
+      "location": "Santo Domingo Oeste, Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en REMIX S. A..",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "Ingeniero(a) de Ejecución de Proyectos Electromecánicos y Supervisión de Obras Ingeniero(a) de Ejecución de Proyectos Electromecánicos y Supervisión de Obras",
+      "company": "Tripalis",
+      "location": "San Felipe de Puerto Plata, Puerto Plata, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en Tripalis.",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "Ingeniero/a control de costos. Ingeniero/a control de costos.",
+      "company": "SERVINSCO SRL",
+      "location": "San Felipe de Puerto Plata, Puerto Plata, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en SERVINSCO SRL.",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "现场工程师 现场工程师",
+      "company": "特变电工国际工程有限公司",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en 特变电工国际工程有限公司.",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "MODELADOR TEKLA STRUCTURE MODELADOR TEKLA STRUCTURE",
+      "company": "ACEROMAS SRL",
+      "location": "San Felipe de Puerto Plata, Puerto Plata, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en ACEROMAS SRL.",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "现场工程师 现场工程师",
+      "company": "TBEA Xi'an Electric Technology Co., Ltd.",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en TBEA Xi'an Electric Technology Co., Ltd..",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "IT Operations Lead IT Operations Lead with verification",
+      "company": "International Schools Partnership Limited",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en International Schools Partnership Limited.",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "Coordinador(a) Gente & Gestión Coordinador(a) Gente & Gestión",
+      "company": "Supermercados Bravo",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en Supermercados Bravo.",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "Corporativo - Coordinadora Administrativa Corporativo - Coordinadora Administrativa",
+      "company": "Centro Cuesta Nacional",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en Centro Cuesta Nacional.",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "Analista de Proyecto Analista de Proyecto",
+      "company": "Factor Humano",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Civil / Agua e Infraestructura",
+      "desc": "Diseño, supervisión y gestión de infraestructura civil, drenaje, agua, resiliencia climática y obras en Factor Humano.",
+      "requirements": [
+        "Civil 3D / AutoCAD",
+        "Gestión de obras",
+        "Drenaje y agua",
+        "Resiliencia climática"
+      ],
+      "impact": "Permite desarrollar infraestructura más segura, sostenible y resistente al clima.",
+      "forMortals": "Es diseñar y supervisar obras, agua y drenaje para que funcionen bien y resistan el uso y el clima."
+    },
+    {
+      "title": "LIDER DE PROYECTOS ARQUITECTURA DE DATOS LIDER DE PROYECTOS ARQUITECTURA DE DATOS with verification",
+      "company": "Banco Popular Dominicano",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en Banco Popular Dominicano.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Architectural Draftsman / Architect Architectural Draftsman / Architect",
+      "company": "OSA Outsourcing Advantage",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en OSA Outsourcing Advantage.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Architect/Interior Designer (Revit Expert) Architect/Interior Designer (Revit Expert)",
+      "company": "RemoteVA",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en RemoteVA.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Arquitecta / Diseñadora de Interiores Arquitecta / Diseñadora de Interiores",
+      "company": "Gestión del Talento Humano",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en Gestión del Talento Humano.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Architectural Designer (Revit) Architectural Designer (Revit)",
+      "company": "RemoteVA",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en RemoteVA.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Architectural Draftsperson / Architectural Designer Architectural Draftsperson / Architectural Designer",
+      "company": "OSA Outsourcing Advantage",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en OSA Outsourcing Advantage.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Architect - Retail - Junior Architect - Retail - Junior with verification",
+      "company": "Gensler",
+      "location": "Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en Gensler.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Analista Programador Analista Programador with verification",
+      "company": "El Catador",
+      "location": "Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en El Catador.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Graphic Designer Graphic Designer with verification",
+      "company": "Remote Leverage",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en Remote Leverage.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Ingeniero Proyectos Ingeniero Proyectos with verification",
+      "company": "Gildan",
+      "location": "La Romana, La Romana, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "ESG / Carbono / Economía Circular",
+      "desc": "Medición de huella de carbono, eficiencia de recursos, reportes ESG, circularidad y reducción de residuos en Gildan.",
+      "requirements": [
+        "ESG",
+        "Huella de carbono",
+        "Economía circular",
+        "Gestión ambiental"
+      ],
+      "impact": "Ayuda a cumplir estándares ambientales y a reducir costos por energía, residuos y materiales.",
+      "forMortals": "Es medir y reducir el impacto ambiental de una operación para producir con menos desperdicio."
+    },
+    {
+      "title": "Training Master",
+      "company": "Svitzer",
+      "location": "Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Svitzer.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Analista de Logística.",
+      "company": "TotalEnergies",
+      "location": "Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Industrial",
+      "desc": "Optimización de procesos, logística, supply chain, mejora continua, calidad, productividad y analítica operacional en TotalEnergies.",
+      "requirements": [
+        "Lean Six Sigma",
+        "Supply Chain",
+        "Power BI / Excel avanzado",
+        "Gestión de procesos"
+      ],
+      "impact": "Reduce desperdicio, tiempos y costos operativos mediante procesos mejor diseñados.",
+      "forMortals": "Es ordenar cómo trabaja una empresa para producir más, gastar menos y cometer menos errores."
+    },
+    {
+      "title": "Data Engineer",
+      "company": "EvoPoint Solutions",
+      "location": "Distrito Nacional, República Dominicana (Híbrido)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Datos",
+      "desc": "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en EvoPoint Solutions.",
+      "requirements": [
+        "SQL Avanzado & dbt",
+        "Apache Spark / Kafka",
+        "Data Lakes & Warehouses",
+        "Python para ETL"
+      ],
+      "impact": "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+      "forMortals": "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
+    },
+    {
+      "title": "Coordinador de Proyectos",
+      "company": "Supermercados Bravo",
+      "location": "Santo Domingo Oeste, Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Supermercados Bravo.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "CONSULTOR ANALISTA DE DOCUMENTACIÓN",
+      "company": "PERCEPTIO S.A.S.",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Inteligencia de Negocios / BI",
+      "desc": "Transformación de datos crudos en tableros e informes para decisiones gerenciales en PERCEPTIO S.A.S..",
+      "requirements": [
+        "Power BI / Tableau / Looker",
+        "SQL para análisis",
+        "Estadística y visualización",
+        "Storytelling con datos"
+      ],
+      "impact": "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+      "forMortals": "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
+    },
+    {
+      "title": "Professional Services Partner - Remote Work | REF#289343",
+      "company": "BairesDev",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en BairesDev.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "TVET Capacity Building Specialist",
+      "company": "ReliefWeb",
+      "location": "República Dominicana (Híbrido)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en ReliefWeb.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Remote - Quality Assurance & Process Analyst",
+      "company": "World Business Lenders, LLC",
+      "location": "Las Salinas, Provincia Barahona, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería Industrial",
+      "desc": "Optimización de procesos, logística, supply chain, mejora continua, calidad, productividad y analítica operacional en World Business Lenders, LLC.",
+      "requirements": [
+        "Lean Six Sigma",
+        "Supply Chain",
+        "Power BI / Excel avanzado",
+        "Gestión de procesos"
+      ],
+      "impact": "Reduce desperdicio, tiempos y costos operativos mediante procesos mejor diseñados.",
+      "forMortals": "Es ordenar cómo trabaja una empresa para producir más, gastar menos y cometer menos errores."
+    },
+    {
+      "title": "Lead Technical Support Engineer | Upto $50K/yr",
+      "company": "Mercor",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Mercor.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Planificador de mantenimiento",
+      "company": "CMI-Corporación Multi Inversiones",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en CMI-Corporación Multi Inversiones.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "IT Projektový Specialista / Cyber Security Leader",
+      "company": "Schneider Electric",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Schneider Electric.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Coordinador de Redes – Última Milla",
+      "company": "Tu Empleo RD",
+      "location": "Santo Domingo Este, Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Tu Empleo RD.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    },
+    {
+      "title": "Engineer II - Manufacturing-3",
+      "company": "Integer Holdings Corporation",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en Integer Holdings Corporation.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Gerente Senior Sinergias Comerciales de Datos",
+      "company": "Banco BHD",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Híbrido)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Banco BHD.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Electrical BIM Job Captain",
+      "company": "ENG",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en ENG.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Manufacturing Engineer I",
+      "company": "Nissha Medical Technologies",
+      "location": "República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en Nissha Medical Technologies.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Medical Education and Events Specialist",
+      "company": "Zimmer Biomet",
+      "location": "República Dominicana (Híbrido)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Zimmer Biomet.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Analista de Proyectos (INFOCENTRO)",
+      "company": "Banco Popular Dominicano",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Inteligencia de Negocios / BI",
+      "desc": "Transformación de datos crudos en tableros e informes para decisiones gerenciales en Banco Popular Dominicano.",
+      "requirements": [
+        "Power BI / Tableau / Looker",
+        "SQL para análisis",
+        "Estadística y visualización",
+        "Storytelling con datos"
+      ],
+      "impact": "Acelera la toma de decisiones estratégicas con evidencia en tiempo real, mejorando resultados en un 40%.",
+      "forMortals": "Es convertir miles de números en gráficas fáciles de entender para que los directivos tomen mejores decisiones."
+    },
+    {
+      "title": "Ingeniero de Calidad",
+      "company": "Cardinal Health",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en Cardinal Health.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Salesforce Consultant",
+      "company": "Applaudo",
+      "location": "República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Applaudo.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Data Engineer",
+      "company": "Perform",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Datos",
+      "desc": "Diseño y mantenimiento de pipelines de datos analíticos y almacenes de datos en Perform.",
+      "requirements": [
+        "SQL Avanzado & dbt",
+        "Apache Spark / Kafka",
+        "Data Lakes & Warehouses",
+        "Python para ETL"
+      ],
+      "impact": "Garantiza que los datos del negocio estén disponibles, limpios y listos para análisis en tiempo real.",
+      "forMortals": "Es construir las tuberías digitales que limpian y organizan toda la información de la empresa."
+    },
+    {
+      "title": "Assistant.MFG.Engineering",
+      "company": "Eaton",
+      "location": "Bajos de Haina, San Cristóbal, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en Eaton.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "Video Editor - Dominican Republic",
+      "company": "Edit Crew",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Edit Crew.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Scientist I",
+      "company": "STERIS",
+      "location": "Santo Domingo Este, Santo Domingo, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en STERIS.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Agentic Software Engineer (Claude Code) - Remote - Latin America",
+      "company": "FullStack",
+      "location": "Bonao, Monseñor Nouel, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en FullStack.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Gerente Senior Regional de Seguridad y TI",
+      "company": "Multicómputos",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ciberseguridad",
+      "desc": "Protección de activos digitales, auditoría de vulnerabilidades y respuesta a incidentes en Multicómputos.",
+      "requirements": [
+        "CompTIA Security+ / CEH / CISSP",
+        "SIEM & SOC Operations",
+        "Seguridad en cloud y redes",
+        "Ethical Hacking"
+      ],
+      "impact": "Previene pérdidas millonarias por ataques cibernéticos y protege la reputación corporativa.",
+      "forMortals": "Es ser el guardián digital que protege a la empresa de hackers y robos de información."
+    },
+    {
+      "title": "Data Analysis Teaching Experts",
+      "company": "TripleTen Indonesia",
+      "location": "Santo Domingo, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en TripleTen Indonesia.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Corporativo - Especialista Comunicación Interna",
+      "company": "Centro Cuesta Nacional",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Centro Cuesta Nacional.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Supervisor, Production-2",
+      "company": "Integer Holdings Corporation",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en Integer Holdings Corporation.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Lead Generation Specialist",
+      "company": "Remote Leverage",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Remote Leverage.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Customer Support Specialist - Fully Remote",
+      "company": "Mercor",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "IA y Automatización",
+      "desc": "Implementación de soluciones de inteligencia artificial y automatización de procesos operativos en Mercor.",
+      "requirements": [
+        "Python / TensorFlow / PyTorch",
+        "Modelos LLM y IA Generativa",
+        "MLOps & Pipelines",
+        "Automatización RPA"
+      ],
+      "impact": "Incrementa la eficiencia operativa hasta un 70% reduciendo tareas manuales repetitivas.",
+      "forMortals": "Es usar computadoras que aprenden solas para hacer trabajos repetitivos sin intervención humana."
+    },
+    {
+      "title": "Senior Drupal Engineer (AI-Augmented) - Remote - Latin America",
+      "company": "FullStack",
+      "location": "Concepción de la Vega, La Vega, República Dominicana (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en FullStack.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Coordinador de Mantenimiento (Proyectos)",
+      "company": "Eaton",
+      "location": "Bajos de Haina, San Cristóbal, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Manufactura / Calidad",
+      "desc": "Mejora de manufactura, calidad, mantenimiento industrial, dispositivos médicos, trazabilidad y control estadístico en Eaton.",
+      "requirements": [
+        "Lean Manufacturing",
+        "ISO / GMP",
+        "Control estadístico",
+        "Validación de procesos"
+      ],
+      "impact": "Eleva la calidad del producto y reduce fallas, retrabajos y desperdicios en planta.",
+      "forMortals": "Es mejorar cómo se fabrica un producto para que salga bien, seguro y con menos defectos."
+    },
+    {
+      "title": "LIDER DE PROYECTOS ARQUITECTURA DE DATOS",
+      "company": "Banco Popular Dominicano",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Arquitectura / BIM",
+      "desc": "Diseño arquitectónico, coordinación BIM, documentación digital, modelos 3D y gemelos digitales de construcción en Banco Popular Dominicano.",
+      "requirements": [
+        "Revit / BIM",
+        "Navisworks",
+        "Coordinación multidisciplinaria",
+        "Visualización 3D"
+      ],
+      "impact": "Reduce errores de diseño y mejora la coordinación entre arquitectura, ingeniería y construcción.",
+      "forMortals": "Es construir el edificio primero en un modelo digital para encontrar errores antes de gastar en obra."
+    },
+    {
+      "title": "Gerente Residente",
+      "company": "Hyatt",
+      "location": "La Altagracia, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Gestión de TI / Liderazgo Tech",
+      "desc": "Dirección estratégica del área tecnológica y alineación con los objetivos del negocio en Hyatt.",
+      "requirements": [
+        "PMP / ITIL / COBIT",
+        "Gestión de equipos técnicos",
+        "Presupuesto y planificación TI",
+        "Transformación digital"
+      ],
+      "impact": "Guía la transformación digital de la empresa para mantenerse competitiva en la economía digital.",
+      "forMortals": "Es ser el director del equipo de tecnología, decidiendo qué sistemas y proyectos construir."
+    },
+    {
+      "title": "Marketing Assistant",
+      "company": "TalentPop App",
+      "location": "América Latina (En remoto)",
+      "date": "Mayo 2026",
+      "type": "Ingeniería de Software",
+      "desc": "Desarrollo de aplicaciones y sistemas digitales escalables para empresas dominicanas en TalentPop App.",
+      "requirements": [
+        "Python, Java, JavaScript / TypeScript",
+        "APIs REST & Microservicios",
+        "Git & CI/CD",
+        "Testing automatizado"
+      ],
+      "impact": "Permite a las empresas lanzar productos digitales más rápido y con mayor calidad.",
+      "forMortals": "Es programar las aplicaciones y sistemas que usamos todos los días en computadoras y celulares."
+    },
+    {
+      "title": "Network Engineer",
+      "company": "Quagnito Solutions Pvt Ltd",
+      "location": "Santo Domingo, Distrito Nacional, República Dominicana (Presencial)",
+      "date": "Mayo 2026",
+      "type": "Cloud & Infraestructura",
+      "desc": "Gestión de infraestructura en la nube, redes y sistemas de alta disponibilidad en Quagnito Solutions Pvt Ltd.",
+      "requirements": [
+        "AWS / Azure / GCP Certified",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Redes: switches, firewalls"
+      ],
+      "impact": "Asegura 99.9% de disponibilidad de los sistemas digitales de la organización.",
+      "forMortals": "Es mantener encendidos y seguros todos los servidores y redes que hacen funcionar la empresa."
+    }
+  ]
+}

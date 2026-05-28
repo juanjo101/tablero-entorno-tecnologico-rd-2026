@@ -12,8 +12,10 @@
 import sys
 import os
 import re
+import csv
 import json
 import time
+from datetime import datetime
 
 # UTF-8 en consola Windows
 if hasattr(sys.stdout, 'reconfigure'):
@@ -21,6 +23,8 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 WORKSPACE = r"C:\Users\jdiaz\Documents\antigravity\resilient-planck"
 INDEX_PATH = os.path.join(WORKSPACE, "index.html")
+LATEST_DEMAND_JSON = os.path.join(WORKSPACE, "linkedin_jobs_demand_latest.json")
+LATEST_DEMAND_CSV = os.path.join(WORKSPACE, "linkedin_jobs_demand_latest.csv")
 
 print("=" * 65)
 print("🚀 EXTRACTOR LINKEDIN SELENIUM — TENDENCIAS TEC. RD 2026")
@@ -681,6 +685,46 @@ if os.path.exists(TXT):
     print(f"  ✅ {local_added} vacantes adicionales de RD añadidas.")
 
 print(f"\n[+] Total final de vacantes a inyectar: {len(enriched)}")
+
+def write_demand_outputs(jobs, demand_summary):
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+    json_path = os.path.join(WORKSPACE, f"linkedin_jobs_demand_{timestamp}.json")
+    csv_path = os.path.join(WORKSPACE, f"linkedin_jobs_demand_{timestamp}.csv")
+    captured_at = datetime.now().isoformat(timespec="seconds")
+
+    payload = {
+        "source": "LinkedIn Jobs",
+        "location": LOCATION,
+        "capturedAt": captured_at,
+        "method": "Vacantes activas capturadas por busquedas tematicas STEAM en LinkedIn Jobs; se deduplican por titulo y empresa.",
+        "searches": [{"keywords": keywords, "category": category} for keywords, category in SEARCHES],
+        "totalJobs": len(jobs),
+        "demandByCategory": demand_summary,
+        "jobs": jobs,
+    }
+
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    with open(LATEST_DEMAND_JSON, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
+    fields = ["title", "company", "location", "date", "type", "desc", "requirements", "impact", "forMortals"]
+    for path in (csv_path, LATEST_DEMAND_CSV):
+        with open(path, "w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=fields)
+            writer.writeheader()
+            for job in jobs:
+                row = dict(job)
+                row["requirements"] = " | ".join(job.get("requirements", []))
+                writer.writerow(row)
+
+    print("[✓] Evidencia de demanda guardada:")
+    print(f"   • JSON: {json_path}")
+    print(f"   • CSV:  {csv_path}")
+    print(f"   • Latest JSON: {LATEST_DEMAND_JSON}")
+    print(f"   • Latest CSV:  {LATEST_DEMAND_CSV}")
+
+write_demand_outputs(enriched, demand_by_category)
 
 # ── Paso 5: Inyectar en index.html ────────────────────────────────
 if not enriched:
