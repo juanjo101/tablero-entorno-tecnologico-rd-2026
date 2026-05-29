@@ -1003,6 +1003,16 @@
                         <li><strong>Fase 3: Validación Dominicana en LinkedIn Empleos:</strong> Auditoría sistemática de vacantes activas localizadas en la República Dominicana y puestos de teletrabajo remoto en Latinoamérica para contrastar la demanda y calcular los porcentajes de adopción empresarial real.</li>
                     </ul>
                 </div>
+
+                <div class="panel-card" style="border-left: 5px solid var(--utesa-green-medium); background: var(--bg-panel);">
+                    <div class="panel-header-row">
+                        <span class="panel-title">💰 Nueva capa salarial integrada</span>
+                        <button onclick="goToSalaryPanel()" class="export-btn" style="font-size:0.72rem;">Ver salarios</button>
+                    </div>
+                    <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+                        El tablero ya incluye rangos salariales STEAM del sector público agregados desde MAP/datos.gob.do: 13,211 cargos coincidentes, mediana máxima observada de RD$90,000 en Eléctrica/Energía y comparación con piso privado 2026.
+                    </p>
+                </div>
                 
                 <!-- KPIs -->
                 <div class="stats-strip">
@@ -1233,7 +1243,7 @@
                 </div>
 
                 <!-- Panel de Rangos Salariales -->
-                <div class="panel-card" style="margin-top: 1.5rem; border-left: 5px solid var(--utesa-green-medium); background-color: var(--bg-panel);">
+                <div id="salaryPanel" class="panel-card" style="margin-top: 1.5rem; border-left: 5px solid var(--utesa-green-medium); background-color: var(--bg-panel);">
                     <div class="panel-header-row">
                         <span class="panel-title">💰 Rangos Salariales STEAM: Sector Público y Referencia Privada</span>
                     </div>
@@ -2075,6 +2085,16 @@
                 document.getElementById('panelReferences').classList.add('active');
                 sidebar.style.display = 'none';
             }
+        }
+
+        function goToSalaryPanel() {
+            switchView('steam');
+            setTimeout(() => {
+                const salaryPanel = document.getElementById('salaryPanel');
+                if (salaryPanel) {
+                    salaryPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
         }
 
         // --- SISTEMA INTERACTIVO DE PESTEL CRUZADO ---
