@@ -45,14 +45,14 @@ ROLE_BUCKETS = [
     ("Ciberseguridad", ["ciber", "seguridad informatica", "security", "soc", "siem"]),
     ("Cloud / Infraestructura", ["cloud", "devops", "infraestructura", "redes", "network", "servidor", "soporte ti"]),
     ("IA / Automatización", ["inteligencia artificial", "machine learning", "automatizacion", "rpa", "python"]),
-    ("Ingeniería de Datos / BI", ["data", "datos", "bi", "business intelligence", "base de datos", "sql"]),
-    ("Ingeniería de Software", ["software", "programador", "desarrollador", "developer", "sistemas", "aplicaciones"]),
+    ("Ingeniería de Datos / BI", ["data", "datos", "bi", "business intelligence", "base de datos", "sql", "reporting", "analyst", "power bi"]),
+    ("Ingeniería de Software", ["software", "programador", "desarrollador", "developer", "sistemas", "ingeniero en sistemas", "aplicaciones"]),
     ("Ingeniería Electrónica", ["electronica", "electrónico", "instrumentacion", "plc", "scada", "iot"]),
     ("Ingeniería Eléctrica / Energía", ["electrica", "eléctrica", "energia", "energía", "potencia", "solar", "renovable"]),
     ("Ingeniería Mecánica / Movilidad", ["mecanica", "mecánica", "mantenimiento", "automotriz", "vehiculo", "vehículo"]),
-    ("Ingeniería Industrial", ["industrial", "procesos", "operaciones", "logistica", "logística", "supply"]),
-    ("Manufactura / Calidad", ["manufactura", "calidad", "quality", "produccion", "producción", "lean"]),
-    ("Ingeniería Civil / Infraestructura", ["civil", "obra", "construccion", "construcción", "infraestructura"]),
+    ("Ingeniería Industrial", ["industrial", "procesos", "operaciones", "logistica", "logística", "supply", "gerente operaciones"]),
+    ("Manufactura / Calidad", ["manufactura", "calidad", "quality", "produccion", "producción", "lean", "sgc", "mejora continua"]),
+    ("Ingeniería Civil / Infraestructura", ["civil", "obra", "construccion", "construcción", "infraestructura", "residente", "estructuras", "encargado de proyecto"]),
     ("Arquitectura / BIM", ["arquitect", "bim", "revit", "navisworks"]),
     ("ESG / Economía Circular", ["esg", "sostenibilidad", "ambiental", "carbono", "circular"]),
     ("Gestión de TI", ["gerente tecnologia", "gerente de ti", "director tecnologia", "encargado tecnologia"]),
@@ -267,7 +267,7 @@ def aggregate_private_jobs(csv_path):
             text = " ".join(str(row.get(key, "")) for key in row.keys())
             found = extract_salary_range(text)
 
-        if role and found and found["currency"] in ("DOP", "RD") and found["min"] and found["max"]:
+        if role and role != "No clasificado" and found and found["currency"] in ("DOP", "RD") and found["min"] and found["max"]:
             monthly_midpoint = (found["min"] + found["max"]) / 2
             groups.setdefault(role, []).append(monthly_midpoint)
             evidence_count += 1

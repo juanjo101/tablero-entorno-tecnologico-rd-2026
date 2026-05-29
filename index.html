@@ -1248,7 +1248,7 @@
                         <span class="panel-title">💰 Rangos Salariales STEAM: Sector Público y Referencia Privada</span>
                     </div>
                     <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 0 0 1rem 0;">
-                        Agregación de sueldos brutos mensuales de la Nómina Pública General del Estado/MAP por cargo STEAM y muestra inicial de vacantes privadas con salario visible en Computrabajo RD. LinkedIn Jobs no publicó rangos salariales visibles en la muestra de 188 vacantes, por lo que el componente privado se captura desde portales laborales dominicanos.
+                        Agregación de sueldos brutos mensuales de la Nómina Pública General del Estado/MAP por cargo STEAM y muestra ampliada de 119 vacantes privadas con salario visible en Computrabajo RD; 91 quedaron clasificadas en categorías STEAM. LinkedIn Jobs no publicó rangos salariales visibles en la muestra de 188 vacantes, por lo que el componente privado se captura desde portales laborales dominicanos.
                     </p>
                     <div class="salary-grid">
                         <div class="salary-kpi">
@@ -1264,8 +1264,12 @@
                             <span class="salary-kpi-lbl">Piso privado empresas grandes 2026</span>
                         </div>
                         <div class="salary-kpi">
-                            <span class="salary-kpi-val">25</span>
-                            <span class="salary-kpi-lbl">Vacantes privadas con salario visible capturadas en Computrabajo RD</span>
+                            <span class="salary-kpi-val">91</span>
+                            <span class="salary-kpi-lbl">Vacantes privadas clasificadas con salario visible</span>
+                        </div>
+                        <div class="salary-kpi">
+                            <span class="salary-kpi-val">RD$131,000</span>
+                            <span class="salary-kpi-lbl">Mayor salario privado STEAM observado: Ciberseguridad senior</span>
                         </div>
                     </div>
                     <div class="table-wrapper" style="max-height: 360px; overflow-y: auto;">
@@ -1273,11 +1277,12 @@
                             <thead>
                                 <tr>
                                     <th>Categoría STEAM</th>
-                                    <th>Cargos</th>
-                                    <th>P25</th>
-                                    <th>Mediana</th>
-                                    <th>P75</th>
-                                    <th>Máximo</th>
+                                    <th>Cargos públicos</th>
+                                    <th>Mediana pública</th>
+                                    <th>Vacantes privadas</th>
+                                    <th>Mediana privada</th>
+                                    <th>P75 público</th>
+                                    <th>Máximo público</th>
                                 </tr>
                             </thead>
                             <tbody id="salaryTableBody">
@@ -1286,7 +1291,7 @@
                         </table>
                     </div>
                     <p style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.5; margin-top: 0.8rem;">
-                        Fuente pública: Nómina Pública General del Estado 2025, MAP/datos.gob.do, procesada de forma agregada sin conservar nombres. Fuente privada inicial: Computrabajo RD, vacantes con salario visible capturadas el 29 de mayo de 2026. Baseline privado: Resoluciones CNS 2025 resumidas por EY y promedio sectorial ENAE/ONE.
+                        Fuente pública: Nómina Pública General del Estado 2025, MAP/datos.gob.do, procesada de forma agregada sin conservar nombres. Fuente privada inicial: Computrabajo RD, 119 vacantes con salario visible capturadas el 29 de mayo de 2026; 91 clasificadas como STEAM. Las medianas privadas son conservadoras porque los portales suelen publicar más salarios operativos/junior que senior. Baseline privado: Resoluciones CNS 2025 resumidas por EY y promedio sectorial ENAE/ONE.
                     </p>
                 </div>
 
@@ -2524,18 +2529,18 @@
         ];
 
         const salaryData = [
-            { role: 'Ingeniería Eléctrica / Energía', count: 43, p25: 90000, median: 90000, p75: 100000, max: 275000 },
-            { role: 'Ingeniería de Software', count: 454, p25: 55000, median: 75000, p75: 90000, max: 220000 },
-            { role: 'ESG / Economía Circular', count: 41, p25: 50000, median: 72738, p75: 82500, max: 180000 },
-            { role: 'Arquitectura / BIM', count: 306, p25: 50000, median: 65000, p75: 75000, max: 180000 },
-            { role: 'Cloud / Infraestructura', count: 313, p25: 55825, median: 60000, p75: 77000, max: 275000 },
-            { role: 'Manufactura / Calidad', count: 627, p25: 35000, median: 55000, p75: 75000, max: 165000 },
-            { role: 'Ingeniería Civil / Infraestructura', count: 671, p25: 50000, median: 50000, p75: 70000, max: 180000 },
-            { role: 'Ingeniería Industrial', count: 533, p25: 40000, median: 50000, p75: 78000, max: 469718 },
-            { role: 'Ingeniería de Datos / BI', count: 5983, p25: 30250, median: 49060, p75: 49060, max: 280000 },
-            { role: 'Ciberseguridad', count: 1452, p25: 20216, median: 35015, p75: 45000, max: 280000 },
-            { role: 'Ingeniería Electrónica', count: 87, p25: 34650, median: 34650, p75: 46000, max: 125000 },
-            { role: 'Ingeniería Mecánica / Movilidad', count: 2701, p25: 15000, median: 23100, p75: 30000, max: 220000 },
+            { role: 'Ingeniería Eléctrica / Energía', count: 43, p25: 90000, median: 90000, p75: 100000, max: 275000, privateCount: 0, privateMedian: null },
+            { role: 'Ingeniería de Software', count: 454, p25: 55000, median: 75000, p75: 90000, max: 220000, privateCount: 13, privateMedian: 35000 },
+            { role: 'ESG / Economía Circular', count: 41, p25: 50000, median: 72738, p75: 82500, max: 180000, privateCount: 0, privateMedian: null },
+            { role: 'Arquitectura / BIM', count: 306, p25: 50000, median: 65000, p75: 75000, max: 180000, privateCount: 2, privateMedian: 52500 },
+            { role: 'Cloud / Infraestructura', count: 313, p25: 55825, median: 60000, p75: 77000, max: 275000, privateCount: 12, privateMedian: 40000 },
+            { role: 'Manufactura / Calidad', count: 627, p25: 35000, median: 55000, p75: 75000, max: 165000, privateCount: 11, privateMedian: 40000 },
+            { role: 'Ingeniería Civil / Infraestructura', count: 671, p25: 50000, median: 50000, p75: 70000, max: 180000, privateCount: 11, privateMedian: 70000 },
+            { role: 'Ingeniería Industrial', count: 533, p25: 40000, median: 50000, p75: 78000, max: 469718, privateCount: 16, privateMedian: 40000 },
+            { role: 'Ingeniería de Datos / BI', count: 5983, p25: 30250, median: 49060, p75: 49060, max: 280000, privateCount: 19, privateMedian: 45000 },
+            { role: 'Ciberseguridad', count: 1452, p25: 20216, median: 35015, p75: 45000, max: 280000, privateCount: 3, privateMedian: 35000 },
+            { role: 'Ingeniería Electrónica', count: 87, p25: 34650, median: 34650, p75: 46000, max: 125000, privateCount: 1, privateMedian: 30000 },
+            { role: 'Ingeniería Mecánica / Movilidad', count: 2701, p25: 15000, median: 23100, p75: 30000, max: 220000, privateCount: 3, privateMedian: 24999 },
         ];
 
         const careerData = [
@@ -2681,6 +2686,7 @@
         }
 
         function formatDOP(value) {
+            if (value === null || value === undefined) return 's/d';
             return `RD$${Number(value).toLocaleString('es-DO', { maximumFractionDigits: 0 })}`;
         }
 
@@ -2693,8 +2699,9 @@
                     <tr>
                         <td><strong>${item.role}</strong></td>
                         <td class="mono-val">${Number(item.count).toLocaleString('es-DO')}</td>
-                        <td class="mono-val">${formatDOP(item.p25)}</td>
                         <td class="mono-val" style="font-weight:800;color:var(--utesa-green-deep);">${formatDOP(item.median)}</td>
+                        <td class="mono-val">${item.privateCount ? Number(item.privateCount).toLocaleString('es-DO') : 's/d'}</td>
+                        <td class="mono-val" style="font-weight:800;color:${item.privateMedian ? 'var(--color-desarrollo)' : 'var(--text-muted)'};">${formatDOP(item.privateMedian)}</td>
                         <td class="mono-val">${formatDOP(item.p75)}</td>
                         <td class="mono-val">${formatDOP(item.max)}</td>
                     </tr>`;

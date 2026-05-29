@@ -93,14 +93,14 @@ ROLE_BUCKETS = [
     ("Ciberseguridad", ["ciber", "cyber", "seguridad informatica", "security", "soc", "siem"]),
     ("Cloud / Infraestructura", ["cloud", "devops", "infraestructura", "redes", "network", "servidor"]),
     ("IA / Automatización", ["inteligencia artificial", "machine learning", "automatizacion", "rpa", "python"]),
-    ("Ingeniería de Datos / BI", ["data", "datos", "bi", "business intelligence", "sql", "etl"]),
-    ("Ingeniería de Software", ["software", "programador", "desarrollador", "developer", "frontend", "backend", "fullstack"]),
+    ("Ingeniería de Datos / BI", ["data", "datos", "bi", "business intelligence", "sql", "etl", "reporting", "analyst", "power bi"]),
+    ("Ingeniería de Software", ["software", "programador", "desarrollador", "developer", "frontend", "backend", "fullstack", "ingeniero en sistemas", "sistemas"]),
     ("Ingeniería Electrónica", ["electronica", "electronico", "instrumentacion", "plc", "scada", "iot"]),
     ("Ingeniería Eléctrica / Energía", ["electrica", "electrico", "energia", "solar", "renovable", "potencia"]),
     ("Ingeniería Mecánica / Movilidad", ["mecanica", "mecanico", "mantenimiento", "automotriz", "vehiculo"]),
-    ("Ingeniería Industrial", ["industrial", "procesos", "operaciones", "logistica", "supply"]),
-    ("Manufactura / Calidad", ["manufactura", "calidad", "quality", "produccion", "lean"]),
-    ("Ingeniería Civil / Infraestructura", ["civil", "obra", "construccion", "infraestructura"]),
+    ("Ingeniería Industrial", ["industrial", "procesos", "operaciones", "logistica", "supply", "gerente operaciones"]),
+    ("Manufactura / Calidad", ["manufactura", "calidad", "quality", "produccion", "lean", "sgc", "mejora continua"]),
+    ("Ingeniería Civil / Infraestructura", ["civil", "obra", "construccion", "infraestructura", "residente", "estructuras", "encargado de proyecto"]),
     ("Arquitectura / BIM", ["arquitect", "bim", "revit", "navisworks"]),
     ("ESG / Economía Circular", ["esg", "sostenibilidad", "ambiental", "carbono", "circular"]),
 ]
@@ -228,6 +228,10 @@ def extract_records_from_text(page_html, source_key, source_name, url, query):
     records = []
     salary_line_re = re.compile(r"((?:RD\$|DOP|US\$|USD)?\s*[\d,.]+\s*\$\s*\(Mensual\)|(?:RD\$|DOP|US\$|USD)\s*[\d,.]+)", re.I)
     noise = {"postular", "guardar en mis favoritos", "denunciar empleo", "ocultar oferta", "crear alerta"}
+    bad_title_fragments = [
+        "contraseña", "condiciones legales", "activar la alerta", "ya viste todas las ofertas",
+        "has olvidado", "busqueda", "búsqueda", "cookies", "autorizacion", "autorización",
+    ]
 
     for match in salary_line_re.finditer(text):
         line = match.group(1)
@@ -242,6 +246,8 @@ def extract_records_from_text(page_html, source_key, source_name, url, query):
         title = previous[-3] if len(previous) >= 3 else previous[0] if previous else query
         company = previous[-2] if len(previous) >= 2 else ""
         location = previous[-1] if previous else "República Dominicana"
+        if any(fragment in normalize(title) for fragment in bad_title_fragments):
+            continue
 
         records.append({
             "portal": source_name,
@@ -350,6 +356,7 @@ def main():
     parser.add_argument("--source", choices=sorted(SOURCES.keys()), help="Portal a consultar.")
     parser.add_argument("--all", action="store_true", help="Consulta todos los portales configurados.")
     parser.add_argument("--url", action="append", help="URL directa de una pagina de vacantes o salarios.")
+    parser.add_argument("--computrabajo-steam", action="store_true", help="Consulta Computrabajo con terminos STEAM y categorias de informática/ingeniería.")
     parser.add_argument("--limit", type=int, default=len(SEARCH_TERMS), help="Cantidad de terminos por portal.")
     parser.add_argument("--term", action="append", help="Termino de busqueda adicional o reemplazo si se usa solo.")
     parser.add_argument("--html-dir", help="Directorio con HTML guardado manualmente de portales.")
@@ -365,6 +372,10 @@ def main():
             print(f"  [url] {url}")
             page = fetch(url)
             records.extend(extract_records(page, "url", "URL directa", url, url))
+    elif args.computrabajo_steam:
+        records.extend(collect_from_source("computrabajo", terms, args.limit))
+        records.extend(collect_from_source("computrabajo_it", terms, args.limit))
+        records.extend(collect_from_source("computrabajo_engineering", terms, args.limit))
     elif args.all:
         for source_key in SOURCES:
             records.extend(collect_from_source(source_key, terms, args.limit))
