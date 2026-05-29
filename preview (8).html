@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Informe de Revisión por Pares - Versión Actualizada</title>
+<style>
+:root{
+  --azul:#1d4fa6;
+  --azul-claro:#eaf2ff;
+  --rojo:#a12323;
+  --rojo-claro:#fdeaea;
+  --amarillo:#a96500;
+  --amarillo-claro:#fff5df;
+  --verde:#1b6b45;
+  --verde-claro:#eaf8ef;
+  --gris:#dbe3ef;
+  --texto:#243044;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(135deg,#edf4ff,#f7f9fc,#e9eef6);
+  color:var(--texto);
+  line-height:1.62;
+}
+.wrapper{
+  max-width:1560px;
+  margin:0 auto;
+  display:flex;
+}
+aside{
+  width:310px;
+  background:#fff;
+  border-right:1px solid var(--gris);
+  padding:24px 20px;
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:auto;
+}
+aside h2{color:var(--azul);margin-top:0}
+aside a{
+  display:block;
+  color:#243044;
+  text-decoration:none;
+  padding:8px 4px;
+  border-bottom:1px solid #eef2f7;
+  font-size:14px;
+}
+main{flex:1;padding:30px}
+.hero{
+  background:linear-gradient(135deg,#1d4fa6,#5d89df);
+  color:#fff;
+  border-radius:18px;
+  padding:36px;
+  box-shadow:0 14px 35px rgba(29,79,166,.25);
+}
+.hero h1{margin:0;color:#fff;font-size:32px}
+.hero p{margin:8px 0;font-size:16px}
+button{
+  background:#fff;
+  color:var(--azul);
+  border:0;
+  padding:12px 18px;
+  border-radius:8px;
+  font-weight:bold;
+  margin-top:16px;
+  cursor:pointer;
+}
+.card{
+  background:#fff;
+  border:1px solid var(--gris);
+  border-radius:16px;
+  margin:22px 0;
+  padding:24px;
+  box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+h1,h2,h3,h4{color:var(--azul)}
+.callout{padding:16px;margin:14px 0;border-radius:10px}
+.red{background:var(--rojo-claro);border-left:7px solid var(--rojo)}
+.yellow{background:var(--amarillo-claro);border-left:7px solid var(--amarillo)}
+.green{background:var(--verde-claro);border-left:7px solid var(--verde)}
+.blue{background:var(--azul-claro);border-left:7px solid var(--azul)}
+.rewrite{
+  background:#f8fafc;
+  border:1px dashed #9aa8bd;
+  padding:16px;
+  border-radius:10px;
+  margin-top:12px;
+}
+.original{color:var(--rojo);font-weight:bold}
+.problem{color:var(--amarillo);font-weight:bold}
+.fixed{color:var(--verde);font-weight:bold}
+.just{color:var(--azul);font-weight:bold}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:18px 0;
+  font-size:14px;
+}
+th,td{
+  border:1px solid var(--gris);
+  padding:10px;
+  vertical-align:top;
+}
+th{background:var(--azul-claro);color:var(--azul)}
+.badge{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:bold;
+}
+.badge-red{background:var(--rojo-claro);color:var(--rojo)}
+.badge-yellow{background:var(--amarillo-claro);color:var(--amarillo)}
+.badge-green{background:var(--verde-claro);color:var(--verde)}
+.badge-blue{background:var(--azul-claro);color:var(--azul)}
+.kpi-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:18px;
+}
+.kpi{
+  background:#fff;
+  border:1px solid var(--gris);
+  border-radius:14px;
+  padding:18px;
+}
+.kpi .num{
+  font-size:30px;
+  color:var(--azul);
+  font-weight:bold;
+}
+.score{margin:15px 0}
+.bar{
+  background:#dbe3ef;
+  border-radius:999px;
+  overflow:hidden;
+  height:23px;
+}
+.fill{
+  height:23px;
+  background:linear-gradient(90deg,#1d4fa6,#79a3f2);
+}
+pre{
+  white-space:pre-wrap;
+  background:#f8fafc;
+  border:1px solid var(--gris);
+  padding:16px;
+  border-radius:10px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+@media(max-width:1000px){
+  .wrapper{display:block}
+  aside{position:relative;width:auto;height:auto}
+  .kpi-grid{grid-template-columns:1fr 1fr}
+}
+@media print{
+  aside{display:none}
+  main{padding:0}
+  body{background:#fff}
+  .card,.hero{box-shadow:none}
+  button{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<aside>
+<h2>Índice</h2>
+<a href="#resumen">1. Resumen ejecutivo</a>
+<a href="#dictamen">2. Dictamen editorial</a>
+<a href="#mejoras">3. Mejoras logradas</a>
+<a href="#fortalezas">4. Fortalezas actuales</a>
+<a href="#pendientes">5. Observaciones pendientes</a>
+<a href="#secciones">6. Revisión por secciones</a>
+<a href="#metodologia">7. Evaluación metodológica</a>
+<a href="#resultados">8. Evaluación de resultados</a>
+<a href="#referencias">9. Referencias y trazabilidad</a>
+<a href="#reescritura">10. Reescrituras sugeridas</a>
+<a href="#matriz">11. Matriz correctiva</a>
+<a href="#rubrica">12. Rúbrica</a>
+<a href="#plan">13. Plan de mejora</a>
+<a href="#veredicto">14. Veredicto final</a>
+</aside>
+
+<main>
+<section class="hero">
+<h1>Informe completo de revisión por pares</h1>
+<p><strong>Artículo evaluado:</strong> Brecha sociotécnica entre demanda laboral emergente y oferta académica: análisis descriptivo-comparativo de plataformas digitales de empleo y currículos universitarios en la República Dominicana (2025–2026).</p>
+<p><strong>Versión evaluada:</strong> Actualización posterior a las mejoras recomendadas.</p>
+<p><strong>Resultado general:</strong> versión sustancialmente más sólida y cercana a sometimiento académico formal.</p>
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+</section>
+
+<section id="resumen" class="card">
+<h2>1. Resumen ejecutivo</h2>
+<p>La versión actual presenta un avance significativo respecto a la anterior. El documento eliminó la duplicación masiva detectada, completó la estructura final, incorporó anexos funcionales, corrigió la sección de limitaciones, restauró la declaración de uso de inteligencia artificial, separó las fuentes de datos laborales de las referencias bibliográficas y fortaleció la trazabilidad curricular mediante un Anexo A.</p>
+
+<div class="kpi-grid">
+<div class="kpi"><div class="num">92/100</div><div>Calidad global actual</div></div>
+<div class="kpi"><div class="num">95/100</div><div>Calidad editorial</div></div>
+<div class="kpi"><div class="num">90/100</div><div>Metodología</div></div>
+<div class="kpi"><div class="num">88/100</div><div>Reproducibilidad</div></div>
+</div>
+
+<div class="callout green">
+<strong>Conclusión ejecutiva:</strong> el artículo ya no presenta impedimentos editoriales graves. Es una versión coherente, organizada y defendible como estudio descriptivo-comparativo aplicado. Las mejoras pendientes son de refinamiento, verificación de fuentes y fortalecimiento de anexos.
+</div>
+</section>
+
+<section id="dictamen" class="card">
+<h2>2. Dictamen editorial</h2>
+<table>
+<tr><th>Tipo de revista</th><th>Dictamen probable</th><th>Justificación</th></tr>
+<tr><td>Revista institucional/universitaria</td><td><span class="badge badge-green">Publicable con correcciones menores</span></td><td>El artículo tiene pertinencia nacional, estructura completa y metodología suficiente.</td></tr>
+<tr><td>Latindex / REDIB / Dialnet</td><td><span class="badge badge-green">Aceptable sujeto a revisión menor</span></td><td>El manuscrito cumple con estructura científica básica y aporta valor aplicado.</td></tr>
+<tr><td>Scopus Q3-Q4</td><td><span class="badge badge-yellow">Revisión moderada</span></td><td>Requeriría mayor trazabilidad de fuentes, anexo de vacantes y verificación curricular.</td></tr>
+<tr><td>Scopus Q1-Q2 / WoS</td><td><span class="badge badge-yellow">Revisión mayor</span></td><td>Solicitaría validación externa con empleadores, dataset suplementario y mayor triangulación.</td></tr>
+</table>
+</section>
+
+<section id="mejoras" class="card">
+<h2>3. Mejoras logradas</h2>
+<table>
+<tr><th>Mejora aplicada</th><th>Estado actual</th><th>Evaluación</th></tr>
+<tr><td>Eliminación de duplicación del documento</td><td>El archivo ya no repite metodología, resultados ni referencias después del anexo.</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+<tr><td>Anexo A de IES</td><td>Incluye las nueve instituciones analizadas.</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+<tr><td>Anexo B de ENDHACE 2020</td><td>Incluye imagen local y contexto histórico.</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+<tr><td>Declaración IA</td><td>Incluida y redactada de forma clara.</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+<tr><td>Limitación temporal</td><td>Completada correctamente.</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+<tr><td>Fuentes de datos laborales</td><td>Separadas de las referencias bibliográficas.</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+</table>
+</section>
+
+<section id="fortalezas" class="card">
+<h2>4. Fortalezas actuales</h2>
+<div class="callout green">
+<h3>4.1. Estructura científica completa</h3>
+<p>El artículo ya presenta título, resumen, introducción, marco teórico, metodología, resultados, discusión, conclusiones, limitaciones, declaración de IA, fuentes de datos, referencias y anexos.</p>
+</div>
+<div class="callout green">
+<h3>4.2. Metodología defendible</h3>
+<p>La investigación especifica muestra, criterios de inclusión y exclusión, codificación, confiabilidad interevaluador e índice ponderado de cobertura curricular.</p>
+</div>
+<div class="callout green">
+<h3>4.3. Delimitación honesta</h3>
+<p>La aclaración de que la muestra corresponde a vacantes STEAM emergentes de alta especialización evita generalizaciones indebidas al mercado laboral completo.</p>
+</div>
+<div class="callout green">
+<h3>4.4. Mejor trazabilidad documental</h3>
+<p>El Anexo A fortalece la base del ICC al mostrar las instituciones y programas consultados.</p>
+</div>
+<div class="callout green">
+<h3>4.5. Relevancia nacional</h3>
+<p>El tema es altamente pertinente para educación superior, políticas de talento, transformación digital y diseño curricular en República Dominicana.</p>
+</div>
+</section>
+
+<section id="pendientes" class="card">
+<h2>5. Observaciones pendientes</h2>
+
+<div class="callout yellow">
+<h3>5.1. Validación de programas universitarios</h3>
+<p><strong>Qué está pendiente:</strong> el Anexo A incluye las nueve IES, pero la mayoría de los enlaces apuntan al portal general, no al pénsum o página específica del programa.</p>
+<p><strong>Impacto:</strong> un revisor podría solicitar evidencia directa de cada carrera o disciplina mapeada.</p>
+<div class="rewrite">
+<span class="fixed">✅ Corrección recomendada:</span><br>
+Agregar enlaces directos a cada programa o pénsum, especialmente para Ciencia de Datos, Ciberseguridad, IA, Mecatrónica, DevOps/Cloud y Sistemas.
+</div>
+</div>
+
+<div class="callout yellow">
+<h3>5.2. Falta matriz de clasificación de vacantes</h3>
+<p><strong>Qué está pendiente:</strong> los porcentajes de IA agéntica, Cloud, DevOps e hiperautomatización son muy altos. Aunque el alcance muestral está aclarado, conviene mostrar evidencia de codificación.</p>
+<div class="rewrite">
+<span class="fixed">✅ Corrección recomendada:</span><br>
+Crear un Anexo C con una muestra de 20 a 30 vacantes: cargo, plataforma, descriptor textual, categoría asignada y justificación de codificación.
+</div>
+</div>
+
+<div class="callout yellow">
+<h3>5.3. Afirmaciones económicas sobre teletrabajo</h3>
+<p><strong>Qué está pendiente:</strong> la conclusión sobre teletrabajo como fuente de divisas y estabilidad económica es plausible, pero no está demostrada por el estudio.</p>
+<div class="rewrite">
+<span class="fixed">✅ Versión sugerida:</span><br>
+“La formación de talento especializado podría contribuir a mejorar la inserción de profesionales dominicanos en mercados tecnológicos locales e internacionales, aunque su impacto económico requiere estudios específicos.”
+</div>
+</div>
+
+<div class="callout yellow">
+<h3>5.4. Concepto de IA Agéntica</h3>
+<p><strong>Qué está pendiente:</strong> el concepto puede ser percibido como emergente y todavía inestable. Conviene definirlo con más precisión o ampliar el término.</p>
+<div class="rewrite">
+<span class="fixed">✅ Versión sugerida:</span><br>
+“Sistemas de IA generativa, agentes inteligentes y automatización basada en modelos de lenguaje.”
+</div>
+</div>
+
+<div class="callout yellow">
+<h3>5.5. Referencias con títulos potencialmente no verificables</h3>
+<p><strong>Qué está pendiente:</strong> algunas referencias pueden requerir verificación exacta del título y año: Gartner, GitHub, Stack Overflow, Banco Mundial y PNUD.</p>
+<p><strong>Impacto:</strong> en revistas indexadas, la trazabilidad bibliográfica suele ser revisada cuidadosamente.</p>
+</div>
+</section>
+
+<section id="secciones" class="card">
+<h2>6. Revisión por secciones</h2>
+
+<h3>6.1. Título</h3>
+<p><strong>Evaluación:</strong> adecuado. El título delimita enfoque, fuentes, objeto de estudio, país y período.</p>
+
+<h3>6.2. Resumen</h3>
+<p><strong>Evaluación:</strong> completo y funcional. Contiene objetivo, metodología, resultados y conclusiones.</p>
+<p><strong>Observación:</strong> todavía puede suavizar “ausencia absoluta” y “marcada brecha” si la revista exige lenguaje más moderado.</p>
+
+<h3>6.3. Introducción</h3>
+<p><strong>Evaluación:</strong> sólida y contextualizada. La pregunta de investigación fortalece la estructura.</p>
+
+<h3>6.4. Marco teórico</h3>
+<p><strong>Evaluación:</strong> pertinente. Integra contexto económico, digital, laboral y regulatorio.</p>
+<p><strong>Observación:</strong> algunas afirmaciones macroeconómicas deberían estar respaldadas con fuente específica o redactarse de forma menos causal.</p>
+
+<h3>6.5. Metodología</h3>
+<p><strong>Evaluación:</strong> fuerte. La sección es clara, replicable en términos generales y coherente con el alcance descriptivo-comparativo.</p>
+
+<h3>6.6. Resultados</h3>
+<p><strong>Evaluación:</strong> mejorados. Presentan frecuencia absoluta, relativa e ICC ponderado.</p>
+<p><strong>Observación:</strong> los casos de validación local deberían presentarse explícitamente como ejemplos ilustrativos.</p>
+
+<h3>6.7. Discusión</h3>
+<p><strong>Evaluación:</strong> útil y aplicada. Las propuestas curriculares son pertinentes.</p>
+<p><strong>Observación:</strong> conviene presentarlas como rutas posibles, no como única solución.</p>
+
+<h3>6.8. Conclusiones</h3>
+<p><strong>Evaluación:</strong> coherentes con los hallazgos. La estrategia curricular gradual es una fortaleza.</p>
+<p><strong>Observación:</strong> la parte de teletrabajo/divisas debe moderarse.</p>
+
+<h3>6.9. Limitaciones</h3>
+<p><strong>Evaluación:</strong> adecuadas. Reconocen sesgo geográfico, plataforma, algoritmo, falta de validación primaria y temporalidad.</p>
+
+<h3>6.10. Declaración IA</h3>
+<p><strong>Evaluación:</strong> clara y alineada con prácticas editoriales actuales.</p>
+
+<h3>6.11. Fuentes de datos y referencias</h3>
+<p><strong>Evaluación:</strong> mucho más organizadas que en versiones previas. Se recomienda precisar enlaces directos.</p>
+
+<h3>6.12. Anexos</h3>
+<p><strong>Evaluación:</strong> ahora son funcionales. El Anexo A y B aportan trazabilidad, aunque el Anexo A puede fortalecerse con URLs específicas.</p>
+</section>
+
+<section id="metodologia" class="card">
+<h2>7. Evaluación metodológica</h2>
+<table>
+<tr><th>Elemento</th><th>Estado actual</th><th>Evaluación</th><th>Recomendación</th></tr>
+<tr><td>Diseño</td><td>No experimental, descriptivo, transversal y comparativo.</td><td><span class="badge badge-green">Adecuado</span></td><td>Mantener.</td></tr>
+<tr><td>Muestra</td><td>N = 188 vacantes únicas a partir de 342 registros brutos.</td><td><span class="badge badge-green">Adecuado</span></td><td>Agregar tabla resumen de depuración si se desea más claridad.</td></tr>
+<tr><td>Codificación</td><td>Diccionario incluido.</td><td><span class="badge badge-green">Adecuado</span></td><td>Agregar Anexo C con ejemplos codificados.</td></tr>
+<tr><td>Confiabilidad</td><td>Kappa = 0.86 sobre submuestra del 25%.</td><td><span class="badge badge-green">Fuerte</span></td><td>Indicar número exacto de casos de la submuestra.</td></tr>
+<tr><td>ICC ponderado</td><td>Definido y aplicado.</td><td><span class="badge badge-green">Adecuado</span></td><td>Respaldar valores con enlaces específicos de pénsum.</td></tr>
+<tr><td>Limitaciones</td><td>Completas y pertinentes.</td><td><span class="badge badge-green">Adecuado</span></td><td>Mantener.</td></tr>
+</table>
+</section>
+
+<section id="resultados" class="card">
+<h2>8. Evaluación de resultados</h2>
+<div class="callout green">
+Los resultados son defendibles dentro del marco de una muestra intencional de vacantes STEAM emergentes. La tabla de frecuencias y el ICC ponderado constituyen el aporte empírico central del artículo.
+</div>
+
+<table>
+<tr><th>Resultado</th><th>Valoración</th><th>Observación</th></tr>
+<tr><td>Frecuencias de demanda</td><td>Útiles y claras</td><td>Requieren anexo de evidencia textual de clasificación.</td></tr>
+<tr><td>ICC ponderado</td><td>Muy útil</td><td>Debe respaldarse con URLs específicas de programas.</td></tr>
+<tr><td>Brecha Ingeniería de Datos</td><td>Importante</td><td>Evitar lenguaje excesivamente alarmista.</td></tr>
+<tr><td>Brecha Cloud/DevOps</td><td>Bien argumentada</td><td>El ICC de 5.6% es coherente con la tabla.</td></tr>
+<tr><td>Propuestas curriculares</td><td>Pertinentes</td><td>Presentarlas como rutas graduales o posibles.</td></tr>
+</table>
+</section>
+
+<section id="referencias" class="card">
+<h2>9. Referencias y trazabilidad</h2>
+<p>La bibliografía se fortaleció, pero aún debe ser verificada antes de someter el artículo. En particular, se deben revisar títulos exactos, fechas y URLs directas.</p>
+
+<div class="callout yellow">
+<strong>Prioridad:</strong> validar fuentes de Banco Mundial, Gartner, GitHub, Stack Overflow, PNUD y los programas universitarios específicos.
+</div>
+
+<table>
+<tr><th>Fuente</th><th>Estado</th><th>Recomendación</th></tr>
+<tr><td>Universidades</td><td>Portales generales</td><td>Usar enlaces directos a carreras/pénsumes.</td></tr>
+<tr><td>GitHub / Stack Overflow</td><td>Referencias plausibles</td><td>Validar título exacto del informe.</td></tr>
+<tr><td>Gartner</td><td>Fuente comercial</td><td>Verificar acceso y título; si no, sustituir por fuente abierta.</td></tr>
+<tr><td>Banco Mundial</td><td>URL general</td><td>Agregar URL del informe específico.</td></tr>
+<tr><td>LinkedIn / BeBee</td><td>Correctamente separados</td><td>Mantener como fuentes de datos laborales.</td></tr>
+</table>
+</section>
+
+<section id="reescritura" class="card">
+<h2>10. Reescrituras sugeridas</h2>
+
+<h3>10.1. Conclusión sobre teletrabajo</h3>
+<pre>La formación de talento especializado podría contribuir a mejorar la inserción de profesionales dominicanos en mercados tecnológicos locales e internacionales; sin embargo, el impacto económico de esta inserción requiere estudios específicos sobre salarios, exportación de servicios, retención de talento y movilidad laboral.</pre>
+
+<h3>10.2. Frase sobre Ingeniería de Datos</h3>
+<pre>El hallazgo de mayor brecha corresponde a Ingeniería de Datos, con un ICC de 0.00. Este resultado sugiere una ausencia de programas de grado completos específicamente orientados a esta disciplina en las instituciones analizadas.</pre>
+
+<h3>10.3. Nota para casos de validación local</h3>
+<pre>Nota. Los casos de validación local se presentan como ejemplos ilustrativos de vacantes identificadas durante la auditoría y no como evidencia independiente de representatividad sectorial.</pre>
+
+<h3>10.4. Formulación ampliada de IA Agéntica</h3>
+<pre>Competencias asociadas con sistemas de IA generativa, agentes inteligentes, automatización basada en modelos de lenguaje y flujos de trabajo asistidos por inteligencia artificial.</pre>
+
+<h3>10.5. Anexo C sugerido</h3>
+<pre>Vacante | Plataforma | Empresa | Descriptor textual observado | Categoría asignada | Justificación de codificación | Fecha de consulta</pre>
+</section>
+
+<section id="matriz" class="card">
+<h2>11. Matriz correctiva</h2>
+<table>
+<tr><th>Problema</th><th>Impacto</th><th>Corrección</th><th>Prioridad</th></tr>
+<tr><td>URLs generales en Anexo A</td><td>Reduce trazabilidad curricular</td><td>Agregar enlaces específicos de carrera o pénsum</td><td><span class="badge badge-yellow">Media</span></td></tr>
+<tr><td>Falta Anexo C de vacantes</td><td>Reduce verificabilidad de frecuencias</td><td>Agregar muestra codificada de vacantes</td><td><span class="badge badge-yellow">Media-Alta</span></td></tr>
+<tr><td>Teletrabajo/divisas</td><td>Extrapolación no probada</td><td>Moderación de lenguaje</td><td><span class="badge badge-yellow">Media</span></td></tr>
+<tr><td>IA Agéntica como concepto cerrado</td><td>Puede ser discutible</td><td>Definir o ampliar término</td><td><span class="badge badge-yellow">Media</span></td></tr>
+<tr><td>Referencias comerciales o generales</td><td>Riesgo editorial</td><td>Validar título exacto y URL directa</td><td><span class="badge badge-yellow">Media</span></td></tr>
+<tr><td>Adjetivos valorativos</td><td>Menor neutralidad científica</td><td>Usar lenguaje descriptivo</td><td><span class="badge badge-blue">Baja-Media</span></td></tr>
+</table>
+</section>
+
+<section id="rubrica" class="card">
+<h2>12. Rúbrica de evaluación</h2>
+<div class="score"><strong>Originalidad: 95/100</strong><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+<div class="score"><strong>Relevancia nacional: 98/100</strong><div class="bar"><div class="fill" style="width:98%"></div></div></div>
+<div class="score"><strong>Marco teórico: 89/100</strong><div class="bar"><div class="fill" style="width:89%"></div></div></div>
+<div class="score"><strong>Metodología: 90/100</strong><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+<div class="score"><strong>Resultados: 92/100</strong><div class="bar"><div class="fill" style="width:92%"></div></div></div>
+<div class="score"><strong>Discusión: 91/100</strong><div class="bar"><div class="fill" style="width:91%"></div></div></div>
+<div class="score"><strong>Conclusiones: 90/100</strong><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+<div class="score"><strong>Referencias: 85/100</strong><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+<div class="score"><strong>Reproducibilidad: 88/100</strong><div class="bar"><div class="fill" style="width:88%"></div></div></div>
+<div class="score"><strong>Calidad editorial: 95/100</strong><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+<div class="score"><strong>Calidad global: 92/100</strong><div class="bar"><div class="fill" style="width:92%"></div></div></div>
+</section>
+
+<section id="plan" class="card">
+<h2>13. Plan de mejora final</h2>
+<div class="callout blue">
+<h3>Fase 1: Correcciones menores antes de someter</h3>
+<ul>
+<li>Suavizar la conclusión sobre teletrabajo y divisas.</li>
+<li>Sustituir “hallazgo alarmante” por “hallazgo de mayor brecha”.</li>
+<li>Definir o ampliar “IA Agéntica”.</li>
+<li>Agregar nota sobre los casos de validación local.</li>
+</ul>
+</div>
+
+<div class="callout blue">
+<h3>Fase 2: Fortalecer trazabilidad</h3>
+<ul>
+<li>Agregar enlaces directos a pénsumes o páginas de carrera.</li>
+<li>Validar cada programa universitario usado en el ICC.</li>
+<li>Revisar título exacto y disponibilidad de cada referencia.</li>
+</ul>
+</div>
+
+<div class="callout blue">
+<h3>Fase 3: Mejora para revistas indexadas</h3>
+<ul>
+<li>Crear Anexo C con vacantes codificadas.</li>
+<li>Agregar dataset anonimizado o matriz resumida.</li>
+<li>Considerar validación externa con empleadores en una versión futura.</li>
+</ul>
+</div>
+</section>
+
+<section id="veredicto" class="card">
+<h2>14. Veredicto final</h2>
+<div class="callout green">
+<p><strong>Veredicto:</strong> esta actualización ya es una versión académicamente sólida y editorialmente organizada. El artículo puede ser considerado publicable en revistas institucionales, regionales o de indexación básica, sujeto a correcciones menores.</p>
+<p><strong>Para revistas de mayor exigencia:</strong> se recomienda fortalecer la evidencia de codificación de vacantes, validar enlaces específicos de programas universitarios y revisar referencias comerciales o generales.</p>
+<p><strong>Puntuación global:</strong> 92/100. Con un Anexo C y URLs específicas de programas, podría alcanzar 95–96/100.</p>
+</div>
+</section>
+
+</main>
+</div>
+</body>
+</html>

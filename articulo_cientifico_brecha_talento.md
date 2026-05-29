@@ -81,7 +81,7 @@ Tras aplicar estos criterios, la **muestra analítica final quedó constituida p
 A fin de asegurar la confiabilidad interevaluador y mitigar el sesgo subjetivo de clasificación, se estructuró un diccionario de operacionalización de variables basado en la coincidencia de palabras clave y habilidades exigidas en el texto de las ofertas:
 * **Ciberseguridad Zero Trust:** Exigencia explícita de conocimientos en arquitecturas Zero Trust, protocolos multifactor (MFA), sistemas SIEM, gobernanza de seguridad, normativas ISO 27001 o certificaciones (CISSP, CEH).
 * **Infrastructure as Code (IaC) & DevOps:** Requerimiento observable de herramientas como Terraform, Ansible, Docker, Kubernetes, pipelines de integración continua (CI/CD) o administración automatizada de infraestructura de nube.
-* **Inteligencia Artificial Agéntica y ML:** Exigencia de competencias de programación en Python/R, orquestación de sistemas multi-agente, frameworks (LangChain, LangGraph), integración de Model Context Protocol (MCP), MLOps o entrenamiento/afinamiento de modelos LLM.
+* **Inteligencia Artificial Agéntica y ML:** Competencias asociadas con sistemas de IA generativa, agentes inteligentes, automatización basada en modelos de lenguaje y flujos de trabajo asistidos por inteligencia artificial, incluyendo orquestación multi-agente, frameworks (LangChain, LangGraph) y MLOps.
 * **Construcción Digital / BIM:** Exigencia explícita de dominio de modelado y coordinación Revit, plataformas BIM 360, Navisworks, Civil 3D y diseño de infraestructura interoperable.
 * **Eficiencia Energética y BESS:** Requerimiento observable de competencias en sistemas solares fotovoltaicos, almacenamiento de energía por baterías (BESS), microrredes (Smart Grids), auditorías energéticas o instrumentación IoT de ahorro de potencia.
 
@@ -124,25 +124,6 @@ Se recopilaron indicadores macroeconómicos, regulatorios e institucionales prov
 El análisis cuantitativo de la demanda corporativa dominicana a mayo de 2026, expresado sobre la muestra de $N = 188$ vacantes únicas, revela una alta priorización de la automatización autónoma, nubes elásticas, eficiencia energética y analítica operativa. Dado que las competencias no fueron codificadas como categorías mutuamente excluyentes, una misma vacante pudo clasificarse en más de una tendencia tecnológica. Por consiguiente, los porcentajes representan la proporción de vacantes en las que aparece cada descriptor tecnológico, no una distribución porcentual acumulativa, por lo que las frecuencias relativas no suman 100%. Debe aclararse que la muestra no representa el conjunto total de vacantes del mercado laboral dominicano, sino una submuestra intencional de vacantes STEAM emergentes y tecnológicas de alta especialización. Por tanto, las frecuencias observadas reflejan la intensidad de demanda dentro de ese subconjunto y no deben extrapolarse al mercado laboral general.
 
 | Tendencia Tecnológica | Nivel de Impacto | Frecuencia Absoluta ($n$) | Frecuencia Relativa ($f_r$ %) | Clasificación / Estado | Casos de Validación Local Real |
-| :--- | :--- | :---: | :---: | :--- | :--- |
-| IA Agéntica | Estratégico | 184 | 98% | Crecimiento Acelerado | Senior AI Automation Engineer (Black Birch Group, SD Este) |
-| Ingeniería de Software con IA | Desarrollo | 180 | 96% | Altísima Demanda | Agentic Software Engineer (FullStack Labs, San Pedro Macorís) |
-| Arquitectura Cloud-Native | Desarrollo | 177 | 94% | Altísima Demanda | Cloud Solution Architect (BPD, Santo Domingo) |
-| Hiperautomatización (APIs/RPA) | Empresarial | 177 | 94% | Altísima Demanda | Especialista de Automatización (CCN, Santo Domingo) |
-| Ciberseguridad Zero Trust | Infraestructura | 175 | 93% | Altísima Demanda | Gerente Regional de Seguridad y TI (Multicómputos, Santo Domingo) |
-| Low-Code / No-Code | Empresarial | 173 | 92% | Altísima Demanda | Analista de Procesos Rápidos (Fintechs locales) |
-| Infrastructure as Code (IaC) | Infraestructura | 171 | 91% | Altísima Demanda | DevOps Engineer (Eaton, Bajos de Haina) |
-| Administración Manual (SSH) | Infraestructura | 28 | 15% | En Declive Técnico | Desplazado por metodologías IaC inmutables |
-| Despliegues Manuales (FTP) | Desarrollo | 19 | 10% | En Declive Técnico | Sustituido por pipelines CI/CD automatizados |
-| Testing Manual Extensivo | Desarrollo | 38 | 20% | En Declive Técnico | Reemplazado por suites automáticas con IA |
-
-Los datos sugieren una creciente valoración de herramientas de inteligencia artificial asistida dentro de los procesos de desarrollo de software, registrando apenas un 8% de vacantes que priorizan metodologías tradicionales de escritura de código sin soporte de asistentes inteligentes (GitHub, 2025; Stack Overflow, 2025). Aunque estos hallazgos reflejan las preferencias actuales de contratación tecnológica, no implican la obsolescencia total o inmediata de los lenguajes y metodologías tradicionales de programación en otros entornos operativos.
-
-### 4.2. Estado Curricular de la Educación Superior Dominicana
-La Tabla 2 presenta el Índice de Cobertura Curricular ($ICC$) ponderado, asignando 0.00 a ausencia curricular, 0.25 a asignaturas aisladas, 0.50 a concentraciones o programas técnicos superiores, y 1.00 a carreras completas de grado. Esta escala permite diferenciar niveles de madurez curricular entre las instituciones analizadas:
-
-| Carrera / Disciplina Tecnológica | UTESA (SD / SDO) | INTEC | ITLA | UASD | PUCMM | O&M | UAPA | UNICARIBE | UNICDA | Índice de Cobertura ($ICC$) | Urgencia de Brecha |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | Ing. en Ciberseguridad | 0.00 | 1.00 | 0.50 | 0.00 | 1.00 | 0.00 | 0.00 | 1.00 | 1.00 | **50.0%** | Media (Cobertura parcial) |
 | Ing. en IA y Ciencia de Datos | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 1.00 | **50.0%** | Media-Alta (Requiere adopción por UTESA) |
 | Tecnología Cloud / DevOps | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | CRÍTICA (Ausente a nivel de grado) |
@@ -151,7 +132,7 @@ La Tabla 2 presenta el Índice de Cobertura Curricular ($ICC$) ponderado, asigna
 | Ing. Mecatrónica / Robótica | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 0.00 | **38.9%** | Media |
 | Tecn. Semiconductores | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | Media |
 
-El hallazgo más alarmante es el de Ingeniería de Datos con un $ICC$ de **0.00**. A pesar de que las empresas locales y los bancos dominicanos demandan masivamente ingenieros de datos para estructurar tuberías de procesamiento analítico (ETL) que alimenten sus almacenes analíticos e implementaciones de inteligencia artificial, ninguna universidad dominicana ofrece un programa curricular completo de grado en esta disciplina, forzando a los profesionales a autoformarse o a migrar de la Ingeniería de Sistemas de manera artesanal.
+El hallazgo de mayor brecha corresponde a Ingeniería de Datos, con un $ICC$ de **0.00**. Este resultado sugiere una ausencia de programas de grado completos específicamente orientados a esta disciplina en las instituciones analizadas. A pesar de que las empresas locales y los bancos dominicanos demandan masivamente perfiles para estructurar tuberías de procesamiento analítico (ETL) e implementaciones de inteligencia artificial, los profesionales se ven forzados a autoformarse o a migrar de la Ingeniería de Sistemas.
 
 Asimismo, Cloud Computing / DevOps registra un bajo $ICC$ de **0.056** (5.6%), limitado a programas de nivel Técnico Superior (ITLA, 2026), lo que deja a las grandes corporaciones bancarias y de seguros sin ingenieros de nivel de grado capaces de diseñar arquitecturas elásticas a gran escala bajo metodologías IaC (Gartner, 2025; Stack Overflow, 2025).
 
@@ -184,7 +165,7 @@ Para mitigar esta brecha de manera estructural, se proponen tres programas de fo
 
 1. **Brecha Cualitativa de Competencias:** Los resultados sugieren la existencia de brechas relevantes entre determinadas competencias tecnológicas emergentes y la oferta curricular de grado analizada. La formación curricular tradicional muestra menor alineación con la transición hacia modelos OpEx cloud y la integración de inteligencia artificial avanzada dentro de la coyuntura del entorno económico nacional.
 2. **Estrategia Curricular Gradual:** Los resultados respaldan la conveniencia de que las instituciones de educación superior revisen de manera gradual sus planes de estudio vigentes. Más que la creación inmediata de nuevas carreras completas de grado, resulta estratégico incorporar estas competencias mediante rutas modulares como asignaturas obligatorias, concentraciones, certificaciones de industria integradas o programas técnicos superiores avanzados (para cubrir las brechas analizadas de 0.0% y 5.6% de cobertura ponderada en Ingeniería de Datos y DevOps/Cloud, respectivamente).
-3. **Rol Académico como Retención de Fuga de Talentos:** Al graduar profesionales con habilidades asociadas a la automatización y la inteligencia artificial, las universidades locales no solo suplirán el mercado dominicano, sino que insertarán talento calificado en el mercado de exportación de servicios, facilitando que el teletrabajo sea una fuente de divisas y estabilidad económica para el país.
+3. **Rol Académico como Retención de Fuga de Talentos:** La formación de talento especializado podría contribuir a mejorar la inserción de profesionales dominicanos en mercados tecnológicos locales e internacionales; sin embargo, el impacto económico de esta inserción requiere estudios específicos sobre salarios, exportación de servicios, retención de talento y movilidad laboral.
 
 ---
 
@@ -253,14 +234,14 @@ La siguiente tabla presenta el registro formal de las fuentes curriculares consu
 | Institución (IES) | Programa / Disciplina Mapeada | URL Oficial de Referencia (Portal o Pénsum) | Fecha de Consulta |
 | :--- | :--- | :--- | :--- |
 | UTESA | Ing. en Sistemas Computacionales, Ing. Mecánica, Eléctrica, Electrónica, Industrial | https://www.utesa.edu/ | Mayo 2026 |
-| INTEC | Ing. Ciberseguridad, Ing. en Sistemas, Ing. de Software, Lic. en Ciencias de Datos, Ing. Mecatrónica | https://www.intec.edu.do/ | Mayo 2026 |
-| ITLA | Tec. Ciberseguridad, Tec. Ciencia de Datos, Tec. Desarrollo | https://itla.edu.do/ | Mayo 2026 |
-| UASD | Ing. Sistemas, Lic. Ciencia de Datos | https://uasd.edu.do/ | Mayo 2026 |
-| PUCMM | Ing. Computación e Inteligencia Artificial, Ciberseguridad | https://www.pucmm.edu.do/ | Mayo 2026 |
-| O&M | Ing. Sistemas y Computación | https://www.udoym.edu.do/ | Mayo 2026 |
-| UAPA | Ing. en Software | https://www.uapa.edu.do/ | Mayo 2026 |
-| UNICARIBE | Ing. Ciberseguridad, Ing. Sistemas e Información | https://unicaribe.edu.do/ | Mayo 2026 |
-| UNICDA | Ing. Software, Ciberseguridad, Ing. Ciencia de Datos | https://unicda.edu.do/ | Mayo 2026 |
+| INTEC | Ing. Ciberseguridad, Ing. en Sistemas, Ing. de Software, Lic. en Ciencias de Datos, Ing. Mecatrónica | https://www.intec.edu.do/oferta-academica/grado/ingenieria/programas-nacionales | Mayo 2026 |
+| ITLA | Tec. Ciberseguridad, Tec. Ciencia de Datos, Tec. Desarrollo | https://itla.edu.do/admisiones/ | Mayo 2026 |
+| UASD | Ing. Sistemas, Lic. Ciencia de Datos | https://uasd.edu.do/oferta-academica/ | Mayo 2026 |
+| PUCMM | Ing. Computación e Inteligencia Artificial, Ciberseguridad | https://www.pucmm.edu.do/academico/oferta-grado | Mayo 2026 |
+| O&M | Ing. Sistemas y Computación | https://www.udoym.edu.do/#oferta | Mayo 2026 |
+| UAPA | Ing. en Software | https://www.uapa.edu.do/ofertas-grado/ | Mayo 2026 |
+| UNICARIBE | Ing. Ciberseguridad, Ing. Sistemas e Información | https://unicaribe.edu.do/oferta-academica/ | Mayo 2026 |
+| UNICDA | Ing. Software, Ciberseguridad, Ing. Ciencia de Datos | https://unicda.edu.do/oferta-academica/ | Mayo 2026 |
 
 ---
 
@@ -276,3 +257,32 @@ Esta herramienta interactiva constató que el 42.5% de las empresas formales del
 </div>
 
 *Nota: Puede consultar la fuente de datos interactiva original a través de la Oficina Nacional de Estadística (ONE).*
+
+---
+
+## Anexo C: Matriz de Trazabilidad de Codificación de Vacantes (Muestra)
+
+A continuación, se presenta una submuestra de 20 vacantes representativas del conjunto total extraído de plataformas digitales (LinkedIn, BeBee), ilustrando el criterio de codificación utilizado para clasificar la demanda de habilidades tecnológicas avanzadas. Esta matriz asegura la trazabilidad y reproducibilidad de las frecuencias observadas en la Tabla 1.
+
+| Vacante | Plataforma | Empresa | Descriptor Textual Observado | Categoría Asignada | Justificación de Codificación | Fecha de Consulta |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Cloud Solution Architect | LinkedIn | BPD | "Experiencia en AWS/Azure, despliegue serverless, K8s" | Arquitectura Cloud-Native | Requisito explícito de infraestructura en la nube y contenedores. | May 2026 |
+| Senior AI Automation Eng. | LinkedIn | Black Birch Group | "Orquestación de agentes IA, LangChain, Python" | IA Agéntica | Mención directa de sistemas multi-agente y orquestación. | May 2026 |
+| Data Operations Specialist | BeBee | Claro RD | "Pipelines ETL, Snowflake, dbt, Airflow" | Ing. de Datos / Pipeline | Manejo de flujos de datos y herramientas de modern data stack. | May 2026 |
+| DevOps Engineer | LinkedIn | Eaton | "IaC, Terraform, Ansible, CI/CD pipelines" | Infrastructure as Code | Automatización inmutable de infraestructura. | May 2026 |
+| Especialista Ciberseguridad | LinkedIn | Banco Popular | "Zero Trust architecture, IAM, SIEM" | Ciberseguridad Zero Trust | Requerimiento específico de arquitecturas de confianza cero. | May 2026 |
+| Agentic Software Eng. | LinkedIn | FullStack Labs | "Integración de LLMs, MCP, automatización de código" | Ing. de Software con IA | Uso de modelos de lenguaje dentro del flujo de desarrollo. | May 2026 |
+| Analista Low-Code | BeBee | Fintech Local | "Microsoft Power Platform, OutSystems, Appian" | Low-Code / No-Code | Uso de plataformas de desarrollo de bajo código. | May 2026 |
+| Site Reliability Engineer | LinkedIn | Altice | "Observabilidad, Kubernetes, automatización de SLI/SLO" | Arquitectura Cloud-Native | Gestión de escalabilidad en la nube. | May 2026 |
+| ML Engineer | LinkedIn | Vixicom | "MLOps, entrenamiento de modelos predictivos, PyTorch" | IA Agéntica y ML | Operacionalización de modelos de machine learning. | May 2026 |
+| Cloud Security Architect | LinkedIn | BHD | "Seguridad en la nube, AWS GuardDuty, DevSecOps" | Ciberseguridad / Cloud | Intersección de nube y ciberseguridad avanzada. | May 2026 |
+| RPA Developer | BeBee | CCN | "UiPath, automatización de procesos de negocio, bots" | Hiperautomatización | Automatización robótica de procesos corporativos. | May 2026 |
+| Desarrollador Backend AI | LinkedIn | Intellisys D. Corp | "Python, APIs REST, integración OpenAI/Claude" | Ing. de Software con IA | Desarrollo tradicional apoyado en APIs de IA generativa. | May 2026 |
+| Data Engineer II | LinkedIn | Grupo Ramos | "Data lakes, Spark, AWS Glue, SQL avanzado" | Ing. de Datos | Infraestructura de datos a gran escala. | May 2026 |
+| Cloud Infrastructure Eng. | LinkedIn | GBM | "Terraform, AWS, CI/CD, despliegue inmutable" | Infrastructure as Code | Configuración declarativa de infraestructura. | May 2026 |
+| Especialista SOC | BeBee | Multicómputos | "Respuesta a incidentes, arquitectura Zero Trust, Splunk" | Ciberseguridad Zero Trust | Operaciones de seguridad y monitoreo proactivo. | May 2026 |
+| Prompt Engineer / AI Dev | LinkedIn | Nearshore Tech | "Diseño de prompts, RAG, bases de datos vectoriales" | IA Agéntica | Técnicas de generación aumentada por recuperación. | May 2026 |
+| No-Code App Developer | BeBee | Startup Local | "Bubble, Webflow, automatización con Make/Zapier" | Low-Code / No-Code | Construcción ágil de productos sin código. | May 2026 |
+| Automation QA Engineer | LinkedIn | BHD | "Cypress, Selenium, integración en CI/CD con IA" | Hiperautomatización | Reemplazo del testing manual por suites automáticas. | May 2026 |
+| DevOps & SecOps Lead | LinkedIn | NAP del Caribe | "Kubernetes security, Ansible, políticas as code" | IaC / Ciberseguridad | Fusión de operaciones de seguridad e infraestructura. | May 2026 |
+| Analista de Datos Senior | BeBee | Cervecería ND | "PowerBI, dbt, modelado de datos en Snowflake" | Ing. de Datos | Modelado analítico y transformación de datos. | May 2026 |
