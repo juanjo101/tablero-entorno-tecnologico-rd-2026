@@ -797,6 +797,36 @@
         .gap-bar-fill  { height: 100%; border-radius: 4px; transition: width 0.8s cubic-bezier(0.4,0,0.2,1); }
         .fill-demand   { background: var(--utesa-green-medium); }
         .fill-supply   { background: var(--utesa-gold); }
+        .salary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .salary-kpi {
+            border: 1px solid var(--border-color);
+            background: var(--bg-canvas);
+            border-radius: 8px;
+            padding: 0.8rem;
+        }
+        .salary-kpi-val {
+            display: block;
+            font-family: var(--font-mono);
+            color: var(--utesa-green-deep);
+            font-weight: 800;
+            font-size: 1rem;
+        }
+        .salary-kpi-lbl {
+            display: block;
+            color: var(--text-secondary);
+            font-size: 0.72rem;
+            line-height: 1.3;
+            margin-top: 0.2rem;
+        }
+        .salary-table td,
+        .salary-table th {
+            white-space: nowrap;
+        }
 
         .career-card {
             background: var(--bg-panel);
@@ -1202,6 +1232,54 @@
                     </div>
                 </div>
 
+                <!-- Panel de Rangos Salariales -->
+                <div class="panel-card" style="margin-top: 1.5rem; border-left: 5px solid var(--utesa-green-medium); background-color: var(--bg-panel);">
+                    <div class="panel-header-row">
+                        <span class="panel-title">💰 Rangos Salariales STEAM: Sector Público y Referencia Privada</span>
+                    </div>
+                    <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 0 0 1rem 0;">
+                        Agregación de sueldos brutos mensuales de la Nómina Pública General del Estado/MAP por cargo STEAM. La muestra privada de LinkedIn no publicó rangos salariales visibles, por lo que se documenta como limitación y se complementa con salario mínimo oficial y ENAE/ONE.
+                    </p>
+                    <div class="salary-grid">
+                        <div class="salary-kpi">
+                            <span class="salary-kpi-val">13,211</span>
+                            <span class="salary-kpi-lbl">Cargos públicos coincidentes con categorías STEAM</span>
+                        </div>
+                        <div class="salary-kpi">
+                            <span class="salary-kpi-val">RD$90,000</span>
+                            <span class="salary-kpi-lbl">Mayor mediana pública observada: Eléctrica / Energía</span>
+                        </div>
+                        <div class="salary-kpi">
+                            <span class="salary-kpi-val">RD$29,988</span>
+                            <span class="salary-kpi-lbl">Piso privado empresas grandes 2026</span>
+                        </div>
+                        <div class="salary-kpi">
+                            <span class="salary-kpi-val">0 / 188</span>
+                            <span class="salary-kpi-lbl">Vacantes LinkedIn con salario visible en la muestra</span>
+                        </div>
+                    </div>
+                    <div class="table-wrapper" style="max-height: 360px; overflow-y: auto;">
+                        <table class="salary-table">
+                            <thead>
+                                <tr>
+                                    <th>Categoría STEAM</th>
+                                    <th>Cargos</th>
+                                    <th>P25</th>
+                                    <th>Mediana</th>
+                                    <th>P75</th>
+                                    <th>Máximo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="salaryTableBody">
+                                <!-- Inyectado por JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.5; margin-top: 0.8rem;">
+                        Fuente pública: Nómina Pública General del Estado 2025, MAP/datos.gob.do, procesada de forma agregada sin conservar nombres. Baseline privado: Resoluciones CNS 2025 resumidas por EY y promedio sectorial ENAE/ONE.
+                    </p>
+                </div>
+
                 <!-- Panel de Auditoría de Empleos de IA en RD -->
                 <div class="panel-card" style="margin-top: 1.5rem; border-left: 5px solid var(--utesa-gold); background-color: var(--bg-panel);">
                     <div class="panel-header-row">
@@ -1514,6 +1592,20 @@
                             <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Estructuras TIC del Estado y Estandarización de Cargos]</p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
                                 Ministerio de Administración Pública. (2024). <em>Resolución No. 342-2024 que aprueba los modelos de estructura organizativa para las áreas de Tecnologías de la Información y Comunicación (TIC) de los entes y órganos de la administración pública</em>. Santo Domingo, R.D.: Autor. Recuperado de <a href="https://map.gob.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://map.gob.do</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Nómina Pública General y Rangos Salariales Agregados]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Ministerio de Administración Pública. (2025). <em>Nómina Pública General del Estado 2025</em> [Conjunto de datos abiertos, agregación propia por cargo STEAM sin registros nominales]. Santo Domingo, R.D.: datos.gob.do. Recuperado de <a href="https://datos.gob.do/dataset/nomina-publica-general-del-estado-2025-ministerio-de-administracion-publica-map" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://datos.gob.do</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Salario Mínimo Privado y Promedios Sectoriales]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Comité Nacional de Salarios / EY. (2026). <em>República Dominicana: salario mínimo 2026</em>; Oficina Nacional de Estadística. (2025). <em>ENAE 2025: salario promedio mensual sector comercio</em>. Recuperado de <a href="https://www.ey.com/es_ce/technical/tax/tax-alerts/republica-dominicana-salario-minimo-2026" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">EY</a> y <a href="https://www.one.gob.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">ONE</a>
                             </p>
                         </div>
 
@@ -2411,6 +2503,21 @@
             { skill: 'SQL / Bases de Datos',             demand: 72, supply: 70, urgency: 'ok',       label: '✅ CUBIERTA', profileCount: 1120 },
         ];
 
+        const salaryData = [
+            { role: 'Ingeniería Eléctrica / Energía', count: 43, p25: 90000, median: 90000, p75: 100000, max: 275000 },
+            { role: 'Ingeniería de Software', count: 454, p25: 55000, median: 75000, p75: 90000, max: 220000 },
+            { role: 'ESG / Economía Circular', count: 41, p25: 50000, median: 72738, p75: 82500, max: 180000 },
+            { role: 'Arquitectura / BIM', count: 306, p25: 50000, median: 65000, p75: 75000, max: 180000 },
+            { role: 'Cloud / Infraestructura', count: 313, p25: 55825, median: 60000, p75: 77000, max: 275000 },
+            { role: 'Manufactura / Calidad', count: 627, p25: 35000, median: 55000, p75: 75000, max: 165000 },
+            { role: 'Ingeniería Civil / Infraestructura', count: 671, p25: 50000, median: 50000, p75: 70000, max: 180000 },
+            { role: 'Ingeniería Industrial', count: 533, p25: 40000, median: 50000, p75: 78000, max: 469718 },
+            { role: 'Ingeniería de Datos / BI', count: 5983, p25: 30250, median: 49060, p75: 49060, max: 280000 },
+            { role: 'Ciberseguridad', count: 1452, p25: 20216, median: 35015, p75: 45000, max: 280000 },
+            { role: 'Ingeniería Electrónica', count: 87, p25: 34650, median: 34650, p75: 46000, max: 125000 },
+            { role: 'Ingeniería Mecánica / Movilidad', count: 2701, p25: 15000, median: 23100, p75: 30000, max: 220000 },
+        ];
+
         const careerData = [
             {
                 priority: 1,
@@ -2550,6 +2657,27 @@
                         <p style="font-size:0.72rem;font-family:var(--font-mono);color:var(--utesa-green-medium);font-weight:600;">${item.demandLabel}</p>
                         <div class="career-tags">${tagsHtml}</div>
                     </div>`;
+            });
+        }
+
+        function formatDOP(value) {
+            return `RD$${Number(value).toLocaleString('es-DO', { maximumFractionDigits: 0 })}`;
+        }
+
+        function renderSalaryTable() {
+            const container = document.getElementById('salaryTableBody');
+            if (!container) return;
+            container.innerHTML = '';
+            salaryData.forEach(item => {
+                container.innerHTML += `
+                    <tr>
+                        <td><strong>${item.role}</strong></td>
+                        <td class="mono-val">${Number(item.count).toLocaleString('es-DO')}</td>
+                        <td class="mono-val">${formatDOP(item.p25)}</td>
+                        <td class="mono-val" style="font-weight:800;color:var(--utesa-green-deep);">${formatDOP(item.median)}</td>
+                        <td class="mono-val">${formatDOP(item.p75)}</td>
+                        <td class="mono-val">${formatDOP(item.max)}</td>
+                    </tr>`;
             });
         }
 
@@ -4739,6 +4867,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             renderGapList();
             renderCareerList();
+            renderSalaryTable();
             renderJobsList();
         });
 
