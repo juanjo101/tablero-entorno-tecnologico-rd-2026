@@ -143,12 +143,12 @@ La Tabla 2 presenta el Índice de Cobertura Curricular ($ICC$) ponderado, asigna
 
 | Carrera / Disciplina Tecnológica | UTESA (SD / SDO) | INTEC | ITLA | UASD | PUCMM | O&M | UAPA | UNICARIBE | UNICDA | Índice de Cobertura ($ICC$) | Urgencia de Brecha |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| Ing. en Ciberseguridad | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 1.00 | 1.00 | **61.1%** | Baja (Mercado cubierto en oferta inicial) |
-| Ing. en IA y Ciencia de Datos | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 1.00 | **50.0%** | Media-Alta (Requiere adopción por UTESA) |
+| Ing. en Ciberseguridad | 0.00 | 1.00 | 0.50 | 0.00 | 1.00 | 0.00 | 0.00 | 1.00 | 1.00 | **50.0%** | Media (Cobertura parcial) |
+| Ing. en IA y Ciencia de Datos | 0.00 | 0.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 1.00 | **38.9%** | Alta (Requiere adopción por INTEC y UTESA) |
 | Tecnología Cloud / DevOps | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | CRÍTICA (Ausente a nivel de grado) |
-| Ing. de Sistemas / Informática | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | **100%** | Baja (Programa tradicional cubierto) |
+| Ing. de Sistemas / Informática | 1.00 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | **94.4%** | Baja (Programa tradicional cubierto) |
 | Tecn. Ingeniería de Datos | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **0%** | CRÍTICA (Desalineación Total) |
-| Ing. Mecatrónica / Robótica | 1.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 0.00 | **50.0%** | Baja |
+| Ing. Mecatrónica / Robótica | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 0.00 | **38.9%** | Media |
 | Tecn. Semiconductores | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | Media |
 
 El hallazgo más alarmante es el de Ingeniería de Datos con un $ICC$ de **0.00**. A pesar de que las empresas locales y los bancos dominicanos demandan masivamente ingenieros de datos para estructurar tuberías de procesamiento analítico (ETL) que alimenten sus almacenes analíticos e implementaciones de inteligencia artificial, ninguna universidad dominicana ofrece un programa curricular completo de grado en esta disciplina, forzando a los profesionales a autoformarse o a migrar de la Ingeniería de Sistemas de manera artesanal.
@@ -222,7 +222,7 @@ Durante la preparación de este trabajo, el autor utilizó modelos de lenguaje d
 * Gartner, Inc. (2025). *Gartner top strategic technology trends for 2026: Agentic AI and hyperautomation matrices*. Stamford, CT: Gartner Research. Recuperado de https://www.gartner.com/
 * GitHub, Inc. (2025). *The State of the Octoverse 2025: AI-Assisted software engineering adoption and open-source growth*. San Francisco, CA: GitHub Developer Relations. Recuperado de https://github.blog/
 * Instituto Tecnológico de Las Américas (ITLA). (2026). *Programas del nivel Técnico Superior y Tecnólogo en Desarrollo de Software, Seguridad Informática, Mecatrónica y Ciencia de Datos*. Santo Domingo, R.D.: Autor. Recuperado de https://itla.edu.do/
-* Instituto Tecnológico de Santo Domingo (INTEC). (2026). *Oferta curricular de grado y postgrado del Área de Ingenierías: Ciberseguridad, Inteligencia Artificial e Ingeniería de Sistemas*. Santo Domingo, R.D.: Autor. Recuperado de https://www.intec.edu.do/
+* Instituto Tecnológico de Santo Domingo (INTEC). (2026). *Oferta curricular de grado y postgrado del Área de Ingenierías: Ciberseguridad, Ingeniería de Software, Mecatrónica e Ingeniería de Sistemas*. Santo Domingo, R.D.: Autor. Recuperado de https://www.intec.edu.do/
 * ISC². (2025). *ISC² Cybersecurity Workforce Study 2025: Cybersecurity at a crucial tipping point*. Alexandria, VA: ISC² Inc. Recuperado de https://www.isc2.org/
 * ManpowerGroup. (2025). *Encuesta global de escasez de talento 2025: Desafíos de contratación en tecnología y habilidades duras*. Milwaukee, WI: ManpowerGroup Global. Recuperado de https://www.manpowergroup.com/
 * Ministerio de Administración Pública (MAP). (2024). *Resolución No. 342-2024 que aprueba los modelos de estructura organizativa para las áreas de Tecnologías de la Información y Comunicación (TIC) de los entes y órganos de la administración pública*. Santo Domingo, R.D.: Autor. Recuperado de https://map.gob.do/
@@ -237,7 +237,7 @@ Durante la preparación de este trabajo, el autor utilizó modelos de lenguaje d
 * Stack Overflow. (2025). *2025 Developer survey: Obsolescence of manual processes and adoption of automated pipelines*. New York, NY: Autor. Recuperado de https://stackoverflow.co/
 * Superintendencia de Electricidad (SIE). (2025). *Tarifas eléctricas vigentes para clientes corporativos en la República Dominicana*. Santo Domingo, R.D.: SIE. Recuperado de https://sie.gob.do/
 * Universidad Autónoma de Santo Domingo (UASD). (2026). *Pénsum y carreras de grado oficiales de la Facultad de Ingeniería y Arquitectura: Ingeniería Electromecánica, Ciberseguridad, Sistemas y Licenciatura en Ciencia de Datos*. Santo Domingo, R.D.: Autor. Recuperado de https://uasd.edu.do/
-* Universidad Tecnológica de Santiago (UTESA). (2026). *Oferta de grado y pénsum de Ingeniería en Sistemas Computacionales e Ingeniería Mecatrónica - Recinto Santo Domingo de Guzmán y Recinto Santo Domingo Oriental*. Santo Domingo, R.D.: Autor. Recuperado de https://www.utesa.edu/
+* Universidad Tecnológica de Santiago (UTESA). (2026). *Oferta de grado y pénsum de Ingeniería en Sistemas Computacionales, Ingeniería Mecánica, Eléctrica, Electrónica e Industrial - Recinto Santo Domingo de Guzmán y Recinto Santo Domingo Oriental*. Santo Domingo, R.D.: Autor. Recuperado de https://www.utesa.edu/
 * Universidad Dominicana O&M. (2026). *Oferta de grado y pénsum de Ingeniería en Sistemas y Computación, Ingeniería Civil, Ingeniería Industrial e Ingeniería Electrónica*. Santo Domingo, R.D.: Autor. Recuperado de https://www.udoym.edu.do/
 * Universidad Abierta para Adultos (UAPA). (2026). *Carreras de Ingeniería en Software y programas virtuales de desarrollo de tecnologías de la información*. Santiago y Santo Domingo, R.D.: Autor. Recuperado de https://www.uapa.edu.do/
 * Universidad del Caribe (UNICARIBE). (2026). *Oferta curricular de Ingeniería en Ciberseguridad e Ingeniería en Sistemas e Información*. Santo Domingo, R.D.: Autor. Recuperado de https://unicaribe.edu.do/
@@ -252,8 +252,8 @@ La siguiente tabla presenta el registro formal de las fuentes curriculares consu
 
 | Institución (IES) | Programa / Disciplina Mapeada | URL Oficial de Referencia (Portal o Pénsum) | Fecha de Consulta |
 | :--- | :--- | :--- | :--- |
-| UTESA | Ing. en Sistemas Computacionales, Ing. Mecatrónica | https://www.utesa.edu/ | Mayo 2026 |
-| INTEC | Ing. Ciberseguridad, Ing. en Sistemas | https://www.intec.edu.do/ | Mayo 2026 |
+| UTESA | Ing. en Sistemas Computacionales, Ing. Mecánica, Eléctrica, Electrónica, Industrial | https://www.utesa.edu/ | Mayo 2026 |
+| INTEC | Ing. Ciberseguridad, Ing. en Sistemas, Ing. de Software, Ing. Mecatrónica | https://www.intec.edu.do/ | Mayo 2026 |
 | ITLA | Tec. Ciberseguridad, Tec. Ciencia de Datos, Tec. Desarrollo | https://itla.edu.do/ | Mayo 2026 |
 | UASD | Ing. Sistemas, Lic. Ciencia de Datos | https://uasd.edu.do/ | Mayo 2026 |
 | PUCMM | Ing. Computación e Inteligencia Artificial, Ciberseguridad | https://www.pucmm.edu.do/ | Mayo 2026 |
