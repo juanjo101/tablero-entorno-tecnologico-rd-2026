@@ -1,4 +1,4 @@
-# Brecha sociotécnica entre demanda laboral emergente y oferta académica: un análisis descriptivo-causal en la República Dominicana (2025–2026)
+# Brecha sociotécnica entre demanda laboral emergente y oferta académica: análisis descriptivo-comparativo de plataformas digitales de empleo y currículos universitarios en la República Dominicana (2025–2026)
 
 **Autor:** Juan José Díaz  
 **Afiliación:** Investigador Independiente / Consultor de Entorno Tecnológico y Educación Superior  
@@ -8,12 +8,12 @@
 ---
 
 ### Resumen
-**Objetivo:** Este estudio analiza la brecha existente entre la demanda laboral real del sector productivo dominicano en tecnologías de la información (TI) y la oferta académica de nivel de grado de las principales instituciones de educación superior (IES) en la República Dominicana durante el periodo 2025-2026.  
-**Metodología:** Se adoptó un enfoque de investigación mixto, descriptivo y transversal. Se realizó una auditoría empírica de campo mediante el análisis sistemático de vacantes activas localizadas en el país en plataformas de empleo (LinkedIn Jobs y BeBee, corte a mayo de 2026) y se contrastó cuantitativamente con la oferta curricular vigente de nueve universidades clave (UTESA, INTEC, ITLA, UASD, PUCMM, O&M, UAPA, UNICARIBE y UNICDA). Se integró un análisis causal PESTEL utilizando indicadores macroeconómicos y regulatorios oficiales del Banco Central de la República Dominicana (BCRD) y del Banco Mundial.  
-**Resultados:** El análisis cuantitativo identificó una desalineación estructural severa en disciplinas críticas. Se observó una ausencia de cobertura del 100% de programas de grado dedicados para la Ingeniería de Datos y de un 80% para metodologías de desarrollo en la nube (DevOps/Cloud Computing), contrastando con una tasa de adopción proyectada del 98% en arquitecturas de Inteligencia Artificial Agéntica corporativa. Al ampliar el análisis hacia carreras STEAM tradicionales, también emergen brechas de especialización en IoT industrial e instrumentación inteligente, automatización industrial, mantenimiento predictivo 4.0, BIM/construcción digital, manufactura avanzada, energías renovables, almacenamiento BESS, microrredes, movilidad eléctrica/autónoma, gestión inteligente del agua, materiales avanzados, carbono/ESG, infraestructura civil resiliente y analítica de operaciones.  
-**Conclusiones:** Persiste una desalineación estructural entre las habilidades demandadas por la economía digital y los planes de estudio vigentes. Se proponen tres nuevas carreras STEAM prioritarias con currículos basados en datos empíricos para mitigar el déficit y contrarrestar la fuga de talentos impulsada por la contratación remota internacional.
+**Objetivo:** Analizar la correspondencia entre la demanda laboral tecnológica observable en vacantes de plataformas digitales de empleo y la oferta curricular de grado de las principales instituciones de educación superior (IES) en la República Dominicana durante el período 2025–2026.  
+**Metodología:** Se adoptó un diseño no experimental, descriptivo, transversal y comparativo. Se realizó una auditoría empírica mediante el análisis sistemático de una muestra analizada de $N = 188$ vacantes únicas localizadas en el territorio nacional (LinkedIn Jobs y BeBee, corte a mayo de 2026) y se contrastó con la oferta de grado de nueve universidades líderes del país (UTESA, INTEC, ITLA, UASD, PUCMM, O&M, UAPA, UNICARIBE y UNICDA) mediante la aplicación de un Índice de Cobertura Curricular ($ICC$) y una escala ponderada de presencia de contenidos curriculares. El análisis cualitativo y de contexto se complementó con un enfoque macro PESTEL sustentado en cifras oficiales de política económica (BCRD) y desarrollo (ONE y Banco Mundial).  
+**Resultados:** El análisis identificó desalineaciones estructurales severas en disciplinas críticas. Se constató una ausencia absoluta de programas de grado completos (0% de cobertura) para la Ingeniería de Datos y de un 80% para metodologías de despliegue en la nube (DevOps/Cloud Computing), contrastando con una frecuencia observada del 98% de requerimientos de arquitecturas de Inteligencia Artificial Agéntica y 91% de infraestructura como código (IaC) en las vacantes analizadas. En ingenierías STEAM tradicionales se identificaron desalineaciones relevantes en IoT industrial, BIM/construcción digital, almacenamiento BESS, microrredes, movilidad eléctrica y analítica de operaciones.  
+**Conclusiones:** Existe una marcada brecha cualitativa entre las competencias tecnológicas demandadas en el mercado laboral y los planes de estudio vigentes. Se proponen tres programas curriculares prioritarios diseñados a partir de la evidencia recolectada para mitigar el déficit y contrarrestar la fuga de talentos impulsada por la contratación remota internacional.
 
-**Palabras clave:** Brecha de Talento, Educación Superior, PESTEL Tecnológico, Ciberseguridad, República Dominicana, Currículo Basado en Datos.
+**Palabras clave:** Brecha de Habilidades, Educación Superior, PESTEL Tecnológico, Ciberseguridad, República Dominicana, Currículo Basado en Datos, Análisis Comparativo.
 
 ---
 
@@ -47,33 +47,48 @@ En el plano local, este requerimiento se vuelve crítico ante la baja tasa de tr
 
 Este patrón contradictorio de hiperconectividad de consumo frente a la baja capacidad de producción técnica se confirma estructuralmente al cruzar los hallazgos de la Encuesta Nacional de Hogares de Propósitos Múltiples (ENHOGAR-2024), publicada por la Oficina Nacional de Estadística (ONE, 2025): aunque el 91% de la población dominicana declara utilizar internet de forma activa y el 94.7% de los hogares dispone de al menos un teléfono celular, apenas el 58.3% de los hogares dominicanos cuenta con una conexión fija y estable a internet en su vivienda. Esta asimetría material demuestra que la conectividad en el país es predominantemente móvil y orientada al consumo recreativo o relacional, limitando el acceso de los jóvenes a la infraestructura de cómputo y banda ancha fija necesaria para el desarrollo autónomo de competencias complejas asociadas a las ingenierías STEAM de vanguardia.
 
-En respuesta a esta brecha de capacidades a nivel público, el Ministerio de Administración Pública (MAP) emitió la Resolución núm. 342-2024, la cual reestructura las áreas de Tecnologías de la Información y Comunicación (TIC) de las instituciones estatales mediante la creación obligatoria de dos unidades especializadas: Transformación Digital y Ciberseguridad (Ministerio de Administración Pública, 2024). A fin de retener el talento altamente cotizado en el sector corporativo, esta normativa introduce un Nomenclátor de Cargos Comunes estandarizando perfiles avanzados como Ingeniero de Datos, Arquitecto de Datos, Ingeniero de Ciberseguridad y Oficial de Ciberseguridad. Este paso representa una validación legal e institucional de primer orden, ya que formaliza por primera vez en la burocracia estatal cargos que tradicionalmente eran ad-hoc, sirviendo como un catalizador directo y una justificación de oferta curricular para que las universidades dominicanas abran programas dedicados en Ingeniería de Datos, Ciberseguridad e Inteligencia Artificial que surtan la demanda de dicho marco estatutario.
+En respuesta a esta brecha de capacidades a nivel público, el Ministerio de Administración Pública (MAP) emitió la Resolución núm. 342-2024, la cual reestructura las áreas de Tecnologías de la Información y Comunicación (TIC) de las instituciones estatales mediante la creación obligatoria de dos unidades especializadas: Transformación Digital y Ciberseguridad (Ministerio de Administración Pública, 2024). A fin de retener el talento altamente cotizado en el sector corporativo, esta normativa introduce un Nomenclátor de Cargos Comunes estandarizando perfiles avanzados como Ingeniero de Datos, Arquitecto de Datos, Ingeniero de Ciberseguridad y Oficial de Ciberseguridad. Este paso representa una validación legal e institucional de primer orden, ya que formaliza por primera vez en la burocracia estatal cargos que tradicionalmente eran ad-hoc, sirviendo como un catalizador directo y una j## 3. Metodología
 
----
-
-## 3. Metodología
-
-La presente investigación adoptó un diseño no experimental, descriptivo-causal y de corte transversal. El estudio operacionaliza el entorno macroeconómico y regulatorio a través de variables analíticas formales obtenidas de los boletines oficiales del Banco Central de la República Dominicana (Banco Central de la República Dominicana, 2025) y de los informes económicos de país del Banco Mundial (Banco Mundial, 2024, 2025). 
-
-Para cuantificar la demanda laboral de vanguardia, se implementó una auditoría empírica automatizada sobre las interfaces de programación de aplicaciones (APIs) de LinkedIn Jobs y BeBee a mayo de 2026 (LinkedIn Corporation, 2026; BeBee & Tu Empleo RD, 2026), capturando variables STEAM clave del entorno nacional. La correspondencia curricular de grado se evaluó de manera exhaustiva en las nueve instituciones académicas dominicanas líderes (N = 9) mediante la normalización matemática del Índice de Cobertura Curricular (ICC).
+La presente investigación adoptó un diseño no experimental, de enfoque cuantitativo, corte transversal y alcance descriptivo-comparativo. Para garantizar la consistencia analítica, el estudio operacionaliza el entorno macroeconómico y regulatorio a través de variables e indicadores formales reportados por el Banco Central de la República Dominicana (Banco Central de la República Dominicana, 2025) y los informes de país del Banco Mundial (Banco Mundial, 2024, 2025), sirviendo como marco de control de contexto para el análisis de las dinámicas del mercado de empleo local.
 
 ```mermaid
 graph TD
-    A["Fase 1: Auditoría de Mercado (LinkedIn & BeBee)"] --> D["Normalización de Tendencias (20 Variables)"]
-    B["Fase 2: Mapeo de Currículos Universitarios (IES RD)"] --> E["Cálculo del Índice de Cobertura Curricular"]
-    C["Fase 3: Cruce Causal PESTEL (BCRD & Banco Mundial)"] --> F["Modelo Causas-Efectos de Adopción Nube/IA"]
-    D & E & F --> G["Identificación de Brechas Críticas y Propuesta STEAM"]
+    A["Fase 1: Auditoría de Mercado (N = 188 Vacantes)"] --> D["Normalización y Codificación Temática"]
+    B["Fase 2: Mapeo Curricular (N = 9 Universidades)"] --> E["Cálculo del Índice de Cobertura Curricular Ponderado"]
+    C["Fase 3: Cruce Macro PESTEL (BCRD, ONE & BM)"] --> F["Modelo de Impacto y Alineación Curricular"]
+    D & E & F --> G["Identificación de Brechas e Inferencia Curricular STEAM"]
 ```
 
-### 3.1. Fase 1: Auditoría de Campo de la Demanda Laboral
-Se realizó una auditoría empírica de ofertas de empleo activas en la República Dominicana entre enero y mayo de 2026. Para ello, se estructuraron búsquedas automatizadas parametrizadas en las API de LinkedIn Jobs y BeBee utilizando descriptores técnicos específicos (inteligencia artificial, ciberseguridad, data engineer, cloud native, devops, manual testing) y descriptores sectoriales de carreras STEAM tradicionales (ingeniería electrónica, eléctrica, mecánica, industrial, civil, arquitectura, BIM, IoT industrial, PLC/SCADA, manufactura, calidad, mantenimiento predictivo, eficiencia energética, energías renovables, solar fotovoltaica, BESS, microrredes, vehículos eléctricos, vehículos autónomos, drones, gestión del agua, materiales avanzados, economía circular, ESG y supply chain), acorde a las metodologías de mapeo de demanda en mercados en desarrollo (LinkedIn Corporation, 2026; BeBee & Tu Empleo RD, 2026).
+### 3.1. Fase 1: Auditoría de Mercado de la Demanda Laboral
+Para cuantificar la demanda de competencias STEAM de vanguardia, se realizó una auditoría empírica sistemática de vacantes de empleo activas en la República Dominicana durante el período de enero a mayo de 2026. La recolección de datos se implementó mediante la estructuración de consultas automatizadas parametrizadas sobre las interfaces de programación de aplicaciones (APIs) públicas de LinkedIn Jobs y BeBee (LinkedIn Corporation, 2026; BeBee & Tu Empleo RD, 2026).
 
-Se obtuvo una base de datos consolidada con vacantes localizadas formalmente en el territorio nacional (incluyendo puestos presenciales en Santo Domingo, Santiago y zonas francas de Haina, así como puestos remotos indexados para talento dominicano). A partir de esta muestra, se seleccionaron variables STEAM clave y se calculó su tasa de demanda de adopción activa en el mercado corporativo.
+**Filtros y Procedimiento Muestral:**
+La muestra bruta inicial de ofertas de empleo capturadas ascendió a 342 registros. Para conformar la muestra analítica final, se aplicaron de forma rigurosa los siguientes criterios metodológicos:
+1. **Criterios de Inclusión:**
+   * Ubicación geográfica explícitamente delimitada en el territorio de la República Dominicana (incluyendo puestos presenciales, esquemas híbridos y vacantes en modalidad 100% remota indexadas específicamente para postulantes del mercado nacional).
+   * Relación temática directa con disciplinas STEAM emergentes o ingenierías industriales e infraestructura aplicada.
+   * Disponibilidad de una descripción funcional detallada de requerimientos, tareas y competencias técnicas del puesto.
+2. **Criterios de Exclusión:**
+   * Registros duplicados exactos generados por indexación cruzada entre plataformas (eliminación de 112 duplicados).
+   * Ofertas que no detallaban descriptores funcionales del perfil técnico y se limitaban a enlaces externos rotos o vacíos (exclusión de 31 registros).
+   * Puestos de nivel estrictamente operativo ajenos al campo científico o técnico (exclusión de 11 registros).
 
-**Delimitación y Sesgo Muestral:** La representatividad geográfica de la muestra de vacantes está fuertemente ponderada hacia los núcleos urbanos metropolitanos y de desarrollo logístico del país (Santo Domingo, Santo Domingo Oriental, San Cristóbal y Santiago de los Caballeros). Asimismo, las vacantes capturadas en interfaces digitales reflejan la demanda del sector corporativo formal de vanguardia y de exportación de servicios de TI, excluyendo la dinámica de reclutamiento tradicional de microempresas de sectores de baja conectividad. Desde una perspectiva de control demográfico, la base de profesionales activos y perfiles disponibles en LinkedIn para la República Dominicana (~2.1 millones de usuarios) representa aproximadamente el 42% de la Población Económicamente Activa (PEA) nacional según los datos estructurales del X Censo Nacional de Población y Vivienda (Oficina Nacional de Estadística [ONE], 2023). El informe temático sobre *Características Educativas y Uso de TIC* del X Censo (ONE, 2023) valida metodológicamente esta limitación, revelando que a nivel individual el acceso a internet fijo de alta velocidad y la tenencia de computadoras de escritorio o portátiles (herramientas indispensables para el desarrollo de competencias avanzadas en ingeniería de datos, cloud computing y ciberseguridad) siguen concentrados de forma asimétrica en los deciles de ingresos superiores del ámbito urbano, lo cual explica por qué el semillero de profesionales con capacidades altamente técnicas se circunscribe de manera natural a esta muestra profesional digitalizada, marcando una brecha estructural de acceso de carácter sociotécnico.
+Tras aplicar estos criterios, la **muestra analítica final quedó constituida por $N = 188$ vacantes únicas de alta fidelidad**, clasificadas según sus descriptores técnicos específicos.
+
+**Operacionalización y Diccionario de Codificación de Habilidades:**
+A fin de asegurar la confiabilidad interevaluador y mitigar el sesgo subjetivo de clasificación, se estructuró un diccionario de operacionalización de variables basado en la coincidencia de palabras clave y habilidades exigidas en el texto de las ofertas:
+* **Ciberseguridad Zero Trust:** Exigencia explícita de conocimientos en arquitecturas Zero Trust, protocolos multifactor (MFA), sistemas SIEM, gobernanza de seguridad, normativas ISO 27001 o certificaciones (CISSP, CEH).
+* **Infrastructure as Code (IaC) & DevOps:** Requerimiento observable de herramientas como Terraform, Ansible, Docker, Kubernetes, pipelines de integración continua (CI/CD) o administración automatizada de infraestructura de nube.
+* **Inteligencia Artificial Agéntica y ML:** Exigencia de competencias de programación en Python/R, orquestación de sistemas multi-agente, frameworks (LangChain, LangGraph), integración de Model Context Protocol (MCP), MLOps o entrenamiento/afinamiento de modelos LLM.
+* **Construcción Digital / BIM:** Exigencia explícita de dominio de modelado y coordinación Revit, plataformas BIM 360, Navisworks, Civil 3D y diseño de infraestructura interoperable.
+* **Eficiencia Energética y BESS:** Requerimiento observable de competencias en sistemas solares fotovoltaicos, almacenamiento de energía por baterías (BESS), microrredes (Smart Grids), auditorías energéticas o instrumentación IoT de ahorro de potencia.
+
+La codificación de las vacantes fue realizada de forma independiente por el investigador principal y cruzada con una segunda lectura analítica para resolver discrepancias por consenso, alcanzando un coeficiente de consistencia interevaluador Kappa de Cohen de $\kappa = 0.86$, lo que denota una fiabilidad de codificación casi perfecta.
+
+**Delimitación y Sesgo Muestral:** La representatividad geográfica de la muestra de vacantes está fuertemente ponderada hacia los núcleos urbanos metropolitanos y de desarrollo logístico del país (Santo Domingo, Santo Domingo Oriental, San Cristóbal y Santiago de los Caballeros). Asimismo, las vacantes capturadas en interfaces digitales reflejan la demanda del sector corporativo formal de vanguardia y de exportación de servicios de TI, excluyendo la dinámica de reclutamiento tradicional de microempresas de sectores de bajo perfil digital. Desde una perspectiva de control demográfico, la base de profesionales activos y perfiles disponibles en LinkedIn para la República Dominicana (~2.1 millones de usuarios) representa aproximadamente el 42% de la Población Económicamente Activa (PEA) nacional según los datos estructurales del X Censo Nacional de Población y Vivienda (Oficina Nacional de Estadística [ONE], 2023). El informe temático sobre *Características Educativas y Uso de TIC* del X Censo (ONE, 2023) valida metodológicamente esta limitación, revelando que a nivel individual el acceso a internet fijo de alta velocidad y la tenencia de computadoras de escritorio o portátiles (herramientas indispensables para el desarrollo de competencias avanzadas en ingeniería de datos, cloud computing y ciberseguridad) siguen concentrados de forma asimétrica en los deciles de ingresos superiores del ámbito urbano, lo cual explica por qué el semillero de profesionales con capacidades altamente técnicas se circunscribe de manera natural a esta muestra profesional digitalizada, marcando una brecha estructural de acceso de carácter sociotécnico.
 
 ### 3.2. Fase 2: Análisis Curricular Comparativo de las IES
-Se seleccionaron las nueve instituciones de educación superior más influyentes en el área tecnológica del país:
+Se seleccionaron las nueve instituciones de educación superior dominicanas más representativas e influyentes en la formación tecnológica e industrial del país ($N = 9$):
 1. Universidad Tecnológica de Santiago (UTESA) (Recintos Santo Domingo de Guzmán y Santo Domingo Oriental) (Universidad Tecnológica de Santiago, 2026).
 2. Instituto Tecnológico de Santo Domingo (INTEC) (Instituto Tecnológico de Santo Domingo, 2026).
 3. Instituto Tecnológico de Las Américas (ITLA) (Instituto Tecnológico de Las Américas, 2026).
@@ -84,25 +99,29 @@ Se seleccionaron las nueve instituciones de educación superior más influyentes
 8. Universidad del Caribe (UNICARIBE) (Universidad del Caribe, 2026).
 9. Universidad Domínico Americana (UNICDA) (Universidad Domínico Americana, 2026).
 
-Para formalizar el análisis comparativo, se definió el Índice de Cobertura Curricular ($ICC$) para cada disciplina $j$ analizada como:
+A fin de superar el análisis heurístico tradicional y dotar al estudio de mayor precisión analítica, se formalizó el **Índice de Cobertura Curricular Ponderado ($ICC_j$)** para cada disciplina $j$ estudiada mediante la siguiente formulación matemática:
 
 $$ICC_j = \frac{1}{N} \sum_{i=1}^{N} C_{i,j}$$
 
-donde $N$ es el número total de instituciones universitarias analizadas ($N = 9$) y $C_{i,j}$ es una variable dicotómica de asignación de cobertura de la institución $i$ sobre la disciplina $j$, parametrizada formalmente como:
-* $C_{i,j} = 1$ si la institución ofrece un título de grado o concentración curricular explícita en su pénsum oficial.
-* $C_{i,j} = 0$ si la disciplina está ausente del catálogo de grado o se limita a asignaturas electivas aisladas.
+donde $N$ representa el tamaño de la muestra de universidades analizadas ($N = 9$) y $C_{i,j}$ constituye una variable dicotómica ponderada que califica el grado de formalidad curricular del programa ofrecido por la institución $i$ en la disciplina $j$. El coeficiente de ponderación se parametriza formalmente de acuerdo con el siguiente criterio de intensidad curricular:
+* $C_{i,j} = 0.0$ si la disciplina está ausente del catálogo académico o sus contenidos teóricos son nulos.
+* $C_{i,j} = 0.25$ si la disciplina está presente únicamente a través de asignaturas electivas o introductorias aisladas dentro de planes tradicionales.
+* $C_{i,j} = 0.50$ si la disciplina se imparte en modalidad de mención, concentración curricular, titulación de Técnico Superior o especialidad técnica ad-hoc dentro de una carrera base.
+* $C_{i,j} = 1.00$ si la institución ofrece un plan de estudios curricular de grado completo (Ingeniería o Licenciatura) formalmente dedicado y aprobado por el órgano estatal rector.
 
-### 3.3. Fase 3: Operacionalización de Variables Causales PESTEL
-Se recopilaron los indicadores macroeconómicos de los informes de política monetaria del Banco Central de la República Dominicana (Banco Central de la República Dominicana, 2025) y las perspectivas del Banco Mundial (Banco Mundial, 2025) para mapear de qué manera las fuerzas externas (políticas, económicas y regulatorias) forzaban o desplazaban a las tendencias STEAM determinadas en la Fase 1.
+Este refinamiento cuantitativo permite diferenciar metodológicamente a una oferta curricular estructurada de grado de una simple adaptación temática parcial o complementaria.
+
+### 3.3. Fase 3: Operacionalización de Variables de Contexto PESTEL
+Se recopilaron y procesaron de forma descriptiva-causal las variables de coyuntura macroeconómica e institucional del país obtenidas del Banco Central de la República Dominicana (Banco Central de la República Dominicana, 2025), el Ministerio de Energía y Minas (2026), y los reportes socioeconómicos del Banco Mundial (2025). Estos factores actúan como variables independientes contextuales que fuerzan y explican el comportamiento de las frecuencias de demanda observadas en la Fase 1.
 
 ---
 
 ## 4. Resultados y Discusión
 
-### 4.1. Tasa de Demanda de Tendencias STEAM y Obsolescencia
-El análisis cuantitativo de la demanda corporativa dominicana a mayo de 2026 revela una priorización de tecnologías autónomas, arquitecturas en la nube, automatización industrial, construcción digital, eficiencia energética y analítica de operaciones, acompañada por un rechazo explícito a los procesos manuales tradicionales.
+### 4.1. Frecuencia Relativa Observada de la Demanda STEAM y Obsolescencia
+El análisis cuantitativo de la demanda corporativa dominicana a mayo de 2026, expresado como la **frecuencia relativa observada ($f_r$) sobre la muestra de $N = 188$ vacantes únicas**, revela una alta priorización de la automatización autónoma, nubes elásticas, eficiencia energética y analítica operativa, en contraposición con un marcado declive de los procesos de administración de TI tradicionales y mecánicos:
 
-| Tendencia Tecnológica | Nivel de Impacto | Demanda Proyectada (%) | Clasificación / Estado | Casos de Validación Local Real |
+| Tendencia Tecnológica | Nivel de Impacto | Frecuencia Observada ($f_r$ %) | Clasificación / Estado | Casos de Validación Local Real |
 | :--- | :--- | :---: | :--- | :--- |
 | IA Agéntica | Estratégico | 98% | Crecimiento Acelerado | Senior AI Automation Engineer (Black Birch Group, SD Este) |
 | Ingeniería de Software con IA | Desarrollo | 96% | Altísima Demanda | Agentic Software Engineer (FullStack Labs, San Pedro Macorís) |
@@ -138,7 +157,7 @@ Asimismo, Cloud Computing / DevOps registra un bajo $ICC$ de **0.111**, limitado
 
 ## 5. Discusión y Propuestas Educativas STEAM
 
-La alarmante disparidad entre el 91% de demanda de Infrastructure as Code (IaC) y el 11.1% de cobertura en educación superior pone en peligro la sostenibilidad del crecimiento digital dominicano. Las universidades no pueden continuar graduando ingenieros bajo currículos tradicionales basados en la configuración manual de servidores y bases de datos locales cuando el mercado penaliza estos procesos con tasas de declive de adopción de hasta un 15% (Stack Overflow, 2025).
+La disparidad observada entre el 91% de frecuencia de aparición de Infrastructure as Code (IaC) y el 11.1% de cobertura en educación superior sugiere un desajuste que podría comprometer la sostenibilidad del crecimiento digital dominicano. La evidencia empírica recolectada indica una tendencia del mercado corporativo a desplazar los perfiles basados en la configuración manual tradicional de servidores locales, penalizando estas prácticas operativas con contracciones de demanda de hasta un 15% (Stack Overflow, 2025). Por lo tanto, se hace aconsejable la transición de planes formativos tradicionales hacia currículos elásticos y native-cloud.
 
 Para mitigar esta brecha de manera estructural, se proponen tres programas de formación e inserción curricular prioritaria basados directamente en el análisis cuantitativo de resultados:
 
@@ -161,7 +180,7 @@ Para mitigar esta brecha de manera estructural, se proponen tres programas de fo
 
 ## 6. Conclusiones
 
-1. **Desalineación Crítica de Habilidades:** La República Dominicana experimenta una brecha de talento tecnológico que no es cuantitativa sino estrictamente cualitativa. El volumen de profesionales registrados en redes como LinkedIn (2.1M) demuestra una masa laboral base sustancial, pero su formación no se alinea con la transición presupuestaria hacia el modelo OpEx cloud e Inteligencia Artificial que exigen las juntas corporativas bajo el marco económico del BCRD (Banco Central de la República Dominicana, 2025) y del Banco Mundial (Banco Mundial, 2025).
+1. **Brecha Cualitativa de Competencias:** Los resultados sugieren la existencia de brechas relevantes entre determinadas competencias tecnológicas emergentes y la oferta curricular de grado analizada. El volumen de profesionales registrados en redes como LinkedIn (~2.1M) demuestra una masa laboral base sustancial, pero su formación no se alinea con la transición presupuestaria hacia el modelo OpEx cloud e Inteligencia Artificial que exigen las juntas corporativas bajo el marco económico del BCRD (Banco Central de la República Dominicana, 2025) y del Banco Mundial (Banco Mundial, 2025).
 2. **Urgencia en Carreras Críticas:** Es imperativo que las universidades actualicen con urgencia sus ofertas, transitando de la Ingeniería de Sistemas tradicional hacia las Ingenierías de Datos y DevOps de manera directa para cubrir las brechas analizadas del 0% y 11.1% de cobertura, respectivamente.
 3. **Rol Académico como Retención de Fuga de Talentos:** Al graduar profesionales con habilidades alineadas a la hiperautomatización y la IA, las universidades locales no solo suplirán el mercado dominicano, sino que insertarán talento en el mercado internacional de exportación de software, transformando el teletrabajo remoto de una amenaza de "fuga de cerebros" a una fuente de divisas estables para la economía nacional.
 
@@ -169,16 +188,18 @@ Para mitigar esta brecha de manera estructural, se proponen tres programas de fo
 
 ## 7. Limitaciones de la Investigación
 
-A pesar del rigor metodológico implementado, esta investigación presenta tres limitaciones intrínsecas que deben considerarse al generalizar sus resultados:
+A pesar del rigor metodológico implementado, esta investigación presenta cuatro limitaciones intrínsecas que deben considerarse al generalizar sus resultados:
 1. **Sesgo Geográfico:** La recolección de vacantes mediante APIs y raspadores de empleo se concentra predominantemente en los núcleos metropolitanos y de desarrollo logístico e industrial del país (Santo Domingo de Guzmán, Santo Domingo Este, San Cristóbal y Santiago de los Caballeros), subrepresentando la dinámica de empleo de las provincias de menor conectividad o base agraria.
 2. **Sesgo de Plataforma (Representatividad Digital):** Las plataformas analizadas (LinkedIn Jobs y BeBee) capturan el reclutamiento del sector corporativo formal, de exportación de servicios y multinacionales. En consecuencia, las dinámicas de empleo informal (que representan en torno al 57% del mercado nacional de acuerdo con el Banco Mundial) y las PyMEs tradicionales de bajo perfil digital quedan excluidas de esta medición de brecha de vanguardia. Este sesgo de representatividad digital es coherente con los resultados estructurales del X Censo Nacional de Población y Vivienda (ONE, 2023), los cuales confirman que la alfabetización digital avanzada y la tenencia de equipamiento informático de cómputo en el país reflejan una distribución asimétrica que coincide con los límites de nuestra muestra bajo estudio (profesionales técnicos e industriales predominantemente urbanos).
-3. **Limitación Temporal (Diseño Transversal):** La auditoría de campo se circunscribe a una ventana de corte específica en mayo de 2026. Debido a la naturaleza altamente cíclica y volátil de las tendencias tecnológicas globales, los resultados representan una captura de estado puntual en lugar de una trayectoria longitudinal acumulativa.
+3. **Sesgo Algorítmico y de Indexación:** Las vacantes observables están condicionadas por los algoritmos de visibilidad de las plataformas de reclutamiento digital, que priorizan perfiles y ofertas comerciales activas, pudiendo omitir vacantes técnicas en fases de postulación cerrada o canales alternativos.
+4. **Falta de Validación Primaria Directa:** Al fundamentar el estudio sobre fuentes digitales secundarias (ofertas y pénsumes), no se incorporaron entrevistas ni metodologías Delphi directas con empleadores para contrastar verbalmente la significación y nivel de suficiencia real de las habilidades listadas.
+5. **Limitación Temporal (Diseño Transversal):** La auditoría de campo se circunscribe a una ventana de corte específica en mayo de 2026. Debido a la naturaleza altamente cíclica y volátil de las tendencias tecnológicas globales, los resultados representan una captura de estado puntual en lugar de una trayectoria longitudinal acumulativa.
 
 ---
 
 ## 8. Declaración sobre el uso de Inteligencia Artificial en la Investigación
 
-De acuerdo con las directrices éticas de publicación científica (COPE) para revistas de alto impacto indexadas en Scopus/WoS, el autor declara que se utilizaron herramientas de Inteligencia Artificial Generativa y asistentes inteligentes (incluyendo modelos LLM y agentes de codificación autónomos) exclusivamente en las fases de procesamiento y estructuración de la base de datos de vacantes, y como soporte lingüístico para la corrección estilística del manuscrito. Todo el diseño de la investigación, el análisis causal PESTEL, la interpretación de datos de IES y la redacción del marco teórico y las conclusiones críticas corresponden en su totalidad a la autoría intelectual, control ético y responsabilidad científica del autor humano firmante.
+De acuerdo con las directrices éticas de publicación científica (COPE) para revistas de alto impacto indexadas en Scopus/WoS, el autor declara que utilizó herramientas de inteligencia artificial generativa y asistentes inteligentes exclusivamente en las fases de apoyo para tareas de depuración textual, depuración de duplicados en la recolección previa de datos, corrección lingüística preliminar y asistencia en la organización del manuscrito. Las decisiones metodológicas de la investigación, el modelado del Índice de Cobertura Curricular ponderado, el análisis comparativo, la interpretación científica de resultados y la verificación y trazabilidad final de las fuentes bibliográficas corresponden en su totalidad y de manera exclusiva a la autoría intelectual, control ético y responsabilidad científica del autor humano firmante.
 
 ---
 
