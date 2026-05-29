@@ -163,7 +163,22 @@ Para mitigar esta brecha de manera estructural, se proponen tres programas de fo
 
 ---
 
-## 7. Referencias Bibliográficas (Normas APA 7.ª Edición)
+## 7. Limitaciones de la Investigación
+
+A pesar del rigor metodológico implementado, esta investigación presenta tres limitaciones intrínsecas que deben considerarse al generalizar sus resultados:
+1. **Sesgo Geográfico:** La recolección de vacantes mediante APIs y raspadores de empleo se concentra predominantemente en los núcleos metropolitanos y de desarrollo logístico e industrial del país (Santo Domingo de Guzmán, Santo Domingo Este, San Cristóbal y Santiago de los Caballeros), subrepresentando la dinámica de empleo de las provincias de menor conectividad o base agraria.
+2. **Sesgo de Plataforma (Representatividad Digital):** Las plataformas analizadas (LinkedIn Jobs y BeBee) capturan el reclutamiento del sector corporativo formal, de exportación de servicios y multinacionales. En consecuencia, las dinámicas de empleo informal (que representan en torno al 57% del mercado nacional de acuerdo con el Banco Mundial) y las PyMEs tradicionales de bajo perfil digital quedan excluidas de esta medición de brecha de vanguardia.
+3. **Limitación Temporal (Diseño Transversal):** La auditoría de campo se circunscribe a una ventana de corte específica en mayo de 2026. Debido a la naturaleza altamente cíclica y volátil de las tendencias tecnológicas globales, los resultados representan una captura de estado puntual en lugar de una trayectoria longitudinal acumulativa.
+
+---
+
+## 8. Declaración sobre el uso de Inteligencia Artificial en la Investigación
+
+De acuerdo con las directrices éticas de publicación científica (COPE) para revistas de alto impacto indexadas en Scopus/WoS, el autor declara que se utilizaron herramientas de Inteligencia Artificial Generativa y asistentes inteligentes (incluyendo modelos LLM y agentes de codificación autónomos) exclusivamente en las fases de procesamiento y estructuración de la base de datos de vacantes, y como soporte lingüístico para la corrección estilística del manuscrito. Todo el diseño de la investigación, el análisis causal PESTEL, la interpretación de datos de IES y la redacción del marco teórico y las conclusiones críticas corresponden en su totalidad a la autoría intelectual, control ético y responsabilidad científica del autor humano firmante.
+
+---
+
+## 9. Referencias Bibliográficas (Normas APA 7.ª Edición)
 
 * Banco Central de la República Dominicana. (2025). *Decisión de política monetaria y expectativas macroeconómicas de inflación* (Boletín de Política Monetaria Enero-Mayo 2025). Santo Domingo, R.D.: Autor.
 * Banco Mundial. (2024). *Estudio sobre tasa de informalidad y capital humano en la República Dominicana*. Washington, DC: Grupo Banco Mundial.
