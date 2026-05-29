@@ -144,7 +144,7 @@ La Tabla 2 presenta el Índice de Cobertura Curricular ($ICC$) ponderado, asigna
 | Carrera / Disciplina Tecnológica | UTESA (SD / SDO) | INTEC | ITLA | UASD | PUCMM | O&M | UAPA | UNICARIBE | UNICDA | Índice de Cobertura ($ICC$) | Urgencia de Brecha |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | Ing. en Ciberseguridad | 0.00 | 1.00 | 0.50 | 0.00 | 1.00 | 0.00 | 0.00 | 1.00 | 1.00 | **50.0%** | Media (Cobertura parcial) |
-| Ing. en IA y Ciencia de Datos | 0.00 | 0.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 1.00 | **38.9%** | Alta (Requiere adopción por INTEC y UTESA) |
+| Ing. en IA y Ciencia de Datos | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 1.00 | **50.0%** | Media-Alta (Requiere adopción por UTESA) |
 | Tecnología Cloud / DevOps | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | CRÍTICA (Ausente a nivel de grado) |
 | Ing. de Sistemas / Informática | 1.00 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | **94.4%** | Baja (Programa tradicional cubierto) |
 | Tecn. Ingeniería de Datos | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **0%** | CRÍTICA (Desalineación Total) |
@@ -253,7 +253,7 @@ La siguiente tabla presenta el registro formal de las fuentes curriculares consu
 | Institución (IES) | Programa / Disciplina Mapeada | URL Oficial de Referencia (Portal o Pénsum) | Fecha de Consulta |
 | :--- | :--- | :--- | :--- |
 | UTESA | Ing. en Sistemas Computacionales, Ing. Mecánica, Eléctrica, Electrónica, Industrial | https://www.utesa.edu/ | Mayo 2026 |
-| INTEC | Ing. Ciberseguridad, Ing. en Sistemas, Ing. de Software, Ing. Mecatrónica | https://www.intec.edu.do/ | Mayo 2026 |
+| INTEC | Ing. Ciberseguridad, Ing. en Sistemas, Ing. de Software, Lic. en Ciencias de Datos, Ing. Mecatrónica | https://www.intec.edu.do/ | Mayo 2026 |
 | ITLA | Tec. Ciberseguridad, Tec. Ciencia de Datos, Tec. Desarrollo | https://itla.edu.do/ | Mayo 2026 |
 | UASD | Ing. Sistemas, Lic. Ciencia de Datos | https://uasd.edu.do/ | Mayo 2026 |
 | PUCMM | Ing. Computación e Inteligencia Artificial, Ciberseguridad | https://www.pucmm.edu.do/ | Mayo 2026 |
@@ -270,6 +270,9 @@ Para contextualizar la persistencia histórica de la brecha de talento en la Rep
 
 Esta herramienta interactiva constató que el 42.5% de las empresas formales del país ya experimentaba serias dificultades para cubrir posiciones técnicas debido a la falta de competencias en los postulantes. Los hallazgos presentados en el presente artículo (2025-2026) confirman que esta asimetría no solo se ha mantenido, sino que se ha trasladado hacia competencias tecnológicas de mayor complejidad (como Cloud Computing e Inteligencia Artificial Agéntica).
 
-![Captura del tablero interactivo de resultados de ENDHACE 2020.](URL_DE_LA_IMAGEN_DEL_DASHBOARD_AQUI)
+<div align="center">
+  <img src="dashboard_monitoreo_brechas.png" alt="Captura del Dashboard Interactivo en PowerBI" width="800"/>
+  <p><em>Figura B1: Interfaz principal del Dashboard de Monitoreo de Brechas de Talento.</em></p>
+</div>
 
 *Nota: Puede consultar la fuente de datos interactiva original a través de la Oficina Nacional de Estadística (ONE).*
