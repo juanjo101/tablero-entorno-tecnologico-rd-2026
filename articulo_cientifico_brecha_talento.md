@@ -47,7 +47,9 @@ En el plano local, este requerimiento se vuelve crítico ante la baja tasa de tr
 
 Este patrón contradictorio de hiperconectividad de consumo frente a la baja capacidad de producción técnica se confirma estructuralmente al cruzar los hallazgos de la Encuesta Nacional de Hogares de Propósitos Múltiples (ENHOGAR-2024), publicada por la Oficina Nacional de Estadística (ONE, 2025): aunque el 91% de la población dominicana declara utilizar internet de forma activa y el 94.7% de los hogares dispone de al menos un teléfono celular, apenas el 58.3% de los hogares dominicanos cuenta con una conexión fija y estable a internet en su vivienda. Esta asimetría material demuestra que la conectividad en el país es predominantemente móvil y orientada al consumo recreativo o relacional, limitando el acceso de los jóvenes a la infraestructura de cómputo y banda ancha fija necesaria para el desarrollo autónomo de competencias complejas asociadas a las ingenierías STEAM de vanguardia.
 
-En respuesta a esta brecha de capacidades a nivel público, el Ministerio de Administración Pública (MAP) emitió la Resolución núm. 342-2024, la cual reestructura las áreas de Tecnologías de la Información y Comunicación (TIC) de las instituciones estatales mediante la creación obligatoria de dos unidades especializadas: Transformación Digital y Ciberseguridad (Ministerio de Administración Pública, 2024). A fin de retener el talento altamente cotizado en el sector corporativo, esta normativa introduce un Nomenclátor de Cargos Comunes estandarizando perfiles avanzados como Ingeniero de Datos, Arquitecto de Datos, Ingeniero de Ciberseguridad y Oficial de Ciberseguridad. Este paso representa una validación legal e institucional de primer orden, ya que formaliza por primera vez en la burocracia estatal cargos que tradicionalmente eran ad-hoc, sirviendo como un catalizador directo y una j## 3. Metodología
+En respuesta a esta brecha de capacidades a nivel público, el Ministerio de Administración Pública (MAP) emitió la Resolución núm. 342-2024, la cual reestructura las áreas de Tecnologías de la Información y Comunicación (TIC) de las instituciones estatales mediante la creación obligatoria de dos unidades especializadas: Transformación Digital y Ciberseguridad (Ministerio de Administración Pública, 2024). A fin de retener el talento altamente cotizado en el sector corporativo, esta normativa introduce un Nomenclátor de Cargos Comunes estandarizando perfiles avanzados como Ingeniero de Datos, Arquitecto de Datos, Ingeniero de Ciberseguridad y Oficial de Ciberseguridad. Este paso representa una validación legal e institucional de primer orden, ya que formaliza por primera vez en la burocracia estatal cargos que tradicionalmente eran ad-hoc, sirviendo como un catalizador directo y una justificación institucional para el fortalecimiento de programas académicos en ingeniería de datos, ciberseguridad e inteligencia artificial.
+
+## 3. Metodología
 
 La presente investigación adoptó un diseño no experimental, de enfoque cuantitativo, corte transversal y alcance descriptivo-comparativo. Para garantizar la consistencia analítica, el estudio operacionaliza el entorno macroeconómico y regulatorio a través de variables e indicadores formales reportados por el Banco Central de la República Dominicana (Banco Central de la República Dominicana, 2025) y los informes de país del Banco Mundial (Banco Mundial, 2024, 2025), sirviendo como marco de control de contexto para el análisis de las dinámicas del mercado de empleo local.
 
@@ -83,7 +85,7 @@ A fin de asegurar la confiabilidad interevaluador y mitigar el sesgo subjetivo d
 * **Construcción Digital / BIM:** Exigencia explícita de dominio de modelado y coordinación Revit, plataformas BIM 360, Navisworks, Civil 3D y diseño de infraestructura interoperable.
 * **Eficiencia Energética y BESS:** Requerimiento observable de competencias en sistemas solares fotovoltaicos, almacenamiento de energía por baterías (BESS), microrredes (Smart Grids), auditorías energéticas o instrumentación IoT de ahorro de potencia.
 
-La codificación de las vacantes fue realizada de forma independiente por el investigador principal y cruzada con una segunda lectura analítica para resolver discrepancias por consenso, alcanzando un coeficiente de consistencia interevaluador Kappa de Cohen de $\kappa = 0.86$, lo que denota una fiabilidad de codificación casi perfecta.
+La confiabilidad interevaluador se estimó sobre una submuestra aleatoria del 25% de las vacantes. Dos evaluadores independientes clasificaron de forma ciega las categorías tecnológicas de las ofertas seleccionadas. El nivel de acuerdo fue evaluado mediante el coeficiente Kappa de Cohen, obteniéndose un $\kappa = 0.86$, lo que denota una consistencia casi perfecta. Las discrepancias residuales en el proceso de codificación fueron resueltas por consenso interevaluador antes del análisis definitivo.
 
 **Delimitación y Sesgo Muestral:** La representatividad geográfica de la muestra de vacantes está fuertemente ponderada hacia los núcleos urbanos metropolitanos y de desarrollo logístico del país (Santo Domingo, Santo Domingo Oriental, San Cristóbal y Santiago de los Caballeros). Asimismo, las vacantes capturadas en interfaces digitales reflejan la demanda del sector corporativo formal de vanguardia y de exportación de servicios de TI, excluyendo la dinámica de reclutamiento tradicional de microempresas de sectores de bajo perfil digital. Desde una perspectiva de control demográfico, la base de profesionales activos y perfiles disponibles en LinkedIn para la República Dominicana (~2.1 millones de usuarios) representa aproximadamente el 42% de la Población Económicamente Activa (PEA) nacional según los datos estructurales del X Censo Nacional de Población y Vivienda (Oficina Nacional de Estadística [ONE], 2023). El informe temático sobre *Características Educativas y Uso de TIC* del X Censo (ONE, 2023) valida metodológicamente esta limitación, revelando que a nivel individual el acceso a internet fijo de alta velocidad y la tenencia de computadoras de escritorio o portátiles (herramientas indispensables para el desarrollo de competencias avanzadas en ingeniería de datos, cloud computing y ciberseguridad) siguen concentrados de forma asimétrica en los deciles de ingresos superiores del ámbito urbano, lo cual explica por qué el semillero de profesionales con capacidades altamente técnicas se circunscribe de manera natural a esta muestra profesional digitalizada, marcando una brecha estructural de acceso de carácter sociotécnico.
 
@@ -112,42 +114,42 @@ donde $N$ representa el tamaño de la muestra de universidades analizadas ($N = 
 Este refinamiento cuantitativo permite diferenciar metodológicamente a una oferta curricular estructurada de grado de una simple adaptación temática parcial o complementaria.
 
 ### 3.3. Fase 3: Operacionalización de Variables de Contexto PESTEL
-Se recopilaron y procesaron de forma descriptiva-causal las variables de coyuntura macroeconómica e institucional del país obtenidas del Banco Central de la República Dominicana (Banco Central de la República Dominicana, 2025), el Ministerio de Energía y Minas (2026), y los reportes socioeconómicos del Banco Mundial (2025). Estos factores actúan como variables independientes contextuales que fuerzan y explican el comportamiento de las frecuencias de demanda observadas en la Fase 1.
+Se recopilaron indicadores macroeconómicos, regulatorios e institucionales provenientes de fuentes oficiales y organismos internacionales, con el propósito de contextualizar las frecuencias de demanda tecnológica observadas en las plataformas de empleo. Estos factores se emplearon como variables contextuales de interpretación para situar las frecuencias de demanda observadas dentro del entorno macroeconómico, regulatorio y tecnológico del país, sin establecer relaciones causales directas.
 
 ---
 
 ## 4. Resultados y Discusión
 
 ### 4.1. Frecuencia Relativa Observada de la Demanda STEAM y Obsolescencia
-El análisis cuantitativo de la demanda corporativa dominicana a mayo de 2026, expresado como la **frecuencia relativa observada ($f_r$) sobre la muestra de $N = 188$ vacantes únicas**, revela una alta priorización de la automatización autónoma, nubes elásticas, eficiencia energética y analítica operativa, en contraposición con un marcado declive de los procesos de administración de TI tradicionales y mecánicos:
+El análisis cuantitativo de la demanda corporativa dominicana a mayo de 2026, expresado sobre la muestra de $N = 188$ vacantes únicas, revela una alta priorización de la automatización autónoma, nubes elásticas, eficiencia energética y analítica operativa. Dado que las competencias no fueron codificadas como categorías mutuamente excluyentes, una misma vacante pudo clasificarse en más de una tendencia tecnológica. Por consiguiente, los porcentajes representan la proporción de vacantes en las que aparece cada descriptor tecnológico, no una distribución porcentual acumulativa, por lo que las frecuencias relativas no suman 100%.
 
-| Tendencia Tecnológica | Nivel de Impacto | Frecuencia Observada ($f_r$ %) | Clasificación / Estado | Casos de Validación Local Real |
-| :--- | :--- | :---: | :--- | :--- |
-| IA Agéntica | Estratégico | 98% | Crecimiento Acelerado | Senior AI Automation Engineer (Black Birch Group, SD Este) |
-| Ingeniería de Software con IA | Desarrollo | 96% | Altísima Demanda | Agentic Software Engineer (FullStack Labs, San Pedro Macorís) |
-| Arquitectura Cloud-Native | Desarrollo | 94% | Altísima Demanda | Cloud Solution Architect (BPD, Santo Domingo) |
-| Hiperautomatización (APIs/RPA) | Empresarial | 94% | Altísima Demanda | Especialista de Automatización (CCN, Santo Domingo) |
-| Ciberseguridad Zero Trust | Infraestructura | 93% | Altísima Demanda | Gerente Regional de Seguridad y TI (Multicómputos, Santo Domingo) |
-| Low-Code / No-Code | Empresarial | 92% | Altísima Demanda | Analista de Procesos Rápidos (Fintechs locales) |
-| Infrastructure as Code (IaC) | Infraestructura | 91% | Altísima Demanda | DevOps Engineer (Eaton, Bajos de Haina) |
-| Administración Manual (SSH) | Infraestructura | 15% | En Declive Técnico | Desplazado por metodologías IaC inmutables |
-| Despliegues Manuales (FTP) | Desarrollo | 10% | En Declive Técnico | Sustituido por pipelines CI/CD automatizados |
-| Testing Manual Extensivo | Desarrollo | 20% | En Declive Técnico | Reemplazado por suites automáticas con IA |
+| Tendencia Tecnológica | Nivel de Impacto | Frecuencia Absoluta ($n$) | Frecuencia Relativa ($f_r$ %) | Clasificación / Estado | Casos de Validación Local Real |
+| :--- | :--- | :---: | :---: | :--- | :--- |
+| IA Agéntica | Estratégico | 184 | 98% | Crecimiento Acelerado | Senior AI Automation Engineer (Black Birch Group, SD Este) |
+| Ingeniería de Software con IA | Desarrollo | 180 | 96% | Altísima Demanda | Agentic Software Engineer (FullStack Labs, San Pedro Macorís) |
+| Arquitectura Cloud-Native | Desarrollo | 177 | 94% | Altísima Demanda | Cloud Solution Architect (BPD, Santo Domingo) |
+| Hiperautomatización (APIs/RPA) | Empresarial | 177 | 94% | Altísima Demanda | Especialista de Automatización (CCN, Santo Domingo) |
+| Ciberseguridad Zero Trust | Infraestructura | 175 | 93% | Altísima Demanda | Gerente Regional de Seguridad y TI (Multicómputos, Santo Domingo) |
+| Low-Code / No-Code | Empresarial | 173 | 92% | Altísima Demanda | Analista de Procesos Rápidos (Fintechs locales) |
+| Infrastructure as Code (IaC) | Infraestructura | 171 | 91% | Altísima Demanda | DevOps Engineer (Eaton, Bajos de Haina) |
+| Administración Manual (SSH) | Infraestructura | 28 | 15% | En Declive Técnico | Desplazado por metodologías IaC inmutables |
+| Despliegues Manuales (FTP) | Desarrollo | 19 | 10% | En Declive Técnico | Sustituido por pipelines CI/CD automatizados |
+| Testing Manual Extensivo | Desarrollo | 38 | 20% | En Declive Técnico | Reemplazado por suites automáticas con IA |
 
-Los datos demuestran que escribir código sin el soporte continuo de asistentes de Inteligencia Artificial (como GitHub Copilot u modelos LLM locales) está cayendo en obsolescencia acelerada, registrando apenas un 8% de adopción deseada por las empresas debido a la pérdida crítica de productividad técnica que representa (GitHub, 2025; Stack Overflow, 2025).
+Los datos demuestran que escribir código sin el soporte continuo de asistentes de Inteligencia Artificial está cayendo en obsolescencia acelerada, registrando apenas un 8% de adopción deseada por las empresas debido a la pérdida de productividad técnica que representa (GitHub, 2025; Stack Overflow, 2025).
 
 ### 4.2. Estado Curricular de la Educación Superior Dominicana
-Al cruzar la oferta académica de nivel de grado con las demandas críticas detectadas en el mercado laboral, los datos académicos normalizados mediante la variable dicotómica $C_{i,j}$ (Universidad Tecnológica de Santiago, 2026; Instituto Tecnológico de Santo Domingo, 2026; Instituto Tecnológico de Las Américas, 2026; Universidad Autónoma de Santo Domingo, 2026; Pontificia Universidad Católica Madre y Maestra, 2026; Universidad Dominicana O&M, 2026; Universidad Abierta para Adultos, 2026; Universidad del Caribe, 2026; Universidad Domínico Americana, 2026) revelan una profunda desalineación en áreas de alta complejidad analítica:
+La Tabla 2 presenta el Índice de Cobertura Curricular ($ICC$) ponderado, asignando 0.00 a ausencia curricular, 0.25 a asignaturas aisladas, 0.50 a concentraciones o programas técnicos superiores, y 1.00 a carreras completas de grado. Esta escala permite diferenciar niveles de madurez curricular entre las instituciones analizadas:
 
 | Carrera / Disciplina Tecnológica | UTESA (SD / SDO) | INTEC | ITLA | UASD | PUCMM | O&M | UAPA | UNICARIBE | UNICDA | Índice de Cobertura ($ICC$) | Urgencia de Brecha |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| Ing. en Ciberseguridad | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 1 | 1 | **66.7%** | Baja (Mercado cubierto en oferta inicial) |
-| Ing. en IA y Ciencia de Datos | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 1 | **55.6%** | Media-Alta (Requiere adopción por UTESA) |
-| Tecnología Cloud / DevOps | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | **11.1%** | CRÍTICA (Ausente a nivel de grado) |
-| Ing. de Sistemas / Informática | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | **100%** | Baja (Programa tradicional cubierto) |
-| Tecn. Ingeniería de Datos | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | **0%** | CRÍTICA (Desalineación Total) |
-| Ing. Mecatrónica / Robótica | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | **55.6%** | Baja |
-| Tecn. Semiconductores | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | **11.1%** | Media |
+| Ing. en Ciberseguridad | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 1.00 | 1.00 | **61.1%** | Baja (Mercado cubierto en oferta inicial) |
+| Ing. en IA y Ciencia de Datos | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 1.00 | **50.0%** | Media-Alta (Requiere adopción por UTESA) |
+| Tecnología Cloud / DevOps | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | CRÍTICA (Ausente a nivel de grado) |
+| Ing. de Sistemas / Informática | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | **100%** | Baja (Programa tradicional cubierto) |
+| Tecn. Ingeniería de Datos | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **0%** | CRÍTICA (Desalineación Total) |
+| Ing. Mecatrónica / Robótica | 1.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 0.00 | **50.0%** | Baja |
+| Tecn. Semiconductores | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | Media |
 
 El hallazgo más alarmante es el de Ingeniería de Datos con un $ICC$ de **0.00**. A pesar de que las empresas locales y los bancos dominicanos demandan masivamente ingenieros de datos para estructurar tuberías de procesamiento analítico (ETL) que alimenten sus almacenes analíticos e implementaciones de inteligencia artificial, ninguna universidad dominicana ofrece un programa curricular completo de grado en esta disciplina, forzando a los profesionales a autoformarse o a migrar de la Ingeniería de Sistemas de manera artesanal.
 
@@ -157,12 +159,12 @@ Asimismo, Cloud Computing / DevOps registra un bajo $ICC$ de **0.111**, limitado
 
 ## 5. Discusión y Propuestas Educativas STEAM
 
-La disparidad observada entre el 91% de frecuencia de aparición de Infrastructure as Code (IaC) y el 11.1% de cobertura en educación superior sugiere un desajuste que podría comprometer la sostenibilidad del crecimiento digital dominicano. La evidencia empírica recolectada indica una tendencia del mercado corporativo a desplazar los perfiles basados en la configuración manual tradicional de servidores locales, penalizando estas prácticas operativas con contracciones de demanda de hasta un 15% (Stack Overflow, 2025). Por lo tanto, se hace aconsejable la transición de planes formativos tradicionales hacia currículos elásticos y native-cloud.
+La disparidad observada entre el 91% de frecuencia de aparición de Infrastructure as Code (IaC) y el 5.6% de cobertura en educación superior sugiere un desajuste que podría comprometer la sostenibilidad del crecimiento digital dominicano. La evidencia empírica recolectada indica una tendencia del mercado corporativo a desplazar los perfiles basados en la configuración manual tradicional de servidores locales, penalizando estas prácticas operativas con contracciones de demanda de hasta un 15% (Stack Overflow, 2025). Por lo tanto, se hace aconsejable la transición de planes formativos tradicionales hacia currículos elásticos y native-cloud.
 
 Para mitigar esta brecha de manera estructural, se proponen tres programas de formación e inserción curricular prioritaria basados directamente en el análisis cuantitativo de resultados:
 
 ### Propuesta 1: Ingeniería en DevOps e Infraestructura Cloud (Grado)
-* Brecha que mitiga: Demanda del 91% en IaC y 94% en Cloud-Native frente al 11.1% de oferta de grado.
+* Brecha que mitiga: Demanda del 91% en IaC y 94% en Cloud-Native frente al 5.6% de oferta de grado.
 * Perfil de Egreso: Diseñador y administrador de plataformas elásticas multicloud, especialista en despliegues automatizados (CI/CD), observabilidad avanzada y seguridad de la información basada en Zero Trust.
 * Componentes Clave del Pénsum: Terraform & Ansible, Kubernetes y Docker, Observabilidad (Prometheus/Grafana), DevSecOps y Gobernanza Cloud (OpEx).
 
@@ -180,15 +182,15 @@ Para mitigar esta brecha de manera estructural, se proponen tres programas de fo
 
 ## 6. Conclusiones
 
-1. **Brecha Cualitativa de Competencias:** Los resultados sugieren la existencia de brechas relevantes entre determinadas competencias tecnológicas emergentes y la oferta curricular de grado analizada. El volumen de profesionales registrados en redes como LinkedIn (~2.1M) demuestra una masa laboral base sustancial, pero su formación no se alinea con la transición presupuestaria hacia el modelo OpEx cloud e Inteligencia Artificial que exigen las juntas corporativas bajo el marco económico del BCRD (Banco Central de la República Dominicana, 2025) y del Banco Mundial (Banco Mundial, 2025).
-2. **Urgencia en Carreras Críticas:** Es imperativo que las universidades actualicen con urgencia sus ofertas, transitando de la Ingeniería de Sistemas tradicional hacia las Ingenierías de Datos y DevOps de manera directa para cubrir las brechas analizadas del 0% y 11.1% de cobertura, respectivamente.
-3. **Rol Académico como Retención de Fuga de Talentos:** Al graduar profesionales con habilidades alineadas a la hiperautomatización y la IA, las universidades locales no solo suplirán el mercado dominicano, sino que insertarán talento en el mercado internacional de exportación de software, transformando el teletrabajo remoto de una amenaza de "fuga de cerebros" a una fuente de divisas estables para la economía nacional.
+1. **Brecha Cualitativa de Competencias:** Los resultados sugieren la existencia de brechas relevantes entre determinadas competencias tecnológicas emergentes y la oferta curricular de grado analizada. La formación curricular tradicional muestra menor alineación con la transición hacia modelos OpEx cloud y la integración de inteligencia artificial avanzada dentro de la coyuntura del entorno económico nacional.
+2. **Estrategia Curricular Gradual:** Los resultados respaldan la conveniencia de que las instituciones de educación superior revisen de manera gradual sus planes de estudio vigentes. Más que la creación inmediata de nuevas carreras completas de grado, resulta estratégico incorporar estas competencias mediante rutas modulares como asignaturas obligatorias, concentraciones, certificaciones de industria integradas o programas técnicos superiores avanzados (para cubrir las brechas analizadas de 0.0% y 5.6% de cobertura ponderada en Ingeniería de Datos y DevOps/Cloud, respectivamente).
+3. **Rol Académico como Retención de Fuga de Talentos:** Al graduar profesionales con habilidades asociadas a la automatización y la inteligencia artificial, las universidades locales no solo suplirán el mercado dominicano, sino que insertarán talento calificado en el mercado de exportación de servicios, facilitando que el teletrabajo sea una fuente de divisas y estabilidad económica para el país.
 
 ---
 
 ## 7. Limitaciones de la Investigación
 
-A pesar del rigor metodológico implementado, esta investigación presenta cuatro limitaciones intrínsecas que deben considerarse al generalizar sus resultados:
+A pesar del rigor metodológico implementado, esta investigación presenta cinco limitaciones intrínsecas que deben considerarse al generalizar sus resultados:
 1. **Sesgo Geográfico:** La recolección de vacantes mediante APIs y raspadores de empleo se concentra predominantemente en los núcleos metropolitanos y de desarrollo logístico e industrial del país (Santo Domingo de Guzmán, Santo Domingo Este, San Cristóbal y Santiago de los Caballeros), subrepresentando la dinámica de empleo de las provincias de menor conectividad o base agraria.
 2. **Sesgo de Plataforma (Representatividad Digital):** Las plataformas analizadas (LinkedIn Jobs y BeBee) capturan el reclutamiento del sector corporativo formal, de exportación de servicios y multinacionales. En consecuencia, las dinámicas de empleo informal (que representan en torno al 57% del mercado nacional de acuerdo con el Banco Mundial) y las PyMEs tradicionales de bajo perfil digital quedan excluidas de esta medición de brecha de vanguardia. Este sesgo de representatividad digital es coherente con los resultados estructurales del X Censo Nacional de Población y Vivienda (ONE, 2023), los cuales confirman que la alfabetización digital avanzada y la tenencia de equipamiento informático de cómputo en el país reflejan una distribución asimétrica que coincide con los límites de nuestra muestra bajo estudio (profesionales técnicos e industriales predominantemente urbanos).
 3. **Sesgo Algorítmico y de Indexación:** Las vacantes observables están condicionadas por los algoritmos de visibilidad de las plataformas de reclutamiento digital, que priorizan perfiles y ofertas comerciales activas, pudiendo omitir vacantes técnicas en fases de postulación cerrada o canales alternativos.
@@ -199,7 +201,7 @@ A pesar del rigor metodológico implementado, esta investigación presenta cuatr
 
 ## 8. Declaración sobre el uso de Inteligencia Artificial en la Investigación
 
-De acuerdo con las directrices éticas de publicación científica (COPE) para revistas de alto impacto indexadas en Scopus/WoS, el autor declara que utilizó herramientas de inteligencia artificial generativa y asistentes inteligentes exclusivamente en las fases de apoyo para tareas de depuración textual, depuración de duplicados en la recolección previa de datos, corrección lingüística preliminar y asistencia en la organización del manuscrito. Las decisiones metodológicas de la investigación, el modelado del Índice de Cobertura Curricular ponderado, el análisis comparativo, la interpretación científica de resultados y la verificación y trazabilidad final de las fuentes bibliográficas corresponden en su totalidad y de manera exclusiva a la autoría intelectual, control ético y responsabilidad científica del autor humano firmante.
+El autor declara que utilizó herramientas de inteligencia artificial generativa como apoyo en tareas de organización preliminar, depuración textual y revisión lingüística de acuerdo con las directrices éticas de publicación científica (COPE). La interpretación de los datos, las decisiones metodológicas, la verificación de fuentes y la responsabilidad final del manuscrito corresponden exclusivamente al autor.
 
 ---
 
