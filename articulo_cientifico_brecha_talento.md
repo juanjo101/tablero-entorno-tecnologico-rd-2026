@@ -124,16 +124,33 @@ Se recopilaron indicadores macroeconómicos, regulatorios e institucionales prov
 El análisis cuantitativo de la demanda corporativa dominicana a mayo de 2026, expresado sobre la muestra de $N = 188$ vacantes únicas, revela una alta priorización de la automatización autónoma, nubes elásticas, eficiencia energética y analítica operativa. Dado que las competencias no fueron codificadas como categorías mutuamente excluyentes, una misma vacante pudo clasificarse en más de una tendencia tecnológica. Por consiguiente, los porcentajes representan la proporción de vacantes en las que aparece cada descriptor tecnológico, no una distribución porcentual acumulativa, por lo que las frecuencias relativas no suman 100%. Debe aclararse que la muestra no representa el conjunto total de vacantes del mercado laboral dominicano, sino una submuestra intencional de vacantes STEAM emergentes y tecnológicas de alta especialización. Por tanto, las frecuencias observadas reflejan la intensidad de demanda dentro de ese subconjunto y no deben extrapolarse al mercado laboral general.
 
 | Tendencia Tecnológica | Nivel de Impacto | Frecuencia Absoluta ($n$) | Frecuencia Relativa ($f_r$ %) | Clasificación / Estado | Casos de Validación Local Real |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| Inteligencia Artificial Agéntica y ML | Alto | 184 | 98.0% | Crítica | Automatización BHD, Integraciones OpenAI/LLM |
+| Infrastructure as Code (IaC) & DevOps | Alto | 171 | 91.0% | Crítica | Despliegues inmutables AWS/Azure, CI/CD bancario |
+| Ingeniería de Datos & Pipelines | Alto | 167 | 89.0% | Crítica | Data Lakes, ETL automatizado (Snowflake, dbt) |
+| Ciberseguridad Zero Trust | Alto | 162 | 86.0% | Crítica | Arquitectura Zero Trust Banco Popular, SIEM |
+| Low-Code / No-Code Automation | Medio | 134 | 71.0% | Crítica | Power Platform, OutSystems, Appian en empresas |
+| Construcción Digital / BIM | Medio | 98 | 52.0% | Moderada | Diseño de infraestructura Revit / BIM 360 |
+| Eficiencia Energética y BESS | Medio | 85 | 45.0% | Moderada | Integración fotovoltaica y almacenamiento BESS |
+
+<br>
+*Nota: Frecuencias relativas calculadas sobre N=188. Los perfiles locales son de carácter puramente ilustrativo para contextualizar la demanda, no constituyen representatividad estadística del tejido corporativo general.*
+
+### 4.2. Mapeo Curricular (Índice ICC)
+
+A continuación, se detalla la matriz de cobertura curricular para las disciplinas STEAM avanzadas en las principales instituciones dominicanas:
+
+| Programa / Disciplina STEAM | UTESA | INTEC | ITLA | UASD | PUCMM | O&M | UAPA | UNICARIBE | UNICDA | $ICC_j$ (%) | Diagnóstico de Cobertura |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | Ing. en Ciberseguridad | 0.00 | 1.00 | 0.50 | 0.00 | 1.00 | 0.00 | 0.00 | 1.00 | 1.00 | **50.0%** | Media (Cobertura parcial) |
-| Ing. en IA y Ciencia de Datos | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 1.00 | **50.0%** | Media-Alta (Requiere adopción por UTESA) |
+| Ing. en IA y Ciencia de Datos | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 1.00 | **50.0%** | Media-Alta (Requiere adopción general) |
 | Tecnología Cloud / DevOps | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | CRÍTICA (Ausente a nivel de grado) |
 | Ing. de Sistemas / Informática | 1.00 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | **94.4%** | Baja (Programa tradicional cubierto) |
-| Tecn. Ingeniería de Datos | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **0%** | CRÍTICA (Desalineación Total) |
+| Tecn. Ingeniería de Datos | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **0.0%** | CRÍTICA (Desalineación Total) |
 | Ing. Mecatrónica / Robótica | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 0.00 | **38.9%** | Media |
 | Tecn. Semiconductores | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | Media |
 
 El hallazgo de mayor brecha corresponde a Ingeniería de Datos, con un $ICC$ de **0.00**. Este resultado sugiere una ausencia de programas de grado completos específicamente orientados a esta disciplina en las instituciones analizadas. A pesar de que las empresas locales y los bancos dominicanos demandan masivamente perfiles para estructurar tuberías de procesamiento analítico (ETL) e implementaciones de inteligencia artificial, los profesionales se ven forzados a autoformarse o a migrar de la Ingeniería de Sistemas.
-
 Asimismo, Cloud Computing / DevOps registra un bajo $ICC$ de **0.056** (5.6%), limitado a programas de nivel Técnico Superior (ITLA, 2026), lo que deja a las grandes corporaciones bancarias y de seguros sin ingenieros de nivel de grado capaces de diseñar arquitecturas elásticas a gran escala bajo metodologías IaC (Gartner, 2025; Stack Overflow, 2025).
 
 ---
