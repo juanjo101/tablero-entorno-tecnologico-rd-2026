@@ -257,10 +257,17 @@ def aggregate_private_jobs(csv_path):
     groups = {}
     evidence_count = 0
     for row in rows:
-        role = row.get("type") or classify_role(row.get("title", ""))
-        text = " ".join(str(row.get(key, "")) for key in row.keys())
-        found = extract_salary_range(text)
-        if role and found and found["currency"] in ("DOP", "RD"):
+        role = row.get("category") or row.get("type") or classify_role(row.get("title", ""))
+        if row.get("salary_min") and row.get("salary_max"):
+            currency = str(row.get("currency") or "DOP").upper()
+            salary_min = parse_money(row.get("salary_min"))
+            salary_max = parse_money(row.get("salary_max"))
+            found = {"currency": currency, "min": salary_min, "max": salary_max}
+        else:
+            text = " ".join(str(row.get(key, "")) for key in row.keys())
+            found = extract_salary_range(text)
+
+        if role and found and found["currency"] in ("DOP", "RD") and found["min"] and found["max"]:
             monthly_midpoint = (found["min"] + found["max"]) / 2
             groups.setdefault(role, []).append(monthly_midpoint)
             evidence_count += 1

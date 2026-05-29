@@ -90,6 +90,7 @@ Fuentes privadas:
 - Vacantes con salario explicitamente publicado.
 - Bolsas de empleo locales con rangos visibles.
 - Encuestas salariales privadas cuando esten disponibles publicamente.
+- Computrabajo RD como primera fuente privada operativa, usando vacantes y paginas de categoria que muestran montos mensuales visibles.
 
 Unidad de analisis para sector publico:
 
@@ -111,6 +112,8 @@ Archivos generados:
 - `salary_public_sector_latest.csv`
 - `salary_private_jobs_latest.json`
 - `salary_private_jobs_latest.csv`
+- `salary_private_raw_latest.json`
+- `salary_private_raw_latest.csv`
 - `salary_reference_baseline.json`
 
 Interpretacion correcta:
