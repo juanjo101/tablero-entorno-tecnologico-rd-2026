@@ -1,6 +1,6 @@
 {
   "source": "Vacantes privadas con salario publicado",
-  "capturedAt": "2026-05-29T09:44:56",
+  "capturedAt": "2026-05-29T10:37:31",
   "method": "Extraccion de rangos salariales explicitamente publicados en texto de vacantes; se usa el punto medio del rango.",
   "matchedRows": 91,
   "results": [
