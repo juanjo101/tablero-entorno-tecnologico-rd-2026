@@ -147,7 +147,7 @@ A continuación, se detalla la matriz de cobertura curricular para las disciplin
 | Tecnología Cloud / DevOps | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | CRÍTICA (Ausente a nivel de grado) |
 | Ing. de Sistemas / Informática | 1.00 | 1.00 | 0.50 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | **94.4%** | Baja (Programa tradicional cubierto) |
 | Tecn. Ingeniería de Datos | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **0.0%** | CRÍTICA (Desalineación Total) |
-| Ing. Mecatrónica / Robótica | 0.00 | 1.00 | 0.50 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 0.00 | **38.9%** | Media |
+| Ing. Mecatrónica / Robótica | 0.00 | 1.00 | 0.50 | 0.00 | 1.00 | 0.00 | 0.00 | 0.00 | 0.00 | **27.8%** | Media-Baja |
 | Tecn. Semiconductores | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **5.6%** | Media |
 
 El hallazgo de mayor brecha corresponde a Ingeniería de Datos, con un $ICC$ de **0.00**. Este resultado sugiere una ausencia de programas de grado completos específicamente orientados a esta disciplina en las instituciones analizadas. A pesar de que las empresas locales y los bancos dominicanos demandan masivamente perfiles para estructurar tuberías de procesamiento analítico (ETL) e implementaciones de inteligencia artificial, los profesionales se ven forzados a autoformarse o a migrar de la Ingeniería de Sistemas.
