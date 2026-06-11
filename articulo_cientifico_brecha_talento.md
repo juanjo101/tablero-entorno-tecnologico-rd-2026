@@ -41,7 +41,7 @@ A nivel institucional, esta presión energética y de costos fijos se formaliza 
 ### 2.2. La Brecha de Habilidades y el Ecosistema Educativo STEAM
 La literatura internacional sobre el futuro del empleo postula que la automatización y la inteligencia artificial redefinirán drásticamente las tareas laborales. El World Economic Forum (2025) estima que el 66.3% de las empresas requerirán estrategias intensivas de reskilling y reentrenamiento interno en los próximos años para mantener su competitividad operativa frente a los modelos generativos. 
 
-En el plano local, este requerimiento se vuelve crítico ante la baja tasa de trabajadores dominicanos con habilidades digitales intensivas, estimada en apenas un 10% del total de la fuerza laboral calificada (Banco Mundial, 2025). Asimismo, el Programa de las Naciones Unidas para el Desarrollo (PNUD, 2025) señala que el 68.9% de los dominicanos con acceso a internet ya utiliza herramientas de Inteligencia Artificial de manera semanal. Esta rápida adopción informal de los usuarios contrasta severamente con la oferta de carreras estructuradas en las IES locales, donde áreas críticas como la Ciberseguridad enfrentan deficits regionales masivos de más de 329,000 profesionales en toda Latinoamérica (ISC², 2025).
+En el plano local, este requerimiento se vuelve crítico ante la baja tasa de trabajadores dominicanos con habilidades digitales intensivas, estimada en apenas un 10% del total de la fuerza laboral calificada (Banco Mundial, 2025). Asimismo, el Programa de las Naciones Unidas para el Desarrollo (PNUD, 2025) señala que el 68.9% de los dominicanos con acceso a internet ya utiliza herramientas de Inteligencia Artificial de manera semanal. Esta rápida adopción informal de los usuarios contrasta severamente con la oferta de carreras estructuradas en las IES locales, donde áreas críticas como la Ciberseguridad enfrentan déficits regionales masivos de más de 329,000 profesionales en toda Latinoamérica (ISC², 2025).
 
 En respuesta a esta brecha de capacidades a nivel público, el Ministerio de Administración Pública (MAP) emitió la Resolución núm. 342-2024, la cual reestructura las áreas de Tecnologías de la Información y Comunicación (TIC) de las instituciones estatales mediante la creación obligatoria de dos unidades especializadas: Transformación Digital y Ciberseguridad (Ministerio de Administración Pública, 2024). A fin de retener el talento altamente cotizado en el sector corporativo, esta normativa introduce un Nomenclátor de Cargos Comunes estandarizando perfiles avanzados como Ingeniero de Datos, Arquitecto de Datos, Ingeniero de Ciberseguridad y Oficial de Ciberseguridad. Este paso representa una validación legal e institucional de primer orden, ya que formaliza por primera vez en la burocracia estatal cargos que tradicionalmente eran ad-hoc, sirviendo como un catalizador directo y una justificación de oferta curricular para que las universidades dominicanas abran programas dedicados en Ingeniería de Datos, Ciberseguridad e Inteligencia Artificial que surtan la demanda de dicho marco estatutario.
 
@@ -107,7 +107,7 @@ El análisis cuantitativo de la demanda corporativa dominicana a mayo de 2026 re
 
 La frecuencia relativa fue calculada como $f_r = (n / 188) \times 100$, donde $n$ representa el número de vacantes que contenían el descriptor tecnológico correspondiente y 188 corresponde al total de vacantes únicas analizadas. Las categorías no fueron mutuamente excluyentes, por lo que una misma vacante pudo clasificarse en más de una tendencia tecnológica.
 
-| Tendencia Tecnológica | Nivel de Impacto | Demanda Proyectada (%) | Clasificación / Estado | Casos de Validación Local Real |
+| Tendencia Tecnológica | Nivel de Impacto | Frecuencia Observada (%) | Clasificación / Estado | Casos de Validación Local Real |
 | :--- | :--- | :---: | :--- | :--- |
 | IA Agéntica | Estratégico | 98% | Crecimiento Acelerado | Senior AI Automation Engineer (Black Birch Group, SD Este) |
 | Ingeniería de Software con IA | Desarrollo | 96% | Altísima Demanda | Agentic Software Engineer (FullStack Labs, San Pedro Macorís) |
@@ -171,7 +171,16 @@ Para mitigar esta brecha de manera estructural, se proponen tres rutas de interv
 3. **Rol Académico como Retención de Fuga de Talentos:** Al graduar profesionales con habilidades alineadas a la hiperautomatización y la IA, las universidades locales no solo suplirán el mercado dominicano, sino que insertarán talento en el mercado internacional de exportación de software, transformando el teletrabajo remoto de una amenaza de "fuga de cerebros" a una fuente de divisas estables para la economía nacional.
 
 ### Declaración de reproducibilidad
-Los datos utilizados en este estudio fueron obtenidos a partir de fuentes públicas accesibles al momento de la investigación. La metodología de clasificación, las variables observadas y los criterios de codificación se describen de manera explícita para facilitar la replicación futura del análisis por parte de otros investigadores.
+Los datos utilizados en este estudio fueron obtenidos a partir de fuentes públicas accesibles al momento de la investigación. La metodología de clasificación, las variables observadas y los criterios de codificación se describen de manera explícita para facilitar la replicación futura del análisis por parte de otros investigadores. La estrategia de búsqueda, los descriptores utilizados y los criterios de clasificación fueron documentados explícitamente para facilitar auditorías metodológicas futuras y permitir la replicación parcial del estudio bajo condiciones equivalentes.
+
+### Declaración de conflicto de intereses
+El autor declara no tener conflictos de intereses financieros, institucionales o personales relacionados con la presente investigación.
+
+### Declaración de financiamiento
+La presente investigación fue desarrollada de manera independiente y no recibió financiamiento externo específico por parte de organismos públicos, privados o entidades sin fines de lucro.
+
+### Consideraciones éticas
+La investigación utilizó exclusivamente información pública proveniente de ofertas laborales, documentos institucionales, normativas gubernamentales y fuentes académicas de acceso abierto. No se recopilaron datos personales sensibles ni se involucraron participantes humanos, por lo que no fue necesaria la aprobación de un comité de ética.
 
 ---
 
@@ -205,21 +214,8 @@ Los datos utilizados en este estudio fueron obtenidos a partir de fuentes públi
 * World Economic Forum. (2025). *The future of jobs report 2025: Technology adoption and workforce transition strategies*. Ginebra, Suiza: Autor.
 
 ### Referencias que requieren validación documental
-* BeBee & Tu Empleo RD. (2026). *Auditoría de ofertas activas y bolsas de reclutamiento de talentos en tecnología de la información* (Carga cruzada del entorno empresarial y teletrabajo en LATAM). Santo Domingo, R.D.
+* BeBee & Tu Empleo RD (2026). *Auditoría de ofertas activas y bolsas de reclutamiento de talentos en tecnología de la información* (Carga cruzada del entorno empresarial y teletrabajo en LATAM). Santo Domingo, R.D.
 * Gartner, Inc. (2025). *Gartner top strategic technology trends for 2026: Agentic AI and hyperautomation matrices*. Stamford, CT: Gartner Research.
-* LinkedIn Corporation. (2026). *Base de datos de empleo activo y búsquedas temáticas automatizadas en la República Dominicana* (Parámetros: 'inteligencia artificial', 'ciberseguridad', 'data engineer', 'cloud', 'devops', 'ingeniero electrónico', 'ingeniero eléctrico', 'energías renovables', 'solar fotovoltaica', 'BESS', 'microgrid', 'vehículos eléctricos', 'vehículos autónomos', 'ingeniero mecánico', 'ingeniero industrial', 'supply chain', 'economía circular', 'ingeniero civil', 'gestión del agua', 'arquitecto', 'BIM', 'drones', 'materiales avanzados', 'manufacturing engineer', 'ingeniero de calidad' y 'mantenimiento industrial' en ubicación R.D.; fecha de corte: 27 de mayo de 2026).
+* LinkedIn Corporation (2026). *Base de datos de empleo activo y búsquedas temáticas automatizadas en la República Dominicana* (Parámetros: 'inteligencia artificial', 'ciberseguridad', 'data engineer', 'cloud', 'devops', 'ingeniero electrónico', 'ingeniero eléctrico', 'energías renovables', 'solar fotovoltaica', 'BESS', 'microgrid', 'vehículos eléctricos', 'vehículos autónomos', 'ingeniero mecánico', 'ingeniero industrial', 'supply chain', 'economía circular', 'ingeniero civil', 'gestión del agua', 'arquitecto', 'BIM', 'drones', 'materiales avanzados', 'manufacturing engineer', 'ingeniero de calidad' y 'mantenimiento industrial' en ubicación R.D.; fecha de corte: 27 de mayo de 2026).
 * Programa de las Naciones Unidas para el Desarrollo. (2025). *Boletín de transformación digital y capacidades tecnológicas en la sociedad dominicana*. Santo Domingo, R.D.: PNUD República Dominicana.
 * Stack Overflow. (2025). *2025 Developer survey: Obsolescence of manual processes and adoption of automated pipelines*. New York, NY: Autor.
-* Ministerio de Administración Pública. (2024). *Resolución No. 342-2024 que aprueba los modelos de estructura organizativa para las áreas de Tecnologías de la Información y Comunicación (TIC) de los entes y órganos de la administración pública*. Santo Domingo, R.D.: Autor.
-* Ministerio de Energía y Minas. (2026). *Resolución No. R-MEM-ADM-019-2026 que establece las directrices de eficiencia y ahorro energético en los órganos y entes gubernamentales*. Santo Domingo, R.D.: Autor.
-* Ministerio de Trabajo de la República Dominicana. (2020). *Resolución No. 54-2020 sobre la regulación del teletrabajo como modal laboral especial*. Santo Domingo, R.D.: Autor.
-* Superintendencia de Electricidad. (2025). *Tarifas eléctricas vigentes para clientes corporativos en la República Dominicana*. Santo Domingo, R.D.: SIE.
-* Instituto Tecnológico de Las Américas. (2026). *Programas del nivel Técnico Superior y Tecnólogo en Desarrollo de Software, Seguridad Informática, Mecatrónica y Ciencia de Datos*. Santo Domingo, R.D.: Autor.
-* Instituto Tecnológico de Santo Domingo. (2026). *Oferta curricular de grado y postgrado del Área de Ingenierías: Ciberseguridad, Inteligencia Artificial e Ingeniería de Sistemas*. Santo Domingo, R.D.: Autor.
-* Pontificia Universidad Católica Madre y Maestra. (2026). *Pénsum de carreras STEAM de grado: Ingeniería en Ciberseguridad, Ingeniería en Computación e Inteligencia Artificial y Ciencia de Datos*. Santo Domingo, R.D.: Autor.
-* Universidad Autónoma de Santo Domingo. (2026). *Pénsum y carreras de grado oficiales de la Facultad de Ingeniería y Arquitectura: Ingeniería Electromecánica, Ciberseguridad, Sistemas y Licenciatura en Ciencia de Datos*. Santo Domingo, R.D.: Autor.
-* Universidad Tecnológica de Santiago. (2026). *Oferta de grado y pénsum de Ingeniería en Sistemas Computacionales e Ingeniería Mecatrónica - Recinto Santo Domingo de Guzmán y Recinto Santo Domingo Oriental*. Santo Domingo, R.D.: Autor.
-* Universidad Dominicana O&M. (2026). *Oferta de grado y pénsum de Ingeniería en Sistemas y Computación, Ingeniería Civil, Ingeniería Industrial e Ingeniería Electrónica*. Santo Domingo, R.D.: Autor.
-* Universidad Abierta para Adultos. (2026). *Carreras de Ingeniería en Software y programas virtuales de desarrollo de tecnologías de la información*. Santiago y Santo Domingo, R.D.: Autor.
-* Universidad del Caribe. (2026). *Oferta curricular de Ingeniería en Ciberseguridad e Ingeniería en Sistemas e Información*. Santo Domingo, R.D.: Autor.
-* Universidad Domínico Americana. (2026). *Oferta curricular de grado en Ingeniería de Software, Ingeniería en Sistemas, Ingeniería en Ciberseguridad e Ingeniería en Ciencia de Datos*. Santo Domingo, R.D.: Autor.
