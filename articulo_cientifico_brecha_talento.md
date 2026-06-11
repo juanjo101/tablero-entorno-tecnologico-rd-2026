@@ -14,14 +14,6 @@
 **Resultados:** El análisis cuantitativo identificó una desalineación estructural severa en disciplinas críticas. Se constató una ausencia de programas de grado completos para Ingeniería de Datos en las instituciones analizadas (0% de cobertura) y una baja cobertura curricular ponderada para metodologías de despliegue en la nube y DevOps (5.6%), contrastando con una frecuencia observada del 98% de requerimientos asociados con arquitecturas de Inteligencia Artificial Agéntica corporativa. Al ampliar el análisis hacia carreras STEAM tradicionales, también emergen brechas de especialización en IoT industrial e instrumentación inteligente, automatización industrial, mantenimiento predictivo 4.0, BIM/construcción digital, manufactura avanzada, energías renovables, almacenamiento BESS, microrredes, movilidad eléctrica/autónoma, gestión inteligente del agua, materiales avanzados, carbono/ESG, infraestructura civil resiliente y analítica de operaciones.  
 **Conclusiones:** Existe una marcada brecha cualitativa entre las competencias tecnológicas demandadas en el mercado laboral y los planes de estudio vigentes. Se proponen tres programas curriculares prioritarios diseñados a partir de la evidencia recolectada para mitigar el déficit y contrarrestar la fuga de talentos impulsada por la contratación remota internacional.
 
-**Objetivo:** Analizar la correspondencia entre la demanda laboral tecnológica observable en vacantes de plataformas digitales de empleo y la oferta curricular de grado de las principales instituciones de educación superior (IES) en la República Dominicana durante el período 2025–2026.  
-**Metodología:** Se adoptó un diseño no experimental, descriptivo, transversal y comparativo. Se realizó una auditoría empírica mediante el análisis sistemático de una muestra analizada de $N = 188$ vacantes únicas localizadas en el territorio nacional (LinkedIn Jobs y BeBee, corte a mayo de 2026) y se contrastó con la oferta de grado de nueve universidades líderes del país (UTESA, INTEC, ITLA, UASD, PUCMM, O&M, UAPA, UNICARIBE y UNICDA) mediante la aplicación de un Índice de Cobertura Curricular ($ICC$) y una escala ponderada de presencia de contenidos curriculares. El análisis cualitativo y de contexto se complementó con un enfoque macro PESTEL sustentado en cifras oficiales de política económica (BCRD) y desarrollo (ONE y Banco Mundial).  
-**Resultados:** El análisis identificó brechas o desalineaciones significativas en disciplinas críticas. Se constató una ausencia absoluta de programas de grado completos (0% de cobertura) para la Ingeniería de Datos y de un 80% para metodologías de despliegue en la nube (DevOps/Cloud Computing), contrastando con una frecuencia observada del 98% de requerimientos de arquitecturas de Inteligencia Artificial Agéntica y 91% de infraestructura como código (IaC) en las vacantes analizadas. En ingenierías STEAM tradicionales se identificaron desalineaciones relevantes en IoT industrial, BIM/construcción digital, almacenamiento BESS, microrredes, movilidad eléctrica y analítica de operaciones.  
-**Conclusiones:** Existe una marcada brecha cualitativa entre las competencias tecnológicas demandadas en el mercado laboral y los planes de estudio vigentes. Se proponen tres programas curriculares prioritarios diseñados a partir de la evidencia recolectada para mitigar el déficit y contrarrestar la fuga de talentos impulsada por la contratación remota internacional.
-
-**Palabras clave:** Brecha de Habilidades, Educación Superior, PESTEL Tecnológico, Ciberseguridad, República Dominicana, Currículo Basado en Datos, Análisis Comparativo.
-
-
 **Palabras clave:** Brecha de Habilidades, Educación Superior, PESTEL Tecnológico, Ciberseguridad, República Dominicana, Currículo Basado en Datos, Análisis Comparativo.
 
 ---
@@ -65,15 +57,6 @@ En respuesta a esta brecha de capacidades a nivel público, el Ministerio de Adm
 La presente investigación adoptó un diseño no experimental, de enfoque cuantitativo, corte transversal y alcance descriptivo-comparativo. Para garantizar la consistencia analítica, el estudio operacionaliza el entorno macroeconómico y regulatorio a través de variables e indicadores formales reportados por el Banco Central de la República Dominicana (Banco Central de la República Dominicana, 2025) y los informes de país del Banco Mundial (Banco Mundial, 2024, 2025), sirviendo como marco de control de contexto para el análisis de las dinámicas del mercado de empleo local.
 
 Figura 1. Diseño metodológico de la investigación: auditoría de mercado, mapeo curricular y análisis contextual PESTEL.
-
-
-```mermaid
-graph TD
-    A["Fase 1: Auditoría de Mercado (N = 188 Vacantes)"] --> D["Normalización y Codificación Temática"]
-    B["Fase 2: Mapeo Curricular (N = 9 Universidades)"] --> E["Cálculo del Índice de Cobertura Curricular Ponderado"]
-    C["Fase 3: Cruce Macro PESTEL (BCRD, ONE & BM)"] --> F["Modelo de Impacto y Alineación Curricular"]
-    D & E & F --> G["Identificación de Brechas e Inferencia Curricular STEAM"]
-```
 
 ### 3.1. Fase 1: Auditoría de Mercado de la Demanda Laboral
 Para cuantificar la demanda de competencias STEAM de vanguardia, se realizó una auditoría empírica sistemática de vacantes de empleo activas en la República Dominicana durante el período de enero a mayo de 2026. La recolección de datos se implementó mediante consultas estructuradas y procedimientos semiautomatizados sobre vacantes públicamente visibles en LinkedIn Jobs y BeBee (LinkedIn Corporation, 2026; BeBee & Tu Empleo RD, 2026).
