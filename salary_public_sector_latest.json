@@ -1,0 +1,130 @@
+{
+  "source": "MAP Nómina Pública",
+  "capturedAt": "2026-05-29T08:22:35",
+  "method": "Agregacion por cargo desde nomina publica; no se guardan nombres ni registros individuales.",
+  "titleColumn": "Cargo",
+  "salaryColumn": "Suelto_Bruto",
+  "matchedRows": 13211,
+  "results": [
+    {
+      "role": "Arquitectura / BIM",
+      "count": 306,
+      "min": 18000.0,
+      "p25": 50000.0,
+      "median": 65000.0,
+      "average": 63195.26,
+      "p75": 75000.0,
+      "max": 180000.0
+    },
+    {
+      "role": "Ciberseguridad",
+      "count": 1452,
+      "min": 1167.17,
+      "p25": 20215.84,
+      "median": 35015.0,
+      "average": 37479.14,
+      "p75": 45000.0,
+      "max": 280000.0
+    },
+    {
+      "role": "Cloud / Infraestructura",
+      "count": 313,
+      "min": 5333.33,
+      "p25": 55825.0,
+      "median": 60000.0,
+      "average": 68885.06,
+      "p75": 77000.0,
+      "max": 275000.0
+    },
+    {
+      "role": "ESG / Economía Circular",
+      "count": 41,
+      "min": 16500.0,
+      "p25": 50000.0,
+      "median": 72737.5,
+      "average": 72710.54,
+      "p75": 82500.0,
+      "max": 180000.0
+    },
+    {
+      "role": "Ingeniería Civil / Infraestructura",
+      "count": 671,
+      "min": 10000.0,
+      "p25": 50000.0,
+      "median": 50000.0,
+      "average": 59368.71,
+      "p75": 70000.0,
+      "max": 180000.0
+    },
+    {
+      "role": "Ingeniería Electrónica",
+      "count": 87,
+      "min": 11000.0,
+      "p25": 34650.0,
+      "median": 34650.0,
+      "average": 43636.45,
+      "p75": 46000.0,
+      "max": 125000.0
+    },
+    {
+      "role": "Ingeniería Eléctrica / Energía",
+      "count": 43,
+      "min": 15200.11,
+      "p25": 90000.0,
+      "median": 90000.0,
+      "average": 100939.58,
+      "p75": 100000.0,
+      "max": 275000.0
+    },
+    {
+      "role": "Ingeniería Industrial",
+      "count": 533,
+      "min": 13333.33,
+      "p25": 40000.0,
+      "median": 50000.0,
+      "average": 62736.36,
+      "p75": 78000.0,
+      "max": 469718.2
+    },
+    {
+      "role": "Ingeniería Mecánica / Movilidad",
+      "count": 2701,
+      "min": 1500.0,
+      "p25": 15000.0,
+      "median": 23100.0,
+      "average": 24718.61,
+      "p75": 30000.0,
+      "max": 220000.0
+    },
+    {
+      "role": "Ingeniería de Datos / BI",
+      "count": 5983,
+      "min": 10000.0,
+      "p25": 30250.0,
+      "median": 49060.0,
+      "average": 44360.63,
+      "p75": 49060.0,
+      "max": 280000.0
+    },
+    {
+      "role": "Ingeniería de Software",
+      "count": 454,
+      "min": 6000.0,
+      "p25": 55000.0,
+      "median": 75000.0,
+      "average": 73996.94,
+      "p75": 90000.0,
+      "max": 220000.0
+    },
+    {
+      "role": "Manufactura / Calidad",
+      "count": 627,
+      "min": 10000.0,
+      "p25": 35000.0,
+      "median": 55000.0,
+      "average": 57962.64,
+      "p75": 75000.0,
+      "max": 165000.0
+    }
+  ]
+}

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Informe de Evaluación - Nueva Versión del Artículo</title>
+<style>
+:root {
+  --azul:#1d4fa6;
+  --azul2:#153c80;
+  --azul-claro:#eaf2ff;
+  --rojo:#a12323;
+  --rojo-claro:#fdeaea;
+  --amarillo:#a96500;
+  --amarillo-claro:#fff5df;
+  --verde:#1b6b45;
+  --verde-claro:#eaf8ef;
+  --gris:#dbe3ef;
+  --texto:#263142;
+}
+*{box-sizing:border-box}
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg,#edf4ff 0%,#f7f9fc 45%,#e9eef6 100%);
+  color:var(--texto);
+  line-height:1.62;
+}
+.wrapper {
+  display:flex;
+  max-width:1550px;
+  margin:0 auto;
+}
+aside {
+  width:292px;
+  background:#ffffff;
+  border-right:1px solid var(--gris);
+  padding:24px 20px;
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:auto;
+}
+aside h2 {
+  color:var(--azul);
+  margin-top:0;
+  font-size:19px;
+}
+aside a {
+  display:block;
+  color:#263142;
+  text-decoration:none;
+  padding:8px 4px;
+  border-bottom:1px solid #eef2f7;
+  font-size:14px;
+}
+main {
+  flex:1;
+  padding:30px;
+}
+.hero {
+  background:linear-gradient(135deg,#1d4fa6,#5d89df);
+  color:#fff;
+  border-radius:18px;
+  padding:34px;
+  box-shadow:0 14px 35px rgba(29,79,166,.25);
+}
+.hero h1 {
+  color:#fff;
+  margin:0;
+  font-size:32px;
+}
+.hero p {
+  margin:9px 0;
+  font-size:16px;
+}
+button {
+  background:#fff;
+  color:var(--azul);
+  padding:12px 18px;
+  border:0;
+  border-radius:8px;
+  font-weight:bold;
+  margin-top:16px;
+  cursor:pointer;
+}
+.card {
+  background:#fff;
+  border:1px solid var(--gris);
+  border-radius:16px;
+  margin:22px 0;
+  padding:24px;
+  box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+h1,h2,h3,h4 {
+  color:var(--azul);
+}
+.callout {
+  padding:16px;
+  margin:14px 0;
+  border-radius:10px;
+}
+.red {background:var(--rojo-claro);border-left:7px solid var(--rojo);}
+.yellow {background:var(--amarillo-claro);border-left:7px solid var(--amarillo);}
+.green {background:var(--verde-claro);border-left:7px solid var(--verde);}
+.blue {background:var(--azul-claro);border-left:7px solid var(--azul);}
+.rewrite {
+  background:#f8fafc;
+  border:1px dashed #9aa8bd;
+  padding:16px;
+  border-radius:10px;
+  margin-top:12px;
+}
+.original{color:var(--rojo);font-weight:bold}
+.problem{color:var(--amarillo);font-weight:bold}
+.fixed{color:var(--verde);font-weight:bold}
+.just{color:var(--azul);font-weight:bold}
+table {
+  width:100%;
+  border-collapse:collapse;
+  margin:18px 0;
+  font-size:14px;
+}
+th,td {
+  border:1px solid var(--gris);
+  padding:10px;
+  vertical-align:top;
+}
+th {
+  background:var(--azul-claro);
+  color:var(--azul);
+}
+.badge {
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:bold;
+}
+.badge-red{background:var(--rojo-claro);color:var(--rojo)}
+.badge-yellow{background:var(--amarillo-claro);color:var(--amarillo)}
+.badge-green{background:var(--verde-claro);color:var(--verde)}
+.badge-blue{background:var(--azul-claro);color:var(--azul)}
+.score {
+  margin:15px 0;
+}
+.bar {
+  background:#dbe3ef;
+  border-radius:999px;
+  overflow:hidden;
+  height:23px;
+}
+.fill {
+  height:23px;
+  background:linear-gradient(90deg,#1d4fa6,#79a3f2);
+}
+pre {
+  white-space:pre-wrap;
+  background:#f8fafc;
+  border:1px solid var(--gris);
+  padding:16px;
+  border-radius:10px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.small {font-size:13px;color:#526071}
+.kpi-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:18px;
+}
+.kpi {
+  background:#fff;
+  border:1px solid var(--gris);
+  border-radius:14px;
+  padding:18px;
+}
+.kpi .num {
+  font-size:30px;
+  color:var(--azul);
+  font-weight:bold;
+}
+@media(max-width:1000px){
+  .wrapper{display:block}
+  aside{position:relative;width:auto;height:auto}
+  .kpi-grid{grid-template-columns:1fr 1fr}
+}
+@media print {
+  aside{display:none}
+  main{padding:0}
+  body{background:#fff}
+  .card,.hero{box-shadow:none}
+  button{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<aside>
+<h2>Índice del informe</h2>
+<a href="#resumen">1. Resumen ejecutivo</a>
+<a href="#avance">2. Avance respecto a la versión anterior</a>
+<a href="#valoracion">3. Valoración editorial</a>
+<a href="#fortalezas">4. Fortalezas nuevas</a>
+<a href="#criticos">5. Problemas críticos persistentes</a>
+<a href="#seccion">6. Revisión sección por sección</a>
+<a href="#metodologia">7. Evaluación metodológica profunda</a>
+<a href="#estadistica">8. Evaluación estadística</a>
+<a href="#referencias">9. Referencias y trazabilidad</a>
+<a href="#reescritura">10. Reescrituras directas</a>
+<a href="#matriz">11. Matriz correctiva</a>
+<a href="#rubrica">12. Rúbrica</a>
+<a href="#plan">13. Plan de mejora</a>
+<a href="#veredicto">14. Veredicto final</a>
+</aside>
+
+<main>
+<section class="hero">
+<h1>Informe de evaluación por pares de la nueva versión</h1>
+<p><strong>Artículo:</strong> Brecha sociotécnica entre demanda laboral emergente y oferta académica: análisis descriptivo-comparativo de plataformas digitales de empleo y currículos universitarios en la República Dominicana (2025–2026).</p>
+<p><strong>Dictamen:</strong> Revisión mayor, con avance sustancial respecto a la versión anterior.</p>
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+</section>
+
+<section id="resumen" class="card">
+<h2>1. Resumen ejecutivo</h2>
+<p>La nueva versión mejora de forma significativa la formulación metodológica. Corrige el título, incorpora un tamaño muestral de <strong>N = 188 vacantes únicas</strong>, añade criterios de inclusión y exclusión, presenta un diccionario de codificación, introduce el <strong>Índice de Cobertura Curricular ponderado</strong> y reconoce sesgos adicionales como el sesgo algorítmico y la falta de validación primaria directa.</p>
+
+<div class="kpi-grid">
+<div class="kpi"><div class="num">78/100</div><div>Calidad global actual</div></div>
+<div class="kpi"><div class="num">+16</div><div>Puntos estimados frente a la versión anterior</div></div>
+<div class="kpi"><div class="num">Mayor</div><div>Tipo de revisión requerida</div></div>
+<div class="kpi"><div class="num">Alta</div><div>Relevancia temática</div></div>
+</div>
+
+<div class="callout yellow">
+<strong>Problema principal pendiente:</strong> aunque la metodología está mucho más desarrollada, todavía hay inconsistencias internas importantes: se mantiene lenguaje causal en la fase PESTEL, la tabla curricular dice usar ponderación pero presenta valores binarios, los porcentajes de frecuencia observada siguen siendo metodológicamente sospechosos por su magnitud, y las referencias continúan sin URL, DOI o evidencia de recuperación.
+</div>
+
+<p><strong>Dictamen editorial:</strong> <span class="badge badge-yellow">Revisión mayor con alto potencial de aceptación tras ajustes</span>.</p>
+</section>
+
+<section id="avance" class="card">
+<h2>2. Avance respecto a la versión anterior</h2>
+<table>
+<tr><th>Aspecto observado</th><th>Versión anterior</th><th>Nueva versión</th><th>Evaluación</th></tr>
+<tr><td>Título</td><td>Usaba “descriptivo-causal”.</td><td>Ahora usa “análisis descriptivo-comparativo”.</td><td><span class="badge badge-green">Mejorado</span></td></tr>
+<tr><td>Tamaño muestral</td><td>No reportado.</td><td>Reporta N = 188 vacantes únicas.</td><td><span class="badge badge-green">Mejorado</span></td></tr>
+<tr><td>Criterios de inclusión/exclusión</td><td>Ausentes o insuficientes.</td><td>Incluye muestra bruta, duplicados y exclusiones.</td><td><span class="badge badge-green">Mejorado</span></td></tr>
+<tr><td>Diccionario de codificación</td><td>No existía.</td><td>Define variables como DevOps, IA agéntica, BIM, BESS y Zero Trust.</td><td><span class="badge badge-green">Mejorado</span></td></tr>
+<tr><td>Confiabilidad interevaluador</td><td>No reportada.</td><td>Reporta Kappa de Cohen κ = 0.86.</td><td><span class="badge badge-yellow">Mejorado, pero requiere soporte</span></td></tr>
+<tr><td>ICC</td><td>Binario.</td><td>Propone escala ponderada 0, .25, .50 y 1.00.</td><td><span class="badge badge-yellow">Conceptualmente mejorado, aplicación inconsistente</span></td></tr>
+<tr><td>Limitaciones</td><td>Menos completas.</td><td>Añade sesgo algorítmico y falta de validación primaria.</td><td><span class="badge badge-green">Mejorado</span></td></tr>
+</table>
+</section>
+
+<section id="valoracion" class="card">
+<h2>3. Valoración editorial global</h2>
+<p>La nueva versión ya no parece un ensayo prospectivo, sino un manuscrito de investigación aplicada en proceso de maduración. Aun así, todavía no alcanza el estándar de reproducibilidad exigible para una revista Scopus/WoS porque el núcleo empírico —las 188 vacantes, las frecuencias relativas y la clasificación curricular— no está acompañado por anexos, base de datos, procedimiento de codificación completamente auditable ni referencias recuperables.</p>
+
+<div class="callout blue">
+<strong>Evaluación editorial:</strong> el artículo es rescatable y prometedor. El editor probablemente no lo rechazaría de entrada si el tema encaja con la revista, pero enviaría el manuscrito a revisión mayor solicitando evidencia suplementaria y correcciones de consistencia metodológica.
+</div>
+</section>
+
+<section id="fortalezas" class="card">
+<h2>4. Fortalezas nuevas de la versión revisada</h2>
+<div class="callout green"><strong>1. Corrección del alcance del estudio:</strong> el título ahora evita prometer causalidad directa y se ajusta mejor a un estudio descriptivo-comparativo.</div>
+<div class="callout green"><strong>2. Mayor transparencia muestral:</strong> se reporta una muestra bruta de 342 registros y una muestra final de 188 vacantes únicas, con eliminación de duplicados y exclusiones.</div>
+<div class="callout green"><strong>3. Operacionalización inicial de variables:</strong> el diccionario de codificación mejora la claridad de categorías como Zero Trust, DevOps/IaC, IA agéntica, BIM y BESS.</div>
+<div class="callout green"><strong>4. Reconocimiento de limitaciones:</strong> el manuscrito ahora reconoce sesgo de plataforma, sesgo algorítmico, sesgo geográfico y falta de validación primaria.</div>
+<div class="callout green"><strong>5. Mejor moderación parcial del lenguaje:</strong> la discusión usa expresiones como “sugiere” y “podría comprometer”, lo que mejora el tono científico.</div>
+</section>
+
+<section id="criticos" class="card">
+<h2>5. Problemas críticos persistentes</h2>
+
+<div class="callout red">
+<h3>5.1. Error de integridad textual</h3>
+<p><strong>Qué está mal:</strong> antes de la sección de metodología aparece un corte textual: “sirviendo como un catalizador directo y una j## 3. Metodología”.</p>
+<p><strong>Impacto científico:</strong> evidencia falta de revisión final del manuscrito y puede generar rechazo editorial por descuido formal.</p>
+<p><strong>Cómo se corrige:</strong> cerrar correctamente el párrafo del marco teórico y separar el encabezado de metodología.</p>
+<div class="rewrite">
+<span class="original">🔴 Texto original:</span> “sirviendo como un catalizador directo y una j## 3. Metodología”<br>
+<span class="problem">⚠️ Problema:</span> error de edición que rompe la continuidad del manuscrito.<br>
+<span class="fixed">✅ Versión corregida:</span> “...sirviendo como un catalizador directo y una justificación institucional para el fortalecimiento de programas académicos en ingeniería de datos, ciberseguridad e inteligencia artificial.”<br><br>
+“## 3. Metodología”<br>
+<span class="just">📌 Justificación:</span> corrige la continuidad sintáctica y restaura la estructura del artículo.
+</div>
+</div>
+
+<div class="callout red">
+<h3>5.2. Persistencia de causalidad no demostrada</h3>
+<p><strong>Qué está mal:</strong> aunque el título fue corregido, en la metodología PESTEL se afirma que las variables macroeconómicas “fuerzan y explican” el comportamiento de las frecuencias de demanda.</p>
+<p><strong>Impacto científico:</strong> contradice el diseño descriptivo-comparativo. No hay modelo causal, regresión, análisis longitudinal ni prueba estadística que permita afirmar fuerza explicativa.</p>
+<p><strong>Cómo se corrige:</strong> describir las variables PESTEL como factores contextuales interpretativos, no como variables independientes causales.</p>
+<div class="rewrite">
+<span class="original">🔴 Texto original:</span> “Estos factores actúan como variables independientes contextuales que fuerzan y explican el comportamiento de las frecuencias de demanda observadas...”<br>
+<span class="fixed">✅ Versión corregida:</span> “Estos factores se emplearon como variables contextuales de interpretación para situar las frecuencias de demanda observadas dentro del entorno macroeconómico, regulatorio y tecnológico del país, sin establecer relaciones causales directas.”<br>
+<span class="just">📌 Justificación:</span> alinea la afirmación con un diseño descriptivo transversal.
+</div>
+</div>
+
+<div class="callout red">
+<h3>5.3. Inconsistencia entre ICC ponderado y tabla de resultados</h3>
+<p><strong>Qué está mal:</strong> la metodología propone una escala ponderada 0, 0.25, 0.50 y 1.00, pero la tabla de resultados sigue presentando valores binarios 0 y 1.</p>
+<p><strong>Impacto científico:</strong> el indicador anunciado no se aplica realmente, por lo que el refinamiento metodológico queda incompleto.</p>
+<p><strong>Cómo se corrige:</strong> rehacer la tabla con valores ponderados o eliminar la promesa de ponderación.</p>
+<div class="rewrite">
+<span class="fixed">✅ Texto sugerido para introducir la tabla:</span><br>
+“La Tabla 2 presenta el ICC ponderado, asignando 0.00 a ausencia curricular, 0.25 a asignaturas aisladas, 0.50 a concentraciones o programas técnicos superiores, y 1.00 a carreras completas de grado. Esta escala permite diferenciar niveles de madurez curricular entre las instituciones analizadas.”
+</div>
+</div>
+
+<div class="callout red">
+<h3>5.4. Frecuencias demasiado altas sin conteos absolutos</h3>
+<p><strong>Qué está mal:</strong> se afirma que IA agéntica aparece en 98% de las 188 vacantes. Eso implicaría aproximadamente 184 vacantes con IA agéntica, lo cual parece improbable para una muestra general STEAM que incluye BIM, energía, DevOps, ciberseguridad e ingeniería industrial.</p>
+<p><strong>Impacto científico:</strong> puede generar sospecha de error de codificación, muestra sesgada o interpretación excesivamente amplia de las categorías.</p>
+<p><strong>Cómo se corrige:</strong> añadir conteos absolutos por categoría, permitir categorías no excluyentes y explicar si una vacante puede pertenecer a varias categorías.</p>
+<div class="rewrite">
+<span class="fixed">✅ Texto sugerido:</span><br>
+“Las categorías no fueron mutuamente excluyentes; una misma vacante podía codificarse en más de una competencia si su descripción incluía descriptores verificables. Por esta razón, las frecuencias relativas no suman 100%. Para mayor transparencia, se reportan las frecuencias absolutas y relativas por categoría.”
+</div>
+</div>
+
+<div class="callout red">
+<h3>5.5. Kappa de Cohen reportado sin procedimiento verificable</h3>
+<p><strong>Qué está mal:</strong> se informa κ = 0.86, pero no se indica número de evaluadores, matriz de acuerdo, muestra usada para validar, categorías evaluadas ni procedimiento para discrepancias.</p>
+<p><strong>Impacto científico:</strong> el dato puede ser visto como decorativo si no se documenta.</p>
+<p><strong>Cómo se corrige:</strong> incluir tabla de validación interevaluador.</p>
+<div class="rewrite">
+<span class="fixed">✅ Texto sugerido:</span><br>
+“La confiabilidad interevaluador se estimó sobre una submuestra aleatoria del 25% de las vacantes. Dos evaluadores clasificaron de forma independiente las categorías tecnológicas. El acuerdo fue evaluado mediante Kappa de Cohen, obteniéndose κ = 0.86. Las discrepancias restantes fueron resueltas por consenso.”
+</div>
+</div>
+</section>
+
+<section id="seccion" class="card">
+<h2>6. Revisión sección por sección</h2>
+
+<h3>6.1. Título</h3>
+<p><strong>Evaluación:</strong> mejorado de manera sustancial. Ahora comunica adecuadamente el diseño descriptivo-comparativo.</p>
+<div class="callout green">El cambio del título es correcto y debe conservarse.</div>
+<div class="rewrite">
+<span class="fixed">✅ Recomendación menor:</span><br>
+“Brecha sociotécnica entre demanda laboral emergente y oferta académica: análisis descriptivo-comparativo de vacantes digitales y currículos universitarios en la República Dominicana (2025–2026).”<br>
+<span class="just">📌 Justificación:</span> “vacantes digitales” es más breve y directo que “plataformas digitales de empleo”.
+</div>
+
+<h3>6.2. Resumen</h3>
+<p><strong>Evaluación:</strong> más sólido que el anterior. Incluye N = 188 y el diseño de investigación.</p>
+<p><strong>Problema:</strong> mantiene conclusiones fuertes como “desalineaciones estructurales severas” y porcentajes que aún requieren conteos absolutos.</p>
+<div class="rewrite">
+<span class="fixed">✅ Versión corregida:</span><br>
+“Los resultados sugieren brechas relevantes en disciplinas críticas, especialmente en ingeniería de datos y metodologías de despliegue en la nube. No obstante, por tratarse de un diseño transversal basado en vacantes digitales, los hallazgos deben interpretarse como evidencia descriptiva del mercado formal observable y no como representación total del mercado laboral dominicano.”
+</div>
+
+<h3>6.3. Introducción</h3>
+<p><strong>Evaluación:</strong> mantiene una contextualización amplia y pertinente.</p>
+<p><strong>Problema:</strong> no aparece una pregunta de investigación explícita y el texto conserva afirmaciones categóricas sobre fuga de talentos sin evidencia primaria.</p>
+<div class="rewrite">
+<span class="fixed">✅ Texto a insertar al final de la introducción:</span><br>
+“En consecuencia, la pregunta de investigación que guía el estudio es: ¿qué nivel de correspondencia existe entre las competencias tecnológicas emergentes observables en vacantes digitales y la oferta curricular de grado de las principales instituciones de educación superior dominicanas durante 2025–2026?”
+</div>
+
+<h3>6.4. Marco teórico</h3>
+<p><strong>Evaluación:</strong> rico en contexto, pero todavía mezcla causalidad, prospectiva y justificación curricular.</p>
+<p><strong>Problema:</strong> algunas fuentes son usadas para sostener inferencias muy específicas sobre adopción cloud, costos energéticos y rediseño curricular.</p>
+<div class="rewrite">
+<span class="fixed">✅ Versión corregida de tono:</span><br>
+“Estos factores macroeconómicos pueden interpretarse como condiciones de contexto que favorecen la adopción de modelos tecnológicos más flexibles, aunque su efecto específico sobre la demanda de perfiles cloud requiere validación empírica adicional.”
+</div>
+
+<h3>6.5. Metodología</h3>
+<p><strong>Evaluación:</strong> es la sección que más mejoró. Aun así, conserva fallas relevantes.</p>
+<p><strong>Problema:</strong> el texto habla de “APIs públicas de LinkedIn Jobs y BeBee”. Esto debe verificarse porque LinkedIn restringe fuertemente el acceso automatizado a datos de empleo, y una revista podría pedir aclaración ética y técnica.</p>
+<div class="rewrite">
+<span class="fixed">✅ Versión corregida prudente:</span><br>
+“La recolección se realizó mediante consultas estructuradas en las plataformas LinkedIn Jobs y BeBee, registrando manual o semiautomáticamente los campos visibles de las vacantes. El procedimiento respetó la disponibilidad pública de la información consultada y no incluyó datos personales de postulantes.”
+</div>
+
+<h3>6.6. Resultados</h3>
+<p><strong>Evaluación:</strong> presentan mayor claridad terminológica al usar frecuencia relativa observada.</p>
+<p><strong>Problema:</strong> no se muestran frecuencias absolutas ni ejemplos suficientes por categoría.</p>
+<div class="rewrite">
+<span class="fixed">✅ Tabla recomendada:</span><br>
+“Tendencia | Frecuencia absoluta (n) | Frecuencia relativa (%) | Criterio de codificación | Ejemplo de vacante | Observación metodológica.”
+</div>
+
+<h3>6.7. Discusión y propuestas</h3>
+<p><strong>Evaluación:</strong> mejoró el tono, pero todavía convierte resultados descriptivos en prescripciones curriculares fuertes.</p>
+<p><strong>Problema:</strong> proponer carreras completas requiere evidencia adicional: empleadores, empleabilidad proyectada, costo de implementación, demanda estudiantil y regulación MESCyT.</p>
+<div class="rewrite">
+<span class="fixed">✅ Versión corregida:</span><br>
+“Los resultados no implican por sí solos la necesidad inmediata de crear carreras completas, pero sí justifican la apertura de una discusión curricular escalonada que puede iniciar con concentraciones, diplomados, asignaturas obligatorias, certificaciones integradas y, posteriormente, programas de grado cuando exista evidencia adicional de demanda sostenida.”
+</div>
+
+<h3>6.8. Conclusiones</h3>
+<p><strong>Evaluación:</strong> algunas expresiones fueron moderadas, pero otras siguen siendo normativas.</p>
+<p><strong>Problema:</strong> “Es imperativo que las universidades actualicen con urgencia...” es más recomendación política que conclusión empírica.</p>
+<div class="rewrite">
+<span class="original">🔴 Texto original:</span> “Es imperativo que las universidades actualicen con urgencia sus ofertas...”<br>
+<span class="fixed">✅ Versión corregida:</span> “Los resultados respaldan la conveniencia de que las universidades revisen sus ofertas académicas y evalúen mecanismos graduales de incorporación de competencias en ingeniería de datos, DevOps e infraestructura cloud.”<br>
+<span class="just">📌 Justificación:</span> evita sobregeneralización y mantiene prudencia científica.
+</div>
+
+<h3>6.9. Limitaciones</h3>
+<p><strong>Evaluación:</strong> muy mejoradas.</p>
+<p><strong>Problema menor:</strong> dice “cuatro limitaciones”, pero enumera cinco.</p>
+<div class="rewrite">
+<span class="fixed">✅ Corrección:</span><br>
+“A pesar del rigor metodológico implementado, esta investigación presenta cinco limitaciones intrínsecas...”
+</div>
+
+<h3>6.10. Declaración de IA</h3>
+<p><strong>Evaluación:</strong> adecuada y más específica.</p>
+<p><strong>Recomendación:</strong> eliminar o suavizar “revistas de alto impacto indexadas en Scopus/WoS” si no se cita una política específica, para evitar una afirmación innecesariamente amplia.</p>
+<div class="rewrite">
+<span class="fixed">✅ Versión corregida:</span><br>
+“El autor declara que utilizó herramientas de inteligencia artificial generativa como apoyo en tareas de organización preliminar, depuración textual y revisión lingüística. La interpretación de los datos, las decisiones metodológicas, la verificación de fuentes y la responsabilidad final del manuscrito corresponden exclusivamente al autor.”
+</div>
+</section>
+
+<section id="metodologia" class="card">
+<h2>7. Evaluación metodológica profunda</h2>
+<table>
+<tr><th>Elemento</th><th>Evaluación</th><th>Riesgo</th><th>Corrección requerida</th></tr>
+<tr><td>Diseño</td><td>Adecuado como descriptivo-comparativo.</td><td>Bajo, si se elimina lenguaje causal.</td><td>Usar “asociado”, “contextualiza”, “sugiere”; evitar “fuerza”, “explica”, “determina”.</td></tr>
+<tr><td>Muestra laboral</td><td>Mejorada con N = 188.</td><td>Medio.</td><td>Agregar tabla de depuración muestral: 342 brutas, -112 duplicados, -31 incompletas, -11 no técnicas = 188.</td></tr>
+<tr><td>Codificación</td><td>Buena base inicial.</td><td>Medio.</td><td>Agregar anexo con diccionario completo y ejemplos positivos/negativos.</td></tr>
+<tr><td>Kappa</td><td>Valor fuerte, pero insuficientemente documentado.</td><td>Alto si no se demuestra.</td><td>Explicar submuestra, número de evaluadores, categorías y matriz de acuerdo.</td></tr>
+<tr><td>ICC ponderado</td><td>Conceptualmente correcto.</td><td>Alto por aplicación inconsistente.</td><td>Aplicar realmente la escala ponderada en la tabla.</td></tr>
+<tr><td>PESTEL</td><td>Útil como contexto.</td><td>Medio-alto por lenguaje causal.</td><td>Convertir en análisis contextual, no causal.</td></tr>
+</table>
+</section>
+
+<section id="estadistica" class="card">
+<h2>8. Evaluación estadística</h2>
+<div class="callout yellow">
+<strong>Conclusión estadística:</strong> el artículo ya incorpora una lógica cuantitativa, pero todavía necesita transparentar el cálculo exacto de sus indicadores. No se requiere estadística avanzada para publicarse como estudio descriptivo, pero sí se requiere trazabilidad.
+</div>
+
+<h3>8.1. Problema con las frecuencias</h3>
+<p>Si IA agéntica tiene 98% sobre N = 188, eso equivale a aproximadamente 184 vacantes. Si IaC tiene 91%, equivale a aproximadamente 171 vacantes. Para una muestra que incluye perfiles diversos de ingeniería, energía, construcción digital, ciberseguridad, industrial y software, esos porcentajes parecen demasiado altos.</p>
+
+<div class="rewrite">
+<span class="fixed">✅ Corrección técnica:</span><br>
+Agregar una columna “n” y explicar si las categorías son mutuamente excluyentes o múltiples. Sin esta aclaración, el lector puede interpretar que casi todas las vacantes dominicanas analizadas exigen IA agéntica, lo cual requiere evidencia robusta.
+</div>
+
+<h3>8.2. Recomendación estadística mínima</h3>
+<ul>
+<li>Frecuencia absoluta por categoría.</li>
+<li>Frecuencia relativa por categoría.</li>
+<li>Intervalos de confianza simples para proporciones, si se quiere elevar el rigor.</li>
+<li>Tabla cruzada entre tipo de vacante y competencia tecnológica.</li>
+<li>Mapa de calor demanda-cobertura curricular.</li>
+</ul>
+
+<div class="rewrite">
+<span class="fixed">✅ Texto sugerido:</span><br>
+“Dado que las competencias no fueron codificadas como categorías mutuamente excluyentes, los porcentajes representan la proporción de vacantes en las que aparece cada descriptor tecnológico, no la distribución total del mercado laboral. Por tanto, las frecuencias no deben sumarse entre sí.”
+</div>
+</section>
+
+<section id="referencias" class="card">
+<h2>9. Referencias y trazabilidad bibliográfica</h2>
+<p>La bibliografía sigue siendo el punto editorial más delicado después de la metodología. Muchas referencias institucionales son plausibles, pero no son suficientemente recuperables.</p>
+
+<table>
+<tr><th>Referencia</th><th>Problema</th><th>Corrección</th></tr>
+<tr><td>LinkedIn Corporation (2026)</td><td>No es una fuente bibliográfica tradicional; parece base propia de consulta.</td><td>Debe pasar a “Datos propios recolectados” o anexo metodológico, no referencia bibliográfica convencional.</td></tr>
+<tr><td>BeBee & Tu Empleo RD (2026)</td><td>Ambigua como referencia; no incluye URL ni fecha de recuperación.</td><td>Agregar URL, consulta, criterios y archivo suplementario.</td></tr>
+<tr><td>Gartner (2025)</td><td>Informe comercial posiblemente no accesible.</td><td>Incluir título exacto, URL o sustituir por fuente abierta.</td></tr>
+<tr><td>GitHub (2025) / Stack Overflow (2025)</td><td>Requieren URL del informe exacto.</td><td>Agregar enlaces y fecha de recuperación.</td></tr>
+<tr><td>Universidades (2026)</td><td>Referencias a pénsumes sin URL.</td><td>Agregar página oficial, fecha de consulta y, si es posible, PDF o captura archivada.</td></tr>
+</table>
+
+<div class="callout red">
+<strong>Advertencia editorial:</strong> una revista puede exigir que todos los pénsumes y vacantes usados estén respaldados por enlaces, capturas, archivo comprimido o repositorio suplementario. Sin eso, el artículo queda vulnerable a la crítica de baja reproducibilidad.
+</div>
+</section>
+
+<section id="reescritura" class="card">
+<h2>10. Reescrituras directas recomendadas</h2>
+
+<h3>10.1. Resumen corregido</h3>
+<pre>Este estudio analiza la correspondencia entre la demanda laboral tecnológica observable en vacantes digitales y la oferta curricular de grado de nueve instituciones de educación superior de la República Dominicana durante el período 2025–2026. Se adoptó un diseño no experimental, descriptivo, transversal y comparativo. La muestra laboral estuvo compuesta por 188 vacantes únicas identificadas en plataformas digitales de empleo, depuradas mediante criterios de inclusión y exclusión previamente definidos. La oferta académica fue analizada mediante un Índice de Cobertura Curricular ponderado, que distingue entre ausencia de contenidos, asignaturas aisladas, concentraciones o programas técnicos, y carreras completas de grado. Los resultados sugieren brechas relevantes en ingeniería de datos, DevOps, infraestructura cloud y otras áreas STEAM emergentes. Debido al carácter transversal y digitalmente observable de la muestra, los hallazgos deben interpretarse como evidencia descriptiva del mercado formal visible en plataformas de empleo, no como representación exhaustiva del mercado laboral dominicano. Se recomienda fortalecer los mecanismos de actualización curricular mediante validación con empleadores, análisis longitudinal de vacantes y publicación de datos suplementarios.</pre>
+
+<h3>10.2. Metodología PESTEL corregida</h3>
+<pre>Se recopilaron indicadores macroeconómicos, regulatorios e institucionales provenientes de fuentes oficiales y organismos internacionales, con el propósito de contextualizar las frecuencias de demanda tecnológica observadas en las plataformas de empleo. Estos indicadores no fueron tratados como variables causales, sino como elementos interpretativos del entorno PESTEL que permiten situar los resultados dentro de las condiciones económicas, regulatorias y tecnológicas del país.</pre>
+
+<h3>10.3. Resultados corregidos</h3>
+<pre>El análisis de las 188 vacantes únicas permitió identificar la presencia recurrente de competencias asociadas con automatización, infraestructura cloud, DevOps, ciberseguridad, análisis de datos y digitalización de procesos industriales. Debido a que las categorías de codificación no fueron mutuamente excluyentes, una misma vacante pudo clasificarse en más de una tendencia tecnológica. Por esta razón, los porcentajes reportados representan frecuencias relativas por descriptor y no una distribución porcentual acumulativa del mercado laboral.</pre>
+
+<h3>10.4. Conclusiones corregidas</h3>
+<pre>Los resultados sugieren una brecha cualitativa entre ciertas competencias tecnológicas emergentes y la oferta curricular de grado analizada. En particular, las áreas de ingeniería de datos, DevOps e infraestructura cloud presentan baja cobertura curricular en comparación con su presencia en las vacantes digitales revisadas. Estos hallazgos respaldan la conveniencia de que las instituciones de educación superior evalúen estrategias graduales de actualización curricular, iniciando con asignaturas, concentraciones, certificaciones integradas y programas técnicos, antes de considerar la apertura de nuevas carreras completas. Se recomienda complementar este estudio con entrevistas a empleadores, validación Delphi, análisis longitudinal de vacantes y revisión documental verificable de pénsumes universitarios.</pre>
+</section>
+
+<section id="matriz" class="card">
+<h2>11. Matriz correctiva</h2>
+<table>
+<tr><th>Problema</th><th>Impacto</th><th>Corrección</th><th>Texto sugerido</th></tr>
+<tr><td>Error “j## 3. Metodología”</td><td>Daña presentación editorial</td><td>Corregir corte textual</td><td>“...justificación institucional para el fortalecimiento...”</td></tr>
+<tr><td>PESTEL causal</td><td>Contradice diseño descriptivo</td><td>Reformular como contexto</td><td>“variables contextuales de interpretación...”</td></tr>
+<tr><td>ICC ponderado no aplicado</td><td>Inconsistencia metodológica</td><td>Rehacer tabla con 0, .25, .50, 1.00</td><td>“La Tabla 2 presenta el ICC ponderado...”</td></tr>
+<tr><td>Frecuencias sin n</td><td>Reduce transparencia</td><td>Agregar frecuencia absoluta</td><td>“n = ___; fr = ___%”</td></tr>
+<tr><td>Kappa sin detalle</td><td>Riesgo de dato no verificable</td><td>Agregar submuestra y evaluadores</td><td>“Se estimó sobre una submuestra aleatoria...”</td></tr>
+<tr><td>APIs públicas</td><td>Posible problema técnico/ético</td><td>Usar “consultas estructuradas”</td><td>“La recolección se realizó mediante consultas estructuradas...”</td></tr>
+<tr><td>Referencias sin URL</td><td>Baja trazabilidad</td><td>Agregar URL/fecha/anexos</td><td>“Disponible en... Recuperado el...”</td></tr>
+<tr><td>Conclusiones normativas</td><td>Sobreinterpretación</td><td>Moderar lenguaje</td><td>“Los resultados respaldan la conveniencia...”</td></tr>
+</table>
+</section>
+
+<section id="rubrica" class="card">
+<h2>12. Rúbrica de evaluación actual</h2>
+<div class="score"><strong>Originalidad: 92/100</strong><div class="bar"><div class="fill" style="width:92%"></div></div></div>
+<div class="score"><strong>Relevancia nacional: 96/100</strong><div class="bar"><div class="fill" style="width:96%"></div></div></div>
+<div class="score"><strong>Claridad del problema: 86/100</strong><div class="bar"><div class="fill" style="width:86%"></div></div></div>
+<div class="score"><strong>Metodología: 70/100</strong><div class="bar"><div class="fill" style="width:70%"></div></div></div>
+<div class="score"><strong>Transparencia de datos: 58/100</strong><div class="bar"><div class="fill" style="width:58%"></div></div></div>
+<div class="score"><strong>Resultados: 68/100</strong><div class="bar"><div class="fill" style="width:68%"></div></div></div>
+<div class="score"><strong>Discusión: 78/100</strong><div class="bar"><div class="fill" style="width:78%"></div></div></div>
+<div class="score"><strong>Conclusiones: 72/100</strong><div class="bar"><div class="fill" style="width:72%"></div></div></div>
+<div class="score"><strong>Referencias APA 7 y trazabilidad: 55/100</strong><div class="bar"><div class="fill" style="width:55%"></div></div></div>
+<div class="score"><strong>Preparación editorial global: 78/100</strong><div class="bar"><div class="fill" style="width:78%"></div></div></div>
+</section>
+
+<section id="plan" class="card">
+<h2>13. Plan de mejora recomendado</h2>
+
+<div class="callout blue">
+<h3>Fase 1: Corrección inmediata de forma y coherencia</h3>
+<ul>
+<li>Corregir el error “j## 3. Metodología”.</li>
+<li>Cambiar “cuatro limitaciones” por “cinco limitaciones”.</li>
+<li>Eliminar lenguaje causal restante.</li>
+<li>Revisar acentos, tildes y consistencia de términos como “déficits”.</li>
+</ul>
+</div>
+
+<div class="callout blue">
+<h3>Fase 2: Fortalecimiento metodológico</h3>
+<ul>
+<li>Agregar tabla de depuración muestral.</li>
+<li>Explicar si las categorías de vacantes son excluyentes o múltiples.</li>
+<li>Reportar frecuencia absoluta junto con frecuencia relativa.</li>
+<li>Documentar el cálculo de Kappa.</li>
+<li>Aplicar realmente el ICC ponderado.</li>
+</ul>
+</div>
+
+<div class="callout blue">
+<h3>Fase 3: Evidencia suplementaria</h3>
+<ul>
+<li>Crear anexo con las 188 vacantes anonimizadas.</li>
+<li>Crear anexo con matriz de codificación.</li>
+<li>Agregar enlaces oficiales de pénsumes.</li>
+<li>Incluir capturas archivadas o repositorio OSF/Zenodo.</li>
+</ul>
+</div>
+
+<div class="callout blue">
+<h3>Fase 4: Mejora de discusión y conclusiones</h3>
+<ul>
+<li>Presentar las propuestas curriculares como rutas graduales, no como exigencia inmediata de nuevas carreras.</li>
+<li>Separar evidencia local, evidencia internacional y opinión prospectiva.</li>
+<li>Agregar recomendaciones para MESCyT, universidades y empleadores.</li>
+</ul>
+</div>
+</section>
+
+<section id="veredicto" class="card">
+<h2>14. Veredicto final</h2>
+<div class="callout yellow">
+<p><strong>Dictamen:</strong> Revisión mayor, pero con avance significativo.</p>
+<p>La nueva versión mejora notablemente el artículo. Ya contiene elementos metodológicos que antes faltaban: muestra, depuración, criterios, codificación, confiabilidad, ICC ponderado y limitaciones más honestas. Sin embargo, todavía no está listo para publicación porque persisten inconsistencias internas, especialmente en la aplicación del ICC ponderado, la interpretación causal del PESTEL, la falta de conteos absolutos, el uso de porcentajes muy elevados sin suficiente explicación y la debilidad de trazabilidad bibliográfica.</p>
+<p><strong>Recomendación editorial:</strong> continuar con una tercera versión enfocada exclusivamente en reproducibilidad, tablas de resultados, anexos y referencias verificables. Si se corrigen esos puntos, el manuscrito podría pasar de “revisión mayor” a “revisión menor” y quedar en condiciones razonables para envío a revista académica regional o indexada.</p>
+</div>
+</section>
+
+</main>
+</div>
+</body>
+</html>

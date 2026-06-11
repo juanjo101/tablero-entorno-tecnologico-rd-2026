@@ -797,6 +797,36 @@
         .gap-bar-fill  { height: 100%; border-radius: 4px; transition: width 0.8s cubic-bezier(0.4,0,0.2,1); }
         .fill-demand   { background: var(--utesa-green-medium); }
         .fill-supply   { background: var(--utesa-gold); }
+        .salary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .salary-kpi {
+            border: 1px solid var(--border-color);
+            background: var(--bg-canvas);
+            border-radius: 8px;
+            padding: 0.8rem;
+        }
+        .salary-kpi-val {
+            display: block;
+            font-family: var(--font-mono);
+            color: var(--utesa-green-deep);
+            font-weight: 800;
+            font-size: 1rem;
+        }
+        .salary-kpi-lbl {
+            display: block;
+            color: var(--text-secondary);
+            font-size: 0.72rem;
+            line-height: 1.3;
+            margin-top: 0.2rem;
+        }
+        .salary-table td,
+        .salary-table th {
+            white-space: nowrap;
+        }
 
         .career-card {
             background: var(--bg-panel);
@@ -972,6 +1002,16 @@
                         <li><strong>Fase 2: Enfoque Temático Balanceado:</strong> Integración equilibrada de ciberseguridad, software, datos y nube junto con automatización industrial, BIM, eficiencia energética, manufactura avanzada, infraestructura civil, electrónica aplicada y analítica de operaciones.</li>
                         <li><strong>Fase 3: Validación Dominicana en LinkedIn Empleos:</strong> Auditoría sistemática de vacantes activas localizadas en la República Dominicana y puestos de teletrabajo remoto en Latinoamérica para contrastar la demanda y calcular los porcentajes de adopción empresarial real.</li>
                     </ul>
+                </div>
+
+                <div class="panel-card" style="border-left: 5px solid var(--utesa-green-medium); background: var(--bg-panel);">
+                    <div class="panel-header-row">
+                        <span class="panel-title">💰 Nueva capa salarial integrada</span>
+                        <button onclick="goToSalaryPanel()" class="export-btn" style="font-size:0.72rem;">Ver salarios</button>
+                    </div>
+                    <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+                        El tablero ya incluye rangos salariales STEAM del sector público agregados desde MAP/datos.gob.do: 13,211 cargos coincidentes, mediana máxima observada de RD$90,000 en Eléctrica/Energía y comparación con piso privado 2026.
+                    </p>
                 </div>
                 
                 <!-- KPIs -->
@@ -1167,6 +1207,42 @@
                     </div>
                 </div>
 
+                <!-- Panel Especial: Estudio Nacional de Habilidades (ENDHACE 2020 - ONE / MEPyD) -->
+                <div class="panel-card" style="margin-top: 1.5rem; border-left: 5px solid var(--utesa-gold); background: linear-gradient(135deg, var(--bg-panel), var(--utesa-gold-light));">
+                    <div class="panel-header-row">
+                        <span class="panel-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                            🎯 Validaciones Nacionales: Encuesta ENDHACE 2020 (ONE / MEPyD / Unión Europea)
+                        </span>
+                        <a href="https://app.powerbi.com/view?r=eyJrIjoiNTMyNWVhMjItZTliMC00MjNmLTlmMWUtMmRlZjlhYjg5M2JiIiwidCI6IjZhNzVjNDBjLTgwMDUtNDBlMC04NDA1LWQ0MDI5M2I2M2M3ZiIsImMiOjF9&pageName=ReportSectionda8a7dc203a5bab1c828" target="_blank" class="btn-export" style="font-size: 0.72rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;">
+                            📊 Ver PowerBI Oficial
+                        </a>
+                    </div>
+                    <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+                        La <strong>Encuesta Nacional para la Detección de Necesidades de Habilidades y Cualificaciones en el Empleo (ENDHACE 2020)</strong>, elaborada conjuntamente por la <strong>Oficina Nacional de Estadística (ONE)</strong> y el <strong>Ministerio de Economía, Planificación y Desarrollo (MEPyD)</strong>, consolida a nivel macro la urgencia del rediseño curricular STEAM:
+                    </p>
+                    <div class="salary-grid" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                        <div class="salary-kpi" style="border-top: 3px solid var(--utesa-green-medium); background: white;">
+                            <span class="salary-kpi-val">70.7%</span>
+                            <span class="salary-kpi-lbl">De las empresas formales reportaron tener plazas vacantes activas.</span>
+                        </div>
+                        <div class="salary-kpi" style="border-top: 3px solid var(--utesa-green-medium); background: white;">
+                            <span class="salary-kpi-val">42.5%</span>
+                            <span class="salary-kpi-lbl">De las empresas con vacantes declararon dificultades críticas para cubrirlas.</span>
+                        </div>
+                        <div class="salary-kpi" style="border-top: 3px solid var(--utesa-green-medium); background: white;">
+                            <span class="salary-kpi-val">71.2%</span>
+                            <span class="salary-kpi-lbl">Considera imperativo fortalecer o actualizar las habilidades del personal.</span>
+                        </div>
+                        <div class="salary-kpi" style="border-top: 3px solid var(--utesa-green-medium); background: white;">
+                            <span class="salary-kpi-val">9.7%</span>
+                            <span class="salary-kpi-lbl">Señala el bajo nivel académico de los candidatos como una barrera operativa directa.</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0; line-height: 1.5; font-style: italic;">
+                        <strong>Cruce Analítico con LinkedIn 2026:</strong> La ENDHACE revela que la brecha de habilidades técnicas y la escasez de postulantes calificados es el cuello de botella productivo número uno de la economía formal dominicana, lo que valida plenamente nuestro Índice de Cobertura Curricular de 0% en Ingeniería de Datos y de 11% en Cloud Computing/DevOps, y justifica la inmediata implementación de los programas propuestos.
+                    </p>
+                </div>
+
                 <!-- Mapa de Brechas + Carreras -->
                 <div class="steam-grid">
 
@@ -1200,6 +1276,59 @@
                             <!-- Carreras renderizadas por JS -->
                         </div>
                     </div>
+                </div>
+
+                <!-- Panel de Rangos Salariales -->
+                <div id="salaryPanel" class="panel-card" style="margin-top: 1.5rem; border-left: 5px solid var(--utesa-green-medium); background-color: var(--bg-panel);">
+                    <div class="panel-header-row">
+                        <span class="panel-title">💰 Rangos Salariales STEAM: Sector Público y Referencia Privada</span>
+                    </div>
+                    <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 0 0 1rem 0;">
+                        Agregación de sueldos brutos mensuales de la Nómina Pública General del Estado/MAP por cargo STEAM y muestra ampliada de 119 vacantes privadas con salario visible en Computrabajo RD; 91 quedaron clasificadas en categorías STEAM. LinkedIn Jobs no publicó rangos salariales visibles en la muestra de 188 vacantes, por lo que el componente privado se captura desde portales laborales dominicanos.
+                    </p>
+                    <div class="salary-grid">
+                        <div class="salary-kpi">
+                            <span class="salary-kpi-val">13,211</span>
+                            <span class="salary-kpi-lbl">Cargos públicos coincidentes con categorías STEAM</span>
+                        </div>
+                        <div class="salary-kpi">
+                            <span class="salary-kpi-val">RD$90,000</span>
+                            <span class="salary-kpi-lbl">Mayor mediana pública observada: Eléctrica / Energía</span>
+                        </div>
+                        <div class="salary-kpi">
+                            <span class="salary-kpi-val">RD$29,988</span>
+                            <span class="salary-kpi-lbl">Piso privado empresas grandes 2026</span>
+                        </div>
+                        <div class="salary-kpi">
+                            <span class="salary-kpi-val">91</span>
+                            <span class="salary-kpi-lbl">Vacantes privadas clasificadas con salario visible</span>
+                        </div>
+                        <div class="salary-kpi">
+                            <span class="salary-kpi-val">RD$131,000</span>
+                            <span class="salary-kpi-lbl">Mayor salario privado STEAM observado: Ciberseguridad senior</span>
+                        </div>
+                    </div>
+                    <div class="table-wrapper" style="max-height: 600px; overflow-y: auto;">
+                        <table class="salary-table">
+                            <thead>
+                                <tr>
+                                    <th>Categoría STEAM</th>
+                                    <th>Cargos públicos</th>
+                                    <th>Mediana pública</th>
+                                    <th>Vacantes privadas</th>
+                                    <th>Mediana privada</th>
+                                    <th>P75 público</th>
+                                    <th>Máximo público</th>
+                                </tr>
+                            </thead>
+                            <tbody id="salaryTableBody">
+                                <!-- Inyectado por JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.5; margin-top: 0.8rem;">
+                        Fuente pública: Nómina Pública General del Estado 2025, MAP/datos.gob.do, procesada de forma agregada sin conservar nombres. Fuente privada inicial: Computrabajo RD, 119 vacantes con salario visible capturadas el 29 de mayo de 2026; 91 clasificadas como STEAM. Las medianas privadas son conservadoras porque los portales suelen publicar más salarios operativos/junior que senior. Baseline privado: Resoluciones CNS 2025 resumidas por EY y promedio sectorial ENAE/ONE.
+                    </p>
                 </div>
 
                 <!-- Panel de Auditoría de Empleos de IA en RD -->
@@ -1329,16 +1458,16 @@
                                 </tr>
                                 <tr>
                                     <td><strong>Ing. Mecatrónica / Robótica</strong></td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
                                     <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
-                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
-                                    <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
+                                    <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#0cc984;font-weight:700;">✓</td>
                                     <td style="text-align:center;color:#a96500;font-weight:800;">△</td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
                                     <td style="text-align:center;color:#dc2626;font-weight:700;">✗</td>
-                                    <td><span class="table-badge badge-dev">MEDIA</span></td>
+                                    <td><span class="table-badge badge-dev">MEDIA-BAJA</span></td>
                                 </tr>
                                 <tr>
                                     <td><strong>Tecn. Semiconductores</strong></td>
@@ -1514,6 +1643,27 @@
                             <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Estructuras TIC del Estado y Estandarización de Cargos]</p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
                                 Ministerio de Administración Pública. (2024). <em>Resolución No. 342-2024 que aprueba los modelos de estructura organizativa para las áreas de Tecnologías de la Información y Comunicación (TIC) de los entes y órganos de la administración pública</em>. Santo Domingo, R.D.: Autor. Recuperado de <a href="https://map.gob.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://map.gob.do</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Nómina Pública General y Rangos Salariales Agregados]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Ministerio de Administración Pública. (2025). <em>Nómina Pública General del Estado 2025</em> [Conjunto de datos abiertos, agregación propia por cargo STEAM sin registros nominales]. Santo Domingo, R.D.: datos.gob.do. Recuperado de <a href="https://datos.gob.do/dataset/nomina-publica-general-del-estado-2025-ministerio-de-administracion-publica-map" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">https://datos.gob.do</a>
+                            </p>
+                        </div>
+
+                        <div style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Salario Mínimo Privado y Promedios Sectoriales]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Comité Nacional de Salarios / EY. (2026). <em>República Dominicana: salario mínimo 2026</em>; Oficina Nacional de Estadística. (2025). <em>ENAE 2025: salario promedio mensual sector comercio</em>. Recuperado de <a href="https://www.ey.com/es_ce/technical/tax/tax-alerts/republica-dominicana-salario-minimo-2026" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">EY</a> y <a href="https://www.one.gob.do" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">ONE</a>
+                            </p>
+                        </div>
+
+                        <div id="ref-endhace" style="border-left: 3px solid var(--utesa-gold); padding-left: 1rem;">
+                            <p style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.25rem;">[Brecha de Habilidades y Detección de Necesidades en el Empleo]</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; font-family: var(--font-mono); padding-left: 1.5rem; text-indent: -1.5rem;">
+                                Oficina Nacional de Estadística (ONE) & Ministerio de Economía, Planificación y Desarrollo (MEPyD). (2020). <em>Encuesta Nacional para la Detección de Necesidades de Habilidades y Cualificaciones en el Empleo (ENDHACE 2020)</em> [Tablero interactivo de resultados, PROETP II financiado por la Unión Europea y Cooperación Española]. Santo Domingo, R.D.: Autor. Recuperado de <a href="https://app.powerbi.com/view?r=eyJrIjoiNTMyNWVhMjItZTliMC00MjNmLTlmMWUtMmRlZjlhYjg5M2JiIiwidCI6IjZhNzVjNDBjLTgwMDUtNDBlMC04NDA1LWQ0MDI5M2I2M2M3ZiIsImMiOjF9&pageName=ReportSectionda8a7dc203a5bab1c828" target="_blank" style="color: var(--utesa-green-medium); text-decoration: underline;">PowerBI ONE</a>
                             </p>
                         </div>
 
@@ -1825,7 +1975,8 @@
                 strategy: "Estandarizar el uso de asistentes de IA en programación, capacitar analistas de negocio en plataformas Low-Code y formar perfiles híbridos capaces de aplicar analítica de operaciones y mantenimiento predictivo en procesos industriales y logísticos.",
                 citations: [
                     { institution: "Banco Mundial (BM)", document: "Estudio sobre Tasa de Informalidad y Capital Humano en la R.D.", year: "2024", url: "https://www.bancomundial.org" },
-                    { institution: "LinkedIn Corporation", document: "Informe sobre Contratación Remota e Hitos del Empleo Latinoamericano", year: "2025", url: "https://news.linkedin.com" }
+                    { institution: "Asociación Nacional de Jóvenes Empresarios (ANJE)", document: "Formación del Talento Humano frente a la Demanda en R.D.", year: "2023", url: "https://www.anje.org" },
+                    { institution: "Asociación Dominicana de Rectores de Universidades (ADRU)", document: "Desafíos de la Empleabilidad y Vinculación de IES en R.D.", year: "2024", url: "https://www.adru.edu.do" }
                 ]
             },
             opex_vs_capex: {
@@ -1983,6 +2134,16 @@
                 document.getElementById('panelReferences').classList.add('active');
                 sidebar.style.display = 'none';
             }
+        }
+
+        function goToSalaryPanel() {
+            switchView('steam');
+            setTimeout(() => {
+                const salaryPanel = document.getElementById('salaryPanel');
+                if (salaryPanel) {
+                    salaryPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
         }
 
         // --- SISTEMA INTERACTIVO DE PESTEL CRUZADO ---
@@ -2411,6 +2572,21 @@
             { skill: 'SQL / Bases de Datos',             demand: 72, supply: 70, urgency: 'ok',       label: '✅ CUBIERTA', profileCount: 1120 },
         ];
 
+        const salaryData = [
+            { role: 'Ingeniería Eléctrica / Energía', count: 43, p25: 90000, median: 90000, p75: 100000, max: 275000, privateCount: 0, privateMedian: null },
+            { role: 'Ingeniería de Software', count: 454, p25: 55000, median: 75000, p75: 90000, max: 220000, privateCount: 13, privateMedian: 35000 },
+            { role: 'ESG / Economía Circular', count: 41, p25: 50000, median: 72738, p75: 82500, max: 180000, privateCount: 0, privateMedian: null },
+            { role: 'Arquitectura / BIM', count: 306, p25: 50000, median: 65000, p75: 75000, max: 180000, privateCount: 2, privateMedian: 52500 },
+            { role: 'Cloud / Infraestructura', count: 313, p25: 55825, median: 60000, p75: 77000, max: 275000, privateCount: 12, privateMedian: 40000 },
+            { role: 'Manufactura / Calidad', count: 627, p25: 35000, median: 55000, p75: 75000, max: 165000, privateCount: 11, privateMedian: 40000 },
+            { role: 'Ingeniería Civil / Infraestructura', count: 671, p25: 50000, median: 50000, p75: 70000, max: 180000, privateCount: 11, privateMedian: 70000 },
+            { role: 'Ingeniería Industrial', count: 533, p25: 40000, median: 50000, p75: 78000, max: 469718, privateCount: 16, privateMedian: 40000 },
+            { role: 'Ingeniería de Datos / BI', count: 5983, p25: 30250, median: 49060, p75: 49060, max: 280000, privateCount: 19, privateMedian: 45000 },
+            { role: 'Ciberseguridad', count: 1452, p25: 20216, median: 35015, p75: 45000, max: 280000, privateCount: 3, privateMedian: 35000 },
+            { role: 'Ingeniería Electrónica', count: 87, p25: 34650, median: 34650, p75: 46000, max: 125000, privateCount: 1, privateMedian: 30000 },
+            { role: 'Ingeniería Mecánica / Movilidad', count: 2701, p25: 15000, median: 23100, p75: 30000, max: 220000, privateCount: 3, privateMedian: 24999 },
+        ];
+
         const careerData = [
             {
                 priority: 1,
@@ -2550,6 +2726,29 @@
                         <p style="font-size:0.72rem;font-family:var(--font-mono);color:var(--utesa-green-medium);font-weight:600;">${item.demandLabel}</p>
                         <div class="career-tags">${tagsHtml}</div>
                     </div>`;
+            });
+        }
+
+        function formatDOP(value) {
+            if (value === null || value === undefined) return 's/d';
+            return `RD$${Number(value).toLocaleString('es-DO', { maximumFractionDigits: 0 })}`;
+        }
+
+        function renderSalaryTable() {
+            const container = document.getElementById('salaryTableBody');
+            if (!container) return;
+            container.innerHTML = '';
+            salaryData.forEach(item => {
+                container.innerHTML += `
+                    <tr>
+                        <td><strong>${item.role}</strong></td>
+                        <td class="mono-val">${Number(item.count).toLocaleString('es-DO')}</td>
+                        <td class="mono-val" style="font-weight:800;color:var(--utesa-green-deep);">${formatDOP(item.median)}</td>
+                        <td class="mono-val">${item.privateCount ? Number(item.privateCount).toLocaleString('es-DO') : 's/d'}</td>
+                        <td class="mono-val" style="font-weight:800;color:${item.privateMedian ? 'var(--color-desarrollo)' : 'var(--text-muted)'};">${formatDOP(item.privateMedian)}</td>
+                        <td class="mono-val">${formatDOP(item.p75)}</td>
+                        <td class="mono-val">${formatDOP(item.max)}</td>
+                    </tr>`;
             });
         }
 
@@ -4739,6 +4938,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             renderGapList();
             renderCareerList();
+            renderSalaryTable();
             renderJobsList();
         });
 

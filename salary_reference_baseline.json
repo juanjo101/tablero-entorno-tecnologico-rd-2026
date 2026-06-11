@@ -1,0 +1,50 @@
+{
+  "capturedAt": "2026-05-29T08:19:43",
+  "currency": "DOP",
+  "minimumWagePrivate2026": [
+    {
+      "segment": "Sector privado no sectorizado - empresas grandes",
+      "monthlySalary": 29988.0,
+      "effectiveDate": "2026-02-01",
+      "source": "EY, resumen Resolución CNS-01-2025",
+      "url": "https://www.ey.com/es_ce/technical/tax/tax-alerts/republica-dominicana-salario-minimo-2026"
+    },
+    {
+      "segment": "Sector privado no sectorizado - empresas medianas",
+      "monthlySalary": 27489.6,
+      "effectiveDate": "2026-02-01",
+      "source": "EY, resumen Resolución CNS-01-2025",
+      "url": "https://www.ey.com/es_ce/technical/tax/tax-alerts/republica-dominicana-salario-minimo-2026"
+    },
+    {
+      "segment": "Sector privado no sectorizado - empresas pequeñas",
+      "monthlySalary": 18421.2,
+      "effectiveDate": "2026-02-01",
+      "source": "EY, resumen Resolución CNS-01-2025",
+      "url": "https://www.ey.com/es_ce/technical/tax/tax-alerts/republica-dominicana-salario-minimo-2026"
+    },
+    {
+      "segment": "Sector privado no sectorizado - microempresas",
+      "monthlySalary": 16993.2,
+      "effectiveDate": "2026-02-01",
+      "source": "EY, resumen Resolución CNS-01-2025",
+      "url": "https://www.ey.com/es_ce/technical/tax/tax-alerts/republica-dominicana-salario-minimo-2026"
+    },
+    {
+      "segment": "Zonas francas",
+      "monthlySalary": 20875.0,
+      "effectiveDate": "2026-06-01",
+      "source": "EY, resumen Resolución CNS-03-2025",
+      "url": "https://www.ey.com/es_ce/technical/tax/tax-alerts/republica-dominicana-salario-minimo-2026"
+    }
+  ],
+  "sectorAverages": [
+    {
+      "sector": "Comercio al por mayor y menor",
+      "year": 2024,
+      "monthlyAverageSalary": 28853.21,
+      "source": "ONE, ENAE 2025 Sector Comercio",
+      "url": "https://www.one.gob.do/media/rixbt34i/enae-2025-sector-comercio-al-por-mayor-y-al-por-menor.pdf"
+    }
+  ]
+}

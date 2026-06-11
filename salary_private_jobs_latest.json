@@ -1,0 +1,108 @@
+{
+  "source": "Vacantes privadas con salario publicado",
+  "capturedAt": "2026-05-29T10:37:31",
+  "method": "Extraccion de rangos salariales explicitamente publicados en texto de vacantes; se usa el punto medio del rango.",
+  "matchedRows": 91,
+  "results": [
+    {
+      "role": "Arquitectura / BIM",
+      "count": 2,
+      "min": 35000.0,
+      "p25": 43750.0,
+      "median": 52500.0,
+      "average": 52500.0,
+      "p75": 61250.0,
+      "max": 70000.0
+    },
+    {
+      "role": "Ciberseguridad",
+      "count": 3,
+      "min": 23500.0,
+      "p25": 29250.0,
+      "median": 35000.0,
+      "average": 63166.67,
+      "p75": 83000.0,
+      "max": 131000.0
+    },
+    {
+      "role": "Cloud / Infraestructura",
+      "count": 12,
+      "min": 17000.0,
+      "p25": 28500.0,
+      "median": 40000.0,
+      "average": 50037.0,
+      "p75": 56250.0,
+      "max": 111111.0
+    },
+    {
+      "role": "Ingeniería Civil / Infraestructura",
+      "count": 11,
+      "min": 28000.0,
+      "p25": 40000.0,
+      "median": 70000.0,
+      "average": 61454.45,
+      "p75": 80000.0,
+      "max": 90000.0
+    },
+    {
+      "role": "Ingeniería Electrónica",
+      "count": 1,
+      "min": 30000.0,
+      "p25": 30000.0,
+      "median": 30000.0,
+      "average": 30000.0,
+      "p75": 30000.0,
+      "max": 30000.0
+    },
+    {
+      "role": "Ingeniería Industrial",
+      "count": 16,
+      "min": 12000.0,
+      "p25": 35000.0,
+      "median": 40000.0,
+      "average": 45437.44,
+      "p75": 46250.0,
+      "max": 100000.0
+    },
+    {
+      "role": "Ingeniería Mecánica / Movilidad",
+      "count": 3,
+      "min": 24000.0,
+      "p25": 24499.5,
+      "median": 24999.0,
+      "average": 27999.67,
+      "p75": 29999.5,
+      "max": 35000.0
+    },
+    {
+      "role": "Ingeniería de Datos / BI",
+      "count": 19,
+      "min": 24000.0,
+      "p25": 34000.0,
+      "median": 45000.0,
+      "average": 49401.63,
+      "p75": 49999.5,
+      "max": 111111.0
+    },
+    {
+      "role": "Ingeniería de Software",
+      "count": 13,
+      "min": 11000.0,
+      "p25": 18984.0,
+      "median": 35000.0,
+      "average": 47354.08,
+      "p75": 80000.0,
+      "max": 123456.0
+    },
+    {
+      "role": "Manufactura / Calidad",
+      "count": 11,
+      "min": 27490.0,
+      "p25": 29500.0,
+      "median": 40000.0,
+      "average": 55595.0,
+      "p75": 87500.0,
+      "max": 122055.0
+    }
+  ]
+}

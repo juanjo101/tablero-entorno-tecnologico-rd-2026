@@ -74,7 +74,60 @@ La brecha se interpreta como:
 
 > Riesgo de insuficiencia relativa de talento disponible frente a la demanda observada.
 
+## Capa salarial
+
+La capa salarial se agrega para estimar el premio economico de cada habilidad/carrera.
+
+Fuentes publicas:
+
+- Nomina Publica General del Estado, MAP / datos.gob.do.
+- Escalas salariales institucionales publicadas en portales de transparencia.
+- Salario minimo oficial del sector privado no sectorizado y sectores especiales.
+- Promedios sectoriales ONE / ENAE.
+
+Fuentes privadas:
+
+- Vacantes con salario explicitamente publicado.
+- Bolsas de empleo locales con rangos visibles.
+- Encuestas salariales privadas cuando esten disponibles publicamente.
+- Computrabajo RD como primera fuente privada operativa, usando vacantes y paginas de categoria que muestran montos mensuales visibles.
+
+Unidad de analisis para sector publico:
+
+- Cargo publico agregado por categoria STEAM.
+- Sueldo bruto mensual.
+- Conteo de cargos coincidentes.
+- Minimo, percentil 25, mediana, promedio, percentil 75 y maximo.
+
+Proteccion metodologica:
+
+- El archivo bruto de nomina no se conserva en el repositorio.
+- No se guardan nombres de empleados.
+- No se publican registros individuales.
+- Solo se guardan agregados por categoria.
+
+Archivos generados:
+
+- `salary_public_sector_latest.json`
+- `salary_public_sector_latest.csv`
+- `salary_private_jobs_latest.json`
+- `salary_private_jobs_latest.csv`
+- `salary_private_raw_latest.json`
+- `salary_private_raw_latest.csv`
+- `salary_reference_baseline.json`
+
+Interpretacion correcta:
+
+> Rangos salariales observados en nomina publica y rangos publicados en vacantes privadas, agregados por categoria STEAM.
+
+No debe presentarse como:
+
+> Salario exacto universal de cada carrera en todo el mercado dominicano.
+
 ## Frase recomendada para el informe
 
 > La demanda fue validada mediante una auditoria automatizada de vacantes activas en LinkedIn Jobs RD. La oferta fue validada mediante conteos agregados de LinkedIn People Search filtrados por Republica Dominicana, sin almacenar datos personales. Por tanto, los resultados representan una medicion puntual y reproducible de presencia digital laboral, no un censo nacional exhaustivo.
 
+## Frase recomendada para salarios
+
+> La dimension salarial se calculo mediante agregacion de sueldos brutos mensuales publicados en la Nomina Publica General del Estado y mediante extraccion de rangos explicitamente publicados en vacantes privadas. Los resultados se reportan por categoria STEAM en forma de rangos y medianas, no como remuneraciones individuales ni como censo completo del mercado.

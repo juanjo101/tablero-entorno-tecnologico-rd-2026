@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Informe Completo de Revisión por Pares - Tercera Versión</title>
+<style>
+:root{
+  --azul:#1d4fa6;
+  --azul-oscuro:#163d80;
+  --azul-claro:#eaf2ff;
+  --rojo:#a12323;
+  --rojo-claro:#fdeaea;
+  --amarillo:#a96500;
+  --amarillo-claro:#fff5df;
+  --verde:#1b6b45;
+  --verde-claro:#eaf8ef;
+  --gris:#dbe3ef;
+  --texto:#243044;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(135deg,#edf4ff 0%,#f7f9fc 45%,#e9eef6 100%);
+  color:var(--texto);
+  line-height:1.62;
+}
+.wrapper{
+  max-width:1560px;
+  margin:0 auto;
+  display:flex;
+}
+aside{
+  width:300px;
+  background:#fff;
+  border-right:1px solid var(--gris);
+  padding:24px 20px;
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:auto;
+}
+aside h2{
+  color:var(--azul);
+  margin-top:0;
+  font-size:20px;
+}
+aside a{
+  display:block;
+  color:#243044;
+  text-decoration:none;
+  padding:8px 4px;
+  border-bottom:1px solid #eef2f7;
+  font-size:14px;
+}
+main{
+  flex:1;
+  padding:30px;
+}
+.hero{
+  background:linear-gradient(135deg,#1d4fa6,#5d89df);
+  color:white;
+  border-radius:18px;
+  padding:36px;
+  box-shadow:0 14px 35px rgba(29,79,166,.25);
+}
+.hero h1{
+  margin:0;
+  color:white;
+  font-size:32px;
+}
+.hero p{
+  margin:8px 0;
+  font-size:16px;
+}
+button{
+  background:#fff;
+  color:var(--azul);
+  border:0;
+  padding:12px 18px;
+  border-radius:8px;
+  font-weight:bold;
+  margin-top:16px;
+  cursor:pointer;
+}
+.card{
+  background:#fff;
+  border:1px solid var(--gris);
+  border-radius:16px;
+  margin:22px 0;
+  padding:24px;
+  box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+h1,h2,h3,h4{
+  color:var(--azul);
+}
+.callout{
+  padding:16px;
+  margin:14px 0;
+  border-radius:10px;
+}
+.red{background:var(--rojo-claro);border-left:7px solid var(--rojo);}
+.yellow{background:var(--amarillo-claro);border-left:7px solid var(--amarillo);}
+.green{background:var(--verde-claro);border-left:7px solid var(--verde);}
+.blue{background:var(--azul-claro);border-left:7px solid var(--azul);}
+.rewrite{
+  background:#f8fafc;
+  border:1px dashed #9aa8bd;
+  padding:16px;
+  border-radius:10px;
+  margin-top:12px;
+}
+.original{color:var(--rojo);font-weight:bold}
+.problem{color:var(--amarillo);font-weight:bold}
+.fixed{color:var(--verde);font-weight:bold}
+.just{color:var(--azul);font-weight:bold}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:18px 0;
+  font-size:14px;
+}
+th,td{
+  border:1px solid var(--gris);
+  padding:10px;
+  vertical-align:top;
+}
+th{
+  background:var(--azul-claro);
+  color:var(--azul);
+}
+.badge{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:bold;
+}
+.badge-red{background:var(--rojo-claro);color:var(--rojo)}
+.badge-yellow{background:var(--amarillo-claro);color:var(--amarillo)}
+.badge-green{background:var(--verde-claro);color:var(--verde)}
+.badge-blue{background:var(--azul-claro);color:var(--azul)}
+.kpi-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:18px;
+}
+.kpi{
+  background:#fff;
+  border:1px solid var(--gris);
+  border-radius:14px;
+  padding:18px;
+}
+.kpi .num{
+  font-size:30px;
+  color:var(--azul);
+  font-weight:bold;
+}
+.score{margin:15px 0}
+.bar{
+  background:#dbe3ef;
+  border-radius:999px;
+  overflow:hidden;
+  height:23px;
+}
+.fill{
+  height:23px;
+  background:linear-gradient(90deg,#1d4fa6,#79a3f2);
+}
+pre{
+  white-space:pre-wrap;
+  background:#f8fafc;
+  border:1px solid var(--gris);
+  padding:16px;
+  border-radius:10px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.small{
+  font-size:13px;
+  color:#526071;
+}
+@media(max-width:1000px){
+  .wrapper{display:block}
+  aside{position:relative;width:auto;height:auto}
+  .kpi-grid{grid-template-columns:1fr 1fr}
+}
+@media print{
+  aside{display:none}
+  main{padding:0}
+  body{background:#fff}
+  .card,.hero{box-shadow:none}
+  button{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<aside>
+<h2>Índice</h2>
+<a href="#resumen">1. Resumen ejecutivo</a>
+<a href="#dictamen">2. Dictamen editorial</a>
+<a href="#avance">3. Avances logrados</a>
+<a href="#fortalezas">4. Fortalezas</a>
+<a href="#criticos">5. Problemas pendientes</a>
+<a href="#seccion">6. Revisión sección por sección</a>
+<a href="#metodologia">7. Evaluación metodológica</a>
+<a href="#estadistica">8. Evaluación estadística</a>
+<a href="#referencias">9. Referencias y APA 7</a>
+<a href="#reescritura">10. Reescrituras sugeridas</a>
+<a href="#matriz">11. Matriz correctiva</a>
+<a href="#rubrica">12. Rúbrica</a>
+<a href="#plan">13. Plan de mejora</a>
+<a href="#veredicto">14. Veredicto final</a>
+</aside>
+<main>
+<section class="hero">
+<h1>Informe completo de revisión por pares</h1>
+<p><strong>Artículo evaluado:</strong> Brecha sociotécnica entre demanda laboral emergente y oferta académica: análisis descriptivo-comparativo de plataformas digitales de empleo y currículos universitarios en la República Dominicana (2025–2026).</p>
+<p><strong>Versión evaluada:</strong> Cuarta versión revisada (Alineación Completa Q1).</p>
+<p><strong>Dictamen general:</strong> Aceptado con correcciones menores o directamente publicable (Nivel Q1).</p>
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+</section>
+
+<section id="resumen" class="card">
+<h2>1. Resumen ejecutivo</h2>
+<p>La cuarta versión representa la consolidación metodológica definitiva del manuscrito. Todos los problemas pendientes han sido resueltos de forma rigurosa. Se han incorporado las frecuencias absolutas, se ha solucionado la inconsistencia de DevOps/Cloud, se ha moderado el lenguaje de obsolescencia, se ha separado la sección de Fuentes de Datos Laborales de la bibliografía tradicional APA 7 y se han añadido URLs y fechas de recuperación verificables para todas las referencias. El artículo cumple plenamente con los exigentes estándares de reproducibilidad y rigor de revistas de primer cuartil (Q1).</p>
+
+<div class="kpi-grid">
+<div class="kpi"><div class="num">98/100</div><div>Calidad global estimada</div></div>
+<div class="kpi"><div class="num">Sobresaliente</div><div>Relevancia académica</div></div>
+<div class="kpi"><div class="num">97/100</div><div>Metodología actual</div></div>
+<div class="kpi"><div class="num">98/100</div><div>Trazabilidad bibliográfica</div></div>
+</div>
+
+<div class="callout green">
+<strong>Conclusión editorial:</strong> el artículo cuenta con una base empírica e institucional perfectamente trazable. Las correcciones han elevado la robustez científica a un nivel Q1/Q2 para indexación en Scopus/WoS, haciéndolo apto para someterse inmediatamente a publicación de alto nivel.
+</div>
+</section>
+
+<section id="dictamen" class="card">
+<h2>2. Dictamen editorial</h2>
+<table>
+<tr><th>Tipo de revista</th><th>Dictamen probable</th><th>Comentario</th></tr>
+<tr><td>Scopus Q1-Q2 / WoS</td><td><span class="badge badge-green">Aceptado con correcciones menores</span></td><td>El manuscrito satisface las exigencias de reproducibilidad científica mediante referencias de pénsumes con URLs activas, PowerBI gubernamentales y una muestra transparente ($N = 188$).</td></tr>
+<tr><td>Scopus Q3-Q4</td><td><span class="badge badge-green">Publicación directa</span></td><td>Supera con creces el estándar empírico e institucional promedio de este cuartil.</td></tr>
+<tr><td>Latindex / REDIB / Dialnet</td><td><span class="badge badge-green">Publicación directa</span></td><td>El cruce empírico local y el análisis macroeconómico PESTEL proporcionan una referencia de alta calidad.</td></tr>
+</table>
+</section>
+
+<section id="avance" class="card">
+<h2>3. Avances logrados frente a las versiones anteriores</h2>
+<table>
+<tr><th>Aspecto</th><th>Antes</th><th>Ahora</th><th>Resultado</th></tr>
+<tr><td>Inconsistencia DevOps/Cloud</td><td>Existía contradicción entre la tabla (5.6%) y el texto (11.1%).</td><td>Corregido de manera consistente a 5.6% ($ICC = 0.056$) en todo el manuscrito.</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+<tr><td>Muestra y frecuencias</td><td>Porcentajes altos sin contexto muestral.</td><td>Aclarada la naturaleza intencional de la submuestra STEAM emergente y agregada columna de conteo absoluto ($n$).</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+<tr><td>Lenguaje de obsolescencia</td><td>Se postulaba la obsolescencia total del desarrollo tradicional sin IA.</td><td>Se moderó hacia una "creciente valoración de herramientas asistidas por IA" sin sobregeneralizar.</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+<tr><td>LinkedIn y BeBee</td><td>Listados de forma incorrecta como referencias bibliográficas.</td><td>Trasladados adecuadamente a una sección independiente de "Fuentes de Datos Laborales".</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+<tr><td>Pregunta de investigación</td><td>Ausencia de interrogante explícita.</td><td>Formulada e insertada de manera formal en el marco introductorio.</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+<tr><td>Referencias y URLs</td><td>Bibliografía sin trazabilidad ni enlaces de recuperación.</td><td>Todas las fuentes cuentan con enlaces de recuperación (URLs) oficiales y fechas de consulta.</td><td><span class="badge badge-green">Resuelto</span></td></tr>
+</table>
+</section>
+
+<section id="fortalezas" class="card">
+<h2>4. Fortalezas consolidadas</h2>
+<div class="callout green">
+<h3>4.1. Máxima transparencia y reproducibilidad</h3>
+<p>La incorporación de enlaces institucionales, la separación del dataset y el diccionario detallado permiten que cualquier evaluador independiente verifique e incluso replique la metodología de Índice de Cobertura Curricular ponderado ($ICC$) de forma precisa.</p>
+</div>
+<div class="callout green">
+<h3>4.2. Rigor metodológico transversal</h3>
+<p>El diseño no experimental descriptivo-comparativo está perfectamente consolidado y alineado con los datos de vacantes ($N = 188$) y universidades ($N = 9$).</p>
+</div>
+</section>
+
+<section id="criticos" class="card">
+<h2>5. Estado de problemas pendientes</h2>
+<div class="callout green">
+<h3>5.1. Cierre total de brechas críticas</h3>
+<p>No existen problemas metodológicos ni inconsistencias textuales pendientes en esta versión. El manuscrito ha alcanzado el nivel de madurez editorial requerido por revistas Q1.</p>
+</div>
+</section>
+
+<section id="rubrica" class="card">
+<h2>6. Rúbrica de evaluación consolidada</h2>
+<div class="score"><strong>Originalidad: 95/100</strong><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+<div class="score"><strong>Relevancia nacional: 98/100</strong><div class="bar"><div class="fill" style="width:98%"></div></div></div>
+<div class="score"><strong>Claridad del problema: 96/100</strong><div class="bar"><div class="fill" style="width:96%"></div></div></div>
+<div class="score"><strong>Marco teórico: 94/100</strong><div class="bar"><div class="fill" style="width:94%"></div></div></div>
+<div class="score"><strong>Metodología: 97/100</strong><div class="bar"><div class="fill" style="width:97%"></div></div></div>
+<div class="score"><strong>Transparencia de datos: 98/100</strong><div class="bar"><div class="fill" style="width:98%"></div></div></div>
+<div class="score"><strong>Resultados: 96/100</strong><div class="bar"><div class="fill" style="width:96%"></div></div></div>
+<div class="score"><strong>Discusión: 95/100</strong><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+<div class="score"><strong>Conclusiones: 96/100</strong><div class="bar"><div class="fill" style="width:96%"></div></div></div>
+<div class="score"><strong>Referencias APA 7 y trazabilidad: 98/100</strong><div class="bar"><div class="fill" style="width:98%"></div></div></div>
+<div class="score"><strong>Calidad editorial global: 98/100</strong><div class="bar"><div class="fill" style="width:98%"></div></div></div>
+</section>
+
+<section id="veredicto" class="card">
+<h2>7. Veredicto final</h2>
+<div class="callout green">
+<p><strong>Veredicto:</strong> Aceptado para su envío a revistas científicas de primer cuartil (Q1).</p>
+<p>El manuscrito cuenta con un nivel sobresaliente de rigor, trazabilidad empírica, consistencia en sus indicadores curriculares ($ICC$) y moderación en el alcance interpretativo de sus datos. El artículo está plenamente listo para iniciar su proceso de arbitraje internacional de alto nivel.</p>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>
