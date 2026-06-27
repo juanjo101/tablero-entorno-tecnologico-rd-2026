@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Teleprompter Mitsubishi Bonanza</title>
+<style>
+:root{--bg:#050505;--panel:#121212;--text:#f8f8f8;--muted:#aaa;--red:#e30613;--gold:#d8b46a;--font:42px;--speed:36}
+*{box-sizing:border-box} html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;overflow:hidden}
+.app{height:100dvh;display:flex;flex-direction:column;background:radial-gradient(circle at top,#1b1b1b,#000 60%)}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(env(safe-area-inset-top) + 8px) 10px 8px;background:linear-gradient(180deg,rgba(0,0,0,.96),rgba(0,0,0,.7));backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1)}
+.title{font-size:13px;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;text-align:center;margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.controls{display:flex;gap:6px;justify-content:center;align-items:center;flex-wrap:wrap}
+button{appearance:none;border:1px solid rgba(255,255,255,.18);background:#181818;color:#fff;border-radius:999px;padding:10px 13px;font-size:14px;font-weight:700;min-width:44px;min-height:42px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+button.primary{background:var(--red);border-color:var(--red)}
+button:active{transform:scale(.96)}
+.stats{display:flex;justify-content:space-between;gap:8px;margin-top:7px;font-size:12px;color:#ddd;align-items:center}.stats span{white-space:nowrap}.progress{height:4px;background:#333;border-radius:99px;overflow:hidden;flex:1}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--gold));}
+.stage{height:100%;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:190px 16px 56vh;scroll-behavior:auto;}
+.script{max-width:920px;margin:0 auto;font-size:var(--font);line-height:1.55;font-weight:600;letter-spacing:.01em;text-align:left;text-wrap:pretty;}
+.script h2{font-size:.68em;color:var(--gold);margin:2.2em 0 .7em;text-transform:uppercase;letter-spacing:.08em;border-top:1px solid rgba(255,255,255,.18);padding-top:1em}
+.script .slide{display:inline-block;font-size:.45em;color:#fff;background:rgba(227,6,19,.18);border:1px solid rgba(227,6,19,.5);padding:.3em .7em;border-radius:999px;margin:.9em 0 .4em}
+.script .speaker{display:block;color:var(--red);font-size:.52em;margin:.5em 0;font-weight:800;letter-spacing:.05em;text-transform:uppercase}.script p{margin:0 0 1.1em}.script strong{color:#fff}.guide{pointer-events:none;position:fixed;left:0;right:0;top:50%;z-index:10;border-top:3px solid var(--red);box-shadow:0 0 16px rgba(227,6,19,.65)}.guide::after{content:'LEE AQUÍ';position:absolute;right:12px;top:-28px;color:#fff;background:var(--red);font-size:11px;padding:4px 8px;border-radius:6px;font-weight:800}.mirror .stage{transform:scaleX(-1)}.bottomhint{position:fixed;left:0;right:0;bottom:0;padding:8px 12px calc(env(safe-area-inset-bottom) + 8px);background:linear-gradient(0deg,rgba(0,0,0,.95),rgba(0,0,0,.25));z-index:20;color:#999;text-align:center;font-size:12px}.hiddenUI .topbar,.hiddenUI .bottomhint{opacity:0;pointer-events:none}.hiddenUI .stage{padding-top:60px}
+@media(max-width:600px){:root{--font:34px}.stage{padding-top:182px}.controls{gap:5px}button{font-size:13px;padding:9px 10px}.script{line-height:1.48}.title{font-size:11px}.stats{font-size:11px}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="topbar" id="topbar">
+    <div class="title">Teleprompter · Mitsubishi Pickup Experience 4.0 · SEM10</div>
+    <div class="controls">
+      <button class="primary" id="playBtn">▶ Play</button>
+      <button id="pauseBtn">⏸ Pausa</button>
+      <button id="resetBtn">⏮ Inicio</button>
+      <button id="backBtn">−30s</button>
+      <button id="fwdBtn">+30s</button>
+      <button id="slowBtn">🐢</button>
+      <button id="fastBtn">⚡</button>
+      <button id="smallBtn">A−</button>
+      <button id="bigBtn">A+</button>
+      <button id="mirrorBtn">🪞</button>
+      <button id="fullBtn">⛶</button>
+    </div>
+    <div class="stats"><span id="state">Listo</span><div class="progress"><div class="bar" id="bar"></div></div><span id="speedLabel">Vel. 36</span></div>
+  </div>
+  <div class="guide"></div>
+  <main class="stage" id="stage"><article class="script" id="script">
+    <span class="slide">Diapositiva 1 · Portada</span><span class="speaker">Juan José Díaz</span>
+    <p>Buenas noches. Somos el equipo integrado por Juan José Díaz Nerio, Laura Yudermi García Peralta y Persio Martínez. Hoy presentamos una propuesta de consultoría en inteligencia artificial y Marketing 4.0 para Bonanza Dominicana, enfocada en Mitsubishi en el segmento de camionetas.</p>
+    <p>Nuestra propuesta se titula: <strong>Transformación de la Experiencia del Cliente en Bonanza Dominicana</strong>. No se trata solamente de vender más camionetas; se trata de rediseñar la relación entre la marca y el cliente, usando datos, personalización semántica, automatización y principios éticos.</p>
+
+    <span class="slide">Diapositiva 2 · Problema de negocio</span><span class="speaker">Juan José Díaz</span>
+    <p>El comprador actual de una camioneta ya no llega al concesionario sin información. Antes de hablar con un asesor, busca en Google, compara videos en YouTube, revisa redes sociales, pregunta por WhatsApp y evalúa financiamiento, seguridad, mantenimiento y valor de reventa.</p>
+    <p>Esto crea un reto para Bonanza Dominicana: si esos puntos de contacto están desconectados, la experiencia se fragmenta. La marca puede tener buenos productos, pero perder oportunidades por falta de seguimiento, baja personalización o ausencia de una visión única del cliente.</p>
+
+    <span class="slide">Diapositiva 3 · Diagnóstico y desafíos</span><span class="speaker">Laura García</span>
+    <p>Desde la filosofía del marketing, identificamos una transición clara. El Marketing 1.0 se enfocaba en el producto: motor, fuerza, tracción y durabilidad. El Marketing 2.0 incorporó al cliente y sus necesidades. El Marketing 3.0 exige propósito humano: movilidad productiva, seguridad vial, sostenibilidad y desarrollo económico.</p>
+    <p>El gran reto está en el Marketing 4.0: integrar canales físicos y digitales, usar mejor el CRM, responder con mayor velocidad, personalizar sin invadir la privacidad y medir resultados con indicadores reales de negocio.</p>
+
+    <span class="slide">Diapositiva 4 · Propuesta consultora</span><span class="speaker">Juan José Díaz</span>
+    <p>Nuestra propuesta se denomina <strong>Mitsubishi Pickup Experience 4.0</strong>. Es una estrategia integral para convertir el proceso de compra y postventa en una experiencia inteligente, personalizada y ética.</p>
+    <p>La idea central es conectar al cliente, el CRM, la inteligencia artificial, la automatización y el equipo comercial en un mismo ecosistema. La tecnología no sustituye al asesor humano; le entrega mejor información para actuar con más oportunidad y pertinencia.</p>
+
+    <span class="slide">Diapositiva 5 · Segmentación conductual</span><span class="speaker">Persio Martínez</span>
+    <p>En lugar de segmentar solo por edad, ingreso o ubicación, proponemos una segmentación basada en comportamiento. Identificamos cuatro perfiles: empresarios productivos, agroproductores y contratistas, familias activas y profesionales urbanos.</p>
+    <p>Cada segmento deja señales digitales distintas: búsquedas de financiamiento, visitas a fichas técnicas, interacción con videos de tracción, consultas por WhatsApp, interés en seguridad familiar o comparación de versiones. Esas señales permiten construir recomendaciones más precisas.</p>
+
+    <span class="slide">Diapositiva 6 · Web Semántica e IA</span><span class="speaker">Persio Martínez</span>
+    <p>La Web Semántica permite que la inteligencia artificial no interprete palabras aisladas, sino contextos. Para este caso trabajamos cinco entidades: movilidad productiva, seguridad vial, territorio dominicano, tecnología automotriz y sostenibilidad operativa.</p>
+    <p>Por ejemplo, si un usuario busca camioneta para finca, revisa rutas de montaña, pregunta por financiamiento y consume contenido de tracción 4x4, la IA no le enviaría un anuncio genérico. Lo clasificaría como agroproductor o contratista y priorizaría mensajes sobre fuerza, suspensión, mantenimiento y soporte postventa.</p>
+
+    <span class="slide">Diapositiva 7 · Buyer Persona</span><span class="speaker">Laura García</span>
+    <p>El buyer persona principal es Roberto Méndez, propietario de una pequeña empresa de servicios técnicos entre Santiago y Santo Domingo. Roberto necesita una camioneta resistente, segura, con buen respaldo postventa y que no afecte el flujo de caja de su negocio.</p>
+    <p>Sus puntos de dolor son muy claros: información dispersa, procesos lentos de cotización, incertidumbre sobre mantenimiento y dificultad para comparar versiones. La IA puede anticipar que Roberto responderá mejor a contenido sobre costo total de propiedad, financiamiento y beneficios postventa.</p>
+
+    <span class="slide">Diapositiva 8 · Campaña IA Generativa</span><span class="speaker">Juan José Díaz</span>
+    <p>La campaña se articula bajo el concepto: <strong>La camioneta que entiende tu camino, tu trabajo y tu próxima meta</strong>. Para la etapa de descubrimiento se busca despertar interés; para consideración, orientar la decisión; y para conversión, activar la prueba de manejo y la cotización personalizada.</p>
+    <p>La pieza visual presenta una camioneta en un escenario dominicano que conecta ciudad, campo y montaña, con elementos sutiles de inteligencia artificial, ruta inteligente, seguridad y mantenimiento predictivo.</p>
+
+    <span class="slide">Diapositiva 9 · CRM inteligente y automatización</span><span class="speaker">Persio Martínez</span>
+    <p>El CRM es el núcleo operativo de la estrategia. Cada interacción alimenta el perfil del cliente: visita a la página de la Triton, descarga de catálogo, pregunta por financiamiento, solicitud de prueba de manejo o compra.</p>
+    <p>La IA interpreta esas señales y activa acciones automáticas. Un visitante inicial recibe contenido educativo. Quien descarga un catálogo recibe comparativas. Quien pregunta por financiamiento recibe contacto del asesor. Y quien compra entra en una secuencia postventa con recordatorios de servicio y programa de referidos.</p>
+
+    <span class="slide">Diapositiva 10 · KPIs y dashboard</span><span class="speaker">Persio Martínez</span>
+    <p>La estrategia se mide con tres indicadores principales: tasa de conversión de leads a prueba de manejo, Customer Lifetime Value y sentimiento de marca.</p>
+    <p>Estos KPIs no se quedan en métricas de vanidad. Permiten tomar decisiones: priorizar asesores, redistribuir presupuesto publicitario, fortalecer postventa, identificar riesgos reputacionales y mejorar la experiencia del cliente. El dashboard ejecutivo integra marketing, ventas y postventa en una sola vista gerencial.</p>
+
+    <span class="slide">Diapositiva 11 · Gobernanza ética</span><span class="speaker">Laura García</span>
+    <p>La personalización basada en IA solo es sostenible si el cliente conserva control sobre sus datos. Por eso proponemos un modelo de consentimiento informado y trazabilidad.</p>
+    <p>Cada autorización debe registrarse en el CRM con fecha, canal, finalidad y versión del aviso de privacidad. Además, el cliente debe poder revocar consentimiento, actualizar datos o solicitar eliminación. En el caso de geolocalización o vehículos conectados, el uso debe ser especialmente restrictivo y nunca emplearse para publicidad sin autorización explícita.</p>
+
+    <span class="slide">Diapositiva 12 · Cierre ejecutivo</span><span class="speaker">Juan José Díaz</span>
+    <p>En conclusión, esta propuesta demuestra que el Marketing 4.0 no consiste en publicar más anuncios digitales. Consiste en construir una experiencia coherente, inteligente y ética durante todo el ciclo de vida del cliente.</p>
+    <p>Para Bonanza Dominicana, Mitsubishi Pickup Experience 4.0 representa la oportunidad de transformar datos en valor humano, mejorar la conversión comercial, fortalecer la confianza y posicionar la camioneta Mitsubishi como una solución de movilidad productiva para el desarrollo dominicano. Muchas gracias.</p>
+  </article></main>
+  <div class="bottomhint">Toque Play para iniciar · Toque dos veces la pantalla para ocultar controles · Espacio = Play/Pausa</div>
+</div>
+<script>
+(function(){
+ const stage=document.getElementById('stage'), app=document.getElementById('app'), bar=document.getElementById('bar');
+ const state=document.getElementById('state'), speedLabel=document.getElementById('speedLabel');
+ let running=false, last=0, raf=null, speed=36, font= parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font')) || 42;
+ function maxScroll(){return Math.max(1, stage.scrollHeight-stage.clientHeight)}
+ function tick(ts){
+   if(!running){return}
+   if(!last) last=ts;
+   const dt=(ts-last)/1000; last=ts;
+   stage.scrollTop += speed*dt;
+   update();
+   if(stage.scrollTop >= maxScroll()-2){running=false; state.textContent='Fin'; return}
+   raf=requestAnimationFrame(tick);
+ }
+ function play(){ if(running) return; running=true; last=0; state.textContent='Reproduciendo'; raf=requestAnimationFrame(tick); }
+ function pause(){ running=false; state.textContent='Pausado'; if(raf) cancelAnimationFrame(raf); }
+ function reset(){ pause(); stage.scrollTop=0; update(); state.textContent='Inicio'; }
+ function update(){ bar.style.width=(stage.scrollTop/maxScroll()*100).toFixed(1)+'%'; speedLabel.textContent='Vel. '+Math.round(speed); }
+ function jump(sec){ stage.scrollTop=Math.max(0,Math.min(maxScroll(),stage.scrollTop+speed*sec)); update(); }
+ document.getElementById('playBtn').addEventListener('click', play, {passive:true});
+ document.getElementById('pauseBtn').addEventListener('click', pause, {passive:true});
+ document.getElementById('resetBtn').addEventListener('click', reset, {passive:true});
+ document.getElementById('backBtn').addEventListener('click', ()=>jump(-30));
+ document.getElementById('fwdBtn').addEventListener('click', ()=>jump(30));
+ document.getElementById('slowBtn').addEventListener('click', ()=>{speed=Math.max(8,speed-6); update();});
+ document.getElementById('fastBtn').addEventListener('click', ()=>{speed=Math.min(120,speed+6); update();});
+ document.getElementById('smallBtn').addEventListener('click', ()=>{font=Math.max(24,font-4);document.documentElement.style.setProperty('--font',font+'px')});
+ document.getElementById('bigBtn').addEventListener('click', ()=>{font=Math.min(84,font+4);document.documentElement.style.setProperty('--font',font+'px')});
+ document.getElementById('mirrorBtn').addEventListener('click', ()=>app.classList.toggle('mirror'));
+ document.getElementById('fullBtn').addEventListener('click', ()=>{ if(!document.fullscreenElement){document.documentElement.requestFullscreen?.()}else{document.exitFullscreen?.()} });
+ stage.addEventListener('scroll', update, {passive:true});
+ let tap=0; document.body.addEventListener('touchend',()=>{let now=Date.now(); if(now-tap<320){app.classList.toggle('hiddenUI')} tap=now},{passive:true});
+ document.addEventListener('keydown', e=>{ if(e.code==='Space'){e.preventDefault(); running?pause():play()} if(e.key==='ArrowUp'){speed+=6;update()} if(e.key==='ArrowDown'){speed=Math.max(8,speed-6);update()} if(e.key==='ArrowLeft')jump(-15); if(e.key==='ArrowRight')jump(15); });
+ update();
+})();
+</script>
+</body>
+</html>
